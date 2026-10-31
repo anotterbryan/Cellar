@@ -87,6 +87,12 @@ svg text{font-family:Inter,sans-serif;cursor:pointer;user-select:none}
 .frow input,.frow select{width:100%;max-width:420px;font-size:16px!important}
 .okc,.edc,.askc{font-weight:600;font-size:11px;border-radius:9px;padding:1px 7px}
 .okc{background:#DDEBD9;color:#2F6B3A}.edc{background:#E8E1F0;color:#5B3F7A}.askc{background:#F6E2C4;color:#8A5A12}
+.liveov{position:fixed;inset:0;background:rgba(20,8,12,.94);z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px}
+.livebox{position:relative;width:100%;max-width:520px;border-radius:14px;overflow:hidden;background:#000}.livebox video{width:100%;display:block}
+.liveguide{position:absolute;left:10%;right:10%;top:32%;bottom:32%;border:3px solid #F2E3C2;border-radius:10px;box-shadow:0 0 0 999px rgba(0,0,0,.25)}
+.livetxt{color:#F2E3C2;font-family:Inter,sans-serif;font-size:15px;margin:14px 0;text-align:center}.livebtns{display:flex;gap:8px}
+.sttip{display:none;background:#FFF7E6;border:1px solid var(--gold2);border-radius:10px;padding:10px 12px;font-size:14px;color:var(--ink);margin-bottom:8px;line-height:1.4}
+.snapbtns{display:flex;flex-wrap:wrap;gap:10px}.bigbtn.alt2{background:#fff;color:var(--ox);border:2px solid var(--ox)}
 .thumbs{display:flex;gap:8px;flex-wrap:wrap}.thumbs .snapimg{max-height:220px}
 .rawbox{margin:10px 0;font-family:Inter,sans-serif;font-size:13px;color:var(--muted)}.rawbox summary{cursor:pointer;margin-bottom:6px}
 .page{background:#fff;border:1px solid var(--rule);border-radius:14px;padding:18px 20px;display:none}
@@ -378,7 +384,7 @@ document.getElementById("tabs").addEventListener("click", e => { const b = e.tar
 const STORE = "cellarLyceum.bottles.v1";
 function loadBottles() { try { return JSON.parse(localStorage.getItem(STORE) || "[]"); } catch (e) { return []; } }
 function saveBottles(list) { try { localStorage.setItem(STORE, JSON.stringify(list)); return true; } catch (e) { alert("Couldn't save on this device (storage full or private browsing)."); return false; } }
-const SNAP = {img: null, thumb: null, text: "", match: undefined, vintage: null, wiki: null, busy: false, saved: false, fields: {}, found: {}, edited: new Set(), lines: []};
+const SNAP = {src: {}, barcode: null, img: null, thumb: null, text: "", match: undefined, vintage: null, wiki: null, busy: false, saved: false, fields: {}, found: {}, edited: new Set(), lines: []};
 
 // matching: same rules as the Wine Snap shortcut
 let MATCHRX = null;
@@ -531,10 +537,123 @@ function extract(lines) {
   return {f, found};
 }
 
+// ---------------------------------------------------------------- barcodes
+const ZX_URL = "https://cdn.jsdelivr.net/npm/@zxing/library@0.21.3/umd/index.min.js", BCKEY = "cellarLyceum.barcodes.v1";
+function loadBC() { try { return JSON.parse(localStorage.getItem(BCKEY) || "{}"); } catch (e) { return {}; } }
+function saveBC(m) { try { localStorage.setItem(BCKEY, JSON.stringify(m)); } catch (e) {} }
+function canvasOf(src, size, rot) { return new Promise(ok => { const img = new Image(); img.onload = () => {
+  const k = Math.min(1, size / Math.max(img.width, img.height)), w = img.width * k, h = img.height * k, c = document.createElement("canvas");
+  c.width = rot ? h : w; c.height = rot ? w : h; const x = c.getContext("2d");
+  if (rot) { x.translate(c.width / 2, c.height / 2); x.rotate((rot === true ? 90 : rot) * Math.PI / 180); x.drawImage(img, -w / 2, -h / 2, w, h); } else x.drawImage(img, 0, 0, w, h);
+  ok(c); }; img.src = src; }); }
+async function decodeBarcode(src) {
+  if ("BarcodeDetector" in window) { try { const det = new BarcodeDetector({formats: ["ean_13", "ean_8", "upc_a", "upc_e"]});
+    const r = await det.detect(await canvasOf(src, 2000, false)); if (r && r.length) return r[0].rawValue; } catch (e) {} }
+  if (!window.ZXing) await loadScript(ZX_URL);
+  const hints = new Map(); hints.set(ZXing.DecodeHintType.POSSIBLE_FORMATS, [ZXing.BarcodeFormat.EAN_13, ZXing.BarcodeFormat.EAN_8, ZXing.BarcodeFormat.UPC_A, ZXing.BarcodeFormat.UPC_E]);
+  hints.set(ZXing.DecodeHintType.TRY_HARDER, true);
+  const reader = new ZXing.MultiFormatReader(); reader.setHints(hints);
+  for (const [size, rot] of [[1400, 0], [1400, 90], [1400, -90], [2200, 0], [2200, 90], [2200, -90], [900, 0], [900, 90], [900, -90]]) {
+    try { const c = await canvasOf(src, size, rot); const bmp = new ZXing.BinaryBitmap(new ZXing.HybridBinarizer(new ZXing.HTMLCanvasElementLuminanceSource(c)));
+      const r = reader.decode(bmp); if (r) return r.getText(); } catch (e) {} }
+  return null;
+}
+async function lookupBarcode(code) {
+  const vars = [code]; if (code.length === 12) vars.push("0" + code); if (code.length === 13 && code[0] === "0") vars.push(code.slice(1));
+  for (const c of vars) { try {
+    const j = await (await fetch(`https://world.openfoodfacts.org/api/v2/product/${c}.json?fields=product_name,brands,generic_name,categories,origins,labels`)).json();
+    if (j.status === 1 && j.product && (j.product.product_name || j.product.brands)) return {src: "Open Food Facts", p: j.product, url: `https://world.openfoodfacts.org/product/${c}`}; } catch (e) {} }
+  try { const j = await (await fetch(`https://api.upcitemdb.com/prod/trial/lookup?upc=${code}`)).json(); const it = j.items && j.items[0];
+    if (it && it.title) return {src: "UPCitemdb", p: {product_name: it.title, brands: it.brand, generic_name: it.description, categories: it.category}, url: ""}; } catch (e) {}
+  return null;
+}
+function freshSnap() { Object.assign(SNAP, {img: null, back: null, thumb: null, lines: [], text: "", fields: {}, found: {}, src: {}, edited: new Set(), match: undefined, wiki: null, saved: false, barcode: null, bcInfo: null, status: ""}); }
+async function onBarcode(file) {
+  if (!file) return;
+  if (!(SNAP.img && !SNAP.barcode)) freshSnap();
+  SNAP.busy = true; setStatus("Reading the barcode…"); viewSnap();
+  const src = await shrink(file, 2400, .92); if (!SNAP.thumb) SNAP.thumb = await shrink(file, 180, .6);
+  let code = null; try { code = await decodeBarcode(src); } catch (e) { console.log(e); }
+  if (!code) { SNAP.busy = false; SNAP.showCode = true; setStatus("We couldn't spot a barcode in that photo. Try again a little closer and straight on, type the numbers under the bars below, or snap the label instead."); viewSnap(); return; }
+  await useBarcode(code);
+}
+async function useBarcode(code) {
+  code = String(code).replace(/\D/g, ""); if (code.length < 8) { setStatus("That doesn't look like a full barcode number."); return; }
+  SNAP.barcode = code; SNAP.busy = true; SNAP.src = SNAP.src || {}; SNAP.edited = SNAP.edited || new Set();
+  const mem = loadBC()[code];
+  if (mem) {
+    Object.entries(mem.fields || {}).forEach(([k, v]) => { if (v != null && v !== "" && !SNAP.edited.has(k)) { SNAP.fields[k] = v; SNAP.found[k] = true; SNAP.src[k] = "remembered"; } });
+    SNAP.fields.placeAll = SNAP.fields.place ? [SNAP.fields.place] : [];
+    setStatus(`Barcode ${code}: you've saved this bottle before, so we filled in what you entered then.${SNAP.fields.vintage ? "" : " Add this bottle's vintage from the label."}`);
+  } else {
+    setStatus(`Barcode ${code}: looking it up…`);
+    const hit = await lookupBarcode(code);
+    if (hit) { const p = hit.p, cats = String(p.categories || "").split(",").map(c => c.trim()).filter(c => /wine|vin|red|white|ros|sparkl|from|grape/i.test(c)).join(", ");
+      const lines = [p.product_name, p.generic_name, p.origins, cats, p.labels].filter(Boolean).map((t, i) => ({text: String(t), conf: 95, h: 0, y: i, pass: 20}));
+      const {f, found} = extract(lines); if (p.brands) { f.producer = String(p.brands).split(",")[0].trim(); found.producer = true; }
+      ["producer", "grape", "place", "sweet", "color", "abv"].forEach(k => { if (f[k] != null && found[k] !== false && !SNAP.edited.has(k) && !(SNAP.src[k] === "label" && SNAP.fields[k])) { SNAP.fields[k] = f[k]; SNAP.found[k] = true; SNAP.src[k] = "barcode"; } });
+      if (f.placeAll && f.placeAll.length) SNAP.fields.placeAll = [...new Set([...(SNAP.fields.placeAll || []), ...f.placeAll])];
+      SNAP.bcInfo = {src: hit.src, name: p.product_name || p.brands || "", url: hit.url};
+      setStatus(`Found barcode ${code} in ${hit.src}: “${SNAP.bcInfo.name}”.${SNAP.fields.vintage ? "" : " Barcodes don't include the year, so add the vintage from the label."}`);
+    } else setStatus(`Barcode ${code} isn't in the free product database. Snap the label to fill in the rest. Once you save the bottle, this phone will remember the barcode next time.`);
+  }
+  SNAP.busy = false; findWine();
+}
+
+// ---------------------------------------------------------------- live barcode camera
+let LIVE = null;
+async function openLiveScanner() {
+  if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { document.getElementById("bcFileHidden").click(); return; }
+  const ov = document.createElement("div"); ov.className = "liveov";
+  ov.innerHTML = `<div class="livebox"><video playsinline muted autoplay></video><div class="liveguide"></div></div>
+    <div class="livetxt" id="liveTxt">Point the camera at the barcode. It scans automatically.</div>
+    <div class="livebtns"><button class="btn" id="livePhoto">Take a photo instead</button><button class="btn solid" id="liveCancel">Cancel</button></div>`;
+  document.body.appendChild(ov);
+  const video = ov.querySelector("video"); let stopped = false;
+  const stop = () => { stopped = true; if (LIVE && LIVE.stream) LIVE.stream.getTracks().forEach(t => t.stop()); ov.remove(); LIVE = null; };
+  ov.querySelector("#liveCancel").onclick = stop;
+  ov.querySelector("#livePhoto").onclick = () => { stop(); document.getElementById("bcFileHidden").click(); };
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({video: {facingMode: {ideal: "environment"}, width: {ideal: 1920}, height: {ideal: 1080}}, audio: false});
+    LIVE = {stream}; video.srcObject = stream; await video.play().catch(() => {});
+  } catch (e) { stop(); setStatus("The camera isn't available here (permission may be off), so choose a photo of the barcode instead."); document.getElementById("bcFileHidden").click(); return; }
+  let det = null; if ("BarcodeDetector" in window) { try { det = new BarcodeDetector({formats: ["ean_13", "ean_8", "upc_a", "upc_e"]}); } catch (e) {} }
+  if (!det && !window.ZXing) { try { await loadScript(ZX_URL); } catch (e) {} }
+  let reader = null;
+  if (!det && window.ZXing) { const hints = new Map(); hints.set(ZXing.DecodeHintType.POSSIBLE_FORMATS, [ZXing.BarcodeFormat.EAN_13, ZXing.BarcodeFormat.EAN_8, ZXing.BarcodeFormat.UPC_A, ZXing.BarcodeFormat.UPC_E]);
+    hints.set(ZXing.DecodeHintType.TRY_HARDER, true); reader = new ZXing.MultiFormatReader(); reader.setHints(hints); }
+  const c = document.createElement("canvas"), x = c.getContext("2d", {willReadFrequently: true}); let tick = 0;
+  const loop = async () => {
+    if (stopped) return;
+    if (video.readyState >= 2 && video.videoWidth) {
+      const vw = video.videoWidth, vh = video.videoHeight, k = Math.min(1, 1280 / Math.max(vw, vh)); tick++;
+      const rot = reader && tick % 2 === 0;           // every other frame, try the image turned sideways
+      c.width = Math.round((rot ? vh : vw) * k); c.height = Math.round((rot ? vw : vh) * k);
+      x.save(); if (rot) { x.translate(c.width / 2, c.height / 2); x.rotate(Math.PI / 2); x.drawImage(video, -vw * k / 2, -vh * k / 2, vw * k, vh * k); } else x.drawImage(video, 0, 0, c.width, c.height); x.restore();
+      let code = null;
+      try { if (det) { const r = await det.detect(c); if (r && r.length) code = r[0].rawValue; }
+            else if (reader) code = reader.decode(new ZXing.BinaryBitmap(new ZXing.HybridBinarizer(new ZXing.HTMLCanvasElementLuminanceSource(c)))).getText(); } catch (e) {}
+      if (code) { if (navigator.vibrate) navigator.vibrate(60); const t = document.getElementById("liveTxt"); if (t) t.textContent = "Got it: " + code; setTimeout(() => { stop(); startBarcodeFlow(code); }, 250); return; }
+    }
+    setTimeout(loop, 180);
+  };
+  loop();
+}
+async function startBarcodeFlow(code) {
+  if (S.view !== "snap") { S.view = "snap"; render(); }
+  if (!(SNAP.img && !SNAP.barcode)) freshSnap();
+  viewSnap(); await useBarcode(code);
+}
+function scanTextHelp() {
+  const d = document.querySelector(".rawbox"); if (d) d.open = true;
+  const ta = document.getElementById("snapText"); if (ta) { ta.focus(); ta.scrollIntoView({behavior: "smooth", block: "center"}); }
+  const tip = document.getElementById("stTip"); if (tip) tip.style.display = "block";
+}
+
 // ---------------------------------------------------------------- snap flow
 async function onPhoto(file, back) {
   if (!file) return;
-  if (!back) Object.assign(SNAP, {img: null, back: null, lines: [], text: "", fields: {}, found: {}, edited: new Set(), match: undefined, wiki: null, saved: false});
+  if (!back && !(SNAP.barcode && !SNAP.img)) freshSnap();
   SNAP.busy = true; setStatus("Preparing photo…");
   const img = await shrink(file, 3200, .92), show = await shrink(file, 1000, .8);
   if (back) SNAP.back = show; else { SNAP.img = show; SNAP.thumb = await shrink(file, 180, .6); }
@@ -549,9 +668,12 @@ async function onPhoto(file, back) {
   SNAP.busy = false; findWine();
 }
 function applyExtract() {
-  const {f, found} = extract(SNAP.lines || []); SNAP.fields = SNAP.fields || {}; SNAP.found = SNAP.found || {}; SNAP.edited = SNAP.edited || new Set();
-  ["producer", "grape", "place", "vintage", "sweet", "color", "abv"].forEach(k => { if (!SNAP.edited.has(k) && f[k] != null) { SNAP.fields[k] = f[k]; SNAP.found[k] = !!found[k]; } });
-  SNAP.fields.placeAll = SNAP.edited.has("place") ? [SNAP.fields.place] : (f.placeAll || []); SNAP.producers = f.producers || [];
+  const {f, found} = extract(SNAP.lines || []); SNAP.fields = SNAP.fields || {}; SNAP.found = SNAP.found || {}; SNAP.edited = SNAP.edited || new Set(); SNAP.src = SNAP.src || {};
+  ["producer", "grape", "place", "vintage", "sweet", "color", "abv"].forEach(k => { if (SNAP.edited.has(k) || f[k] == null) return;
+    if (["barcode", "remembered"].includes(SNAP.src[k]) && SNAP.fields[k]) return;
+    SNAP.fields[k] = f[k]; SNAP.found[k] = !!found[k]; SNAP.src[k] = "label"; });
+  SNAP.fields.placeAll = SNAP.edited.has("place") ? [SNAP.fields.place] : [...new Set([...(["barcode", "remembered"].includes(SNAP.src.place) ? [SNAP.fields.place] : []), ...(f.placeAll || [])])].filter(Boolean);
+  SNAP.producers = [...new Set([...(SNAP.src.producer && SNAP.src.producer !== "label" ? [SNAP.fields.producer] : []), ...(f.producers || [])])];
 }
 function composed() {
   const F = SNAP.fields || {};
@@ -573,12 +695,13 @@ function findWine(fromForm) {
 function readForm() {
   const pg = document.getElementById("pageStage"); if (!pg) return;
   pg.querySelectorAll("[data-f]").forEach(el => { const k = el.dataset.f; let v = el.value.trim(); if (k === "vintage") v = +v || null;
-    if ((SNAP.fields[k] || "") !== (v || "")) { SNAP.edited.add(k); SNAP.fields[k] = v || null; SNAP.found[k] = false; } });
+    if ((SNAP.fields[k] || "") !== (v || "")) { SNAP.edited.add(k); SNAP.fields[k] = v || null; SNAP.found[k] = false; if (SNAP.src) delete SNAP.src[k]; } });
 }
 function saveScan() {
   readForm(); const list = loadBottles(); const w = SNAP.match ? byId[SNAP.match] : null, F = SNAP.fields || {};
   const name = [F.producer, F.grape && !(F.producer || "").toLowerCase().includes(F.grape.toLowerCase()) ? F.grape : ""].filter(Boolean).join(" ") || (w ? w.name : (SNAP.wiki && SNAP.wiki.title) || "Unknown bottle");
-  list.unshift({id: Date.now(), ts: new Date().toISOString(), wineId: w ? w.id : null, name: name.slice(0, 70), vintage: F.vintage || null, thumb: SNAP.thumb,
+  if (SNAP.barcode) { const m = loadBC(); m[SNAP.barcode] = {fields: {producer: F.producer, grape: F.grape, place: F.place, sweet: F.sweet, color: F.color}, wineId: w ? w.id : null, ts: Date.now()}; saveBC(m); }
+  list.unshift({id: Date.now(), ts: new Date().toISOString(), wineId: w ? w.id : null, name: name.slice(0, 70), vintage: F.vintage || null, thumb: SNAP.thumb, barcode: SNAP.barcode || null,
                 fields: {producer: F.producer, grape: F.grape, place: F.place, sweet: F.sweet, color: F.color, abv: F.abv}, level: SNAP.level,
                 text: (SNAP.text || "").slice(0, 600), wiki: SNAP.wiki && SNAP.wiki.title ? SNAP.wiki : null, cellar: false, qty: 1, loc: ""});
   if (saveBottles(list)) { SNAP.saved = true; viewSnap(); }
@@ -587,9 +710,10 @@ function saveScan() {
 function viewSnap() {
   const pg = document.getElementById("pageStage"); const w = SNAP.match ? byId[SNAP.match] : null;
   SNAP.fields = SNAP.fields || {}; SNAP.found = SNAP.found || {}; SNAP.edited = SNAP.edited || new Set();
-  const F = SNAP.fields, started = SNAP.img || SNAP.match !== undefined || (SNAP.text || "").trim();
-  const mark = k => SNAP.found[k] ? `<span class="okc">✓ read from label</span>` : F[k] ? `<span class="edc">✎ entered</span>` : `<span class="askc">Please fill in</span>`;
-  const row = (k, label, input) => `<div class="frow"><div class="fl">${label} ${mark(k)}</div>${input}</div>`;
+  const F = SNAP.fields, started = SNAP.img || SNAP.barcode || SNAP.match !== undefined || (SNAP.text || "").trim();
+  const SRCN = {label: "✓ read from label", barcode: "✓ from barcode", remembered: "✓ remembered"};
+  const mark = k => SNAP.found[k] ? `<span class="okc">${SRCN[(SNAP.src || {})[k]] || SRCN.label}</span>` : F[k] ? `<span class="edc">✎ entered</span>` : `<span class="askc">Please fill in</span>`;
+  const row = (k, label, input) => `<div class="frow"><div class="fl">${label} <span id="mk-${k}">${mark(k)}</span></div>${input}</div>`;
   const dl = (id, arr) => `<datalist id="${id}">${arr.map(x => `<option value="${esc(x)}">`).join("")}</datalist>`;
   const sel = (k, opts) => `<select data-f="${k}"><option value="">Not sure</option>${opts.map(o => `<option${F[k] === o ? " selected" : ""}>${o}</option>`).join("")}</select>`;
   const form = started ? `<div class="fbox"><div class="flab2" style="margin-top:0">What we read</div>
@@ -601,7 +725,10 @@ function viewSnap() {
     ${row("sweet", "Sweetness", sel("sweet", ["Dry", "Off-dry / semi-sweet", "Sweet"]))}
     ${F.abv ? `<div class="status">Alcohol on the label: ${F.abv}%</div>` : ""}
     <div style="margin-top:10px"><button class="btn solid" id="snapFind">Find this wine</button>
-    ${SNAP.img ? `<label class="btn">📷 Add the back label<input type="file" accept="image/*" capture="environment" id="snapBack" hidden></label>` : ""}</div>
+    ${SNAP.img ? `<label class="btn">📷 Add the back label<input type="file" accept="image/*" capture="environment" id="snapBack" hidden></label>` : `<label class="btn">📷 Snap the label too<input type="file" accept="image/*" capture="environment" id="snapFile2" hidden></label>`}
+    ${!SNAP.barcode ? `<button class="btn" id="bcLive2">▥ Add the barcode</button>` : ""}
+    <button class="btn" id="snapNew">Start a new bottle</button></div>
+    ${SNAP.barcode ? `<div class="status">Barcode ${esc(SNAP.barcode)}${SNAP.bcInfo ? ` · found in ${esc(SNAP.bcInfo.src)}${SNAP.bcInfo.url ? ` (<a href="${esc(SNAP.bcInfo.url)}" target="_blank" rel="noopener">see entry</a>)` : ""}` : ""}</div>` : ""}
     ${SNAP.back ? `<div class="status">Back label added ✓</div>` : ""}</div>` : "";
   let res = "";
   if (SNAP.match !== undefined && !SNAP.busy) {
@@ -623,22 +750,37 @@ function viewSnap() {
     const q = F.producer || F.grape || "";
     res += `<label class="lab">About the winery</label><input type="text" id="wikiLine" value="${esc(q)}" placeholder="Winery name"> <button class="btn" id="wikiGo">Look up on Wikipedia</button><div id="wikiBox">${wikiHTML(SNAP.wiki)}</div>`;
   }
-  pg.innerHTML = `<h2>Snap a label</h2>
-    <p>Take a photo of the front label. The page reads it on your device (no account, no keys), fills in what it can, and asks you for anything it isn't sure about.</p>
-    <label class="bigbtn">📷 Take or choose a photo<input type="file" accept="image/*" capture="environment" id="snapFile" hidden></label>
+  pg.innerHTML = `<h2>Snap a bottle</h2>
+    <p>Photograph the front label, the barcode, or both. The page reads them on your device (no account, no keys), fills in what it can, and asks you for anything it isn't sure about.</p>
+    <div class="snapbtns"><label class="bigbtn">📷 Snap the label<input type="file" accept="image/*" capture="environment" id="snapFile" hidden></label>
+    <button class="bigbtn alt2" id="bcLive">▥ Scan the barcode</button><input type="file" accept="image/*" capture="environment" id="bcFile" hidden><input type="file" accept="image/*" capture="environment" id="bcFileHidden" hidden></div>
+    <div class="status" style="margin-top:8px">On iPhone, the sharpest way to read a label is Apple's own <a href="#" id="stLink">Scan Text</a>.</div>
+    ${SNAP.showCode && !SNAP.barcode ? `<div class="fbox"><div class="fl" style="font-family:Inter,sans-serif;font-size:12px;font-weight:700">Type the numbers under the barcode</div><input type="text" inputmode="numeric" id="bcType" placeholder="e.g. 012345678905" style="width:100%;max-width:300px;font-size:16px"> <button class="btn solid" id="bcGo">Look up</button></div>` : ""}
     ${SNAP.img ? `<div class="thumbs"><img class="snapimg" src="${SNAP.img}" alt="Front label">${SNAP.back ? `<img class="snapimg" src="${SNAP.back}" alt="Back label">` : ""}</div>` : ""}
     <div class="status" id="snapStatus">${esc(SNAP.status || "")}</div>
     ${form}
-    <details class="rawbox"${!SNAP.img ? " open" : ""}><summary>${SNAP.img ? "Show the raw text we read" : "No photo? Type what the label says"}</summary>
+    <details class="rawbox"${!SNAP.img ? " open" : ""}><summary>${SNAP.img ? "Show the raw text we read" : "Use iPhone Scan Text, or type what the label says"}</summary>
+      <div class="sttip" id="stTip"><b>Use your iPhone's Scan Text:</b> tap inside the box below, tap it again, then choose <b>Scan Text</b> (the icon of a page inside brackets). Point at the label, tap <b>Insert</b>, then tap <b>Read this text</b>. Add the back label the same way.</div>
       <textarea id="snapText" placeholder="e.g. Honey Moon · Viognier · California · 2024">${esc(SNAP.text || "")}</textarea>
       <button class="btn" id="snapRead">Read this text</button></details>${res}`;
   document.getElementById("snapFile").onchange = e => onPhoto(e.target.files[0]);
+  document.getElementById("bcFile").onchange = e => onBarcode(e.target.files[0]);
+  document.getElementById("bcFileHidden").onchange = e => onBarcode(e.target.files[0]);
+  document.getElementById("bcLive").onclick = openLiveScanner;
+  const bl2 = document.getElementById("bcLive2"); if (bl2) bl2.onclick = openLiveScanner;
+  document.getElementById("stLink").onclick = e => { e.preventDefault(); scanTextHelp(); };
+  const s2 = document.getElementById("snapFile2"); if (s2) s2.onchange = e => onPhoto(e.target.files[0]);
+
+  const nb = document.getElementById("snapNew"); if (nb) nb.onclick = () => { freshSnap(); SNAP.showCode = false; S.sel = null; render(); };
+  const bg = document.getElementById("bcGo"); if (bg) bg.onclick = () => useBarcode(document.getElementById("bcType").value);
   const bk = document.getElementById("snapBack"); if (bk) bk.onchange = e => onPhoto(e.target.files[0], true);
   const fd = document.getElementById("snapFind"); if (fd) fd.onclick = () => findWine(true);
   document.getElementById("snapRead").onclick = () => { SNAP.text = document.getElementById("snapText").value; SNAP.lines = SNAP.text.split(/\n/).map((t, i) => ({text: t.trim(), conf: 90, h: 0, y: i, pass: 0})).filter(l => l.text);
-    SNAP.fields = {}; SNAP.found = {}; SNAP.edited = new Set(); applyExtract(); findWine(); };
+    const keep = Object.keys(SNAP.src || {}).filter(k => ["barcode", "remembered"].includes(SNAP.src[k]));
+    const F0 = {}, f0 = {}, s0 = {}; keep.forEach(k => { F0[k] = SNAP.fields[k]; f0[k] = true; s0[k] = SNAP.src[k]; });
+    SNAP.fields = F0; SNAP.found = f0; SNAP.src = s0; SNAP.edited = new Set(); applyExtract(); findWine(); };
   const sv = document.getElementById("snapSave"); if (sv) sv.onclick = saveScan;
-  pg.querySelectorAll("[data-f]").forEach(el => el.onchange = () => { readForm(); viewSnapKeep(); });
+  pg.querySelectorAll("[data-f]").forEach(el => el.onchange = () => { readForm(); const m = document.getElementById("mk-" + el.dataset.f); if (m) m.innerHTML = mark(el.dataset.f); });
   const wg = document.getElementById("wikiGo"); if (wg) wg.onclick = () => wikiLookup(document.getElementById("wikiLine").value);
   pg.querySelectorAll("[data-pickwine]").forEach(b => b.onclick = () => { SNAP.match = b.dataset.pickwine; SNAP.level = "exact"; S.sel = {type: "wine", id: SNAP.match}; S.vintage = SNAP.vintage; S.vintageFor = SNAP.match; render(); });
 }
@@ -686,7 +828,8 @@ function viewHome() {
   pg.innerHTML = `<div class="hero"><div class="k">Welcome</div><h2>What's in that bottle?</h2>
     <p>Welcome! Snap a photo of any wine label and find out what it is, what it tastes like, what to eat with it, and whether it's ready to open tonight or happier waiting a few more years.</p>
     <label class="bigbtn">📷 Snap a bottle<input type="file" accept="image/*" capture="environment" id="homeFile" hidden></label>
-    <span class="alt" id="homeType">No photo handy? Type the label instead</span></div>
+    <span class="alt" id="homeBc">or scan the barcode</span>
+    <span class="alt" id="homeType">Or use your iPhone's Scan Text, or type the label</span></div>
     <div class="steps"><div><b>1 · Snap</b>Photograph the front label, straight on, in good light.</div>
       <div><b>2 · Discover</b>See tasting notes, food pairings, serving tips, and this vintage's best years.</div>
       <div><b>3 · Keep</b>Save it to My Bottles to build a simple cellar list that suggests what to open next.</div></div>
@@ -700,7 +843,8 @@ function viewHome() {
     </div>
     <p class="status" style="margin-top:16px">Everything here is free, needs no account, and keeps your saved bottles privately on this device. Wine profiles are drawn from reputable published sources and independently fact-checked.</p>`;
   document.getElementById("homeFile").onchange = e => { S.view = "snap"; render(); onPhoto(e.target.files[0]); };
-  document.getElementById("homeType").onclick = () => { go("snap"); setTimeout(() => document.getElementById("snapText").focus(), 50); };
+  document.getElementById("homeBc").onclick = () => { go("snap"); openLiveScanner(); };
+  document.getElementById("homeType").onclick = () => { go("snap"); setTimeout(scanTextHelp, 60); };
   const hb = document.getElementById("homeBottles"); if (hb) hb.onclick = () => go("bottles");
   pg.querySelectorAll("[data-go]").forEach(c => c.onclick = () => go(c.dataset.go));
 }
