@@ -1,4 +1,4 @@
-// Cellar · wine-snap  (version 3: label reading, bottle notes, dinner pairing, shared household cellar)
+// Cellar · wine-snap  (version 4: label reading, bottle notes, dinner pairing, shared household cellar, community bottle facts)
 import postgres from "npm:postgres@3.4.5";
 // A tiny, private middleman between the Cellar website and Google's Gemini API.
 // It keeps the Gemini key secret (stored as a Supabase secret, never in the website),
@@ -94,6 +94,8 @@ async function db() {
   if (!ready) {
     await sql`create table if not exists cellar_households (code text primary key, data jsonb not null default '{}'::jsonb, created_at timestamptz not null default now(), updated_at timestamptz not null default now())`;
     await sql`alter table cellar_households enable row level security`;   // no public access; only this function can read/write
+    await sql`create table if not exists cellar_community (key text not null, device text not null, fields jsonb not null, updated_at timestamptz not null default now(), primary key (key, device))`;
+    await sql`alter table cellar_community enable row level security`;
     ready = true;
   }
   return sql;
@@ -134,6 +136,38 @@ async function household(task: string, input: { code?: string; bottles?: Rec[]; 
     await t`update cellar_households set data = ${t.json({ ...cur, ...merged } as never)}, updated_at = now() where code = ${code}`;
     return { ok: true, name: cur.name ?? "", ...merged, server_time: Date.now() };
   });
+}
+
+// ---------------- community bottle facts (anonymous; only facts about the bottle, never personal data)
+const CFIELDS = ["producer", "grape", "place", "color", "sweet", "wine_id"];
+const cleanKey = (k: unknown) => String(k ?? "").toLowerCase().replace(/[^a-z0-9:|-]/g, "").slice(0, 120);
+function cleanFields(f: Record<string, unknown> = {}) {
+  const out: Record<string, string> = {};
+  for (const k of CFIELDS) { const v = f[k]; if (typeof v === "string" && v.trim()) out[k] = v.trim().slice(0, 80); }
+  return out;
+}
+async function community(task: string, input: { keys?: unknown[]; device?: unknown; fields?: Record<string, unknown> }) {
+  const s = await db();
+  const keys = [...new Set((input.keys ?? []).map(cleanKey).filter((k) => /^(bc|nm):.{3,}/.test(k)))].slice(0, 4);
+  if (!keys.length) return { error: "No bottle key", status: 400 };
+  if (task === "community_add") {
+    const device = String(input.device ?? "").replace(/[^a-zA-Z0-9-]/g, "").slice(0, 40);
+    const fields = cleanFields(input.fields);
+    if (device.length < 8 || Object.keys(fields).length < 2) return { error: "Not enough to share", status: 400 };
+    for (const k of keys) await s`insert into cellar_community (key, device, fields) values (${k}, ${device}, ${s.json(fields)}) on conflict (key, device) do update set fields = excluded.fields, updated_at = now()`;
+    return { ok: true };
+  }
+  // community_get: majority value per field, with how many different phones agree
+  const all = await s`select device, fields from cellar_community where key in ${s(keys)} order by updated_at desc limit 400`;
+  const seen = new Set<string>(), rows = all.filter((r) => !seen.has(r.device) && seen.add(r.device));   // one vote per phone
+  if (!rows.length) return { found: false };
+  const tally: Record<string, Record<string, { v: string; n: number }>> = {};
+  for (const r of rows) for (const [k, v] of Object.entries(r.fields as Record<string, string>)) {
+    const norm = String(v).toLowerCase(); tally[k] ??= {}; tally[k][norm] ??= { v: String(v), n: 0 }; tally[k][norm].n++;
+  }
+  const fields: Record<string, string> = {}, agree: Record<string, number> = {};
+  for (const [k, opts] of Object.entries(tally)) { const best = Object.values(opts).sort((a, b) => b.n - a.n)[0]; fields[k] = best.v; agree[k] = best.n; }
+  return { found: true, fields, agree, people: rows.length, trusted: Math.min(agree.producer ?? 0, agree.grape ?? agree.wine_id ?? 0) >= 2 };
 }
 
 const NOTES_PROMPT = `You are a warm, precise sommelier writing a short "at a glance" panel about ONE specific wine for a wine-lover's app.
@@ -201,11 +235,16 @@ Deno.serve(async (req) => {
   if (origin && !ORIGINS.includes("*") && !ORIGINS.includes(origin)) return new Response(JSON.stringify({ error: "Origin not allowed" }), { status: 403, headers: H });
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? "anon";
   const peek = req.headers.get("x-cellar-task") ?? "";
-  if (!peek.startsWith("household_") && !allowed(ip)) return new Response(JSON.stringify({ error: "Too many scans this hour. Try again later." }), { status: 429, headers: H });
+  if (!peek.startsWith("household_") && !peek.startsWith("community_get") && !allowed(ip)) return new Response(JSON.stringify({ error: "Too many scans this hour. Try again later." }), { status: 429, headers: H });
 
-  let input: { task?: string; code?: string; name?: string; bottles?: Rec[]; tombs?: Record<string, number>; images?: string[]; text?: string; wine?: Record<string, unknown>; dish?: string; catalog?: { id: string; name: string }[]; cellar?: { id: string; name: string }[] };
+  let input: { task?: string; keys?: unknown[]; device?: string; fields?: Record<string, unknown>; code?: string; name?: string; bottles?: Rec[]; tombs?: Record<string, number>; images?: string[]; text?: string; wine?: Record<string, unknown>; dish?: string; catalog?: { id: string; name: string }[]; cellar?: { id: string; name: string }[] };
   try { input = await req.json(); } catch { return new Response(JSON.stringify({ error: "Bad JSON" }), { status: 400, headers: H }); }
   const task = input.task ?? "read";
+  if (task.startsWith("community_")) {
+    try { const out = await community(task, input as never); const st = (out as { status?: number }).status;
+      return new Response(JSON.stringify(out), { status: st ?? 200, headers: H }); }
+    catch (e) { return new Response(JSON.stringify({ error: "The community database isn't available right now.", detail: String(e).slice(0, 200) }), { status: 500, headers: H }); }
+  }
   if (task.startsWith("household_")) {
     try { const out = await household(task, input as never); const st = (out as { status?: number }).status;
       return new Response(JSON.stringify(out), { status: st ?? 200, headers: H }); }

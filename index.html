@@ -106,6 +106,7 @@ svg text{font-family:Inter,sans-serif;cursor:pointer;user-select:none}
 .qd{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0 12px}
 .ppick{border:1px solid var(--rule);border-radius:12px;padding:12px 14px;margin:8px 0;cursor:pointer;background:#fff}.ppick:hover{border-color:var(--ox)}
 .ppick.mine{background:#F5F1F9;border-color:#C9B8DD}.ppick .pn{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--ox)}.ppick p{margin:6px 0 2px;font-size:16px}
+.commc{background:#E3ECF7!important;color:#2E5A8A!important}.commnote{margin-top:6px}
 .hhbox{margin-top:18px;border:1.5px dashed var(--gold2);border-radius:14px;padding:12px 14px;background:#FFFBF2}.hhbox .k{font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--gold)}
 .hhbox p{font-size:15px;margin:6px 0}.hhcode{font-family:Inter,monospace;font-size:28px;font-weight:700;letter-spacing:.12em;color:var(--ox);margin:4px 0}
 .hhbox input{border:1px solid var(--rule);border-radius:8px;padding:6px 10px;font-size:16px}
@@ -666,7 +667,7 @@ async function lookupBarcode(code) {
     if (it && it.title) return {src: "UPCitemdb", p: {product_name: it.title, brands: it.brand, generic_name: it.description, categories: it.category}, url: ""}; } catch (e) {}
   return null;
 }
-function freshSnap() { Object.assign(SNAP, {recId: null, notes: null, notesKey: null, aiFront: null, aiBack: null, aiInfo: null, aiConf: null, notWine: false, img: null, back: null, thumb: null, lines: [], text: "", fields: {}, found: {}, src: {}, edited: new Set(), match: undefined, wiki: null, saved: false, barcode: null, bcInfo: null, status: ""}); }
+function freshSnap() { Object.assign(SNAP, {community: null, commAgree: null, shared: false, recId: null, notes: null, notesKey: null, aiFront: null, aiBack: null, aiInfo: null, aiConf: null, notWine: false, img: null, back: null, thumb: null, lines: [], text: "", fields: {}, found: {}, src: {}, edited: new Set(), match: undefined, wiki: null, saved: false, barcode: null, bcInfo: null, status: ""}); }
 async function onBarcode(file) {
   if (!file) return;
   if (!(SNAP.img && !SNAP.barcode)) freshSnap();
@@ -686,6 +687,9 @@ async function useBarcode(code) {
     setStatus(`Barcode ${code}: you've saved this bottle before, so we filled in what you entered then.${SNAP.fields.vintage ? "" : " Add this bottle's vintage from the label."}`);
   } else {
     setStatus(`Barcode ${code}: looking it up…`);
+    if (await communityLookup(true) && SNAP.fields.producer && SNAP.fields.grape) {
+      setStatus(`Barcode ${code}: found in the Cellar community.${SNAP.fields.vintage ? "" : " Barcodes don't include the year, so add the vintage from the label."}`);
+      SNAP.busy = false; findWine(); return; }
     const hit = await lookupBarcode(code);
     if (hit) { const p = hit.p, cats = String(p.categories || "").split(",").map(c => c.trim()).filter(c => /wine|vin|red|white|ros|sparkl|from|grape/i.test(c)).join(", ");
       const lines = [p.product_name, p.generic_name, p.origins, cats, p.labels].filter(Boolean).map((t, i) => ({text: String(t), conf: 95, h: 0, y: i, pass: 20}));
@@ -833,9 +837,9 @@ function actionsHTML() {
 }
 function wireActions() {
   const c = document.getElementById("actCellar"), w = document.getElementById("actWish"), s = document.getElementById("actShare");
-  if (c) c.onclick = () => { const r = recordScan(); if (r) patchRecord(r.id, b => { b.cellar = true; b.qty = (b.qty || 0) + 1; }); viewSnapKeep(); };
-  if (w) w.onclick = () => { const r = recordScan(); if (r) patchRecord(r.id, b => { b.wish = !b.wish; }); viewSnapKeep(); };
-  if (s) s.onclick = () => { const r = recordScan(); if (r) shareCard(loadBottles().find(b => b.id === r.id), SNAP.img); };
+  if (c) c.onclick = () => { communityAdd(); const r = recordScan(); if (r) patchRecord(r.id, b => { b.cellar = true; b.qty = (b.qty || 0) + 1; }); viewSnapKeep(); };
+  if (w) w.onclick = () => { communityAdd(); const r = recordScan(); if (r) patchRecord(r.id, b => { b.wish = !b.wish; }); viewSnapKeep(); };
+  if (s) s.onclick = () => { communityAdd(); const r = recordScan(); if (r) shareCard(loadBottles().find(b => b.id === r.id), SNAP.img); };
 }
 
 // ---------------------------------------------------------------- AI notes for this bottle ("at a glance")
@@ -1110,6 +1114,41 @@ function mapSection(cellar, wish) {
     <div id="mapList"></div>`;
 }
 
+// ---------------------------------------------------------------- community bottle facts (anonymous)
+const DEVKEY = "cellarLyceum.device.v1", COMMKEY = "cellarLyceum.community.v1";
+function deviceId() { let d = getJ(DEVKEY, null); if (!d) { d = "d-" + Array.from(crypto.getRandomValues(new Uint8Array(12)), x => x.toString(36).padStart(2, "0")).join("").slice(0, 20); setJ(DEVKEY, d); } return d; }
+const communityOn = () => getJ(COMMKEY, true) !== false;
+const keyPart = t => plain(t || "").replace(/[^a-z0-9]/g, "");
+function commKeys(F, barcode) { const k = []; if (barcode) k.push("bc:" + barcode); if (F.producer && F.grape) k.push(`nm:${keyPart(F.producer)}|${keyPart(F.grape)}`); return k; }
+async function communityAdd() {
+  if (!AI.url || !communityOn()) return;
+  const F = SNAP.fields || {}, keys = commKeys(F, SNAP.barcode); if (!keys.length) return;
+  const fields = {producer: F.producer, grape: F.grape, place: F.place, color: F.color, sweet: F.sweet, wine_id: SNAP.match || null};
+  if (Object.values(fields).filter(Boolean).length < 2) return;
+  try { await aiCall({task: "community_add", device: deviceId(), keys, fields}, "community_add"); SNAP.shared = true; } catch (e) {}
+}
+async function communityLookup(fromBarcode) {
+  if (!AI.url) return false;
+  const F = SNAP.fields || {}, keys = commKeys(F, SNAP.barcode); if (!keys.length) return false;
+  try {
+    const j = await aiCall({task: "community_get", keys}, "community_get");
+    if (!j.found) return false;
+    SNAP.community = {people: j.people, trusted: j.trusted};
+    const map = {producer: "producer", grape: "grape", place: "place", color: "color", sweet: "sweet"};
+    let filled = 0;
+    Object.entries(map).forEach(([k, src]) => { const v = j.fields[src]; if (!v || SNAP.edited.has(k)) return;
+      if (SNAP.fields[k] && SNAP.src[k] && SNAP.src[k] !== "community" && !fromBarcode) return;   // never overwrite what we read on this bottle
+      if (SNAP.fields[k] && ["label", "ai", "remembered"].includes(SNAP.src[k])) return;
+      SNAP.fields[k] = v; SNAP.found[k] = true; SNAP.src[k] = "community"; SNAP.commAgree = Object.assign(SNAP.commAgree || {}, {[k]: j.agree[src] || 1}); filled++; });
+    if (SNAP.fields.place) SNAP.fields.placeAll = [...new Set([SNAP.fields.place, ...(SNAP.fields.placeAll || [])])];
+    return filled > 0 || !!j.found;
+  } catch (e) { return false; }
+}
+function communityNote() {
+  const c = SNAP.community; if (!c) return "";
+  return `<div class="status commnote">👥 ${c.trusted ? `Confirmed by ${c.people} people in the Cellar community.` : `Shared by ${c.people === 1 ? "1 person" : c.people + " people"} in the Cellar community. Not yet confirmed, so please double-check.`}</div>`;
+}
+
 // ---------------------------------------------------------------- snap flow
 async function onPhoto(file, back) {
   if (!file) return;
@@ -1122,7 +1161,7 @@ async function onPhoto(file, back) {
   if (AI.url) {
     try { setStatus(back ? "Reading the back label with AI…" : "Reading the label with AI (a few seconds)…");
       const j = await aiRead([SNAP.aiFront, SNAP.aiBack].filter(Boolean), "");
-      applyAI(j);
+      applyAI(j); await communityLookup(false);
       setStatus(SNAP.notWine ? "This doesn't look like a wine label. Try another photo, or fill in the fields." : `Read by AI${SNAP.aiConf === "low" ? " (it wasn't very sure, so please double-check)" : ""}. Check each field, fill in anything missing, then tap Find this wine.`);
       SNAP.busy = false; findWine(); return;
     } catch (e) { console.log(e); setStatus((e.message || "The AI reader isn't available") + " Using the on-device reader instead…"); }
@@ -1131,7 +1170,7 @@ async function onPhoto(file, back) {
     if (!WORKER) setStatus("Loading the label reader (first time only)…");
     const lines = await readImage(img, back ? "back label" : "label"); if (back) lines.forEach(l => l.pass += 10);
     SNAP.lines = (SNAP.lines || []).concat(lines); SNAP.text = SNAP.lines.map(l => l.text).join("\n");
-    applyExtract();
+    applyExtract(); await communityLookup(false);
     setStatus(SNAP.lines.length ? "Here's what we could read. Check each field, fill in anything missing, then tap Find this wine." : "We couldn't read any words. Fill in the fields below.");
   } catch (e) { console.log(e); setStatus("The label reader couldn't load (are you offline?). Fill in the fields below."); }
   SNAP.busy = false; findWine();
@@ -1173,8 +1212,8 @@ function viewSnap() {
   const pg = document.getElementById("pageStage"); const w = SNAP.match ? byId[SNAP.match] : null;
   SNAP.fields = SNAP.fields || {}; SNAP.found = SNAP.found || {}; SNAP.edited = SNAP.edited || new Set();
   const F = SNAP.fields, started = SNAP.img || SNAP.barcode || SNAP.match !== undefined || (SNAP.text || "").trim();
-  const SRCN = {ai: "✓ read by AI", label: "✓ read from label", barcode: "✓ from barcode", remembered: "✓ remembered"};
-  const mark = k => SNAP.found[k] ? `<span class="okc">${SRCN[(SNAP.src || {})[k]] || SRCN.label}</span>` : F[k] ? `<span class="edc">✎ entered</span>` : `<span class="askc">Please fill in</span>`;
+  const SRCN = {community: "👥 community", ai: "✓ read by AI", label: "✓ read from label", barcode: "✓ from barcode", remembered: "✓ remembered"};
+  const mark = k => SNAP.found[k] ? `<span class="okc${(SNAP.src || {})[k] === "community" ? " commc" : ""}">${SRCN[(SNAP.src || {})[k]] || SRCN.label}${(SNAP.src || {})[k] === "community" && SNAP.commAgree && SNAP.commAgree[k] ? ` (${SNAP.commAgree[k]})` : ""}</span>` : F[k] ? `<span class="edc">✎ entered</span>` : `<span class="askc">Please fill in</span>`;
   const row = (k, label, input) => `<div class="frow"><div class="fl">${label} <span id="mk-${k}">${mark(k)}</span></div>${input}</div>`;
   const dl = (id, arr) => `<datalist id="${id}">${arr.map(x => `<option value="${esc(x)}">`).join("")}</datalist>`;
   const sel = (k, opts) => `<select data-f="${k}"><option value="">Not sure</option>${opts.map(o => `<option${F[k] === o ? " selected" : ""}>${o}</option>`).join("")}</select>`;
@@ -1185,7 +1224,7 @@ function viewSnap() {
     ${row("vintage", "Vintage (year)", `<input type="number" data-f="vintage" min="1900" max="2100" value="${F.vintage || ""}" placeholder="e.g. 2021">`)}
     ${row("color", "Color", sel("color", ["Red", "White", "Rosé", "Sparkling", "Fortified"]))}
     ${row("sweet", "Sweetness", sel("sweet", ["Dry", "Off-dry / semi-sweet", "Sweet"]))}
-    ${F.abv ? `<div class="status">Alcohol on the label: ${F.abv}%</div>` : ""}
+    ${F.abv ? `<div class="status">Alcohol on the label: ${F.abv}%</div>` : ""}${communityNote()}
     <div style="margin-top:10px"><button class="btn solid" id="snapFind">Find this wine</button>
     ${SNAP.img ? `<label class="btn">📷 Add the back label<input type="file" accept="image/*" capture="environment" id="snapBack" hidden></label>` : `<label class="btn">📷 Snap the label too<input type="file" accept="image/*" capture="environment" id="snapFile2" hidden></label>`}
     ${!SNAP.barcode ? `<button class="btn" id="bcLive2">▥ Add the barcode</button>` : ""}
@@ -1239,12 +1278,13 @@ function viewSnap() {
   const bg = document.getElementById("bcGo"); if (bg) bg.onclick = () => useBarcode(document.getElementById("bcType").value);
   const bk = document.getElementById("snapBack"); if (bk) bk.onchange = e => onPhoto(e.target.files[0], true);
   const fd = document.getElementById("snapFind"); if (fd) fd.onclick = () => findWine(true);
-  document.getElementById("snapRead").onclick = () => { SNAP.text = document.getElementById("snapText").value; SNAP.lines = SNAP.text.split(/\n/).map((t, i) => ({text: t.trim(), conf: 90, h: 0, y: i, pass: 0})).filter(l => l.text);
+  document.getElementById("snapRead").onclick = async () => { SNAP.text = document.getElementById("snapText").value; SNAP.lines = SNAP.text.split(/\n/).map((t, i) => ({text: t.trim(), conf: 90, h: 0, y: i, pass: 0})).filter(l => l.text);
     const keep = Object.keys(SNAP.src || {}).filter(k => ["barcode", "remembered"].includes(SNAP.src[k]));
     const F0 = {}, f0 = {}, s0 = {}; keep.forEach(k => { F0[k] = SNAP.fields[k]; f0[k] = true; s0[k] = SNAP.src[k]; });
     const sameBottle = keep.length > 0;   // text added to a barcode/AI read of the same bottle
     if (!sameBottle) { SNAP.recId = null; SNAP.notes = null; SNAP.notesKey = null; SNAP.wiki = null; SNAP.topics = []; SNAP.topicsKey = null; SNAP.aiInfo = null; if (!SNAP.img) SNAP.thumb = null; }
-    SNAP.fields = F0; SNAP.found = f0; SNAP.src = s0; SNAP.edited = new Set(); applyExtract(); findWine(); };
+    if (!sameBottle) { SNAP.community = null; SNAP.commAgree = null; }
+    SNAP.fields = F0; SNAP.found = f0; SNAP.src = s0; SNAP.edited = new Set(); applyExtract(); await communityLookup(false); findWine(); };
   wireActions();
   pg.querySelectorAll("[data-f]").forEach(el => el.onchange = () => { readForm(); const m = document.getElementById("mk-" + el.dataset.f); if (m) m.innerHTML = mark(el.dataset.f); });
   const wg = document.getElementById("wikiGo"); if (wg) wg.onclick = () => wineryLookup(document.getElementById("wikiLine").value, F.grape || "");
@@ -1289,6 +1329,8 @@ function viewBottles() {
           <button class="btn" data-del="${b.id}" style="padding:3px 10px">${mode === "history" ? "Remove" : "✕"}</button></div></div></div>`; }).join("")
       : mode === "map" ? "" : `<p class="status">${empty}</p>`}
     ${householdHTML()}
+    ${AI.url ? `<div class="hhbox"><div class="k">CELLAR COMMUNITY</div><label style="display:flex;gap:10px;align-items:flex-start;font-size:15px"><input type="checkbox" id="commOn" ${communityOn() ? "checked" : ""} style="width:22px;height:22px;margin-top:2px">
+      <span>Help others identify bottles. When you add a bottle to your cellar or wishlist, share just its facts (winery, grape, region, color, sweetness, barcode). Never your name, cellar, notes or anything personal.</span></label></div>` : ""}
     <div style="margin-top:14px"><button class="btn" id="bExport">Back up (download)</button><label class="btn">Restore from backup<input type="file" accept="application/json" id="bImport" hidden></label></div>
     <div class="status">Saved on this device. Use Back up to move your list to another phone.</div>`;
   const upd = (id, fn) => { patchRecord(id, fn); viewBottles(); };
@@ -1306,6 +1348,7 @@ function viewBottles() {
     document.getElementById("mapList").innerHTML = `<div class="flab2">${esc(k === "United States of America" ? "United States" : k)}</div>` + bs.map(b => `<div class="tnote" data-open="${b.id}" style="cursor:pointer"><b>${esc(b.name)}${b.vintage ? " " + b.vintage : ""}</b>${b.qty ? ` <span class="m">× ${b.qty}</span>` : ""}</div>`).join("");
     document.querySelectorAll("#mapList [data-open]").forEach(o => o.onclick = () => { const b = loadBottles().find(y => y.id == o.dataset.open); if (b && b.wineId) { S.sel = {type: "wine", id: b.wineId}; S.vintage = b.vintage; S.vintageFor = b.wineId; render(); if (innerWidth < 900) panel.scrollIntoView({behavior: "smooth"}); } }); });
   wireHousehold();
+  const co = document.getElementById("commOn"); if (co) co.onchange = () => setJ(COMMKEY, co.checked);
   pg.querySelectorAll("[data-loc]").forEach(x => x.onchange = () => patchRecord(x.dataset.loc, b => { b.loc = x.value; }));
   pg.querySelectorAll("[data-share]").forEach(x => x.onclick = () => shareCard(loadBottles().find(b => b.id == x.dataset.share)));
   pg.querySelectorAll("[data-del]").forEach(x => x.onclick = () => {
