@@ -1,4 +1,4 @@
-// Cellar · wine-snap
+// Cellar · wine-snap  (version 2: label reading, bottle notes, dinner pairing)
 // A tiny, private middleman between the Cellar website and Google's Gemini API.
 // It keeps the Gemini key secret (stored as a Supabase secret, never in the website),
 // sends Gemini the label photo(s), and returns the details as tidy JSON.
@@ -83,12 +83,48 @@ const SCHEMA = {
   required: ["is_wine", "label", "confidence"],
 };
 
-async function callGemini(model: string, parts: unknown[]) {
+const NOTES_PROMPT = `You are a warm, precise sommelier writing a short "at a glance" panel about ONE specific wine for a wine-lover's app.
+You get the producer, wine name, grape, place and vintage (some may be missing) plus the general style it belongs to.
+- If you genuinely know this producer/wine, describe THIS wine (known=true). If not, set known=false and describe what a bottle like this typically offers, saying so plainly.
+- Never invent awards, scores, prices, owners or history. If unsure about a fact, leave it out.
+- headline: one sentence, like a search snippet. taste: 3-6 short tasting notes. food: 3-5 specific dishes. serve: one short tip (temperature/decanting/glass).
+- producer: 1-2 sentences about the producer only if known, else empty.
+Return only JSON.`;
+const NOTES_SCHEMA = {
+  type: "OBJECT",
+  properties: {
+    known: { type: "BOOLEAN" },
+    headline: { type: "STRING" },
+    taste: { type: "ARRAY", items: { type: "STRING" } },
+    food: { type: "ARRAY", items: { type: "STRING" } },
+    serve: { type: "STRING", nullable: true },
+    producer: { type: "STRING", nullable: true },
+    confidence: { type: "STRING", enum: ["high", "medium", "low"] },
+  },
+  required: ["known", "headline", "taste", "food", "confidence"],
+};
+const PAIR_PROMPT = `You are a friendly expert sommelier. The user tells you what they're having for dinner.
+Pick the 3 best wine STYLES from the numbered CATALOG (use their exact ids), best first, and explain each in one or two plain, warm sentences (why it works with this dish: acidity, tannin, weight, sweetness vs spice, etc.).
+If the user's CELLAR list is not empty, also pick up to 2 bottles from it that would work (exact ids), with a short why; if none fit, return an empty list.
+Add one "avoid" sentence (what would clash) and one practical tip. Keep it encouraging and simple. Only use ids that appear in the lists. Return only JSON.`;
+const PAIR_SCHEMA = {
+  type: "OBJECT",
+  properties: {
+    dish: { type: "STRING" },
+    picks: { type: "ARRAY", items: { type: "OBJECT", properties: { id: { type: "STRING" }, why: { type: "STRING" } }, required: ["id", "why"] } },
+    cellar_picks: { type: "ARRAY", items: { type: "OBJECT", properties: { id: { type: "STRING" }, why: { type: "STRING" } }, required: ["id", "why"] } },
+    avoid: { type: "STRING", nullable: true },
+    tip: { type: "STRING", nullable: true },
+  },
+  required: ["dish", "picks"],
+};
+
+async function callGemini(model: string, parts: unknown[], schema: unknown = SCHEMA, search = SEARCH) {
   const body: Record<string, unknown> = {
     contents: [{ role: "user", parts }],
-    generationConfig: SEARCH ? { temperature: 0.1 } : { temperature: 0.1, responseMimeType: "application/json", responseSchema: SCHEMA },
+    generationConfig: search ? { temperature: 0.2 } : { temperature: 0.2, responseMimeType: "application/json", responseSchema: schema },
   };
-  if (SEARCH) body.tools = [{ google_search: {} }];
+  if (search) body.tools = [{ google_search: {} }];
   const r = await fetch(`${BASE}/v1beta/models/${model}:generateContent`, {
     method: "POST",
     headers: { "content-type": "application/json", "x-goog-api-key": KEY },
@@ -113,8 +149,32 @@ Deno.serve(async (req) => {
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? "anon";
   if (!allowed(ip)) return new Response(JSON.stringify({ error: "Too many scans this hour. Try again later." }), { status: 429, headers: H });
 
-  let input: { images?: string[]; text?: string };
+  let input: { task?: string; images?: string[]; text?: string; wine?: Record<string, unknown>; dish?: string; catalog?: { id: string; name: string }[]; cellar?: { id: string; name: string }[] };
   try { input = await req.json(); } catch { return new Response(JSON.stringify({ error: "Bad JSON" }), { status: 400, headers: H }); }
+  const task = input.task ?? "read";
+  if (task === "notes" || task === "pair") {
+    let parts: unknown[], schema: unknown;
+    if (task === "notes") {
+      const w = JSON.stringify(input.wine ?? {}).slice(0, 1500);
+      parts = [{ text: NOTES_PROMPT + (SEARCH ? "\nYou may search the web; respond with ONLY the JSON object." : "") }, { text: "Wine: " + w }]; schema = NOTES_SCHEMA;
+    } else {
+      const dish = String(input.dish ?? "").slice(0, 300);
+      if (!dish) return new Response(JSON.stringify({ error: "Tell me what's for dinner" }), { status: 400, headers: H });
+      const cat = (input.catalog ?? []).slice(0, 260).map((c) => `${c.id}: ${c.name}`).join("\n").slice(0, 20000);
+      const cel = (input.cellar ?? []).slice(0, 80).map((c) => `${c.id}: ${c.name}`).join("\n").slice(0, 6000);
+      parts = [{ text: PAIR_PROMPT }, { text: "Dinner: " + dish }, { text: "CATALOG:\n" + cat }, { text: "CELLAR:\n" + (cel || "(empty)") }]; schema = PAIR_SCHEMA;
+    }
+    const useSearch = SEARCH && task === "notes";
+    let r = await callGemini(MODEL, parts, schema, useSearch), used = MODEL;
+    if (r.status === 429 || r.status === 503 || r.status === 404) { r = await callGemini(FALLBACK, parts, schema, useSearch); used = FALLBACK; }
+    if (!r.ok) return new Response(JSON.stringify({ error: r.status === 429 ? "The free AI quota is used up for now." : "The AI couldn't answer this one.", status: r.status }), { status: 502, headers: H });
+    const j = await r.json(); const cand = j.candidates?.[0];
+    const out = parseJSON((cand?.content?.parts ?? []).map((p: { text?: string }) => p.text ?? "").join(""));
+    if (!out) return new Response(JSON.stringify({ error: "The AI reply couldn't be understood." }), { status: 502, headers: H });
+    const sources = (cand?.groundingMetadata?.groundingChunks ?? []).map((c: { web?: { uri?: string; title?: string } }) => c.web).filter(Boolean).slice(0, 5);
+    return new Response(JSON.stringify({ ...out, model: used, web_search: useSearch, sources }), { headers: H });
+  }
+
   const images = (input.images ?? []).slice(0, 2).filter((s) => typeof s === "string" && s.length < 2_500_000);
   const text = (input.text ?? "").slice(0, 2000);
   if (!images.length && !text) return new Response(JSON.stringify({ error: "Send a photo or text" }), { status: 400, headers: H });
