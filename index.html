@@ -93,6 +93,9 @@ svg text{font-family:Inter,sans-serif;cursor:pointer;user-select:none}
 .livetxt{color:#F2E3C2;font-family:Inter,sans-serif;font-size:15px;margin:14px 0;text-align:center}.livebtns{display:flex;gap:8px}
 .sttip{display:none;background:#FFF7E6;border:1px solid var(--gold2);border-radius:10px;padding:10px 12px;font-size:14px;color:var(--ink);margin-bottom:8px;line-height:1.4}
 .snapbtns{display:flex;flex-wrap:wrap;gap:10px}.bigbtn.alt2{background:#fff;color:var(--ox);border:2px solid var(--ox)}
+.learn{margin-top:14px;border-top:1px solid var(--rule);padding-top:10px}
+.looklinks{margin:6px 0 4px}.looklinks .k,.wiki .k{font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--gold)}
+.looklinks .btn{text-decoration:none}.wiki.topic summary{cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--ox)}
 .thumbs{display:flex;gap:8px;flex-wrap:wrap}.thumbs .snapimg{max-height:220px}
 .rawbox{margin:10px 0;font-family:Inter,sans-serif;font-size:13px;color:var(--muted)}.rawbox summary{cursor:pointer;margin-bottom:6px}
 .page{background:#fff;border:1px solid var(--rule);border-radius:14px;padding:18px 20px;display:none}
@@ -409,24 +412,99 @@ function loadScript(src) { return new Promise((ok, no) => { const s = document.c
 function shrink(file, max, q) { return new Promise(ok => { const img = new Image(); img.onload = () => { const k = Math.min(1, max / Math.max(img.width, img.height));
   const c = document.createElement("canvas"); c.width = Math.round(img.width * k); c.height = Math.round(img.height * k); c.getContext("2d").drawImage(img, 0, 0, c.width, c.height); ok(c.toDataURL("image/jpeg", q)); }; img.src = URL.createObjectURL(file); }); }
 
-async function wikiLookup(name) {
-  const box = document.getElementById("wikiBox"); if (box) box.innerHTML = `<div class="status">Looking up “${esc(name)}” on Wikipedia…</div>`;
-  const H = {headers: {"Api-User-Agent": "CellarLyceum/1.0 (personal use)"}};
+// ---------------------------------------------------------------- learning more: Wikipedia, Wikidata and one-tap links
+const WH = {headers: {"Api-User-Agent": "CellarLyceum/1.0 (personal wine app)"}};
+const WINEY = /\b(wine|wines|winery|wineries|vineyard|vineyards|winemaker|winemaking|vintner|cellars|grape|grapes|appellation|bodega|ch[aâ]teau|domaine|cantina|weingut)\b/i;
+async function wpSearch(q, n) { const j = await (await fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=${n}&format=json&origin=*&srsearch=${encodeURIComponent(q)}`, WH)).json();
+  return ((j.query && j.query.search) || []).map(h => h.title); }
+async function wpSummary(t) { const sm = await (await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(t.replace(/ /g, "_"))}`, WH)).json();
+  if (!sm || !sm.title) throw new Error("no page");
+  return {title: sm.title, summary: sm.extract || "", url: (sm.content_urls && sm.content_urls.desktop && sm.content_urls.desktop.page) || `https://en.wikipedia.org/wiki/${encodeURIComponent(t)}`, qid: sm.wikibase_item || null, type: sm.type}; }
+async function wdFacts(qid) {
+  const j = await (await fetch(`https://www.wikidata.org/w/api.php?action=wbgetentities&ids=${qid}&props=claims&format=json&origin=*`)).json();
+  const cl = (j.entities && j.entities[qid] && j.entities[qid].claims) || {};
+  const val = p => { const c = cl[p] && cl[p][0]; return c && c.mainsnak && c.mainsnak.datavalue ? c.mainsnak.datavalue.value : null; };
+  const ids = [...new Set(["P131", "P276", "P159", "P17"].map(val).filter(v => v && v.id).map(v => v.id))];
+  const labels = {};
+  if (ids.length) { const L = await (await fetch(`https://www.wikidata.org/w/api.php?action=wbgetentities&ids=${ids.join("|")}&props=labels&languages=en&format=json&origin=*`)).json();
+    for (const k in (L.entities || {})) { const e = L.entities[k]; labels[k] = e.labels && e.labels.en && e.labels.en.value; } }
+  const lab = p => { const v = val(p); return v && v.id ? labels[v.id] : null; };
+  const inc = val("P571"), site = val("P856");
+  return {founded: inc && inc.time ? inc.time.slice(1, 5).replace(/^0+/, "") : null,
+          location: [...new Set([lab("P131") || lab("P276") || lab("P159"), lab("P17")].filter(Boolean))].join(", "),
+          website: typeof site === "string" ? site : null};
+}
+const WCACHE = {};
+async function wineryLookup(name, hint) {
+  name = (name || "").trim(); if (!name) return;
+  SNAP.wiki = {loading: true, q: name}; updateWiki();
   try {
-    const sr = await (await fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&srlimit=1&format=json&origin=*&srsearch=${encodeURIComponent(name + " wine")}`, H)).json();
-    const hit = sr.query && sr.query.search && sr.query.search[0];
-    if (!hit) { SNAP.wiki = {none: true, q: name}; viewSnap(); return; }
-    const sm = await (await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(hit.title)}`, H)).json();
-    SNAP.wiki = {title: sm.title || hit.title, summary: sm.extract || "", url: (sm.content_urls && sm.content_urls.desktop && sm.content_urls.desktop.page) || `https://en.wikipedia.org/wiki/${encodeURIComponent(hit.title)}`};
+    if (!WCACHE[name]) {
+      const titles = [];
+      for (const q of [`${name} winery`, `${name} wine ${hint || ""}`.trim(), name]) {
+        (await wpSearch(q, 3)).forEach(t => { if (!titles.includes(t)) titles.push(t); }); if (titles.length >= 5) break; }
+      const sums = []; for (const t of titles.slice(0, 5)) { try { sums.push(await wpSummary(t)); } catch (e) {} }
+      const nm = plain(name).split(/\s+/).filter(w => w.length > 2);
+      sums.forEach(s => s.score = (WINEY.test(s.summary) ? 3 : 0) + 2 * nm.filter(w => plain(s.title + " " + s.summary.slice(0, 160)).includes(w)).length + (s.type === "disambiguation" ? -6 : 0));
+      sums.sort((a, b) => b.score - a.score);
+      WCACHE[name] = sums;
+    }
+    const sums = WCACHE[name], best = sums[0];
+    if (!best || best.score < 5) SNAP.wiki = {none: true, q: name, others: sums.filter(s => s.score >= 3).slice(0, 3)};
+    else { SNAP.wiki = Object.assign({q: name}, best, {others: sums.slice(1).filter(s => s.score >= 3).slice(0, 3)});
+      if (best.qid) { try { SNAP.wiki.facts = await wdFacts(best.qid); } catch (e) {} } }
   } catch (e) { SNAP.wiki = {error: true, q: name}; }
-  viewSnap();
+  updateWiki();
+}
+async function pickWiki(title) {
+  const o = ((SNAP.wiki && SNAP.wiki.others) || []).find(s => s.title === title); if (!o) return;
+  const rest = [SNAP.wiki, ...SNAP.wiki.others].filter(s => s && s.title && s.title !== title && !s.none);
+  SNAP.wiki = Object.assign({q: SNAP.wiki.q}, o, {others: rest.map(({facts, others, ...r}) => r).slice(0, 3)}); updateWiki();
+  if (o.qid) { try { SNAP.wiki.facts = await wdFacts(o.qid); } catch (e) {} updateWiki(); }
+}
+const TCACHE = {};
+async function topicLookups(F) {
+  const want = [F.grape && !/blend/i.test(F.grape) ? [[F.grape], F.grape] : null, F.place ? [[`${F.place} wine`, `${F.place} (wine)`, F.place], F.place] : null].filter(Boolean);
+  const key = want.map(w => w[0][0]).join("|"); if (SNAP.topicsKey === key) return; SNAP.topicsKey = key; SNAP.topics = [];
+  for (const [tries, label] of want) {
+    for (const t of tries) {
+      if (!(t in TCACHE)) { try { const s = await wpSummary(t); TCACHE[t] = s && s.summary && s.type !== "disambiguation" && (tries.length === 1 || t !== label || WINEY.test(s.summary)) ? s : null; } catch (e) { TCACHE[t] = null; } }
+      if (TCACHE[t]) { SNAP.topics.push(Object.assign({label}, TCACHE[t])); break; }
+    } }
+  updateWiki();
+}
+function lookQuery(F) { return [F.producer, F.grape && !plain(F.producer || "").includes(plain(F.grape)) ? F.grape : ""].filter(Boolean).join(" ") || [F.grape, F.place].filter(Boolean).join(" "); }
+function linksHTML(F) {
+  const q = lookQuery(F || {}); if (!q) return "";
+  const e = encodeURIComponent, L = [["Vivino", `https://www.vivino.com/search/wines?q=${e(q)}`], ["Wine-Searcher", `https://www.wine-searcher.com/find/${e(q).replace(/%20/g, "+")}`],
+    ["CellarTracker", `https://www.cellartracker.com/list.asp?Table=List&szSearch=${e(q)}`], ["Google", `https://www.google.com/search?q=${e(q + " wine")}`]];
+  return `<div class="looklinks"><div class="k">RATINGS, PRICES &amp; REVIEWS</div><div>${L.map(([n, u]) => `<a class="btn" href="${u}" target="_blank" rel="noopener">${n} ↗</a>`).join("")}</div>
+    <div class="status">Opens a search for “${esc(q)}”. These sites can't be read automatically, so they open in a new tab.</div></div>`;
 }
 function wikiHTML(wk) {
   if (!wk) return "";
-  if (wk.none) return `<div class="wiki">No Wikipedia article found for “${esc(wk.q)}”. Try another line from the label.</div>`;
+  if (wk.loading) return `<div class="wiki"><div class="status">Looking up “${esc(wk.q)}” on Wikipedia…</div></div>`;
   if (wk.error) return `<div class="wiki">Couldn't reach Wikipedia right now. Try again in a moment.</div>`;
-  return `<div class="wiki"><div class="k">ABOUT THE WINERY · FROM WIKIPEDIA</div><div class="matchname" style="font-size:20px">${esc(wk.title)}</div><p style="margin:4px 0">${esc(wk.summary)}</p>
-   <div class="status">Not part of the verified register. Check it's the right winery. <a href="${esc(wk.url)}" target="_blank" rel="noopener">Read on Wikipedia</a> · text CC BY-SA 4.0</div></div>`;
+  const others = (wk.others || []).length ? `<div class="status" style="margin-top:6px">${wk.none ? "Possible matches" : "Not the right one? Try"}: ${wk.others.map(o => `<a href="#" data-wpick="${esc(o.title)}">${esc(o.title)}</a>`).join(" · ")}</div>` : "";
+  if (wk.none) return `<div class="wiki">We couldn't find a Wikipedia article for the winery “${esc(wk.q)}”. Smaller wineries often don't have one; the links above are the best next step.${others}</div>`;
+  const f = wk.facts || {}, facts = [f.location && `📍 ${esc(f.location)}`, f.founded && `Founded ${esc(f.founded)}`, f.website && `<a href="${esc(f.website)}" target="_blank" rel="noopener">Website ↗</a>`].filter(Boolean).join(" · ");
+  return `<div class="wiki"><div class="k">ABOUT THE WINERY · WIKIPEDIA${facts ? " &amp; WIKIDATA" : ""}</div><div class="matchname" style="font-size:20px">${esc(wk.title)}</div>
+   ${facts ? `<div class="status" style="margin:2px 0 4px">${facts}</div>` : ""}<p style="margin:4px 0">${esc(wk.summary)}</p>
+   <div class="status">Not part of the verified register, so check it's the right winery. <a href="${esc(wk.url)}" target="_blank" rel="noopener">Read on Wikipedia</a> · text CC BY-SA 4.0</div>${others}</div>`;
+}
+function topicsHTML(ts) {
+  return (ts || []).map(t => `<details class="wiki topic"><summary><span class="k">BACKGROUND · ${esc(t.label.toUpperCase())}</span> ${esc(t.title)}</summary><p style="margin:6px 0">${esc(t.summary)}</p>
+    <div class="status"><a href="${esc(t.url)}" target="_blank" rel="noopener">Read on Wikipedia</a> · CC BY-SA 4.0</div></details>`).join("");
+}
+function updateWiki() {
+  const box = document.getElementById("wikiBox"); if (box) box.innerHTML = wikiHTML(SNAP.wiki);
+  const tb = document.getElementById("topicBox"); if (tb) tb.innerHTML = topicsHTML(SNAP.topics);
+  document.querySelectorAll("[data-wpick]").forEach(a => a.onclick = e => { e.preventDefault(); pickWiki(a.dataset.wpick); });
+}
+function autoLearn() {
+  const F = SNAP.fields || {};
+  if (F.producer && (!SNAP.wiki || SNAP.wiki.q !== F.producer)) wineryLookup(F.producer, F.grape || "");
+  topicLookups(F);
 }
 // ---------------------------------------------------------------- label reading
 const TESS = {js: "https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js", worker: "https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/worker.min.js",
@@ -532,7 +610,7 @@ function extract(lines) {
   const score = g => (g.h || 0) * (1 + .2 * (Math.min(4, g.t.split(" ").length) - 1));
   let cand = groups.filter(g => g.t).sort((a, b) => score(b) - score(a) || b.c - a.c);
   cand = cand.filter(g => !cand.some(o => o !== g && o.t.length > g.t.length && plain(o.t).includes(plain(g.t)) && score(o) >= score(g) * .8));
-  f.producers = [...new Set(cand.map(l => l.t.split(" ").slice(0, 6).join(" ").replace(/\b(\w)(\w*)/g, (m, a, b) => a.toUpperCase() + b.toLowerCase())))].slice(0, 6);
+  f.producers = [...new Set(cand.map(l => l.t.split(" ").slice(0, 6).join(" ").split(" ").map(w => w ? w[0].toUpperCase() + w.slice(1).toLowerCase() : w).join(" ")))].slice(0, 6);
   if (f.producers.length) { f.producer = f.producers[0]; found.producer = true; }
   return {f, found};
 }
@@ -747,8 +825,10 @@ function viewSnap() {
         <div>${near.map(n => `<button class="btn" data-pickwine="${esc(n.id)}">${esc(n.name)}</button>`).join("")}</div>
         <div style="margin-top:10px"><button class="btn solid" id="snapSave">${SNAP.saved ? "✓ Saved to My Bottles" : "Save to My Bottles"}</button></div></div>`;
     }
-    const q = F.producer || F.grape || "";
-    res += `<label class="lab">About the winery</label><input type="text" id="wikiLine" value="${esc(q)}" placeholder="Winery name"> <button class="btn" id="wikiGo">Look up on Wikipedia</button><div id="wikiBox">${wikiHTML(SNAP.wiki)}</div>`;
+    res += `<div class="learn"><div class="flab2">Learn more about this bottle</div>${linksHTML(F)}
+      <div id="wikiBox">${wikiHTML(SNAP.wiki)}</div>
+      <div class="status" style="margin-top:6px">Wrong winery? Search by name: <input type="text" id="wikiLine" value="${esc(F.producer || "")}" placeholder="Winery name" style="max-width:200px"> <button class="btn" id="wikiGo">Search</button></div>
+      <div id="topicBox">${topicsHTML(SNAP.topics)}</div></div>`;
   }
   pg.innerHTML = `<h2>Snap a bottle</h2>
     <p>Photograph the front label, the barcode, or both. The page reads them on your device (no account, no keys), fills in what it can, and asks you for anything it isn't sure about.</p>
@@ -781,7 +861,8 @@ function viewSnap() {
     SNAP.fields = F0; SNAP.found = f0; SNAP.src = s0; SNAP.edited = new Set(); applyExtract(); findWine(); };
   const sv = document.getElementById("snapSave"); if (sv) sv.onclick = saveScan;
   pg.querySelectorAll("[data-f]").forEach(el => el.onchange = () => { readForm(); const m = document.getElementById("mk-" + el.dataset.f); if (m) m.innerHTML = mark(el.dataset.f); });
-  const wg = document.getElementById("wikiGo"); if (wg) wg.onclick = () => wikiLookup(document.getElementById("wikiLine").value);
+  const wg = document.getElementById("wikiGo"); if (wg) wg.onclick = () => wineryLookup(document.getElementById("wikiLine").value, F.grape || "");
+  updateWiki(); if (SNAP.match !== undefined && !SNAP.busy) autoLearn();
   pg.querySelectorAll("[data-pickwine]").forEach(b => b.onclick = () => { SNAP.match = b.dataset.pickwine; SNAP.level = "exact"; S.sel = {type: "wine", id: SNAP.match}; S.vintage = SNAP.vintage; S.vintageFor = SNAP.match; render(); });
 }
 function viewSnapKeep() { const y = scrollY; viewSnap(); scrollTo(0, y); }
@@ -818,7 +899,7 @@ function viewBottles() {
   pg.querySelectorAll("[data-del]").forEach(x => x.onclick = () => { if (confirm("Remove this bottle from the list?")) { const l = loadBottles().filter(b => b.id != x.dataset.del); saveBottles(l); viewBottles(); } });
   pg.querySelectorAll("[data-open]").forEach(x => x.onclick = () => { const b = loadBottles().find(y => y.id == x.dataset.open); if (!b) return;
     if (b.wineId) { S.sel = {type: "wine", id: b.wineId}; S.vintage = b.vintage; S.vintageFor = b.wineId; render(); if (innerWidth < 900) panel.scrollIntoView({behavior: "smooth"}); }
-    else if (b.wiki) { panel.innerHTML = `<h2>${esc(b.name)}</h2>${wikiHTML(b.wiki)}`; } });
+    else { panel.innerHTML = `<h2>${esc(b.name)}</h2>${linksHTML(b.fields || {producer: b.name})}${b.wiki ? wikiHTML(b.wiki) : ""}`; } });
   document.getElementById("bExport").onclick = () => { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([JSON.stringify(loadBottles())], {type: "application/json"})); a.download = "cellar-lyceum-bottles.json"; a.click(); };
   document.getElementById("bImport").onchange = async e => { try { const l = JSON.parse(await e.target.files[0].text()); if (Array.isArray(l)) { saveBottles(l); viewBottles(); } } catch (x) { alert("That file isn't a Cellar Lyceum backup."); } };
 }
