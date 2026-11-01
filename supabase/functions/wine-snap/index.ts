@@ -1,4 +1,4 @@
-// Cellar · wine-snap  (version 4: label reading, bottle notes, dinner pairing, shared household cellar, community bottle facts)
+// Cellar · wine-snap  (version 5: label reading, bottle notes, guided dinner pairing, shared household cellar, community bottle facts)
 import postgres from "npm:postgres@3.4.5";
 // A tiny, private middleman between the Cellar website and Google's Gemini API.
 // It keeps the Gemini key secret (stored as a Supabase secret, never in the website),
@@ -190,6 +190,11 @@ const NOTES_SCHEMA = {
   },
   required: ["known", "headline", "taste", "food", "confidence"],
 };
+const GUIDED_PROMPT = `You are a friendly expert sommelier. The user described their meal and picked details (sauce, toppings, cheeses...).
+You get CANDIDATES: wine styles already vetted by a fact-checked pairing guide for those details, each with the guide's reason.
+- Choose the 3 best for this exact meal from the CANDIDATES (use exact ids), best first, and write one or two warm, plain sentences each explaining why it works with THIS meal (acidity, tannin, weight, sweetness vs spice, fat, salt). Stay consistent with the guide's reasons; do not contradict them.
+- If the CELLAR list is not empty, pick up to 2 of the user's bottles (exact ids) that suit the meal, with a short why; else return an empty list.
+- Add one "avoid" sentence and one practical serving tip. Only use ids from the lists. Return only JSON.`;
 const PAIR_PROMPT = `You are a friendly expert sommelier. The user tells you what they're having for dinner.
 Pick the 3 best wine STYLES from the numbered CATALOG (use their exact ids), best first, and explain each in one or two plain, warm sentences (why it works with this dish: acidity, tannin, weight, sweetness vs spice, etc.).
 If the user's CELLAR list is not empty, also pick up to 2 bottles from it that would work (exact ids), with a short why; if none fit, return an empty list.
@@ -237,7 +242,7 @@ Deno.serve(async (req) => {
   const peek = req.headers.get("x-cellar-task") ?? "";
   if (!peek.startsWith("household_") && !peek.startsWith("community_get") && !allowed(ip)) return new Response(JSON.stringify({ error: "Too many scans this hour. Try again later." }), { status: 429, headers: H });
 
-  let input: { task?: string; keys?: unknown[]; device?: string; fields?: Record<string, unknown>; code?: string; name?: string; bottles?: Rec[]; tombs?: Record<string, number>; images?: string[]; text?: string; wine?: Record<string, unknown>; dish?: string; catalog?: { id: string; name: string }[]; cellar?: { id: string; name: string }[] };
+  let input: { candidates?: { id: string; name: string; why?: string }[]; details?: string; task?: string; keys?: unknown[]; device?: string; fields?: Record<string, unknown>; code?: string; name?: string; bottles?: Rec[]; tombs?: Record<string, number>; images?: string[]; text?: string; wine?: Record<string, unknown>; dish?: string; catalog?: { id: string; name: string }[]; cellar?: { id: string; name: string }[] };
   try { input = await req.json(); } catch { return new Response(JSON.stringify({ error: "Bad JSON" }), { status: 400, headers: H }); }
   const task = input.task ?? "read";
   if (task.startsWith("community_")) {
@@ -258,9 +263,17 @@ Deno.serve(async (req) => {
     } else {
       const dish = String(input.dish ?? "").slice(0, 300);
       if (!dish) return new Response(JSON.stringify({ error: "Tell me what's for dinner" }), { status: 400, headers: H });
+      const cands = (input.candidates ?? []).slice(0, 16);
+      if (cands.length) {
+        const cel = (input.cellar ?? []).slice(0, 80).map((c) => `${c.id}: ${c.name}`).join("\n").slice(0, 6000);
+        const cl = cands.map((c) => `${c.id}: ${c.name}${c.why ? " | guide: " + String(c.why).slice(0, 220) : ""}`).join("\n");
+        parts = [{ text: GUIDED_PROMPT }, { text: "Meal: " + dish + (input.details ? "\nDetails: " + String(input.details).slice(0, 400) : "") }, { text: "CANDIDATES:\n" + cl }, { text: "CELLAR:\n" + (cel || "(empty)") }];
+        schema = PAIR_SCHEMA;
+      } else {
       const cat = (input.catalog ?? []).slice(0, 260).map((c) => `${c.id}: ${c.name}`).join("\n").slice(0, 20000);
       const cel = (input.cellar ?? []).slice(0, 80).map((c) => `${c.id}: ${c.name}`).join("\n").slice(0, 6000);
       parts = [{ text: PAIR_PROMPT }, { text: "Dinner: " + dish }, { text: "CATALOG:\n" + cat }, { text: "CELLAR:\n" + (cel || "(empty)") }]; schema = PAIR_SCHEMA;
+      }
     }
     const useSearch = SEARCH && task === "notes";
     let r = await callGemini(MODEL, parts, schema, useSearch), used = MODEL;
