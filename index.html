@@ -123,6 +123,8 @@ svg text{font-family:Inter,sans-serif;cursor:pointer;user-select:none}
 .tnote{border-bottom:1px solid var(--rule);padding:6px 0;font-size:15px}
 .cmap{width:100%;height:auto;margin:8px 0;border-radius:12px;background:#fff}.mdot{cursor:pointer}
 @media (max-width:900px){.panel.mhide{display:none}}
+.tdiag{width:100%;max-width:420px;height:auto;display:block;margin:6px auto 4px;background:#FBF7EE;border-radius:12px}
+.tbody p{font-size:17px;line-height:1.45;margin:6px 0 10px}.tbody .fl{font-family:Inter,sans-serif;font-size:13px;font-weight:700;margin-bottom:5px}
 .saybox{background:#FFFBF2;border:1px solid var(--gold2);border-radius:12px;padding:10px 12px;margin:4px 0}
 .sayl{display:grid;grid-template-columns:62px 1fr;gap:8px;font-size:16px;line-height:1.4;margin:3px 0}.sayl b{font-family:Inter,sans-serif;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ox);padding-top:4px}
 .sw{border-bottom:1.5px dotted var(--gold);cursor:pointer}.saydef{font-family:Inter,sans-serif;font-size:12.5px;color:var(--muted);margin-top:6px;min-height:18px}
@@ -1173,7 +1175,7 @@ function openTasting(id, opened) {
       <div class="frow"><div class="fl">Date</div><input type="date" id="tDate" value="${new Date().toISOString().slice(0, 10)}"></div>
       <div class="frow"><div class="fl">Shared with</div><input type="text" id="tWith" placeholder="e.g. Craig, the Smiths"></div>
       <div class="frow"><div class="fl">Notes</div><textarea id="tNote" rows="3" placeholder="What did you taste? What did you eat with it? Would you buy it again?" style="width:100%;font-size:16px"></textarea></div>
-      <button class="btn solid" id="tSave">Save note</button>${b.wineId ? ` <button class="btn" id="tGuide">✎ Describe it step by step</button>` : ""}
+      <button class="btn solid" id="tSave">Save note</button>${b.wineId ? ` <button class="btn" id="tGuide">🍷 Taste it step by step</button>` : ""}
       ${list.length ? `<div class="flab2">Earlier notes</div>${list.map(t => `<div class="tnote">${starsHTML(t.stars)} <span class="m">${esc(t.date || "")}${t.with ? " · with " + esc(t.with) : ""}</span>${t.note ? `<div>${esc(t.note)}</div>` : ""}</div>`).join("")}` : ""}</div>`;
     ov.querySelector("#tClose").onclick = () => ov.remove();
     const tg = ov.querySelector("#tGuide"); if (tg) tg.onclick = () => { ov.remove(); describeGlass(b.wineId, b.id); };
@@ -1326,7 +1328,7 @@ function sayHTML(w, vintage) {
   if (P.verdict) lines.push(["Verdict", esc(P.verdict)]);
   return `<div class="sec">Say it like a sommelier</div><div class="saybox">${lines.map(([k, v]) => `<div class="sayl"><b>${k}</b><span>${v}</span></div>`).join("")}
     <div class="saydef" id="sayDef">Tap any underlined word to see what it means.</div>
-    <button class="btn solid" data-describe="${esc(w.id)}" style="margin-top:8px">✎ Describe your glass</button></div>`;
+    <button class="btn solid" data-describe="${esc(w.id)}" style="margin-top:8px">🍷 Taste it step by step</button></div>`;
 }
 function wireSay(root) {
   (root || document).querySelectorAll(".sw").forEach(s => s.onclick = () => { const d = (root || document).querySelector("#sayDef"); if (d) d.innerHTML = `<b>${esc(s.dataset.def)}</b>: ${esc(defOf(s.dataset.def) || "a common tasting word.")}`; });
@@ -1335,56 +1337,150 @@ function wireSay(root) {
 // ---------------- the guided tasting
 const LOOKS = {white: ["Pale lemon-green", "Pale lemon", "Lemon", "Gold", "Deep gold", "Amber"], red: ["Purple", "Ruby", "Deep ruby", "Garnet", "Tawny", "Brick"],
   rose: ["Pale pink", "Salmon", "Onion skin", "Deep pink"], orange: ["Gold", "Amber", "Orange"]};
+// ---------------- Guided tasting: one step per screen, with diagrams (technique per Volume I, "Tasting Like a Sommelier")
+const WINE_FILL = w => ["lred", "mred", "fred"].includes(w.style) ? "#7A1F2E" : w.style === "rose" ? "#E8A0A4" : w.style === "orange" ? "#D98A3D" : w.style === "fort" ? "#7A3B1E" : w.style === "sweet" ? "#E0B13E" : "#EAD98A";
+const GLASS = (x, y, s, fill, tilt) => `<g transform="translate(${x},${y}) rotate(${tilt || 0}) scale(${s})">
+  <path d="M-34,-70 C-40,-30 -32,4 0,8 C32,4 40,-30 34,-70 Z" fill="#fff" stroke="#6E1E2B" stroke-width="2.5"/>
+  <path d="M-36.5,-40 C-36,-12 -26,4 0,6 C26,4 36,-12 36.5,-40 Z" fill="${fill}" opacity=".9"/>
+  <line x1="0" y1="8" x2="0" y2="52" stroke="#6E1E2B" stroke-width="3"/><ellipse cx="0" cy="54" rx="22" ry="5" fill="#fff" stroke="#6E1E2B" stroke-width="2.5"/></g>`;
+const SVGW = (inner, h) => `<svg viewBox="0 0 360 ${h || 200}" class="tdiag" role="img">${inner}</svg>`;
+const T_LABEL = (x, y, t, a) => `<text x="${x}" y="${y}" font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="#6E1E2B" text-anchor="${a || "start"}">${t}</text>`;
+const BOWL = "M-34,-70 C-40,-30 -32,4 0,8 C32,4 40,-30 34,-70 Z";
+const LEAD = (x1, y1, x2, y2) => `<path d="M${x1},${y1} L${x2},${y2}" stroke="#C9A55A" stroke-width="1.5" fill="none"/><circle cx="${x2}" cy="${y2}" r="3" fill="#C9A55A"/>`;
+const DIAG = {
+  pour: f => SVGW(`${GLASS(130, 120, 1.15, f)}<line x1="178" y1="74" x2="214" y2="74" stroke="#C9A55A" stroke-dasharray="3 3"/>${T_LABEL(218, 70, "about 1/3 full")}${T_LABEL(218, 85, "(2–3 oz)")}
+    ${LEAD(214, 150, 134, 160)}${T_LABEL(218, 146, "hold the stem,")}${T_LABEL(218, 161, "not the bowl")}`),
+  look: f => { const tf = "translate(185,104) rotate(-38)";
+    return SVGW(`<defs><clipPath id="bowlc"><path d="${BOWL}" transform="${tf}"/></clipPath></defs>
+    <rect x="70" y="150" width="220" height="40" rx="4" fill="#fff" stroke="#D8C7A2"/>${T_LABEL(180, 182, "white paper or napkin", "middle")}
+    <g transform="${tf}"><path d="${BOWL}" fill="#fff"/></g><rect x="0" y="86" width="360" height="200" fill="${f}" opacity=".9" clip-path="url(#bowlc)"/>
+    <g transform="${tf}"><path d="${BOWL}" fill="none" stroke="#6E1E2B" stroke-width="2.5"/><line x1="0" y1="8" x2="0" y2="48" stroke="#6E1E2B" stroke-width="3"/><ellipse cx="0" cy="50" rx="20" ry="5" fill="#fff" stroke="#6E1E2B" stroke-width="2.5"/></g>
+    ${LEAD(96, 44, 142, 88)}${T_LABEL(8, 30, "rim: the watery edge")}${T_LABEL(8, 45, "(hints at age)")}
+    ${LEAD(262, 50, 196, 104)}${T_LABEL(240, 36, "core: color")}${T_LABEL(240, 51, "and depth")}`); },
+  swirl: f => SVGW(`<rect x="90" y="184" width="180" height="6" rx="3" fill="#D8C7A2"/>${GLASS(180, 126, 1.05, f)}
+    <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#C9A55A"/></marker></defs>
+    <path d="M128,62 A55,16 0 1 0 232,62" fill="none" stroke="#C9A55A" stroke-width="2.5" marker-end="url(#ar)"/>
+    ${T_LABEL(8, 140, "base stays on")}${T_LABEL(8, 155, "the table; small")}${T_LABEL(8, 170, "circles, 5–10 sec")}`),
+  smell: f => SVGW(`<path d="M70,20 C80,42 84,58 80,74 L104,98 L84,102 C88,110 86,118 78,120 C84,126 82,134 74,136 C76,150 72,164 62,178" fill="none" stroke="#6E1E2B" stroke-width="2.5" stroke-linecap="round"/>
+    ${GLASS(250, 132, 1, f, -12)}<path d="M108,96 C150,92 180,80 214,66" stroke="#C9A55A" stroke-dasharray="4 4" fill="none" stroke-width="2"/>
+    <circle cx="150" cy="90" r="11" fill="#fff" stroke="#6E1E2B" stroke-width="2"/><text x="150" y="94" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#6E1E2B">1</text>
+    <circle cx="208" cy="58" r="11" fill="#fff" stroke="#6E1E2B" stroke-width="2"/><text x="208" y="62" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#6E1E2B">2</text>
+    ${T_LABEL(120, 20, "1 · gentle sniff, a few inches away")}${T_LABEL(120, 36, "2 · nose in the glass, short sniffs")}`),
+  sip: () => SVGW(`<path d="M128,40 C112,90 116,150 180,176 C244,150 248,90 232,40 C214,22 146,22 128,40 Z" fill="#F3D3D0" stroke="#6E1E2B" stroke-width="2.5"/>
+    <path d="M180,36 L180,160" stroke="#E2AFA9" stroke-width="2"/>
+    ${LEAD(112, 20, 180, 32)}${T_LABEL(8, 16, "alcohol: warmth")}${T_LABEL(8, 30, "in the throat")}
+    ${LEAD(104, 94, 132, 100)}${T_LABEL(8, 84, "acidity: a")}${T_LABEL(8, 98, "mouth-watering")}${T_LABEL(8, 112, "zing at the sides")}
+    ${LEAD(256, 94, 228, 100)}${T_LABEL(262, 84, "tannin: dry,")}${T_LABEL(262, 98, "grippy feel on")}${T_LABEL(262, 112, "gums & cheeks")}
+    ${LEAD(262, 40, 186, 96)}${T_LABEL(262, 30, "body: weight")}${T_LABEL(262, 44, "on the tongue")}
+    ${LEAD(112, 168, 176, 166)}${T_LABEL(8, 158, "sweetness:")}${T_LABEL(8, 172, "noticed first,")}${T_LABEL(8, 186, "often at the tip")}`),
+  finish: () => SVGW(`<circle cx="180" cy="104" r="60" fill="#fff" stroke="#6E1E2B" stroke-width="3"/><rect x="172" y="32" width="16" height="12" rx="2" fill="#6E1E2B"/>
+    ${[...Array(12).keys()].map(i => { const a = i * 30 * Math.PI / 180; return `<line x1="${180 + 52 * Math.sin(a)}" y1="${104 - 52 * Math.cos(a)}" x2="${180 + 58 * Math.sin(a)}" y2="${104 - 58 * Math.cos(a)}" stroke="#6E1E2B" stroke-width="2"/>`; }).join("")}
+    <path d="M180,104 L180,46 A58,58 0 0 1 230,75 Z" fill="#C9A55A" opacity=".35"/><line x1="180" y1="104" x2="230" y2="75" stroke="#6E1E2B" stroke-width="3"/>
+    ${T_LABEL(8, 186, "count how long the flavor lasts")}${T_LABEL(352, 186, "10+ sec = long", "end")}`)
+};
+function describeGlass_unused() {}
+function startTasting() {
+  const bl = loadBottles().filter(b => b.wineId && byId[b.wineId]), cel = bl.filter(b => b.cellar && b.qty > 0), rest = bl.filter(b => !(b.cellar && b.qty > 0)).slice(0, 8);
+  const ov = document.createElement("div"); ov.className = "sheet";
+  const row = b => `<div class="tnote" data-pick="${b.id}" style="cursor:pointer"><b>${esc(b.name)}${b.vintage ? " " + b.vintage : ""}</b> <span class="m">${esc(byId[b.wineId].name)}</span></div>`;
+  ov.innerHTML = `<div class="sheetin"><button class="btn" id="sClose" style="float:right">Close</button><div class="flab2" style="margin-top:0">Guided tasting</div>
+    <div class="matchname">What are you tasting?</div>
+    <p class="status">Pick the bottle in your glass. Not listed? Scan it first, or choose its style below.</p>
+    ${cel.length ? `<div class="fl" style="font-family:Inter,sans-serif;font-weight:700;margin-top:8px">From your cellar</div>${cel.map(row).join("")}` : ""}
+    ${rest.length ? `<div class="fl" style="font-family:Inter,sans-serif;font-weight:700;margin-top:8px">Recently scanned</div>${rest.map(row).join("")}` : ""}
+    <div class="fl" style="font-family:Inter,sans-serif;font-weight:700;margin-top:10px">Or choose a style</div>
+    <input type="text" id="sStyle" list="sStyles" placeholder="Start typing: Pinot Noir, Chablis, Rioja…" style="width:100%;font-size:16px;padding:8px 10px;border:1px solid var(--rule);border-radius:8px">
+    <datalist id="sStyles">${DATA.wines.map(w => `<option value="${esc(w.name)}">`).join("")}</datalist>
+    <div style="margin-top:10px"><button class="btn solid" id="sGo">Start tasting</button> <button class="btn" id="sScan">📷 Scan it first</button></div><div class="status" id="sMsg"></div></div>`;
+  document.body.appendChild(ov);
+  ov.querySelector("#sClose").onclick = () => ov.remove();
+  ov.querySelector("#sScan").onclick = () => { ov.remove(); go("snap"); };
+  ov.querySelectorAll("[data-pick]").forEach(r => r.onclick = () => { const b = loadBottles().find(x => x.id == r.dataset.pick); ov.remove(); describeGlass(b.wineId, b.id); });
+  ov.querySelector("#sGo").onclick = () => { const v = ov.querySelector("#sStyle").value.trim().toLowerCase(), w = DATA.wines.find(x => x.name.toLowerCase() === v) || DATA.wines.find(x => x.name.toLowerCase().includes(v) && v.length > 2);
+    if (!w) { ov.querySelector("#sMsg").textContent = "Pick a style from the list, or scan the bottle first."; return; } ov.remove(); describeGlass(w.id); };
+}
 function describeGlass(wineId, bottleId) {
   const w = byId[wineId]; if (!w) return;
-  const P = sayParts(w), red = isRedStyle(w), fam = w.style === "rose" ? "rose" : w.style === "orange" ? "orange" : red ? "red" : "white";
-  const typical = {sweetness: P.palate.sweet, acidity: SCALEW.acidity[(w.structure || {}).acidity || 0], tannin: SCALEW.tannin[(w.structure || {}).tannin || 0],
-    body: P.palate.body, alcohol: SCALEW.alcohol[(w.structure || {}).alcohol || 0], finish: w.finish};
-  const T = {look: null, nose: new Set(), pal: {}, finish: null, bal: null, ready: null, stars: 0, more: false};
-  const ov = document.createElement("div"); ov.className = "sheet";
+  const P = sayParts(w), red = isRedStyle(w), fam = w.style === "rose" ? "rose" : w.style === "orange" ? "orange" : red ? "red" : "white", fill = WINE_FILL(w);
+  const st = w.structure || {};
+  const typical = {sweetness: P.palate.sweet, acidity: SCALEW.acidity[st.acidity || 0], tannin: SCALEW.tannin[st.tannin || 0], body: P.palate.body, alcohol: SCALEW.alcohol[st.alcohol || 0], finish: w.finish};
+  const T = {look: null, clear: null, nose: new Set(), pal: {}, finish: null, secs: null, bal: null, ready: null, stars: 0, more: false, step: 0};
+  const HOW = {sweetness: "Any sweetness? You notice it right away; it feels soft and round.", acidity: "Is your mouth watering? That zing along the sides is acidity.",
+    tannin: "Do your gums and cheeks feel dry and grippy, like strong black tea? That's tannin.", body: "How heavy does it feel: skim milk (light), whole milk (medium) or cream (full)?",
+    alcohol: "Breathe out gently. Warmth in the throat means higher alcohol."};
   const chip = (grp, val, on, hint) => `<button class="pchip${on ? " on" : ""}" data-g="${grp}" data-v="${esc(val)}">${esc(val)}${hint ? " ·" : ""}</button>`;
   const sentence = () => {
     const parts = [];
-    if (T.look) parts.push(`I see a ${T.look.toLowerCase()} wine.`);
-    if (T.nose.size) parts.push(`I'm tasting ${listJoin([...T.nose])}.`);
+    if (T.look) parts.push(`I see a ${T.look.toLowerCase()} wine${T.clear === "hazy" ? ", a little hazy" : ""}.`);
+    if (T.nose.size) parts.push(`I'm smelling and tasting ${listJoin([...T.nose])}.`);
     const sw2 = [T.pal.sweetness, T.pal.body].filter(Boolean), wi = [T.pal.acidity && T.pal.acidity + " acidity", T.pal.tannin && T.pal.tannin + " tannin", T.pal.alcohol && T.pal.alcohol + " alcohol"].filter(Boolean);
     if (sw2.length || wi.length) parts.push(`It's ${sw2.join(" and ") || "smooth"}${wi.length ? ", with " + listJoin(wi) : ""}.`);
-    if (T.finish) parts.push(`The finish is ${T.finish}.`);
+    if (T.finish) parts.push(`The finish is ${T.finish}${T.secs ? ` (about ${T.secs} seconds)` : ""}.`);
     const v = [T.bal, T.ready].filter(Boolean); if (v.length) parts.push(v.join(", and ") + ".");
     return parts.join(" ").replace(/^./, c => c.toUpperCase());
   };
+  const STEPS = [
+    {t: "Pour & prepare", d: "pour", body: () => `<p>Pour about a third of a glass, so there's room to swirl. Hold the glass by the stem so your hand doesn't warm the wine or smudge the bowl.</p>
+      ${w.serve_f ? `<div class="gl"><b>Serve at</b> ${esc(f2c(w.serve_f))}${w.decant && w.decant !== "none" ? `; decant ${esc(w.decant)}` : ""}</div>` : ""}
+      <p class="status">Find a spot without strong smells (candles, perfume, cooking), and have a glass of water nearby.</p>`},
+    {t: "Look", d: "look", body: () => `<p>Tilt the glass away from you over something white. Look at the <b>core</b> (the deepest part) for color and depth, then the <b>rim</b>. A watery or brownish rim hints at age.</p>
+      <div class="fl">What color do you see?</div><div class="pchips">${LOOKS[fam].map(v => chip("look", v, T.look === v, P.look && P.look.toLowerCase().includes(v.toLowerCase()))).join("")}</div>
+      <div class="fl" style="margin-top:8px">Is it clear?</div><div class="pchips">${["clear", "hazy"].map(v => chip("clear", v, T.clear === v)).join("")}</div>
+      ${P.look ? `<p class="status">Typical for ${esc(w.name)}: ${esc(P.look)}</p>` : ""}`},
+    {t: "Swirl", d: "swirl", body: () => `<p>Keep the base on the table and move the glass in small circles for 5 to 10 seconds. Swirling pulls air into the wine and lifts its aromas.</p>
+      <p class="status">See the “legs” or “tears” running down the glass? They come from alcohol and sugar. They're not a sign of quality.</p>`},
+    {t: "Smell", d: "smell", body: () => `<p>Start with a gentle sniff a few inches from the glass: what's the first impression? Then put your nose into the glass and take a few short, quick sniffs. Breathe through your mouth between sniffs to reset.</p>
+      <p>Think in families: <b>fruit</b> (citrus, red, dark), <b>flowers</b>, <b>herbs & spice</b>, <b>earth</b>, <b>oak</b> (vanilla, toast). Tap what you smell:</p>
+      <div class="pchips">${(w.descriptors || []).filter(t => termFam[t] && termFam[t].name !== "Texture & Feel").map(t => chip("nose", t, T.nose.has(t), true)).join("")}</div>
+      ${T.more ? DATA.families.filter(f => f.name !== "Texture & Feel").map(f => `<div class="pgrp"><div class="fl" style="color:${f.color}">${esc(f.name)}</div><div class="pchips">${f.terms.filter(t => !(w.descriptors || []).includes(t)).map(t => chip("nose", t, T.nose.has(t))).join("")}</div></div>`).join("") : `<button class="btn" id="dMore" style="margin-top:6px">Smell something else? More words…</button>`}
+      <p class="status">Dots (·) mark the aromas typical for this style. Trust your own nose, though: there are no wrong answers.</p>`},
+    {t: "Sip", d: "sip", body: () => `<p>Take a small sip, about a tablespoon. Hold it and move it all around your mouth for a few seconds, as if chewing. If you like, purse your lips and draw in a little air: it carries the flavors up to your nose.</p>
+      <p class="status">All five tastes can be sensed across the whole tongue. The diagram shows where people usually <i>notice</i> each feeling.</p>
+      ${SCALES_UI.filter(([k]) => k !== "tannin" || red || w.style === "orange").map(([k, label, opts]) => `<div class="pgrp"><div class="fl">${label}</div><div class="status" style="margin:0 0 4px">${HOW[k]}</div><div class="pchips">${opts.map(v => chip("pal:" + k, v, T.pal[k] === v, typical[k] === v)).join("")}</div></div>`).join("")}`},
+    {t: "Finish", d: "finish", body: () => `<p>Swallow (or spit, as professionals do at tastings). Now notice how long the flavor lingers. Tap <b>Start</b> as you swallow and <b>Stop</b> when it fades.</p>
+      <div style="display:flex;gap:10px;align-items:center;margin:6px 0"><button class="bigbtn" id="dTimer" style="padding:10px 22px">${T.timing ? "■ Stop" : "▶ Start"}</button><span class="hometitle" id="dSecs" style="margin:0;font-size:30px">${T.secs != null ? T.secs + "s" : ""}</span></div>
+      <div class="fl">Or choose:</div><div class="pchips">${FINISHES.map(v => chip("finish", v, T.finish === v, typical.finish === v)).join("")}</div>
+      <p class="status">Rough guide: a few seconds is short; ten seconds or more is long, a mark of a serious wine.</p>`},
+    {t: "Your verdict", d: null, body: () => `<p>Was it balanced, with no single part (sweetness, acid, tannin, alcohol) shouting over the others? Is it ready now?</p>
+      <div class="pchips">${["Balanced", "A little out of balance"].map(v => chip("bal", v, T.bal === v)).join("")}</div>
+      <div class="pchips" style="margin-top:6px">${["ready to drink now", "better with more time", "past its best"].map(v => chip("ready", v, T.ready === v)).join("")}</div>
+      <div style="margin-top:6px">${[1, 2, 3, 4, 5].map(i => `<button class="starbtn" data-star="${i}">${i <= T.stars ? "★" : "☆"}</button>`).join("")}</div>
+      <div class="saybox" style="margin-top:10px"><div class="k" style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--gold)">YOUR TASTING NOTE</div>
+        <p style="font-size:18px;margin:6px 0">${esc(sentence()) || "Go back and tap a few observations, and your note will appear here."}</p></div>
+      <button class="btn solid" id="dSave">Save to my tasting notes</button><button class="btn" id="dCopy">Copy</button><div class="status" id="dMsg"></div>`}];
+  const ov = document.createElement("div"); ov.className = "sheet";
+  let timer = null;
   const draw = () => {
-    const extra = DATA.families.filter(f => f.name !== "Texture & Feel");
+    const S1 = STEPS[T.step], last = T.step === STEPS.length - 1;
     ov.innerHTML = `<div class="sheetin"><button class="btn" id="dClose" style="float:right">Close</button>
-      <div class="flab2" style="margin-top:0">Describe your glass</div><div class="matchname" style="font-size:22px">${esc(w.name)}</div>
-      <p class="status">Go step by step, like the textbook formula. Tap what you notice. Dots (·) mark what's typical for this style; trust your own glass.</p>
-      <div class="pq"><div class="fl">1 · Look: tilt the glass over something white. What color?</div><div class="pchips">${LOOKS[fam].map(v => chip("look", v, T.look === v, P.look && P.look.toLowerCase().includes(v.toLowerCase()))).join("")}</div></div>
-      <div class="pq"><div class="fl">2 · Nose: swirl, sniff. What do you smell or taste?</div><div class="pchips">${(w.descriptors || []).filter(t => termFam[t] && termFam[t].name !== "Texture & Feel").map(t => chip("nose", t, T.nose.has(t), true)).join("")}</div>
-        ${T.more ? extra.map(f => `<div class="pgrp"><div class="fl" style="color:${f.color}">${esc(f.name)}</div><div class="pchips">${f.terms.filter(t => !(w.descriptors || []).includes(t)).map(t => chip("nose", t, T.nose.has(t))).join("")}</div></div>`).join("") : `<button class="btn" id="dMore" style="margin-top:6px">More words…</button>`}</div>
-      <div class="pq"><div class="fl">3 · Palate: take a sip and hold it. How does it feel?</div>
-        ${SCALES_UI.filter(([k]) => k !== "tannin" || red || w.style === "orange").map(([k, label, opts]) => `<div class="pgrp"><div class="fl">${label}</div><div class="pchips">${opts.map(v => chip("pal:" + k, v, T.pal[k] === v, typical[k] === v)).join("")}</div></div>`).join("")}</div>
-      <div class="pq"><div class="fl">4 · Finish: after you swallow, how long does the flavor last?</div><div class="pchips">${FINISHES.map(v => chip("finish", v, T.finish === v, typical.finish === v)).join("")}</div></div>
-      <div class="pq"><div class="fl">5 · Verdict</div><div class="pchips">${["Balanced", "A little out of balance"].map(v => chip("bal", v, T.bal === v)).join("")}</div>
-        <div class="pchips" style="margin-top:6px">${["ready to drink now", "better with more time", "past its best"].map(v => chip("ready", v, T.ready === v)).join("")}</div>
-        <div style="margin-top:6px">${[1, 2, 3, 4, 5].map(i => `<button class="starbtn" data-star="${i}">${i <= T.stars ? "★" : "☆"}</button>`).join("")}</div></div>
-      <div class="saybox"><div class="k" style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--gold)">YOUR TASTING NOTE</div>
-        <p style="font-size:18px;margin:6px 0" id="dSentence">${esc(sentence()) || "Tap your observations above and your note will appear here."}</p></div>
-      <button class="btn solid" id="dSave">Save to my tasting notes</button><button class="btn" id="dCopy">Copy</button><div class="status" id="dMsg"></div></div>`;
-    ov.querySelector("#dClose").onclick = () => ov.remove();
-    const more = ov.querySelector("#dMore"); if (more) more.onclick = () => { T.more = true; redraw(); };
+      <div class="flab2" style="margin-top:0">Guided tasting · step ${T.step + 1} of ${STEPS.length}</div><div class="matchname" style="font-size:24px">${S1.t}</div>
+      <div class="status" style="margin-top:-2px">${esc(w.name)}</div>
+      ${S1.d ? DIAG[S1.d](fill) : ""}<div class="tbody">${S1.body()}</div>
+      ${T.step < STEPS.length - 1 && sentence() ? `<div class="status" style="margin-top:10px"><b>So far:</b> ${esc(sentence())}</div>` : ""}
+      <div class="dots" style="margin-top:12px">${STEPS.map((_, i) => `<i class="${i === T.step ? "on" : ""}"></i>`).join("")}</div>
+      <div style="display:flex;gap:8px;justify-content:space-between">${T.step ? `<button class="btn" id="dBack">← Back</button>` : "<span></span>"}${last ? "" : `<button class="btn solid" id="dNext">Next →</button>`}</div></div>`;
+    const $ = q => ov.querySelector(q);
+    $("#dClose").onclick = () => { clearInterval(timer); ov.remove(); };
+    if ($("#dNext")) $("#dNext").onclick = () => { T.step++; draw(); ov.querySelector(".sheetin").scrollTop = 0; };
+    if ($("#dBack")) $("#dBack").onclick = () => { T.step--; draw(); ov.querySelector(".sheetin").scrollTop = 0; };
+    if ($("#dMore")) $("#dMore").onclick = () => { T.more = true; redraw(); };
     ov.querySelectorAll("[data-g]").forEach(b => b.onclick = () => { const g = b.dataset.g, v = b.dataset.v;
       if (g === "nose") T.nose.has(v) ? T.nose.delete(v) : T.nose.add(v);
       else if (g.startsWith("pal:")) { const k = g.slice(4); T.pal[k] = T.pal[k] === v ? null : v; }
-      else T[g] = T[g] === v ? null : v;
+      else { T[g] = T[g] === v ? null : v; if (g === "finish") T.secs = null; }
       redraw(); });
     ov.querySelectorAll("[data-star]").forEach(b => b.onclick = () => { T.stars = +b.dataset.star; redraw(); });
-    ov.querySelector("#dCopy").onclick = () => { const t = sentence(); (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => ov.querySelector("#dMsg").textContent = "Copied ✓", () => {}); };
-    ov.querySelector("#dSave").onclick = () => {
-      const note = sentence(); if (!note && !T.stars) { ov.querySelector("#dMsg").textContent = "Tap a few observations first."; return; }
+    if ($("#dTimer")) $("#dTimer").onclick = () => {
+      if (!T.timing) { T.timing = Date.now(); T.secs = 0; timer = setInterval(() => { const e = $("#dSecs"); if (e) e.textContent = Math.round((Date.now() - T.timing) / 1000) + "s"; }, 250); redraw(); }
+      else { clearInterval(timer); T.secs = Math.round((Date.now() - T.timing) / 1000); T.timing = null;
+        T.finish = T.secs < 4 ? "short" : T.secs < 7 ? "medium" : T.secs < 10 ? "medium-long" : T.secs < 20 ? "long" : "persistent"; redraw(); } };
+    if ($("#dCopy")) $("#dCopy").onclick = () => { const t = sentence(); (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(() => $("#dMsg").textContent = "Copied ✓", () => {}); };
+    if ($("#dSave")) $("#dSave").onclick = () => {
+      const note = sentence(); if (!note && !T.stars) { $("#dMsg").textContent = "Go back and tap a few observations first."; return; }
       let list = loadBottles(), b = bottleId ? list.find(x => x.id == bottleId) : list.find(x => x.wineId === w.id);
       if (!b) { b = {id: Date.now(), ts: new Date().toISOString(), wineId: w.id, name: w.name, vintage: null, cellar: false, qty: 0, wish: false, loc: "", fields: {}, mt: Date.now()}; list.unshift(b); saveBottles(list); }
       patchRecord(b.id, r => { r.tastings = (r.tastings || []).concat([{date: new Date().toISOString().slice(0, 10), stars: T.stars, with: "", note}]); });
-      ov.querySelector("#dMsg").textContent = `Saved to “${b.name}” in My Bottles ✓`; if (S.view === "bottles") viewBottles(); };
+      $("#dMsg").textContent = `Saved to “${b.name}” in My Bottles ✓`; if (S.view === "bottles") viewBottles(); };
   };
   const redraw = () => { const y = ov.querySelector(".sheetin") ? ov.querySelector(".sheetin").scrollTop : 0; draw(); ov.querySelector(".sheetin").scrollTop = y; };
   draw(); document.body.appendChild(ov);
@@ -1623,23 +1719,27 @@ function viewHome() {
     ${tonight ? `<div class="tonight" data-open="${tonight.b.id}" style="cursor:pointer"><div class="k">OPEN TONIGHT</div><div class="t">${esc(tonight.b.name)}${tonight.b.vintage ? " " + tonight.b.vintage : ""}</div>
       <div style="font-family:Inter,sans-serif;font-size:12px">${[tonight.vi && tonight.vi.badge, tonight.b.loc && esc(tonight.b.loc), tonight.w.pairings && tonight.w.pairings.classic && "with " + esc(tonight.w.pairings.classic[0])].filter(Boolean).join(" · ")}</div></div>` : ""}
     ${recent.length ? `<div class="homeh">Recently scanned</div><div class="recent">${recent.map(b => `<div class="r" data-open="${b.id}">${b.thumb ? `<img src="${b.thumb}" alt="">` : `<div class="ph">🍷</div>`}${esc(b.name.length > 26 ? b.name.slice(0, 25) + "…" : b.name)}</div>`).join("")}</div>` : ""}
-    <div class="tile" data-go="learn" style="margin-top:6px"><div class="ic">📖</div><div><div class="t">Learn about wine</div><div class="d">Explore ${DATA.wines.length} wine styles and the words tasters use, on interactive wheels.</div></div></div>
+    <div class="tile" id="homeTaste" style="margin-top:6px"><div class="ic">👃</div><div><div class="t">Guided tasting</div><div class="d">Pour a glass and we'll walk you through it, step by step: look, swirl, smell, sip, finish.</div></div></div>
+    <div class="tile" data-go="learn" style="margin-top:10px"><div class="ic">📖</div><div><div class="t">Learn about wine</div><div class="d">Explore ${DATA.wines.length} wine styles and the words tasters use, on interactive wheels.</div></div></div>
     <p class="status" style="margin-top:14px;text-align:center"><a href="#" id="tourAgain">New here? Take the 30-second tour</a> · Free, no account needed.</p>`;
   pg.querySelectorAll("[data-go]").forEach(c => c.onclick = () => go(c.dataset.go));
   pg.querySelectorAll("[data-open]").forEach(c => c.onclick = () => { const b = loadBottles().find(x => x.id == c.dataset.open); if (!b) return;
     if (b.wineId) { S.view = "bottles"; S.sel = {type: "wine", id: b.wineId}; S.vintage = b.vintage; S.vintageFor = b.wineId; render(); if (innerWidth < 900) panel.scrollIntoView({behavior: "smooth"}); } else go("bottles"); });
+  document.getElementById("homeTaste").onclick = startTasting;
   document.getElementById("tourAgain").onclick = e => { e.preventDefault(); showTour(); };
 }
 function viewLearn() {
   const pg = document.getElementById("pageStage");
   pg.innerHTML = `<h2>Learn about wine</h2><p>Four interactive wheels built from ${DATA.wines.length} fact-checked wine styles. Tap anything to see what it means and how it connects. Use the search bar above to jump straight to a wine, grape or tasting word.</p>
     <div class="tiles">
+      <div class="tile" id="learnTaste"><div class="ic">👃</div><div><div class="t">Guided tasting</div><div class="d">Learn to taste like a sommelier with the bottle in front of you, one step at a time.</div></div></div>
       <div class="tile" data-go="aroma"><div class="ic">🌸</div><div><div class="t">The Aroma Wheel</div><div class="d">Every smell and flavor word, grouped into families. Start in the middle and work outward.</div></div></div>
       <div class="tile" data-go="together"><div class="ic">🔗</div><div><div class="t">Wines &amp; Words</div><div class="d">Wines on one side, tasting words on the other. Tap a wine to see how it's described.</div></div></div>
       <div class="tile" data-go="wines"><div class="ic">🍇</div><div><div class="t">Wine Wheel</div><div class="d">Wines arranged from crisp whites to big reds, linked to the ones that taste most alike. "If you like this, try that."</div></div></div>
       <div class="tile" data-go="words"><div class="ic">💬</div><div><div class="t">Word Wheel</div><div class="d">Which flavors travel together in the glass.</div></div></div>
     </div>`;
   pg.querySelectorAll("[data-go]").forEach(c => c.onclick = () => go(c.dataset.go));
+  document.getElementById("learnTaste").onclick = startTasting;
 }
 // ---------------- welcome tour & help
 const TOURKEY = "cellarLyceum.tour.v1";
