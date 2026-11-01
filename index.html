@@ -892,7 +892,9 @@ function recordScan() {
 function patchRecord(id, fn) { const list = loadBottles(), r = list.find(b => b.id == id); if (r) { fn(r); r.mt = Date.now(); saveBottles(list); } return r; }
 function actionsHTML() {
   const r = SNAP.recId ? loadBottles().find(b => b.id === SNAP.recId) : null;
-  return `<div class="acts"><button class="btn solid" id="actCellar">${r && r.cellar && r.qty > 0 ? `✓ In my cellar (${r.qty}) · add another` : "🍷 Add to my cellar"}</button>
+  const tw = SNAP.match && byId[SNAP.match];
+  return `${tw ? `<button class="choice main" id="actTaste" style="margin-top:12px"><span class="ic">👃</span><span><div class="t">Taste it step by step</div><div class="d">Pour a glass and we'll guide you: look, swirl, smell, sip, finish.</div></span></button>` : ""}
+    <div class="acts"><button class="btn solid" id="actCellar">${r && r.cellar && r.qty > 0 ? `✓ In my cellar (${r.qty}) · add another` : "🍷 Add to my cellar"}</button>
     <button class="btn" id="actWish">${r && r.wish ? "♥ On your wishlist" : "♡ Add to wishlist"}</button><button class="btn" id="actShare">↗ Share card</button></div>
     ${r ? `<div class="status">Kept in your History ✓, so you can add it to your cellar any time.</div>` : ""}`;
 }
@@ -900,6 +902,7 @@ function wireActions() {
   const c = document.getElementById("actCellar"), w = document.getElementById("actWish"), s = document.getElementById("actShare");
   if (c) c.onclick = () => { communityAdd(); const r = recordScan(); if (r) patchRecord(r.id, b => { b.cellar = true; b.qty = (b.qty || 0) + 1; }); viewSnapKeep(); };
   if (w) w.onclick = () => { communityAdd(); const r = recordScan(); if (r) patchRecord(r.id, b => { b.wish = !b.wish; }); viewSnapKeep(); };
+  const ta = document.getElementById("actTaste"); if (ta) ta.onclick = () => { const r = recordScan(); describeGlass(SNAP.match, r ? r.id : null); };
   if (s) s.onclick = () => { communityAdd(); const r = recordScan(); if (r) shareCard(loadBottles().find(b => b.id === r.id), SNAP.img); };
 }
 
