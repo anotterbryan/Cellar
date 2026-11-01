@@ -1,6 +1,6 @@
 {
- "name": "The Cellar Lyceum",
- "short_name": "Cellar",
+ "name": "cellar \u00b7 your pocket sommelier",
+ "short_name": "cellar",
  "start_url": "./",
  "display": "standalone",
  "background_color": "#FAF6EE",
