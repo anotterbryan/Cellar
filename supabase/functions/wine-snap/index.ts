@@ -1,4 +1,5 @@
-// Cellar · wine-snap  (version 2: label reading, bottle notes, dinner pairing)
+// Cellar · wine-snap  (version 3: label reading, bottle notes, dinner pairing, shared household cellar)
+import postgres from "npm:postgres@3.4.5";
 // A tiny, private middleman between the Cellar website and Google's Gemini API.
 // It keeps the Gemini key secret (stored as a Supabase secret, never in the website),
 // sends Gemini the label photo(s), and returns the details as tidy JSON.
@@ -83,6 +84,58 @@ const SCHEMA = {
   required: ["is_wine", "label", "confidence"],
 };
 
+// ---------------- shared household cellar (stored in this project's own database)
+const DB_URL = Deno.env.get("SUPABASE_DB_URL") ?? "";
+let sql: ReturnType<typeof postgres> | null = null;
+let ready = false;
+async function db() {
+  if (!DB_URL) throw new Error("Database not available");
+  if (!sql) sql = postgres(DB_URL, { max: 2, prepare: false, idle_timeout: 20 });
+  if (!ready) {
+    await sql`create table if not exists cellar_households (code text primary key, data jsonb not null default '{}'::jsonb, created_at timestamptz not null default now(), updated_at timestamptz not null default now())`;
+    await sql`alter table cellar_households enable row level security`;   // no public access; only this function can read/write
+    ready = true;
+  }
+  return sql;
+}
+const ALPHA = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+function newCode() { const b = crypto.getRandomValues(new Uint8Array(8)); const c = [...b].map((x) => ALPHA[x % ALPHA.length]).join(""); return `${c.slice(0, 4)}-${c.slice(4)}`; }
+type Rec = { id: number | string; mt?: number; [k: string]: unknown };
+function mergeData(a: { bottles?: Rec[]; tombs?: Record<string, number> }, b: { bottles?: Rec[]; tombs?: Record<string, number> }) {
+  const tombs: Record<string, number> = { ...(a.tombs ?? {}) };
+  for (const [k, v] of Object.entries(b.tombs ?? {})) tombs[k] = Math.max(tombs[k] ?? 0, Number(v) || 0);
+  const byId = new Map<string, Rec>();
+  for (const r of [...(a.bottles ?? []), ...(b.bottles ?? [])]) {
+    const k = String(r.id), cur = byId.get(k);
+    if (!cur || (Number(r.mt) || 0) >= (Number(cur.mt) || 0)) byId.set(k, r);
+  }
+  const bottles = [...byId.values()].filter((r) => !(tombs[String(r.id)] && tombs[String(r.id)] >= (Number(r.mt) || 0)))
+    .sort((x, y) => String(y.ts ?? "").localeCompare(String(x.ts ?? ""))).slice(0, 600);
+  return { bottles, tombs };
+}
+async function household(task: string, input: { code?: string; bottles?: Rec[]; tombs?: Record<string, number>; name?: string }) {
+  const s = await db();
+  if (task === "household_create") {
+    for (let i = 0; i < 5; i++) {
+      const code = newCode();
+      const r = await s`insert into cellar_households (code, data) values (${code}, ${s.json({ name: String(input.name ?? "").slice(0, 60), bottles: [], tombs: {} })}) on conflict do nothing returning code`;
+      if (r.length) return { code };
+    }
+    throw new Error("Couldn't create a code, try again");
+  }
+  const code = String(input.code ?? "").toUpperCase().replace(/[^A-Z0-9]/g, "").replace(/^(.{4})(.{4})$/, "$1-$2");
+  if (!/^[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(code)) return { error: "That code doesn't look right (it's 8 letters/numbers, like ABCD-2345).", status: 400 };
+  return await s.begin(async (t) => {
+    const rows = await t`select data from cellar_households where code = ${code} for update`;
+    if (!rows.length) return { error: "No shared cellar uses that code. Check it and try again.", status: 404 };
+    const cur = rows[0].data as { name?: string; bottles?: Rec[]; tombs?: Record<string, number> };
+    if (task === "household_check") return { ok: true, name: cur.name ?? "", count: (cur.bottles ?? []).length };
+    const merged = mergeData(cur, { bottles: (input.bottles ?? []).slice(0, 600), tombs: input.tombs ?? {} });
+    await t`update cellar_households set data = ${t.json({ ...cur, ...merged } as never)}, updated_at = now() where code = ${code}`;
+    return { ok: true, name: cur.name ?? "", ...merged, server_time: Date.now() };
+  });
+}
+
 const NOTES_PROMPT = `You are a warm, precise sommelier writing a short "at a glance" panel about ONE specific wine for a wine-lover's app.
 You get the producer, wine name, grape, place and vintage (some may be missing) plus the general style it belongs to.
 - If you genuinely know this producer/wine, describe THIS wine (known=true). If not, set known=false and describe what a bottle like this typically offers, saying so plainly.
@@ -147,11 +200,17 @@ Deno.serve(async (req) => {
   if (!KEY) return new Response(JSON.stringify({ error: "Server is missing GEMINI_API_KEY" }), { status: 500, headers: H });
   if (origin && !ORIGINS.includes("*") && !ORIGINS.includes(origin)) return new Response(JSON.stringify({ error: "Origin not allowed" }), { status: 403, headers: H });
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? "anon";
-  if (!allowed(ip)) return new Response(JSON.stringify({ error: "Too many scans this hour. Try again later." }), { status: 429, headers: H });
+  const peek = req.headers.get("x-cellar-task") ?? "";
+  if (!peek.startsWith("household_") && !allowed(ip)) return new Response(JSON.stringify({ error: "Too many scans this hour. Try again later." }), { status: 429, headers: H });
 
-  let input: { task?: string; images?: string[]; text?: string; wine?: Record<string, unknown>; dish?: string; catalog?: { id: string; name: string }[]; cellar?: { id: string; name: string }[] };
+  let input: { task?: string; code?: string; name?: string; bottles?: Rec[]; tombs?: Record<string, number>; images?: string[]; text?: string; wine?: Record<string, unknown>; dish?: string; catalog?: { id: string; name: string }[]; cellar?: { id: string; name: string }[] };
   try { input = await req.json(); } catch { return new Response(JSON.stringify({ error: "Bad JSON" }), { status: 400, headers: H }); }
   const task = input.task ?? "read";
+  if (task.startsWith("household_")) {
+    try { const out = await household(task, input as never); const st = (out as { status?: number }).status;
+      return new Response(JSON.stringify(out), { status: st ?? 200, headers: H }); }
+    catch (e) { return new Response(JSON.stringify({ error: "The shared cellar isn't available right now.", detail: String(e).slice(0, 200) }), { status: 500, headers: H }); }
+  }
   if (task === "notes" || task === "pair") {
     let parts: unknown[], schema: unknown;
     if (task === "notes") {
