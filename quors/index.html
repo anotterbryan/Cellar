@@ -518,26 +518,83 @@ const TSTEPS = [
  ["Add water", "Add a few drops of still water and nose and sip again. A little water lowers the alcohol burn and often releases hidden aromas, especially in high-proof spirits."],
  ["Finish", "After swallowing, notice what lingers and for how long: short, medium or long, and how it changes (sweet to spicy, fruit to smoke)."],
 ];
+// ---- guided tasting: one illustrated card per step (same feel as cellar's wine tasting cards)
+const SPFILL = sp => { const l = String((sp && sp.look) || "").toLowerCase(); return /clear|crystal|water-white|colorless|colourless/.test(l) ? "#EEF0EA" : /pale|straw|light gold|yellow/.test(l) ? "#E8C766" : /mahogany|dark|deep|brown|black|copper/.test(l) ? "#8A4A1C" : /green/.test(l) ? "#9DB86A" : /red|ruby/.test(l) ? "#A8323C" : "#C8862F"; };
+const TL = (x, y, t, a) => `<text x="${x}" y="${y}" font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="#4A2C17" text-anchor="${a || "start"}">${t}</text>`;
+const TLEAD = (x1, y1, x2, y2) => `<path d="M${x1},${y1} L${x2},${y2}" stroke="#B08A3E" stroke-width="1.5" fill="none"/><circle cx="${x2}" cy="${y2}" r="3" fill="#B08A3E"/>`;
+const TSV = (inner, h) => `<svg viewBox="0 0 360 ${h || 200}" style="width:100%;max-width:420px;display:block;margin:6px auto 10px" role="img">${inner}</svg>`;
+// a tulip (Glencairn-style) nosing glass, centered at (x, y) = base of bowl
+const GLEN = (x, y, k, f, rot) => `<g transform="translate(${x},${y}) rotate(${rot || 0}) scale(${k})"><path d="M-22,-88 C-22,-70 -34,-52 -34,-30 C-34,-6 -20,6 0,6 C20,6 34,-6 34,-30 C34,-52 22,-70 22,-88" fill="#fff" stroke="#4A2C17" stroke-width="2.5"/>
+  <path d="M-33,-22 C-32,-4 -18,5 0,5 C18,5 32,-4 33,-22 Z" fill="${f}" opacity=".92"/><path d="M-14,6 L-18,30 L18,30 L14,6" fill="#fff" stroke="#4A2C17" stroke-width="2.5"/><rect x="-26" y="30" width="52" height="7" rx="3" fill="#fff" stroke="#4A2C17" stroke-width="2.5"/></g>`;
+const TDIAG = {
+  pour: f => TSV(`${GLEN(120, 140, 1.15, f)}<line x1="164" y1="115" x2="206" y2="115" stroke="#B08A3E" stroke-dasharray="3 3"/>${TL(210, 111, "about ¾ oz (20 ml)")}${TL(210, 126, "a small pour")}
+    ${TLEAD(206, 60, 140, 52)}${TL(210, 56, "tulip shape traps")}${TL(210, 71, "and focuses aroma")}${TL(210, 176, "room temperature,")}${TL(210, 191, "water on the side")}`),
+  look: f => TSV(`<rect x="60" y="152" width="240" height="38" rx="4" fill="#fff" stroke="#D8C7A2"/>${TL(180, 176, "something white behind it", "middle")}${GLEN(180, 120, 1, f, -30)}
+    ${TLEAD(70, 40, 140, 96)}${TL(6, 26, "color: water-white to")}${TL(6, 41, "deep mahogany")}${TLEAD(286, 50, 214, 66)}${TL(232, 30, "legs on the glass:")}${TL(232, 45, "alcohol and sugar,")}${TL(232, 60, "not quality")}`),
+  nose: f => TSV(`<path d="M60,20 C70,42 74,58 70,74 L94,98 L74,102 C78,110 76,118 68,120 C74,126 72,134 64,136 C66,150 62,164 52,178" fill="none" stroke="#4A2C17" stroke-width="2.5" stroke-linecap="round"/>
+    ${GLEN(270, 150, .95, f, -14)}<path d="M100,98 C150,94 190,86 238,76" stroke="#B08A3E" stroke-dasharray="4 4" fill="none" stroke-width="2"/>
+    <circle cx="140" cy="94" r="11" fill="#fff" stroke="#4A2C17" stroke-width="2"/><text x="140" y="98" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#4A2C17">1</text>
+    <circle cx="214" cy="80" r="11" fill="#fff" stroke="#4A2C17" stroke-width="2"/><text x="214" y="84" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#4A2C17">2</text>
+    ${TL(104, 20, "1 · start a few inches away")}${TL(104, 36, "2 · closer, short gentle sniffs")}${TL(104, 52, "mouth slightly open")}`),
+  sip: () => TSV(`<path d="M128,40 C112,90 116,150 180,176 C244,150 248,90 232,40 C214,22 146,22 128,40 Z" fill="#F1DCC4" stroke="#4A2C17" stroke-width="2.5"/><path d="M180,36 L180,160" stroke="#D8B68E" stroke-width="2"/>
+    ${TLEAD(112, 20, 180, 32)}${TL(6, 16, "heat: warmth at the")}${TL(6, 30, "back and throat")}${TLEAD(104, 100, 132, 104)}${TL(6, 90, "body: thin, round")}${TL(6, 104, "or oily?")}
+    ${TLEAD(256, 100, 228, 104)}${TL(262, 90, "spice: a tingle")}${TL(262, 104, "or prickle")}${TLEAD(112, 168, 176, 166)}${TL(6, 160, "sweetness:")}${TL(6, 174, "noticed first")}
+    ${TL(262, 160, "hold it a few")}${TL(262, 174, "seconds: the")}${TL(262, 188, "'Kentucky chew'")}`),
+  water: f => TSV(`${GLEN(200, 146, 1.05, f)}<path d="M120,18 L120,64 C120,74 132,74 132,64 L132,18 Z" fill="#fff" stroke="#4A2C17" stroke-width="2.5"/><rect x="114" y="6" width="24" height="14" rx="5" fill="#4A2C17"/>
+    <path d="M126,80 C122,88 122,92 126,94 C130,92 130,88 126,80 Z" fill="#7FB3D5"/><path d="M146,100 C142,108 142,112 146,114 C150,112 150,108 146,100 Z" fill="#7FB3D5"/>
+    ${TL(6, 140, "a few drops")}${TL(6, 155, "of still water,")}${TL(6, 170, "then nose and")}${TL(6, 185, "sip again")}${TL(262, 40, "it softens the")}${TL(262, 55, "burn and often")}${TL(262, 70, "opens up aromas")}`),
+  finish: () => TSV(`<circle cx="180" cy="104" r="60" fill="#fff" stroke="#4A2C17" stroke-width="3"/><rect x="172" y="32" width="16" height="12" rx="2" fill="#4A2C17"/>
+    ${[...Array(12).keys()].map(i => { const a = i * 30 * Math.PI / 180; return `<line x1="${(180 + 52 * Math.sin(a)).toFixed(1)}" y1="${(104 - 52 * Math.cos(a)).toFixed(1)}" x2="${(180 + 58 * Math.sin(a)).toFixed(1)}" y2="${(104 - 58 * Math.cos(a)).toFixed(1)}" stroke="#4A2C17" stroke-width="2"/>`; }).join("")}
+    <path d="M180,104 L180,46 A58,58 0 0 1 230,75 Z" fill="#B08A3E" opacity=".35"/><line x1="180" y1="104" x2="230" y2="75" stroke="#4A2C17" stroke-width="3"/>
+    ${TL(6, 190, "how long does it linger?")}${TL(354, 190, "and how does it change?", "end")}`)
+};
 function viewTaste() {
-  const sp = S.tasteSp ? byId[S.tasteSp] : null, T = S.tsel || (S.tsel = {notes: new Set(), feel: new Set(), finish: "medium"});
-  const fams = Object.entries(DATA.vocab).filter(([f]) => f !== "Texture & Feel");
-  const sugg = sp ? new Set(sp.descriptors || []) : new Set();
-  const sentence = () => { const n = [...T.notes], f = [...T.feel]; if (!n.length && !f.length) return "";
-    const lj = a => a.length < 2 ? a.join("") : a.slice(0, -1).join(", ") + " and " + a[a.length - 1];
-    return `On the nose and palate I'm getting ${lj(n) || "…"}${f.length ? `, with a ${lj(f)} feel` : ""} and a ${T.finish} finish.`; };
-  M().innerHTML = `<div class="card"><button class="btn" id="back">← Learn</button><h1 style="margin-top:8px">Guided spirits tasting</h1>
-    <p class="status">Pour about ¾ oz (20 ml) into a tulip, Glencairn or small wine glass. Go slowly; this is about noticing, not drinking.</p>
-    <div class="fl">What are you tasting? (optional)</div><select id="tsp"><option value="">Any spirit</option>${Object.entries(CATS).map(([c, v]) => `<optgroup label="${esc(v.name)}">${SP.filter(x => x.category === c).map(x => `<option value="${x.id}" ${x.id === S.tasteSp ? "selected" : ""}>${esc(x.name)}</option>`).join("")}</optgroup>`).join("")}</select>
-    ${TSTEPS.map(([h, d], i) => `<div class="glance"><div class="k">STEP ${i + 1} · ${h.toUpperCase()}</div><div class="row">${esc(d)}</div></div>`).join("")}
-    <div class="sec">What do you notice?</div>${sp ? `<p class="status">Typical for ${esc(sp.name)} (highlighted): ${esc((sp.descriptors || []).join(", "))}</p>` : ""}
-    ${fams.map(([f, ts]) => `<div class="fl">${esc(f)}</div><div>${ts.map(t => `<button class="chip" data-tn="${esc(t)}" style="background:${T.notes.has(t) ? "var(--ox)" : sugg.has(t) ? "#EADBC2" : "var(--tint)"};color:${T.notes.has(t) ? "#F2E3C2" : "var(--ink)"}">${dIcon(t)}${esc(t)}</button>`).join("")}</div>`).join("")}
-    <div class="fl">How does it feel?</div><div>${DATA.vocab["Texture & Feel"].filter(t => !["long", "short"].includes(t)).map(t => `<button class="chip" data-tf="${esc(t)}" style="background:${T.feel.has(t) ? "var(--ox)" : sugg.has(t) ? "#EADBC2" : "var(--tint)"};color:${T.feel.has(t) ? "#F2E3C2" : "var(--ink)"}">${dIcon(t)}${esc(t)}</button>`).join("")}</div>
-    <div class="fl">Finish</div><div class="seg">${["short", "medium", "long"].map(f => `<button data-fin="${f}" class="${T.finish === f ? "on" : ""}">${f}</button>`).join("")}</div>
-    <div class="glance"><div class="k">SAY IT LIKE A PRO</div><p id="say" style="margin:6px 0;font-size:19px">${esc(sentence()) || '<span class="status">Tap what you notice above.</span>'}</p></div></div>`;
-  $("back").onclick = () => go("learn"); $("tsp").onchange = e => { S.tasteSp = e.target.value || null; viewTaste(); };
-  M().querySelectorAll("[data-tn]").forEach(b => b.onclick = () => { const t = b.dataset.tn; T.notes.has(t) ? T.notes.delete(t) : T.notes.add(t); viewTaste(); });
-  M().querySelectorAll("[data-tf]").forEach(b => b.onclick = () => { const t = b.dataset.tf; T.feel.has(t) ? T.feel.delete(t) : T.feel.add(t); viewTaste(); });
-  M().querySelectorAll("[data-fin]").forEach(b => b.onclick = () => { T.finish = b.dataset.fin; viewTaste(); });
+  const sp = S.tasteSp ? byId[S.tasteSp] : null, T = S.tsel || (S.tsel = {notes: new Set(), feel: new Set(), finish: null, look: null, water: null, step: 0, secs: null});
+  const fams = Object.entries(DATA.vocab).filter(([f]) => f !== "Texture & Feel"), sugg = sp ? new Set(sp.descriptors || []) : new Set(), f = SPFILL(sp);
+  const lj = a => a.length < 2 ? a.join("") : a.slice(0, -1).join(", ") + " and " + a[a.length - 1];
+  const sentence = () => { const n = [...T.notes], fl = [...T.feel]; if (!n.length && !fl.length && !T.look) return "";
+    return [T.look ? `${T.look[0].toUpperCase() + T.look.slice(1)} in the glass.` : "", n.length ? `On the nose and palate: ${lj(n)}.` : "", fl.length ? `It feels ${lj(fl)}.` : "",
+      T.water ? (T.water === "opened up" ? "A few drops of water opened it up." : "Water didn't change it much.") : "", T.finish ? `The finish is ${T.finish}${T.secs >= 2 ? ` (about ${T.secs} seconds)` : ""}.` : ""].filter(Boolean).join(" "); };
+  const chipN = t => `<button class="chip" data-tn="${esc(t)}" style="background:${T.notes.has(t) ? "var(--ox)" : sugg.has(t) ? "#EADBC2" : "var(--tint)"};color:${T.notes.has(t) ? "#F2E3C2" : "var(--ink)"}">${dIcon(t)}${esc(t)}${sugg.has(t) ? " ·" : ""}</button>`;
+  const pickRow = (key, vals) => `<div>${vals.map(v => `<button class="chip" data-tk="${key}" data-tv="${esc(v)}" style="${T[key] === v ? "background:var(--ox);color:#F2E3C2" : "background:var(--tint)"}">${esc(v)}</button>`).join("")}</div>`;
+  const STEPS = [
+    {t: "Pour & prepare", ic: "q-glencairn", d: "pour", body: () => `<p>Pour about ¾ oz (20 ml) into a tulip, Glencairn or small wine glass. Taste at room temperature, with a glass of still water nearby. Go slowly: this is about noticing, not drinking.</p>
+      <div class="fl">What are you tasting? (optional)</div><select id="tsp"><option value="">Any spirit</option>${Object.entries(CATS).filter(([c]) => c !== "bitters").map(([c, v]) => `<optgroup label="${esc(v.name)}">${SP.filter(x => x.category === c).map(x => `<option value="${x.id}" ${x.id === S.tasteSp ? "selected" : ""}>${esc(x.name)}</option>`).join("")}</optgroup>`).join("")}</select>
+      ${sp && sp.glass ? `<p class="status">Suggested glass for ${esc(sp.name)}: ${esc(sp.glass)}.</p>` : ""}`},
+    {t: "Look", ic: "glass-tilt", d: "look", body: () => `<p>${esc(TSTEPS[0][1])}</p><div class="fl">What color do you see?</div>${pickRow("look", ["water-white", "pale straw", "gold", "amber", "deep copper", "mahogany"])}
+      ${sp && sp.look ? `<p class="status">Typical for ${esc(sp.name)}: ${esc(sp.look)}</p>` : ""}`},
+    {t: "Nose", ic: "smell", d: "nose", body: () => `<p>${esc(TSTEPS[1][1])}</p><div class="fl">Tap what you smell${sp ? ` (dots mark what's typical for ${esc(sp.name)})` : ""}</div>
+      ${sp ? `<div>${(sp.descriptors || []).filter(t => !DATA.vocab["Texture & Feel"].includes(t)).map(chipN).join("")}</div>` : ""}
+      <details ${sp ? "" : "open"} style="margin-top:6px"><summary class="status" style="cursor:pointer">All the words, by family</summary>${fams.map(([fm, ts]) => `<div class="fl" style="color:${(FAMCOL[fm] || [])[0]}">${esc(fm)}</div><div>${ts.map(chipN).join("")}</div>`).join("")}</details>`},
+    {t: "Sip", ic: "sip", d: "sip", body: () => `<p>${esc(TSTEPS[2][1])}</p><div class="fl">How does it feel?</div><div>${DATA.vocab["Texture & Feel"].filter(t => !["long", "short"].includes(t)).map(t => `<button class="chip" data-tf="${esc(t)}" style="background:${T.feel.has(t) ? "var(--ox)" : sugg.has(t) ? "#EADBC2" : "var(--tint)"};color:${T.feel.has(t) ? "#F2E3C2" : "var(--ink)"}">${dIcon(t)}${esc(t)}</button>`).join("")}</div>
+      ${sp ? `<p class="status">Typical: sweetness ${(sp.structure || {}).sweetness}/5, body ${(sp.structure || {}).body}/5, heat ${(sp.structure || {}).heat}/5.</p>` : ""}`},
+    {t: "Add water", ic: "q-ice", d: "water", body: () => `<p>${esc(TSTEPS[3][1])}</p><div class="fl">What happened?</div>${pickRow("water", ["opened up", "not much change"])}`},
+    {t: "Finish", ic: "finish", d: "finish", body: () => `<p>${esc(TSTEPS[4][1])}</p>
+      <div style="display:flex;gap:10px;align-items:center;margin:6px 0"><button class="btn solid" id="tTimer">${T.t0 ? "■ Stop" : "▶ Start timing"}</button><b style="font-size:26px" id="tSecs">${T.secs != null ? T.secs + "s" : ""}</b></div>
+      <div class="fl">Or choose</div>${pickRow("finish", ["short", "medium", "long"])}${sp && sp.finish ? `<p class="status">Typical for ${esc(sp.name)}: ${esc(sp.finish)}.</p>` : ""}`},
+    {t: "Say it like a pro", ic: "star", d: null, body: () => `<div class="glance"><div class="k">YOUR TASTING NOTE</div><p id="say" style="margin:6px 0;font-size:19px">${esc(sentence()) || '<span class="status">Go back and tap a few observations, and your note appears here.</span>'}</p></div>
+      <p class="status">Pros describe it in this order: color, aromas, how it feels, then the finish. ${sp ? `Compare with the profile: ${esc((sp.descriptors || []).join(", "))}.` : ""}</p>
+      ${sentence() ? `<button class="btn solid" id="tCopy">Copy my note</button>` : ""}<button class="btn" id="tAgain">Taste another</button> <span class="status" id="tMsg"></span>`}];
+  const k = Math.max(0, Math.min(STEPS.length - 1, T.step || 0)), S1 = STEPS[k];
+  M().innerHTML = `<div class="card"><button class="btn" id="back">← Learn</button>
+    <div style="display:flex;gap:6px;margin:10px 0 4px">${STEPS.map((x, i) => `<button data-st="${i}" title="${esc(x.t)}" style="flex:1;border:0;border-radius:10px;padding:6px 0;background:${i === k ? "var(--ox)" : i < k ? "#EADBC2" : "var(--tint)"};color:${i === k ? "#F2E3C2" : "var(--ox)"};cursor:pointer">${I(x.ic)}</button>`).join("")}</div>
+    <div class="kick">Guided spirits tasting · step ${k + 1} of ${STEPS.length}</div><h1 style="margin:2px 0">${esc(S1.t)}</h1>${sp ? `<div class="status">${esc(sp.name)}</div>` : ""}
+    ${S1.d ? TDIAG[S1.d](f) : ""}<div>${S1.body()}</div>
+    ${k < STEPS.length - 1 && sentence() ? `<div class="status" style="margin-top:10px"><b>So far:</b> ${esc(sentence())}</div>` : ""}
+    <div style="display:flex;justify-content:space-between;margin-top:14px">${k ? `<button class="btn" id="tPrev">← Back</button>` : "<span></span>"}${k < STEPS.length - 1 ? `<button class="btn solid" id="tNext">Next: ${esc(STEPS[k + 1].t)} →</button>` : ""}</div></div>`;
+  const redraw = () => { const y = scrollY; viewTaste(); scrollTo(0, y); };
+  $("back").onclick = () => go("learn");
+  if ($("tsp")) $("tsp").onchange = e => { S.tasteSp = e.target.value || null; redraw(); };
+  if ($("tNext")) $("tNext").onclick = () => { T.step = k + 1; viewTaste(); scrollTo({top: 0}); };
+  if ($("tPrev")) $("tPrev").onclick = () => { T.step = k - 1; viewTaste(); scrollTo({top: 0}); };
+  M().querySelectorAll("[data-st]").forEach(b => b.onclick = () => { T.step = +b.dataset.st; viewTaste(); });
+  M().querySelectorAll("[data-tn]").forEach(b => b.onclick = () => { const t = b.dataset.tn; T.notes.has(t) ? T.notes.delete(t) : T.notes.add(t); redraw(); });
+  M().querySelectorAll("[data-tf]").forEach(b => b.onclick = () => { const t = b.dataset.tf; T.feel.has(t) ? T.feel.delete(t) : T.feel.add(t); redraw(); });
+  M().querySelectorAll("[data-tk]").forEach(b => b.onclick = () => { T[b.dataset.tk] = T[b.dataset.tk] === b.dataset.tv ? null : b.dataset.tv; redraw(); });
+  if ($("tTimer")) $("tTimer").onclick = () => { if (!T.t0) { T.t0 = Date.now(); T.secs = 0; T.iv = setInterval(() => { const e = $("tSecs"); T.secs = Math.round((Date.now() - T.t0) / 1000); if (e) e.textContent = T.secs + "s"; }, 250); }
+    else { clearInterval(T.iv); T.secs = Math.round((Date.now() - T.t0) / 1000); T.t0 = null; } redraw(); };
+  if ($("tCopy")) $("tCopy").onclick = async () => { try { await navigator.clipboard.writeText(sentence()); $("tMsg").textContent = "Copied."; } catch (e) { $("tMsg").textContent = "Couldn't copy on this device."; } };
+  if ($("tAgain")) $("tAgain").onclick = () => { S.tsel = null; S.tasteSp = null; viewTaste(); scrollTo({top: 0}); };
 }
 function viewWheel() {
   const fams = Object.entries(DATA.vocab), terms = fams.flatMap(([f, ts]) => ts.map(t => [f, t])), N = terms.length, R1 = 70, R2 = 120, R3 = 300;
