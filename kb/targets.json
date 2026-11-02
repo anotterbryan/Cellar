@@ -36,6 +36,7 @@
    "id": "pessac-leognan-blanc",
    "name": "Pessac-Léognan Blanc",
    "candidates": [
+    "Pessac-Léognan",
     "Pessac-Léognan Blanc",
     "Bordeaux — Graves wine"
    ],
@@ -163,6 +164,7 @@
    "name": "Morgon",
    "candidates": [
     "Morgon",
+    "Morgon AOC",
     "Beaujolais — Crus wine"
    ],
    "grapes": [
@@ -203,6 +205,7 @@
    "id": "blanc-de-blancs-champagne",
    "name": "Blanc de Blancs Champagne",
    "candidates": [
+    "Blanc de blancs",
     "Blanc de Blancs Champagne",
     "Champagne — Côte des Blancs wine"
    ],
@@ -594,6 +597,8 @@
    "id": "gavi",
    "name": "Gavi",
    "candidates": [
+    "Gavi (wine)",
+    "Cortese di Gavi",
     "Gavi",
     "Piedmont – Alessandria wine"
    ],
@@ -1037,6 +1042,8 @@
    "id": "rueda-verdejo",
    "name": "Rueda Verdejo",
    "candidates": [
+    "Rueda (DO)",
+    "Verdejo",
     "Rueda Verdejo",
     "Castilla y León — Rueda wine"
    ],
@@ -1082,6 +1089,8 @@
    "id": "spanish-garnacha",
    "name": "Spanish Garnacha (Campo de Borja, Calatayud)",
    "candidates": [
+    "Campo de Borja (DO)",
+    "Grenache",
     "Spanish Garnacha",
     "Aragón — Campo de Borja wine"
    ],
@@ -1162,6 +1171,8 @@
    "id": "douro-red",
    "name": "Douro Red",
    "candidates": [
+    "Douro DOC",
+    "Douro (wine region)",
     "Douro Red",
     "Douro Valley wine"
    ],
@@ -1461,6 +1472,7 @@
    "id": "wiener-gemischter-satz",
    "name": "Wiener Gemischter Satz",
    "candidates": [
+    "Gemischter Satz",
     "Wiener Gemischter Satz",
     "Vienna wine"
    ],
@@ -1801,6 +1813,7 @@
    "id": "temecula-valley-red",
    "name": "Temecula Valley Red",
    "candidates": [
+    "Temecula Valley AVA",
     "Temecula Valley Red",
     "California — South Coast wine"
    ],
@@ -2316,6 +2329,7 @@
    "id": "california-red-blend",
    "name": "California Red Blend",
    "candidates": [
+    "California wine",
     "California Red Blend",
     "California — mostly statewide 'California' appellation wine"
    ],
@@ -2528,6 +2542,8 @@
    "id": "long-island-merlot",
    "name": "Long Island Merlot & Red Blends (New York)",
    "candidates": [
+    "Long Island AVA",
+    "New York wine",
     "Long Island Merlot & Red Blends",
     "Long Island Merlot",
     "Red Blends",
@@ -2573,6 +2589,7 @@
    "id": "texas-tempranillo",
    "name": "Texas Tempranillo (High Plains & Hill Country)",
    "candidates": [
+    "Texas wine",
     "Texas Tempranillo",
     "Texas High Plains AVA; Texas Hill Country AVA wine"
    ],
@@ -2586,6 +2603,7 @@
    "id": "michigan-riesling",
    "name": "Michigan Riesling (Old Mission & Leelanau)",
    "candidates": [
+    "Michigan wine",
     "Michigan Riesling",
     "Northern Michigan — Old Mission Peninsula & Leelanau Peninsula AVAs wine"
    ],
@@ -2687,6 +2705,7 @@
    "id": "red-blend",
    "name": "Red Blend (general)",
    "candidates": [
+    "Red wine",
     "Various (often Zinfandel, Merlot, Cabernet Sauvignon, Syrah/Shiraz, Petite Sirah)",
     "Red Blend"
    ],
@@ -2921,6 +2940,7 @@
    "id": "sweet-red",
    "name": "Sweet Red Wine (general)",
    "candidates": [
+    "Sweetness of wine",
     "Various (often unspecified red blends)",
     "Sweet Red Wine"
    ],
@@ -2936,6 +2956,8 @@
    "id": "uruguay-tannat",
    "name": "Uruguayan Tannat",
    "candidates": [
+    "Uruguayan wine",
+    "Tannat",
     "Uruguayan Tannat"
    ],
    "grapes": [],
@@ -2947,6 +2969,8 @@
    "id": "mendoza-bonarda",
    "name": "Argentine Bonarda",
    "candidates": [
+    "Douce noir",
+    "Bonarda",
     "Argentine Bonarda"
    ],
    "grapes": [],
@@ -2958,8 +2982,9 @@
    "id": "uco-valley-cabernet-franc",
    "name": "Argentine Cabernet Franc (Uco Valley)",
    "candidates": [
-    "Argentine Cabernet Franc",
-    "Uco Valley"
+    "Uco Valley",
+    "Argentine wine",
+    "Argentine Cabernet Franc"
    ],
    "grapes": [],
    "country": "",
@@ -2993,6 +3018,7 @@
    "id": "chilean-cool-climate-syrah",
    "name": "Chilean Cool-Climate Syrah (Elqui, Limarí, San Antonio)",
    "candidates": [
+    "Chilean wine",
     "Chilean Cool-Climate Syrah",
     "Elqui",
     "Limarí",
@@ -3007,6 +3033,8 @@
    "id": "limari-chardonnay",
    "name": "Chilean Coastal Chardonnay (Limarí, Casablanca)",
    "candidates": [
+    "Limarí Valley",
+    "Chilean wine",
     "Chilean Coastal Chardonnay",
     "Limarí",
     "Casablanca"
@@ -3020,6 +3048,7 @@
    "id": "serra-gaucha-sparkling",
    "name": "Brazilian Sparkling Wine (Serra Gaúcha)",
    "candidates": [
+    "Brazilian wine",
     "Brazilian Sparkling Wine",
     "Serra Gaúcha"
    ],
@@ -3043,6 +3072,7 @@
    "id": "tasmanian-sparkling",
    "name": "Tasmanian Sparkling Wine",
    "candidates": [
+    "Tasmanian wine",
     "Tasmanian Sparkling Wine"
    ],
    "grapes": [],
@@ -3054,6 +3084,8 @@
    "id": "adelaide-hills-chardonnay",
    "name": "Adelaide Hills Chardonnay",
    "candidates": [
+    "Adelaide Hills wine region",
+    "Adelaide Hills",
     "Adelaide Hills Chardonnay"
    ],
    "grapes": [],
@@ -3065,8 +3097,9 @@
    "id": "gimblett-gravels-red",
    "name": "Hawke's Bay Bordeaux-Style Red (Gimblett Gravels)",
    "candidates": [
-    "Hawke's Bay Bordeaux-Style Red",
-    "Gimblett Gravels"
+    "Gimblett Gravels",
+    "Hawke's Bay",
+    "Hawke's Bay Bordeaux-Style Red"
    ],
    "grapes": [],
    "country": "",
@@ -3088,6 +3121,8 @@
    "id": "constantia-sweet",
    "name": "Constantia Sweet Wine (Vin de Constance style)",
    "candidates": [
+    "Vin de Constance",
+    "Constantia (wine)",
     "Constantia Sweet Wine",
     "Vin de Constance style"
    ],
@@ -3100,6 +3135,7 @@
    "id": "swiss-chasselas",
    "name": "Swiss Chasselas (Vaud, Lavaux)",
    "candidates": [
+    "Chasselas",
     "Swiss Chasselas",
     "Vaud",
     "Lavaux"
@@ -3125,6 +3161,7 @@
    "id": "plavac-mali",
    "name": "Croatian Plavac Mali (Dingač, Postup)",
    "candidates": [
+    "Plavac Mali",
     "Croatian Plavac Mali",
     "Dingač",
     "Postup"
@@ -3138,6 +3175,8 @@
    "id": "istrian-malvazija",
    "name": "Istrian Malvazija (Croatia & Slovenia)",
    "candidates": [
+    "Malvazija Istarska",
+    "Malvasia",
     "Istrian Malvazija",
     "Croatia",
     "Slovenia"
@@ -3151,6 +3190,8 @@
    "id": "brda-rebula",
    "name": "Rebula from Brda (Slovenia)",
    "candidates": [
+    "Goriška Brda",
+    "Ribolla Gialla",
     "Rebula from Brda",
     "Slovenia"
    ],
@@ -3175,6 +3216,8 @@
    "id": "feteasca-neagra",
    "name": "Romanian Fetească Neagră",
    "candidates": [
+    "Fetească neagră",
+    "Feteasca Neagra",
     "Romanian Fetească Neagră"
    ],
    "grapes": [],
@@ -3186,6 +3229,7 @@
    "id": "bulgarian-mavrud",
    "name": "Bulgarian Mavrud",
    "candidates": [
+    "Mavrud",
     "Bulgarian Mavrud"
    ],
    "grapes": [],
@@ -3197,6 +3241,8 @@
    "id": "turkish-okuzgozu-bogazkere",
    "name": "Turkish Öküzgözü & Boğazkere",
    "candidates": [
+    "Turkish wine",
+    "Öküzgözü",
     "Turkish Öküzgözü & Boğazkere"
    ],
    "grapes": [],
@@ -3208,6 +3254,7 @@
    "id": "israel-red-blend",
    "name": "Israeli Red Blend (Galilee, Golan Heights, Judean Hills)",
    "candidates": [
+    "Israeli wine",
     "Israeli Red Blend",
     "Galilee",
     "Golan Heights",
@@ -3222,6 +3269,8 @@
    "id": "ningxia-cabernet",
    "name": "Ningxia Cabernet Sauvignon & Blends (China)",
    "candidates": [
+    "Ningxia wine",
+    "Chinese wine",
     "Ningxia Cabernet Sauvignon & Blends",
     "China"
    ],
@@ -3234,6 +3283,8 @@
    "id": "mantinia-moschofilero",
    "name": "Mantinia Moschofilero (Greece)",
    "candidates": [
+    "Moschofilero",
+    "Mantineia",
     "Mantinia Moschofilero",
     "Greece"
    ],
@@ -3246,6 +3297,8 @@
    "id": "santorini-vinsanto",
    "name": "Santorini Vinsanto",
    "candidates": [
+    "Vinsanto",
+    "Santorini (wine)",
     "Santorini Vinsanto"
    ],
    "grapes": [],
@@ -3269,6 +3322,7 @@
    "id": "english-bacchus",
    "name": "English Bacchus",
    "candidates": [
+    "Bacchus (grape)",
     "English Bacchus"
    ],
    "grapes": [],
@@ -3280,7 +3334,8 @@
    "id": "picpoul-de-pinet",
    "name": "Picpoul de Pinet",
    "candidates": [
-    "Picpoul de Pinet"
+    "Picpoul de Pinet",
+    "Piquepoul"
    ],
    "grapes": [],
    "country": "",
@@ -3291,6 +3346,7 @@
    "id": "cotes-de-gascogne-white",
    "name": "Côtes de Gascogne White",
    "candidates": [
+    "Côtes de Gascogne",
     "Côtes de Gascogne White"
    ],
    "grapes": [],
@@ -3302,6 +3358,8 @@
    "id": "madiran",
    "name": "Madiran",
    "candidates": [
+    "Madiran AOC",
+    "Madiran wine",
     "Madiran"
    ],
    "grapes": [],
@@ -3313,6 +3371,7 @@
    "id": "jurancon",
    "name": "Jurançon (dry & sweet)",
    "candidates": [
+    "Jurançon AOC",
     "Jurançon",
     "dry",
     "sweet"
@@ -3326,6 +3385,7 @@
    "id": "beaujolais-nouveau",
    "name": "Beaujolais Nouveau",
    "candidates": [
+    "Beaujolais nouveau",
     "Beaujolais Nouveau"
    ],
    "grapes": [],
@@ -3348,6 +3408,8 @@
    "id": "bordeaux-superieur",
    "name": "Everyday Bordeaux Red (Bordeaux & Bordeaux Supérieur)",
    "candidates": [
+    "Bordeaux AOC",
+    "Bordeaux wine",
     "Everyday Bordeaux Red",
     "Bordeaux",
     "Bordeaux Supérieur"
@@ -3372,6 +3434,7 @@
    "id": "german-sekt",
    "name": "German Sekt",
    "candidates": [
+    "Sekt",
     "German Sekt"
    ],
    "grapes": [],
@@ -3407,6 +3470,8 @@
    "id": "roero-arneis",
    "name": "Roero Arneis",
    "candidates": [
+    "Roero (wine)",
+    "Arneis",
     "Roero Arneis"
    ],
    "grapes": [],
@@ -3418,6 +3483,7 @@
    "id": "lugana",
    "name": "Lugana (Turbiana)",
    "candidates": [
+    "Lugana (wine)",
     "Lugana",
     "Turbiana"
    ],
@@ -3430,6 +3496,8 @@
    "id": "montefalco-sagrantino",
    "name": "Montefalco Sagrantino",
    "candidates": [
+    "Sagrantino di Montefalco",
+    "Sagrantino",
     "Montefalco Sagrantino"
    ],
    "grapes": [],
@@ -3441,6 +3509,8 @@
    "id": "valtellina-nebbiolo",
    "name": "Valtellina Nebbiolo (Chiavennasca) & Sforzato",
    "candidates": [
+    "Valtellina Superiore",
+    "Valtellina",
     "Valtellina Nebbiolo & Sforzato",
     "Chiavennasca"
    ],
@@ -3465,6 +3535,7 @@
    "name": "Godello (Valdeorras, Bierzo)",
    "candidates": [
     "Godello",
+    "Valdeorras (DO)",
     "Valdeorras",
     "Bierzo"
    ],
@@ -3477,6 +3548,8 @@
    "id": "navarra-rosado",
    "name": "Navarra Rosado",
    "candidates": [
+    "Navarra (DO)",
+    "Navarra wine",
     "Navarra Rosado"
    ],
    "grapes": [],
@@ -3729,5 +3802,14 @@
   "Wine cellar",
   "Aging of wine",
   "Wine serving temperature"
- ]
+ ],
+ "grape_titles": {
+  "Azal": null,
+  "Carlos": "Vitis rotundifolia",
+  "Cariñena (Samsó)": "Carignan",
+  "Erbamat": "Erbamat",
+  "Various (often unspecified red blends)": null,
+  "Sárgamuskotály (Yellow Muscat)": "Muscat Blanc à Petits Grains",
+  "Tinta Negra": "Tinta Negra Mole"
+ }
 }

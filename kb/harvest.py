@@ -99,7 +99,11 @@ def main():
     if only in ("all", "topic"):
         for t in T["topics"]: run("topic", t, t, [t], [t])
     if only in ("all", "grape"):
-        for g in T["grapes"]: run("grape", g, g, [f"{g} (grape)", g], [f"{g} grape variety"])
+        GT = T.get("grape_titles", {})
+        for g in T["grapes"]:
+            if g in GT and GT[g] is None: continue   # not a real single grape (e.g. "Various")
+            first = [GT[g]] if GT.get(g) else []
+            run("grape", g, g, first + [f"{g} (grape)", g], [f"{g} grape variety"])
     if only in ("all", "country"):
         for c in T["countries"]: run("country", c, c, [f"{c} wine", f"Wine in {c}", f"Wine in the {c}", f"Winemaking in {c}"], [f"{c} wine industry"])
     if only in ("all", "wine"):
