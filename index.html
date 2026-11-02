@@ -15,7 +15,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Cormorant+SC:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ox:#6E1E2B;--ox2:#4A1520;--ink:#2B201A;--gold:#A8833B;--gold2:#C9A55A;--paper:#FBF7EE;--tint:#F3EADA;--rule:#D8C7A2;--muted:#8a7558}
+:root{--ox:#6E1E2B;--ox2:#4A1520;--ink:#2B201A;--gold:#A8833B;--goldt:#7A5A1E;--gold2:#C9A55A;--paper:#FBF7EE;--tint:#F3EADA;--rule:#D8C7A2;--muted:#6B5740}
+a,a:visited{color:var(--ox);font-weight:700;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1.5px}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--paper);color:var(--ink);font-family:'EB Garamond',Georgia,serif;-webkit-text-size-adjust:100%}
 button,input{font:inherit}
@@ -50,7 +51,7 @@ header{background:var(--ox2);color:#F2E3C2;padding:calc(14px + env(safe-area-ins
 .bars{display:grid;grid-template-columns:70px 1fr;gap:3px 8px;font-family:Inter,sans-serif;font-size:11px;color:var(--muted);align-items:center}
 .bar{display:flex;gap:3px}.bar i{flex:1;height:7px;border-radius:3px;background:#E9DFCB}.bar i.f{background:var(--ox)}
 .row{font-size:15px;line-height:1.38;margin:3px 0}
-.link{color:var(--ox);cursor:pointer;border-bottom:1px dotted var(--gold)}
+.link{color:var(--ox);cursor:pointer;font-weight:700;text-decoration:underline;text-underline-offset:2px}
 .src{font-family:Inter,sans-serif;font-size:10.5px;color:var(--muted);margin-top:12px}
 .empty{color:var(--muted);font-style:italic}
 .legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-family:Inter,sans-serif;font-size:11px;color:var(--ink);padding:6px 10px 10px;justify-content:center}
@@ -63,7 +64,7 @@ svg text{font-family:Inter,sans-serif;cursor:pointer;user-select:none}
 .sbub{display:inline-flex;align-items:stretch;border-radius:16px;overflow:hidden;border:1.4px solid var(--rule);background:#fff;margin:2px 4px 2px 0}
 .sbub .bl{border:none;background:var(--tint);color:var(--ink);font-family:Inter,sans-serif;font-size:12px;font-weight:700;padding:4px 10px;cursor:pointer}
 .sbub .bl.on{background:var(--ox2);color:#F2E3C2}
-.sbub .sg{border:none;font-family:Inter,sans-serif;font-size:11px;font-weight:600;padding:4px 9px;cursor:pointer;color:#fff;text-shadow:0 1px 1px rgba(0,0,0,.25)}
+.sbub .sg{border:none;font-family:Inter,sans-serif;font-size:11px;font-weight:700;padding:4px 9px;cursor:pointer;color:#fff}
 .sbub .sg.on{box-shadow:inset 0 0 0 2.5px #fff,inset 0 0 0 4px var(--ox2)}
 .sbub .sg.dim{opacity:.35}
 .hero{background:linear-gradient(160deg,#4A1520,#6E1E2B 60%,#7d2a36);color:#F2E3C2;border-radius:16px;padding:26px 22px;margin-bottom:14px}
@@ -94,7 +95,7 @@ svg text{font-family:Inter,sans-serif;cursor:pointer;user-select:none}
 .sttip{display:none;background:#FFF7E6;border:1px solid var(--gold2);border-radius:10px;padding:10px 12px;font-size:14px;color:var(--ink);margin-bottom:8px;line-height:1.4}
 .snapbtns{display:flex;flex-wrap:wrap;gap:10px}.bigbtn.alt2{background:#fff;color:var(--ox);border:2px solid var(--ox)}
 .learn{margin-top:14px;border-top:1px solid var(--rule);padding-top:10px}
-.looklinks{margin:6px 0 4px}.looklinks .k,.wiki .k{font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--gold)}
+.looklinks{margin:6px 0 4px}.looklinks .k,.wiki .k{font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--goldt)}
 .looklinks .btn{text-decoration:none}.wiki.topic summary{cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--ox)}
 .aiwiki{border-left-color:#7A5BA8;background:#F5F1F9}.aiwiki .k{color:#7A5BA8}
 .acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
@@ -114,7 +115,7 @@ svg text{font-family:Inter,sans-serif;cursor:pointer;user-select:none}
 .ppick{border:1px solid var(--rule);border-radius:12px;padding:12px 14px;margin:8px 0;cursor:pointer;background:#fff}.ppick:hover{border-color:var(--ox)}
 .ppick.mine{background:#F5F1F9;border-color:#C9B8DD}.ppick .pn{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--ox)}.ppick p{margin:6px 0 2px;font-size:16px}
 .commc{background:#E3ECF7!important;color:#2E5A8A!important}.commnote{margin-top:6px}
-.hhbox{margin-top:18px;border:1.5px dashed var(--gold2);border-radius:14px;padding:12px 14px;background:#FFFBF2}.hhbox .k{font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--gold)}
+.hhbox{margin-top:18px;border:1.5px dashed var(--gold2);border-radius:14px;padding:12px 14px;background:#FFFBF2}.hhbox .k{font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--goldt)}
 .hhbox p{font-size:15px;margin:6px 0}.hhcode{font-family:Inter,monospace;font-size:28px;font-weight:700;letter-spacing:.12em;color:var(--ox);margin:4px 0}
 .hhbox input{border:1px solid var(--rule);border-radius:8px;padding:6px 10px;font-size:16px}
 .sheet{position:fixed;inset:0;background:rgba(20,8,12,.55);z-index:100;display:flex;align-items:flex-end;justify-content:center}
@@ -146,7 +147,7 @@ svg text{font-family:Inter,sans-serif;cursor:pointer;user-select:none}
 .vbadge{display:inline-block;color:#fff;font-family:Inter,sans-serif;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:10px}
 .vbox{background:var(--tint);border-radius:10px;padding:10px 12px;margin:6px 0}
 .wiki{background:#F7F4EC;border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:10px 12px;margin-top:10px}
-.wiki .k{font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--gold)}
+.wiki .k{font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--goldt)}
 .bot{display:grid;grid-template-columns:64px 1fr;gap:12px;border-bottom:1px solid var(--rule);padding:12px 0}
 .bot img{width:64px;height:64px;object-fit:cover;border-radius:8px;background:var(--tint)}
 .bot .n{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--ox);font-weight:600;cursor:pointer}
@@ -184,7 +185,7 @@ header .tab{display:inline-flex;align-items:center;gap:6px}
 .tile.primary{background:linear-gradient(150deg,#4A1520,#7d2a36);border:none}.tile.primary .t{color:#F2E3C2}.tile.primary .d{color:#F2E3C2}.tile.primary .ic{background:rgba(242,227,194,.15)}
 .recent{display:flex;gap:10px;overflow-x:auto;padding:2px 0 8px}.recent .r{flex:none;width:92px;cursor:pointer;text-align:center;font-family:Inter,sans-serif;font-size:11px;color:var(--ink)}
 .recent .r img,.recent .r .ph{width:92px;height:92px;border-radius:14px;object-fit:cover;background:var(--tint);display:flex;align-items:center;justify-content:center;font-size:34px;margin-bottom:4px}
-.greet{font-family:Inter,sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.greet{font-family:Inter,sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--goldt)}
 .hometitle{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:600;color:var(--ox);margin:2px 0 12px;line-height:1.05}
 .choice{display:flex;align-items:center;gap:12px;width:100%;border:1.5px solid var(--rule);background:#fff;border-radius:14px;padding:12px 14px;margin:8px 0;cursor:pointer;text-align:left}
 .choice .ic{font-size:28px;flex:none}.choice .t{font-family:Inter,sans-serif;font-weight:700;font-size:16px;color:var(--ox)}.choice .d{font-size:14px;color:var(--muted)}
@@ -242,6 +243,8 @@ const RG = Object.fromEntries(DATA.regions.map(r => [r.key, r]));
 const byName = Object.fromEntries(DATA.wines.map(w => [w.name, w]));
 const byId = Object.fromEntries(DATA.wines.map(w => [w.id, w]));
 const uses = {}; DATA.wines.forEach(w => w.descriptors.forEach(t => (uses[t] = uses[t] || []).push(w)));
+function inkOn(hex) { const h = String(hex || "").replace("#", ""); if (h.length < 6) return "#fff"; const L = [0, 2, 4].map(i => { const v = parseInt(h.slice(i, i + 2), 16) / 255; return v <= .03928 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4; });
+  const l = .2126 * L[0] + .7152 * L[1] + .0722 * L[2]; return (1.05 / (l + .05)) >= ((l + .05) / .05) * .55 ? "#fff" : "#2B201A"; }   // readable text on any coloured fill
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const jac = (a, b) => { const A = new Set(a), B = new Set(b); let i = 0; A.forEach(x => B.has(x) && i++); return i / (A.size + B.size - i || 1); };
 const pol = (r, d) => { const a = d * Math.PI / 180; return [r * Math.cos(a), r * Math.sin(a)]; };
@@ -268,7 +271,7 @@ function buildBars() {
   const rb = document.getElementById("regionbar"), sb = document.getElementById("stylebar");
   const mk = (bar, items, key) => { bar.querySelectorAll(".chip").forEach(c => c.remove());
     items.forEach(([k, name, col]) => { const b = document.createElement("button"); b.className = "chip" + (S[key] === k ? " on" : "");
-      b.style.borderColor = col; b.style.color = col; if (S[key] === k) b.style.background = col; b.textContent = name;
+      b.style.borderColor = col; b.style.borderWidth = "1.5px"; b.style.color = "var(--ink)"; if (S[key] === k) { b.style.background = col; b.style.setProperty("color", inkOn(col), "important"); } b.textContent = name;
       b.onclick = () => { S[key] = S[key] === k ? null : k; S.sel = null; render(); }; bar.appendChild(b); }); };
   mk(rb, DATA.regions.filter(r => DATA.wines.some(w => w.group === r.key)).map(r => [r.key, r.name, r.color]), "region");
   sb.querySelectorAll(".sbub").forEach(c => c.remove());
@@ -277,7 +280,7 @@ function buildBars() {
     lab.onclick = () => { S.style = S.style === "c:" + ck ? null : "c:" + ck; S.sel = null; render(); }; box.appendChild(lab);
     keys.filter(k => DATA.wines.some(w => w.style === k)).forEach(k => { const b = document.createElement("button"); const st = DATA.styles[k];
       const inGroup = S.style === "c:" + ck;
-      b.className = "sg" + (S.style === k ? " on" : "") + (S.style && S.style !== k && !inGroup ? " dim" : ""); b.style.background = st.color;
+      b.className = "sg" + (S.style === k ? " on" : "") + (S.style && S.style !== k && !inGroup ? " dim" : ""); b.style.background = st.color; b.style.color = inkOn(st.color);
       b.textContent = st.name.replace(/ (white|red)$/i, "").replace(" / amber", ""); b.title = st.name;
       b.onclick = () => { S.style = S.style === k ? null : k; S.sel = null; render(); }; box.appendChild(b); });
     sb.appendChild(box); });
@@ -368,7 +371,7 @@ function viewWords() {
 
 // ---------------- panel
 const SC = [["sweetness","Sweetness"],["acidity","Acidity"],["tannin","Tannin"],["alcohol","Alcohol"],["body","Body"]];
-function tchip(t, strong) { const f = termFam[t]; return `<button class="tchip" data-word="${esc(t)}" style="background:${strong ? f.color : f.tint};color:${strong ? "#fff" : "#2B201A"}">${dIcon(t)}${esc(t)}</button>`; }
+function tchip(t, strong) { const f = termFam[t]; return `<button class="tchip" data-word="${esc(t)}" style="background:${strong ? f.color : f.tint};color:${strong ? inkOn(f.color) : "#2B201A"}">${dIcon(t)}${esc(t)}</button>`; }
 function wlink(n) { const w = byName[n]; return w ? `<span class="link" data-wine="${esc(w.id)}">${esc(n)}</span>` : esc(n); }
 function f2c(r) { const m = String(r || "").match(/\d+/g); if (!m || m.length < 2) return r ? r + "°F" : ""; const c = x => Math.round((x - 32) * 5 / 9); return `${r}°F (${c(+m[0])}–${c(+m[1])}°C)`; }
 const NVSET = new Set(DATA.nv || []);
@@ -390,7 +393,7 @@ function panelWine(w) {
   const near = DATA.wines.filter(o => o !== w).map(o => [jac(w.descriptors, o.descriptors), o]).sort((a, b) => b[0] - a[0]).slice(0, 4).map(([s, o]) => wlink(o.name)).join(" · ");
   const srcs = [...new Set((w.sources || []).map(u => u.replace(/^https?:\/\/(www\.)?/, "").split("/")[0]))];
   panel.innerHTML = `<h2>${esc(w.name)}</h2>
-   <div class="meta"><span class="badge" style="background:${DATA.styles[w.style].color}">${esc(DATA.styles[w.style].name)}</span>
+   <div class="meta"><span class="badge" style="background:${DATA.styles[w.style].color};color:${inkOn(DATA.styles[w.style].color)}">${esc(DATA.styles[w.style].name)}</span>
    <span style="color:${RG[w.group].color};font-weight:600">${esc([w.region, w.country].filter(Boolean).join(", "))}</span></div>
    <div class="meta">${esc((w.grapes || []).join(", "))}${w.abv ? " · " + esc(w.abv) + " abv" : ""}${w.price ? " · " + esc(w.price) : ""}</div>
    ${w.summary ? `<p>${esc(w.summary)}</p>` : ""}
@@ -403,7 +406,7 @@ function panelWine(w) {
    ${p.classic ? `<div class="sec">Pair with</div><div class="row">${esc(p.classic.join("; "))}</div>${p.creative ? `<div class="row"><i>Try:</i> ${esc(p.creative.join("; "))}</div>` : ""}${p.avoid ? `<div class="row"><i>Avoid:</i> ${esc(p.avoid.join("; "))}</div>` : ""}` : ""}
    ${w.accent ? `<div class="sec">Regional accent</div><div class="row">${esc(w.accent)}</div>` : ""}
    ${kin ? `<div class="sec">Kindred (sommelier picks)</div><div class="row">${kin}</div>` : ""}
-   <div class="sec">Shares the most words with</div><div class="row">${near}</div>
+   <div class="sec">Most closely related to</div><div class="row">${near}</div>
    ${w.confidence === "medium" ? `<div class="src" style="color:#8a6a2e">◐ Generalized profile: this style varies widely or has fewer published sources. Treat it as a guide.</div>` : ""}
    ${srcs.length ? `<div class="src">Sources: ${esc(srcs.join(", "))}</div>` : ""}
    ${AI.url ? `<div class="src" style="margin-top:10px"><a href="#" data-suggest="${esc(w.id)}">${I("notes")} Suggest a correction or addition</a></div>` : ""}`;
@@ -413,9 +416,9 @@ function panelWord(t) {
   const groups = DATA.regions.map(r => [r, ws.filter(w => w.group === r.key)]).filter(x => x[1].length);
   const C = {}; ws.forEach(w => w.descriptors.forEach(o => { if (o !== t) C[o] = (C[o] || 0) + 1; }));
   const partners = Object.entries(C).sort((a, b) => b[1] - a[1]).slice(0, 8).map(([o]) => tchip(o)).join("");
-  panel.innerHTML = `<h2>${esc(t)}</h2><div class="meta"><span class="badge" style="background:${f.color}">${esc(f.name)}</span> ${ws.length} wines</div>
+  panel.innerHTML = `<h2>${esc(t)}</h2><div class="meta"><span class="badge" style="background:${f.color};color:${inkOn(f.color)}">${esc(f.name)}</span> ${ws.length} wines</div>
    <p>${esc(DATA.defs[t] || "")}</p>
-   ${partners ? `<div class="sec">Often found with</div><div>${partners}</div>` : ""}
+   ${partners ? `<div class="sec">Flavor notes that often go together with this one</div><div>${partners}</div>` : ""}
    <div class="sec">Wines it describes</div>
    ${groups.length ? groups.map(([r, list]) => `<div class="row"><b style="color:${r.color}">${esc(r.name)}:</b> ${list.map(w => wlink(w.name)).join(" · ")}</div>`).join("") : `<div class="row empty">No wine lists it as a hallmark yet.</div>`}`;
 }
@@ -1082,7 +1085,7 @@ async function findPairing() {
   P.busy = false; P.res = res; viewPair();
 }
 function wineCard(id, why, extra) { const w = byId[id], st = DATA.styles[w.style];
-  return `<div class="ppick" data-wine="${esc(w.id)}"><div class="pn">${esc(w.name)}</div><span class="badge" style="background:${st.color}">${esc(st.name)}</span>${extra || ""}
+  return `<div class="ppick" data-wine="${esc(w.id)}"><div class="pn">${esc(w.name)}</div><span class="badge" style="background:${st.color};color:${inkOn(st.color)}">${esc(st.name)}</span>${extra || ""}
     <p>${esc(why)}</p><div class="status">Tap for the full profile →</div></div>`; }
 function viewPair() {
   const pg = document.getElementById("pageStage"), P = S.pair = S.pair || {sel: {}};
@@ -1481,7 +1484,7 @@ function describeGlass(wineId, bottleId) {
       <div class="pchips">${["Balanced", "A little out of balance"].map(v => chip("bal", v, T.bal === v)).join("")}</div>
       <div class="pchips" style="margin-top:6px">${["ready to drink now", "better with more time", "past its best"].map(v => chip("ready", v, T.ready === v)).join("")}</div>
       <div style="margin-top:6px">${[1, 2, 3, 4, 5].map(i => `<button class="starbtn" data-star="${i}">${i <= T.stars ? "★" : "☆"}</button>`).join("")}</div>
-      <div class="saybox" style="margin-top:10px"><div class="k" style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--gold)">YOUR TASTING NOTE</div>
+      <div class="saybox" style="margin-top:10px"><div class="k" style="font-family:Inter,sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--goldt)">YOUR TASTING NOTE</div>
         <p style="font-size:18px;margin:6px 0">${esc(sentence()) || "Go back and tap a few observations, and your note will appear here."}</p></div>
       <button class="btn solid" id="dSave">Save to my tasting notes</button><button class="btn" id="dCopy">Copy</button><div class="status" id="dMsg"></div>`}];
   const ov = document.createElement("div"); ov.className = "sheet";
@@ -1795,7 +1798,7 @@ async function viewMenu() {
     <label class="status" style="display:block;margin-top:8px">Guests <input type="number" id="mG" min="1" max="40" value="${M2.guests}" style="width:64px"></label>
     ${picks.length > 6 ? `<p class="status">Wine Folly suggests 4 to 6 wines for a tasting; more than that tires the palate.</p>` : ""}
     ${order.length ? `<div class="flab2" style="margin-top:14px">The pour order</div>${order.map((w, i) => { const why = menuWhy(w, order[i - 1], R), bites = (B[w.style] || []).slice(0, 3), own = ((w.pairings || {}).classic || []).slice(0, 2);
-      return `<div class="tonight" style="margin:8px 0;background:var(--cream, #FBF5EA);color:inherit"><div class="k" style="color:${DATA.styles[w.style].color}">POUR ${i + 1} · ${esc(DATA.styles[w.style].name.toUpperCase())}</div>
+      return `<div class="tonight" style="margin:8px 0;background:var(--cream, #FBF5EA);color:inherit"><div class="k" style="color:var(--goldt)"><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${DATA.styles[w.style].color};margin-right:6px;vertical-align:-1px"></span>POUR ${i + 1} · ${esc(DATA.styles[w.style].name.toUpperCase())}</div>
         <div class="t"><a href="#" data-mw="${w.id}">${esc(w.name)}</a></div>
         <div class="row" style="font-size:13px">${w.serve_f ? `Serve at ${esc(f2c(w.serve_f))}` : ""}${w.decant && w.decant !== "none" ? ` · decant ${esc(w.decant)}` : ""}</div>
         ${why.map(([t, r]) => `<div class="row" style="font-size:14px"><b>Why here:</b> ${esc(t)}${r ? ` <span class="status" style="font-size:11px">(${esc(fSrc(r.sources))})</span>` : ""}</div>`).join("")}
@@ -1985,7 +1988,7 @@ function viewAroma() {
 }
 function panelFamily(f) {
   panel.innerHTML = `<h2>${esc(f.name)}</h2><p>${f.terms.length} words in this family. Tap one to see what it means and which wines show it.</p>
-   <div class="chips">${f.terms.map(t => `<span class="tchip" data-w="${esc(t)}" style="background:${f.color};color:#fff">${esc(t)}</span>`).join(" ")}</div>`;
+   <div class="chips">${f.terms.map(t => `<span class="tchip" data-w="${esc(t)}" style="background:${f.color};color:${inkOn(f.color)}">${esc(t)}</span>`).join(" ")}</div>`;
   panel.querySelectorAll("[data-w]").forEach(x => { x.style.cursor = "pointer"; x.onclick = () => pick("word", x.dataset.w); });
 }
 function panelWelcome() {
