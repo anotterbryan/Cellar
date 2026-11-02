@@ -1,5 +1,6 @@
 name: Deploy Cellar server to Supabase
 # Runs whenever the server code changes on GitHub (or by hand from the Actions tab).
+# First automatic deploy: Nov 1, 2026.
 # Needs one repository secret: SUPABASE_ACCESS_TOKEN (Settings → Secrets and variables → Actions).
 on:
   push:
