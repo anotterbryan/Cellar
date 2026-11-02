@@ -1,8 +1,8 @@
-// Cellar · swift-action  (version 9: adds listing for review areas such as suggestions)
+// Cellar · swift-action  (version 10: remembered answers for settings-file tasks, e.g. quors spirit notes)
 // Label reading, bottle notes, guided dinner pairing, shared household cellar, community bottle facts,
 // plus (new in 6) a settings file on the Cellar website, general-purpose storage, and a status check,
 // so most future features need no server change. Deployed automatically from GitHub.
-const SERVER_VERSION = 9;
+const SERVER_VERSION = 10;
 import postgres from "npm:postgres@3.4.5";
 // A tiny, private middleman between the Cellar website and Google's Gemini API.
 // It keeps the Gemini key secret (stored as a Supabase secret, never in the website),
@@ -30,7 +30,7 @@ const GROQ_BASE = Deno.env.get("GROQ_BASE") ?? "https://api.groq.com";
 const CONFIG_URL = Deno.env.get("CONFIG_URL") ?? "https://anotterbryan.github.io/Cellar/server/config.json";
 
 // ---------------- settings file (cached 5 minutes; built-in defaults if it can't be reached)
-type TaskDef = { prompt: string; schema?: unknown; inputs?: Record<string, number>; images?: number; search?: boolean };
+type TaskDef = { prompt: string; schema?: unknown; inputs?: Record<string, number>; images?: number; search?: boolean; cache_days?: number };
 type StoreDef = { max_bytes?: number; per_key?: number; listable?: boolean };
 type Config = { version?: number | string; groq?: { model?: string; vision_model?: string; enabled?: boolean }; cache?: { notes_days?: number; pair_days?: number }; models?: { primary?: string | null; fallback?: string | null }; limits?: { ai_per_hour?: number; store_puts_per_hour?: number };
   prompts?: Record<string, string>; schemas?: Record<string, unknown>; tasks?: Record<string, TaskDef>; stores?: Record<string, StoreDef> };
@@ -399,10 +399,14 @@ Deno.serve(async (req) => {
     }
     if (parts.length < 2) return new Response(JSON.stringify({ error: "Nothing to work with" }), { status: 400, headers: H });
     const search = SEARCH && !!def.search;
+    const hasImg = parts.some((p) => (p as { inline_data?: unknown }).inline_data);
+    const ck = def.cache_days && !hasImg ? await cacheKey(task, parts) : "";
+    if (ck) { const hit = await cacheGet(ck, def.cache_days!); if (hit) return new Response(JSON.stringify({ ...(hit as object), cached: true }), { headers: H }); }
     const { r, used } = await runGemini(parts, def.schema ?? { type: "OBJECT", properties: { text: { type: "STRING" } } }, search);
     if (!r.ok) return new Response(JSON.stringify({ error: r.status === 429 ? "The free AI quota is used up for now." : "The AI couldn't answer this one.", status: r.status }), { status: 502, headers: H });
     const j = await r.json(); const out = parseJSON((j.candidates?.[0]?.content?.parts ?? []).map((p: { text?: string }) => p.text ?? "").join(""));
     if (!out) return new Response(JSON.stringify({ error: "The AI reply couldn't be understood." }), { status: 502, headers: H });
+    if (ck) await cachePut(ck, task, { ...out, model: used });
     return new Response(JSON.stringify({ ...out, model: used }), { headers: H });
   }
   if (!["read", "notes", "pair"].includes(task) && !task.startsWith("community_") && !task.startsWith("household_"))

@@ -1,6 +1,6 @@
 {
   "_about": "Cellar server settings. The Supabase function reads this file (cached 5 minutes). Prompts here replace the built-in ones; 'tasks' adds new AI requests; 'stores' switches on storage areas. Edit, push, done: no server change needed.",
-  "version": "2026-11-01c",
+  "version": "2026-11-02a",
   "models": {
     "primary": null,
     "fallback": "gemini-3.8-flash"
@@ -19,7 +19,131 @@
     "guided": "You are a friendly expert sommelier. The user described their meal and picked details (sauce, toppings, cheeses...).\nYou get CANDIDATES: wine styles already vetted by a fact-checked pairing guide for those details, each with the guide's reason.\n- Choose the 3 best for this exact meal from the CANDIDATES (use exact ids), best first, and write one or two warm, plain sentences each explaining why it works with THIS meal (acidity, tannin, weight, sweetness vs spice, fat, salt). Stay consistent with the guide's reasons; do not contradict them.\n- If the CELLAR list is not empty, pick up to 2 of the user's bottles (exact ids) that suit the meal, with a short why; else return an empty list.\n- Add one \"avoid\" sentence and one practical serving tip. Only use ids from the lists. Return only JSON.",
     "pair": "You are a friendly expert sommelier. The user tells you what they're having for dinner.\nPick the 3 best wine STYLES from the numbered CATALOG (use their exact ids), best first, and explain each in one or two plain, warm sentences (why it works with this dish: acidity, tannin, weight, sweetness vs spice, etc.).\nIf the user's CELLAR list is not empty, also pick up to 2 bottles from it that would work (exact ids), with a short why; if none fit, return an empty list.\nAdd one \"avoid\" sentence (what would clash) and one practical tip. Keep it encouraging and simple. Only use ids that appear in the lists. Return only JSON."
   },
-  "tasks": {},
+  "tasks": {
+    "spirit_read": {
+      "prompt": "You are a careful spirits expert reading a bottle label (whisky, bourbon, tequila, mezcal, rum, gin, vodka, brandy, liqueur, vermouth...).\nLook at the photo(s) and any text the user typed. Rules:\n- Only report what is printed on the label; use null when unclear. Never guess an age statement or proof.\n- category: one of whiskey, agave, rum, brandy, gin, vodka, liqueur, aperitif, other, or null.\n- style: the most specific legal/common style printed or unmistakable (e.g. \"Kentucky Straight Bourbon\", \"Islay Single Malt Scotch\", \"Tequila Reposado\", \"Rhum Agricole\", \"London Dry Gin\", \"Amaro\").\n- age: age statement in years if printed (number) else null. abv: number (convert proof/2 if only proof is printed). proof: number or null.\n- brand/producer and expression (bottling name) as printed. region and country if printed or clearly implied.\n- notes: 2-3 sentences of what you KNOW about this producer/bottling from general knowledge; if unknown, set known=false and leave empty. Never invent awards or prices.\n- is_spirit: false if this is not a spirit/liqueur bottle.",
+      "inputs": {
+        "text": 2000
+      },
+      "images": 2,
+      "schema": {
+        "type": "OBJECT",
+        "properties": {
+          "is_spirit": {
+            "type": "BOOLEAN"
+          },
+          "brand": {
+            "type": "STRING",
+            "nullable": true
+          },
+          "expression": {
+            "type": "STRING",
+            "nullable": true
+          },
+          "category": {
+            "type": "STRING",
+            "nullable": true
+          },
+          "style": {
+            "type": "STRING",
+            "nullable": true
+          },
+          "region": {
+            "type": "STRING",
+            "nullable": true
+          },
+          "country": {
+            "type": "STRING",
+            "nullable": true
+          },
+          "age": {
+            "type": "INTEGER",
+            "nullable": true
+          },
+          "abv": {
+            "type": "NUMBER",
+            "nullable": true
+          },
+          "proof": {
+            "type": "NUMBER",
+            "nullable": true
+          },
+          "known": {
+            "type": "BOOLEAN"
+          },
+          "notes": {
+            "type": "STRING",
+            "nullable": true
+          },
+          "confidence": {
+            "type": "STRING",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          }
+        },
+        "required": [
+          "is_spirit",
+          "confidence"
+        ]
+      }
+    },
+    "spirit_notes": {
+      "prompt": "You are a warm, precise spirits expert writing a short \"at a glance\" panel about ONE specific bottling for a home-bar app.\nYou get the brand, expression, style, age and abv (some may be missing) plus the general category it belongs to.\n- If you genuinely know this bottling, describe it (known=true); otherwise set known=false and describe what a bottle like this typically offers, saying so plainly.\n- Never invent awards, scores, prices, mash bills, cask details or history. Leave out anything you are unsure of.\n- headline: one sentence. taste: 3-6 short tasting notes. serve: one tip (neat, water, rocks, which cocktail). cocktails: 2-4 classic cocktails it suits. producer: 1-2 sentences about the producer only if known.",
+      "inputs": {
+        "bottle": 1500
+      },
+      "images": 0,
+      "schema": {
+        "type": "OBJECT",
+        "properties": {
+          "known": {
+            "type": "BOOLEAN"
+          },
+          "headline": {
+            "type": "STRING"
+          },
+          "taste": {
+            "type": "ARRAY",
+            "items": {
+              "type": "STRING"
+            }
+          },
+          "serve": {
+            "type": "STRING",
+            "nullable": true
+          },
+          "cocktails": {
+            "type": "ARRAY",
+            "items": {
+              "type": "STRING"
+            }
+          },
+          "producer": {
+            "type": "STRING",
+            "nullable": true
+          },
+          "confidence": {
+            "type": "STRING",
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          }
+        },
+        "required": [
+          "known",
+          "headline",
+          "taste",
+          "confidence"
+        ]
+      },
+      "cache_days": 180
+    }
+  },
   "stores": {
     "ratings": {
       "max_bytes": 1500,
