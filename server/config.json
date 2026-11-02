@@ -1,9 +1,9 @@
 {
   "_about": "Cellar server settings. The Supabase function reads this file (cached 5 minutes). Prompts here replace the built-in ones; 'tasks' adds new AI requests; 'stores' switches on storage areas. Edit, push, done: no server change needed.",
-  "version": "2026-11-01",
+  "version": "2026-11-01b",
   "models": {
     "primary": null,
-    "fallback": null
+    "fallback": "gemini-3.8-flash"
   },
   "limits": {
     "ai_per_hour": 40,
