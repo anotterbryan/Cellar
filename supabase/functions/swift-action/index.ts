@@ -1,4 +1,8 @@
-// Cellar · wine-snap  (version 5: label reading, bottle notes, guided dinner pairing, shared household cellar, community bottle facts)
+// Cellar · swift-action  (version 6)
+// Label reading, bottle notes, guided dinner pairing, shared household cellar, community bottle facts,
+// plus (new in 6) a settings file on the Cellar website, general-purpose storage, and a status check,
+// so most future features need no server change. Deployed automatically from GitHub.
+const SERVER_VERSION = 6;
 import postgres from "npm:postgres@3.4.5";
 // A tiny, private middleman between the Cellar website and Google's Gemini API.
 // It keeps the Gemini key secret (stored as a Supabase secret, never in the website),
@@ -10,6 +14,9 @@ import postgres from "npm:postgres@3.4.5";
 //   FALLBACK_MODEL   optional. Default "gemini-3.5-flash-lite".
 //   ALLOWED_ORIGINS  optional. Comma list. Default "https://anotterbryan.github.io".
 //   WEB_SEARCH       optional. "on" turns on Google Search grounding (requires billing on the Google account).
+//   CONFIG_URL       optional. Settings file. Default https://anotterbryan.github.io/Cellar/server/config.json
+//                    (prompts, extra AI tasks, storage areas, limits). Only read from this address, so
+//                    nobody can send the server their own instructions.
 
 const KEY = Deno.env.get("GEMINI_API_KEY") ?? "";
 const MODEL = Deno.env.get("GEMINI_MODEL") ?? "gemini-3.8-flash";
@@ -17,14 +24,36 @@ const FALLBACK = Deno.env.get("FALLBACK_MODEL") ?? "gemini-3.5-flash-lite";
 const ORIGINS = (Deno.env.get("ALLOWED_ORIGINS") ?? "https://anotterbryan.github.io").split(",").map((s) => s.trim()).filter(Boolean);
 const BASE = Deno.env.get("GEMINI_BASE") ?? "https://generativelanguage.googleapis.com";
 const SEARCH = (Deno.env.get("WEB_SEARCH") ?? "off").toLowerCase() === "on";
+const CONFIG_URL = Deno.env.get("CONFIG_URL") ?? "https://anotterbryan.github.io/Cellar/server/config.json";
+
+// ---------------- settings file (cached 5 minutes; built-in defaults if it can't be reached)
+type TaskDef = { prompt: string; schema?: unknown; inputs?: Record<string, number>; images?: number; search?: boolean };
+type StoreDef = { max_bytes?: number; per_key?: number };
+type Config = { version?: number | string; models?: { primary?: string | null; fallback?: string | null }; limits?: { ai_per_hour?: number; store_puts_per_hour?: number };
+  prompts?: Record<string, string>; schemas?: Record<string, unknown>; tasks?: Record<string, TaskDef>; stores?: Record<string, StoreDef> };
+let CFG: Config = {}, cfgAt = 0, cfgErr = "";
+async function config(): Promise<Config> {
+  if (Date.now() - cfgAt < 5 * 60 * 1000) return CFG;
+  cfgAt = Date.now();
+  try {
+    const r = await fetch(CONFIG_URL + "?t=" + Math.floor(Date.now() / 300000), { signal: AbortSignal.timeout(4000) });
+    if (r.ok) { const j = await r.json(); if (j && typeof j === "object") { CFG = j; cfgErr = ""; } }
+    else cfgErr = "settings file returned " + r.status;
+  } catch (e) { cfgErr = "settings file unreachable: " + String(e).slice(0, 80); }
+  return CFG;
+}
+const prompt = (name: string, dflt: string) => (typeof CFG.prompts?.[name] === "string" && CFG.prompts[name].length > 20) ? CFG.prompts[name] : dflt;
+const schemaOf = (name: string, dflt: unknown) => (CFG.schemas?.[name] && typeof CFG.schemas[name] === "object") ? CFG.schemas[name] : dflt;
+const modelPrimary = () => CFG.models?.primary || MODEL;
+const modelFallback = () => CFG.models?.fallback || FALLBACK;
 
 // gentle per-visitor limit so a stranger can't burn the free quota
 const hits = new Map<string, number[]>();
-function allowed(ip: string): boolean {
-  const now = Date.now(), win = 60 * 60 * 1000, max = 40;
-  const list = (hits.get(ip) ?? []).filter((t) => now - t < win);
+function allowed(ip: string, bucket = "ai", max = CFG.limits?.ai_per_hour ?? 40): boolean {
+  const now = Date.now(), win = 60 * 60 * 1000, k = bucket + "|" + ip;
+  const list = (hits.get(k) ?? []).filter((t) => now - t < win);
   if (list.length >= max) return false;
-  list.push(now); hits.set(ip, list); return true;
+  list.push(now); hits.set(k, list); return true;
 }
 
 function cors(origin: string | null): Record<string, string> {
@@ -96,6 +125,8 @@ async function db() {
     await sql`alter table cellar_households enable row level security`;   // no public access; only this function can read/write
     await sql`create table if not exists cellar_community (key text not null, device text not null, fields jsonb not null, updated_at timestamptz not null default now(), primary key (key, device))`;
     await sql`alter table cellar_community enable row level security`;
+    await sql`create table if not exists cellar_store (ns text not null, key text not null, device text not null, data jsonb not null, updated_at timestamptz not null default now(), primary key (ns, key, device))`;
+    await sql`alter table cellar_store enable row level security`;
     ready = true;
   }
   return sql;
@@ -170,6 +201,34 @@ async function community(task: string, input: { keys?: unknown[]; device?: unkno
   return { found: true, fields, agree, people: rows.length, trusted: Math.min(agree.producer ?? 0, agree.grape ?? agree.wine_id ?? 0) >= 2 };
 }
 
+// ---------------- general-purpose storage: areas are switched on in the settings file ("stores")
+// Each phone keeps its own entry per key (e.g. one rating per phone per wine); everyone can read all entries.
+const cleanNs = (n: unknown) => String(n ?? "").toLowerCase().replace(/[^a-z0-9_]/g, "").slice(0, 40);
+const cleanDevice = (d: unknown) => String(d ?? "").replace(/[^a-zA-Z0-9-]/g, "").slice(0, 40);
+async function store(task: string, input: { ns?: unknown; key?: unknown; keys?: unknown[]; device?: unknown; data?: unknown }, ip: string) {
+  const ns = cleanNs(input.ns), def = CFG.stores?.[ns];
+  if (!def) return { error: "That storage area isn't switched on.", status: 404 };
+  const s = await db();
+  if (task === "store_put" || task === "store_delete") {
+    const key = cleanKey(input.key), device = cleanDevice(input.device);
+    if (key.length < 2 || device.length < 8) return { error: "Missing key or device", status: 400 };
+    if (task === "store_delete") { await s`delete from cellar_store where ns = ${ns} and key = ${key} and device = ${device}`; return { ok: true }; }
+    if (!allowed(ip, "store", CFG.limits?.store_puts_per_hour ?? 300)) return { error: "Too many saves this hour.", status: 429 };
+    const body = JSON.stringify(input.data ?? null);
+    if (input.data == null || body.length > (def.max_bytes ?? 4000)) return { error: "Too much to save", status: 413 };
+    await s`insert into cellar_store (ns, key, device, data) values (${ns}, ${key}, ${device}, ${s.json(input.data as never)}) on conflict (ns, key, device) do update set data = excluded.data, updated_at = now()`;
+    return { ok: true };
+  }
+  // store_get: up to per_key newest entries for each key (device ids are never returned)
+  const keys = [...new Set((input.keys ?? [input.key]).map(cleanKey).filter((k) => k.length >= 2))].slice(0, 20);
+  if (!keys.length) return { error: "Missing key", status: 400 };
+  const me = cleanDevice(input.device), lim = Math.min(def.per_key ?? 100, 500);
+  const rows = await s`select key, device, data, updated_at from (select *, row_number() over (partition by key order by updated_at desc) as rn from cellar_store where ns = ${ns} and key in ${s(keys)}) x where rn <= ${lim}`;
+  const out: Record<string, { data: unknown; mine: boolean; updated: string }[]> = {};
+  for (const r of rows) (out[r.key] ??= []).push({ data: r.data, mine: !!me && r.device === me, updated: new Date(r.updated_at).toISOString() });
+  return { ok: true, entries: out };
+}
+
 const NOTES_PROMPT = `You are a warm, precise sommelier writing a short "at a glance" panel about ONE specific wine for a wine-lover's app.
 You get the producer, wine name, grape, place and vintage (some may be missing) plus the general style it belongs to.
 - If you genuinely know this producer/wine, describe THIS wine (known=true). If not, set known=false and describe what a bottle like this typically offers, saying so plainly.
@@ -225,6 +284,14 @@ async function callGemini(model: string, parts: unknown[], schema: unknown = SCH
   return r;
 }
 
+async function runGemini(parts: unknown[], schema: unknown, search: boolean) {
+  const primary = modelPrimary(), fallback = modelFallback();
+  const call = (m: string) => callGemini(m, parts, schema, search).catch(() => new Response("{}", { status: 503 }));   // network hiccup → try the backup model
+  let r = await call(primary), used = primary;
+  if (r.status === 429 || r.status === 503 || r.status === 404) { r = await call(fallback); used = fallback; }
+  return { r, used };
+}
+
 function parseJSON(t: string) {
   try { return JSON.parse(t); } catch { /* fall through */ }
   const m = t.match(/\{[\s\S]*\}/); if (m) { try { return JSON.parse(m[0]); } catch { /* ignore */ } }
@@ -236,15 +303,51 @@ Deno.serve(async (req) => {
   const H = { ...cors(origin), "content-type": "application/json" };
   if (req.method === "OPTIONS") return new Response("ok", { headers: H });
   if (req.method !== "POST") return new Response(JSON.stringify({ error: "POST only" }), { status: 405, headers: H });
-  if (!KEY) return new Response(JSON.stringify({ error: "Server is missing GEMINI_API_KEY" }), { status: 500, headers: H });
   if (origin && !ORIGINS.includes("*") && !ORIGINS.includes(origin)) return new Response(JSON.stringify({ error: "Origin not allowed" }), { status: 403, headers: H });
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? "anon";
+  await config();
   const peek = req.headers.get("x-cellar-task") ?? "";
-  if (!peek.startsWith("household_") && !peek.startsWith("community_get") && !allowed(ip)) return new Response(JSON.stringify({ error: "Too many scans this hour. Try again later." }), { status: 429, headers: H });
+  const free = peek.startsWith("household_") || peek.startsWith("community_get") || peek.startsWith("store_") || peek === "info";
+  if (!free && !allowed(ip)) return new Response(JSON.stringify({ error: "Too many scans this hour. Try again later." }), { status: 429, headers: H });
 
-  let input: { candidates?: { id: string; name: string; why?: string }[]; details?: string; task?: string; keys?: unknown[]; device?: string; fields?: Record<string, unknown>; code?: string; name?: string; bottles?: Rec[]; tombs?: Record<string, number>; images?: string[]; text?: string; wine?: Record<string, unknown>; dish?: string; catalog?: { id: string; name: string }[]; cellar?: { id: string; name: string }[] };
+  let input: { ns?: unknown; key?: unknown; data?: unknown; inputs?: Record<string, unknown>; candidates?: { id: string; name: string; why?: string }[]; details?: string; task?: string; keys?: unknown[]; device?: string; fields?: Record<string, unknown>; code?: string; name?: string; bottles?: Rec[]; tombs?: Record<string, number>; images?: string[]; text?: string; wine?: Record<string, unknown>; dish?: string; catalog?: { id: string; name: string }[]; cellar?: { id: string; name: string }[] };
   try { input = await req.json(); } catch { return new Response(JSON.stringify({ error: "Bad JSON" }), { status: 400, headers: H }); }
   const task = input.task ?? "read";
+  if (task === "info") {
+    let dbOk = false; try { if (DB_URL) { await db(); dbOk = true; } } catch { /* reported as false */ }
+    return new Response(JSON.stringify({ ok: true, server_version: SERVER_VERSION, config_version: CFG.version ?? null, config_error: cfgErr || null,
+      model: modelPrimary(), fallback: modelFallback(), web_search: SEARCH, database: dbOk, key_set: !!KEY,
+      tasks: ["read", "notes", "pair", ...Object.keys(CFG.tasks ?? {})], stores: Object.keys(CFG.stores ?? {}) }), { headers: H });
+  }
+  if (task.startsWith("store_")) {
+    try { const out = await store(task, input as never, ip); const st = (out as { status?: number }).status;
+      return new Response(JSON.stringify(out), { status: st ?? 200, headers: H }); }
+    catch (e) { return new Response(JSON.stringify({ error: "Storage isn't available right now.", detail: String(e).slice(0, 200) }), { status: 500, headers: H }); }
+  }
+  const aiTask = !!CFG.tasks?.[task] || ["read", "notes", "pair"].includes(task);
+  if (aiTask && !KEY) return new Response(JSON.stringify({ error: "Server is missing GEMINI_API_KEY" }), { status: 500, headers: H });
+  // extra AI tasks defined in the settings file: the prompt and schema come from the file, the app only sends data
+  const def = CFG.tasks?.[task];
+  if (def && typeof def.prompt === "string") {
+    const parts: unknown[] = [{ text: def.prompt }];
+    for (const [name, max] of Object.entries(def.inputs ?? {})) {
+      const v = input.inputs?.[name]; if (v == null || v === "") continue;
+      parts.push({ text: `${name.toUpperCase()}:\n` + (typeof v === "string" ? v : JSON.stringify(v)).slice(0, Math.min(Number(max) || 1000, 20000)) });
+    }
+    for (const d of (input.images ?? []).slice(0, Math.min(def.images ?? 0, 3))) {
+      const m = typeof d === "string" && d.length < 2_500_000 && d.match(/^data:(image\/[a-z]+);base64,(.+)$/);
+      if (m) parts.push({ inline_data: { mime_type: m[1], data: m[2] } });
+    }
+    if (parts.length < 2) return new Response(JSON.stringify({ error: "Nothing to work with" }), { status: 400, headers: H });
+    const search = SEARCH && !!def.search;
+    const { r, used } = await runGemini(parts, def.schema ?? { type: "OBJECT", properties: { text: { type: "STRING" } } }, search);
+    if (!r.ok) return new Response(JSON.stringify({ error: r.status === 429 ? "The free AI quota is used up for now." : "The AI couldn't answer this one.", status: r.status }), { status: 502, headers: H });
+    const j = await r.json(); const out = parseJSON((j.candidates?.[0]?.content?.parts ?? []).map((p: { text?: string }) => p.text ?? "").join(""));
+    if (!out) return new Response(JSON.stringify({ error: "The AI reply couldn't be understood." }), { status: 502, headers: H });
+    return new Response(JSON.stringify({ ...out, model: used }), { headers: H });
+  }
+  if (!["read", "notes", "pair"].includes(task) && !task.startsWith("community_") && !task.startsWith("household_"))
+    return new Response(JSON.stringify({ error: "This server doesn't know that request yet.", unknown_task: task, server_version: SERVER_VERSION }), { status: 404, headers: H });
   if (task.startsWith("community_")) {
     try { const out = await community(task, input as never); const st = (out as { status?: number }).status;
       return new Response(JSON.stringify(out), { status: st ?? 200, headers: H }); }
@@ -259,7 +362,7 @@ Deno.serve(async (req) => {
     let parts: unknown[], schema: unknown;
     if (task === "notes") {
       const w = JSON.stringify(input.wine ?? {}).slice(0, 1500);
-      parts = [{ text: NOTES_PROMPT + (SEARCH ? "\nYou may search the web; respond with ONLY the JSON object." : "") }, { text: "Wine: " + w }]; schema = NOTES_SCHEMA;
+      parts = [{ text: prompt("notes", NOTES_PROMPT) + (SEARCH ? "\nYou may search the web; respond with ONLY the JSON object." : "") }, { text: "Wine: " + w }]; schema = schemaOf("notes", NOTES_SCHEMA);
     } else {
       const dish = String(input.dish ?? "").slice(0, 300);
       if (!dish) return new Response(JSON.stringify({ error: "Tell me what's for dinner" }), { status: 400, headers: H });
@@ -267,17 +370,16 @@ Deno.serve(async (req) => {
       if (cands.length) {
         const cel = (input.cellar ?? []).slice(0, 80).map((c) => `${c.id}: ${c.name}`).join("\n").slice(0, 6000);
         const cl = cands.map((c) => `${c.id}: ${c.name}${c.why ? " | guide: " + String(c.why).slice(0, 220) : ""}`).join("\n");
-        parts = [{ text: GUIDED_PROMPT }, { text: "Meal: " + dish + (input.details ? "\nDetails: " + String(input.details).slice(0, 400) : "") }, { text: "CANDIDATES:\n" + cl }, { text: "CELLAR:\n" + (cel || "(empty)") }];
-        schema = PAIR_SCHEMA;
+        parts = [{ text: prompt("guided", GUIDED_PROMPT) }, { text: "Meal: " + dish + (input.details ? "\nDetails: " + String(input.details).slice(0, 400) : "") }, { text: "CANDIDATES:\n" + cl }, { text: "CELLAR:\n" + (cel || "(empty)") }];
+        schema = schemaOf("pair", PAIR_SCHEMA);
       } else {
       const cat = (input.catalog ?? []).slice(0, 260).map((c) => `${c.id}: ${c.name}`).join("\n").slice(0, 20000);
       const cel = (input.cellar ?? []).slice(0, 80).map((c) => `${c.id}: ${c.name}`).join("\n").slice(0, 6000);
-      parts = [{ text: PAIR_PROMPT }, { text: "Dinner: " + dish }, { text: "CATALOG:\n" + cat }, { text: "CELLAR:\n" + (cel || "(empty)") }]; schema = PAIR_SCHEMA;
+      parts = [{ text: prompt("pair", PAIR_PROMPT) }, { text: "Dinner: " + dish }, { text: "CATALOG:\n" + cat }, { text: "CELLAR:\n" + (cel || "(empty)") }]; schema = schemaOf("pair", PAIR_SCHEMA);
       }
     }
     const useSearch = SEARCH && task === "notes";
-    let r = await callGemini(MODEL, parts, schema, useSearch), used = MODEL;
-    if (r.status === 429 || r.status === 503 || r.status === 404) { r = await callGemini(FALLBACK, parts, schema, useSearch); used = FALLBACK; }
+    const { r, used } = await runGemini(parts, schema, useSearch);
     if (!r.ok) return new Response(JSON.stringify({ error: r.status === 429 ? "The free AI quota is used up for now." : "The AI couldn't answer this one.", status: r.status }), { status: 502, headers: H });
     const j = await r.json(); const cand = j.candidates?.[0];
     const out = parseJSON((cand?.content?.parts ?? []).map((p: { text?: string }) => p.text ?? "").join(""));
@@ -290,15 +392,14 @@ Deno.serve(async (req) => {
   const text = (input.text ?? "").slice(0, 2000);
   if (!images.length && !text) return new Response(JSON.stringify({ error: "Send a photo or text" }), { status: 400, headers: H });
 
-  const parts: unknown[] = [{ text: PROMPT + (SEARCH ? "\nYou may search the web to identify the producer and fill winery_info; respond with ONLY the JSON object (no prose)." : "") }];
+  const parts: unknown[] = [{ text: prompt("read", PROMPT) + (SEARCH ? "\nYou may search the web to identify the producer and fill winery_info; respond with ONLY the JSON object (no prose)." : "") }];
   images.forEach((d, i) => {
     const m = d.match(/^data:(image\/[a-z]+);base64,(.+)$/);
     if (m) parts.push({ text: i === 0 ? "Front label:" : "Back label:" }, { inline_data: { mime_type: m[1], data: m[2] } });
   });
   if (text) parts.push({ text: "Text the user typed or scanned from the label:\n" + text });
 
-  let r = await callGemini(MODEL, parts), used = MODEL;
-  if (r.status === 429 || r.status === 503 || r.status === 404) { r = await callGemini(FALLBACK, parts); used = FALLBACK; }
+  const { r, used } = await runGemini(parts, schemaOf("read", SCHEMA), SEARCH);
   if (!r.ok) {
     const detail = (await r.text()).slice(0, 300);
     const msg = r.status === 429 ? "The free AI quota is used up for now. The on-device reader will be used instead." : "The AI couldn't read this one.";

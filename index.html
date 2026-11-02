@@ -459,7 +459,12 @@ function render() {
   try { history.replaceState(null, "", "#" + [S.view, S.sel ? S.sel.type + ":" + S.sel.id : ""].join("/")); } catch (e) {}
 }
 document.getElementById("subnav").addEventListener("click", e => { const b = e.target.closest(".sub"); if (!b) return; S.view = b.dataset.v; if (S.view === "learn") S.sel = null; render(); scrollTo({top: 0}); });
-document.getElementById("wm").onclick = () => { S.view = "home"; S.sel = null; render(); scrollTo({top: 0}); };
+let wmTaps = [];
+document.getElementById("wm").onclick = () => {
+  const now = Date.now(); wmTaps = wmTaps.filter(t => now - t < 3000).concat(now);
+  if (wmTaps.length >= 5) { wmTaps = []; showServer(); return; }   // hidden: tap "cellar" 5 times for the server status
+  S.view = "home"; S.sel = null; render(); scrollTo({top: 0});
+};
 document.getElementById("helpBtn").onclick = () => showHelp();
 document.getElementById("tabs").addEventListener("click", e => { const b = e.target.closest(".tab"); if (!b) return; S.view = b.dataset.v; scrollTo({top: 0});
   if (["pair", "home", "learn", "bottles", "snap"].includes(S.view)) S.sel = null;
@@ -1733,12 +1738,14 @@ function viewHome() {
     ${recent.length ? `<div class="homeh">Recently scanned</div><div class="recent">${recent.map(b => `<div class="r" data-open="${b.id}">${b.thumb ? `<img src="${b.thumb}" alt="">` : `<div class="ph">🍷</div>`}${esc(b.name.length > 26 ? b.name.slice(0, 25) + "…" : b.name)}</div>`).join("")}</div>` : ""}
     <div class="tile" id="homeTaste" style="margin-top:6px"><div class="ic">👃</div><div><div class="t">Guided tasting</div><div class="d">Pour a glass and we'll walk you through it, step by step: look, swirl, smell, sip, finish.</div></div></div>
     <div class="tile" data-go="learn" style="margin-top:10px"><div class="ic">📖</div><div><div class="t">Learn about wine</div><div class="d">Explore ${DATA.wines.length} wine styles and the words tasters use, on interactive wheels.</div></div></div>
+    ${(getJ(ADMINKEY, null) || {}).need ? `<p class="status" style="text-align:center"><a href="#" id="homeSrv">⚙︎ Server update needed (owner)</a></p>` : ""}
     ${!bl.length && !hh() && AI.url ? `<p class="status" style="text-align:center">Had bottles before? <a href="#" id="homeRestore">Restore them with your cellar code</a>.</p>` : ""}
     <p class="status" style="margin-top:14px;text-align:center"><a href="#" id="tourAgain">New here? Take the 30-second tour</a> · Free, no account needed.</p>`;
   pg.querySelectorAll("[data-go]").forEach(c => c.onclick = () => go(c.dataset.go));
   pg.querySelectorAll("[data-open]").forEach(c => c.onclick = () => { const b = loadBottles().find(x => x.id == c.dataset.open); if (!b) return;
     if (b.wineId) { S.view = "bottles"; S.sel = {type: "wine", id: b.wineId}; S.vintage = b.vintage; S.vintageFor = b.wineId; render(); if (innerWidth < 900) panel.scrollIntoView({behavior: "smooth"}); } else go("bottles"); });
   document.getElementById("homeTaste").onclick = startTasting;
+  const hs = document.getElementById("homeSrv"); if (hs) hs.onclick = e => { e.preventDefault(); showServer(); };
   const hr = document.getElementById("homeRestore"); if (hr) hr.onclick = e => { e.preventDefault(); go("bottles"); setTimeout(() => { const j = document.getElementById("hhJoin"); if (j) { j.scrollIntoView({behavior: "smooth", block: "center"}); j.focus(); } }, 300); };
   document.getElementById("tourAgain").onclick = e => { e.preventDefault(); showTour(); };
 }
@@ -1779,6 +1786,32 @@ const HELP = {
   bottles: ["Your cellar", "<b>Cellar</b>: bottles you own. Tap <b>−</b> when you open one to add a tasting note.<br><b>Wishlist</b>: bottles to try.<br><b>History</b>: everything you've scanned.<br><b>Map</b>: where your wines come from.<br><br>⏰ adds a calendar reminder for when a bottle is at its best. Your bottles back up automatically once you save one. Scroll down to see your <b>cellar code</b>: enter it on another phone (or the home-screen app) to restore or share the same cellar."],
   learn: ["Learning about wine", "Each wheel is interactive: tap a wine or a word to see how it connects. Use the search bar to jump to a specific wine or grape."],
   wheel: ["Using the wheels", "Tap any wine or word on the wheel. Its details appear below (on a phone) or on the right. Use the Region and Style filters to narrow things down, and <b>← Learn</b> to go back."]};
+// ---------------------------------------------------------------- server status (hidden owner panel)
+const NEED_SERVER = 6, ADMINKEY = "cellarLyceum.admin.v1";
+async function serverInfo() {
+  try { const j = await aiCall({task: "info"}, "info"); return j && j.server_version ? j : {old: true}; }
+  catch (e) { return e.status === 400 || e.status === 404 ? {old: true} : {down: true, err: e.message}; }
+}
+async function adminCheck() {   // only on the owner's phone (after opening the panel once): note an out-of-date server on Home
+  const a = getJ(ADMINKEY, null); if (!a || !AI.url || Date.now() - (a.at || 0) < 6 * 3600e3) return;
+  const j = await serverInfo(); setJ(ADMINKEY, {at: Date.now(), need: !!(j.old || (j.server_version || 0) < NEED_SERVER)}); if (S.view === "home") render();
+}
+async function showServer() {
+  const ov = document.createElement("div"); ov.className = "sheet";
+  ov.innerHTML = `<div class="sheetin"><button class="btn" id="sClose" style="float:right">Close</button><div class="flab2" style="margin-top:0">For the owner</div>
+    <div class="matchname">Server status</div><div id="sBody" class="status">Checking…</div></div>`;
+  document.body.appendChild(ov); ov.onclick = e => { if (e.target === ov) ov.remove(); }; ov.querySelector("#sClose").onclick = () => ov.remove();
+  if (!AI.url) { ov.querySelector("#sBody").textContent = "No server is set up for this copy of the app."; return; }
+  const j = await serverInfo(), need = !!(j.old || (j.server_version || 0) < NEED_SERVER);
+  if (!j.down) setJ(ADMINKEY, {at: Date.now(), need});
+  const row = (k, v, ok) => `<tr><td style="padding:4px 10px 4px 0;color:var(--muted)">${k}</td><td>${ok === false ? "⚠️ " : ok ? "✅ " : ""}${esc(String(v))}</td></tr>`;
+  ov.querySelector("#sBody").innerHTML = j.down ? `⚠️ The server didn't answer: ${esc(j.err || "")}`
+    : j.old ? `⚠️ The server is an older version (5 or earlier). It still works, but needs an update for the newest features. Once automatic deploys are set up, this fixes itself.`
+    : `<table style="font-size:15px">${row("Server version", j.server_version + (need ? " (update needed)" : " (up to date)"), !need)}${row("Settings file", j.config_error ? j.config_error : "loaded · " + (j.config_version || "?"), !j.config_error)}
+      ${row("AI model", j.model + " → backup " + j.fallback)}${row("Gemini key", j.key_set ? "set" : "missing", !!j.key_set)}${row("Database", j.database ? "connected" : "not connected", !!j.database)}
+      ${row("AI requests", (j.tasks || []).join(", "))}${row("Storage areas", (j.stores || []).join(", ") || "none")}</table>`;
+  if (S.view === "home") render();
+}
 function showHelp() {
   const [t, d] = HELP[WHEELS.includes(S.view) ? "wheel" : S.view] || HELP.home;
   const ov = document.createElement("div"); ov.className = "sheet";
@@ -1867,7 +1900,7 @@ const AITEST = location.hash === "#aitest";
   if (h[1]) { const [t, ...rest] = h[1].split(":"); const id = rest.join(":"); if ((t === "wine" && byId[id]) || (t === "word" && termFam[id])) S.sel = {type: t, id}; } })();
 render();
 if (AITEST) aiSelfTest(); else if (!getJ(TOURKEY, false) && S.view === "home") setTimeout(() => showTour(), 500);
-setTimeout(() => { syncNow(); ensureBackup(); }, 800);
+setTimeout(() => { syncNow(); ensureBackup(); adminCheck(); }, 800);
 try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {}
 </script>
 </body>

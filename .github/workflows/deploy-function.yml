@@ -1,0 +1,38 @@
+name: Deploy Cellar server to Supabase
+# Runs whenever the server code changes on GitHub (or by hand from the Actions tab).
+# Needs one repository secret: SUPABASE_ACCESS_TOKEN (Settings → Secrets and variables → Actions).
+on:
+  push:
+    branches: [main]
+    paths: ["supabase/functions/**", ".github/workflows/deploy-function.yml"]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      PROJECT_REF: hdqslqtodpacavvgmfbd
+    steps:
+      - name: Waiting for setup?
+        if: ${{ env.SUPABASE_ACCESS_TOKEN == '' }}
+        run: echo "No SUPABASE_ACCESS_TOKEN secret yet, so nothing was deployed. Add it under Settings → Secrets and variables → Actions."
+      - uses: actions/checkout@v4
+        if: ${{ env.SUPABASE_ACCESS_TOKEN != '' }}
+      - uses: supabase/setup-cli@v1
+        if: ${{ env.SUPABASE_ACCESS_TOKEN != '' }}
+        with:
+          version: latest
+      - name: Deploy swift-action
+        if: ${{ env.SUPABASE_ACCESS_TOKEN != '' }}
+        run: supabase functions deploy swift-action --project-ref "$PROJECT_REF" --no-verify-jwt --use-api
+      - name: Check it answers
+        if: ${{ env.SUPABASE_ACCESS_TOKEN != '' }}
+        run: |
+          sleep 10
+          curl -sS -X POST "https://$PROJECT_REF.supabase.co/functions/v1/swift-action" \
+            -H "content-type: application/json" \
+            -H "apikey: sb_publishable_apUSFmYpE6C7Yb-N3hR6iw_dRNUHNzV" \
+            -H "x-cellar-task: info" \
+            -d '{"task":"info"}' | tee info.json
+          grep -q '"server_version"' info.json
