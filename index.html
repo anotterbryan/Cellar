@@ -937,7 +937,7 @@ function notesHTML(n) {
     ${(n.food || []).length ? `<div class="gl"><b>Great with</b> ${esc((n.food || []).join(" · "))}</div>` : ""}
     ${n.serve ? `<div class="gl"><b>Serve</b> ${esc(n.serve)}</div>` : ""}
     ${n.producer ? `<div class="gl"><b>The producer</b> ${esc(n.producer)}</div>` : ""}
-    <div class="status">${n.known ? "Written by AI about this wine" : "AI didn't recognize this exact bottle, so these notes describe what a wine like it typically offers"}${n.web_search ? " using web results" : ""}. Always double-check; the verified style profile is below.</div>
+    <div class="status">${n.known ? "Written by AI about this wine" : "AI didn't recognize this exact bottle, so these notes describe what a wine like it typically offers"}${n.web_search ? " using web results" : ""}${n.cached ? " (a saved answer, so no AI quota was used)" : ""}. Always double-check; the verified style profile is below.</div>
     ${(n.sources || []).length ? `<div class="status">Sources: ${n.sources.map(s => `<a href="${esc(s.uri)}" target="_blank" rel="noopener">${esc(s.title || "link")}</a>`).join(" · ")}</div>` : ""}</div>`;
 }
 function updateNotes() { const b = document.getElementById("notesBox"); if (b) b.innerHTML = notesHTML(SNAP.notes); }
@@ -1787,7 +1787,7 @@ const HELP = {
   learn: ["Learning about wine", "Each wheel is interactive: tap a wine or a word to see how it connects. Use the search bar to jump to a specific wine or grape."],
   wheel: ["Using the wheels", "Tap any wine or word on the wheel. Its details appear below (on a phone) or on the right. Use the Region and Style filters to narrow things down, and <b>← Learn</b> to go back."]};
 // ---------------------------------------------------------------- server status (hidden owner panel)
-const NEED_SERVER = 6, ADMINKEY = "cellarLyceum.admin.v1";
+const NEED_SERVER = 7, ADMINKEY = "cellarLyceum.admin.v1";
 async function serverInfo() {
   try { const j = await aiCall({task: "info"}, "info"); return j && j.server_version ? j : {old: true}; }
   catch (e) { return e.status === 400 || e.status === 404 ? {old: true} : {down: true, err: e.message}; }
@@ -1809,7 +1809,7 @@ async function showServer() {
     : j.old ? `⚠️ The server is an older version (5 or earlier). It still works, but needs an update for the newest features. Once automatic deploys are set up, this fixes itself.`
     : `<table style="font-size:15px">${row("Server version", j.server_version + (need ? " (update needed)" : " (up to date)"), !need)}${row("Settings file", j.config_error ? j.config_error : "loaded · " + (j.config_version || "?"), !j.config_error)}
       ${row("AI model", j.model + " → backup " + j.fallback)}${row("Gemini key", j.key_set ? "set" : "missing", !!j.key_set)}${row("Database", j.database ? "connected" : "not connected", !!j.database)}
-      ${row("AI requests", (j.tasks || []).join(", "))}${row("Storage areas", (j.stores || []).join(", ") || "none")}</table>`;
+      ${row("Remembered answers", (j.remembered_answers ?? 0) + " saved · reused " + (j.quota_saved ?? 0) + " times")}${row("AI requests", (j.tasks || []).join(", "))}${row("Storage areas", (j.stores || []).join(", ") || "none")}</table>`;
   if (S.view === "home") render();
 }
 function showHelp() {

@@ -9,6 +9,10 @@
     "ai_per_hour": 40,
     "store_puts_per_hour": 300
   },
+  "cache": {
+    "notes_days": 180,
+    "pair_days": 60
+  },
   "prompts": {
     "read": "You are a careful sommelier's assistant reading a wine bottle label.\nLook at the photo(s) (front label, and back label if given) plus any text the user typed.\n\nRules:\n- \"label\" fields: ONLY what is actually printed on the bottle. If you cannot read it clearly, use null. Never guess a vintage year.\n- grape: the grape variety or wine type as printed (e.g. \"Viognier\", \"Muscadine\", \"Red Blend\"). If several are listed, give the main one in grape and all in grapes.\n- region: the most specific place printed (e.g. \"Napa Valley\", \"Paso Robles\"); state: US state if printed or clearly implied by the region; country if printed or clearly implied.\n- color: one of \"Red\",\"White\",\"Rosé\",\"Sparkling\",\"Fortified\", or null. sweetness: one of \"Dry\",\"Off-dry / semi-sweet\",\"Sweet\", or null — only if printed or unmistakable from the wine type.\n- abv: number from the label (e.g. 13.5) or null.\n- winery_info: what you KNOW about this producer from general knowledge (2-3 plain sentences, location, notable facts). If you don't know this producer, set known=false and leave summary empty. Do not invent facts.\n- is_wine: false if the photo is not a wine bottle/label.\nReturn only JSON matching the schema.",
     "notes": "You are a warm, precise sommelier writing a short \"at a glance\" panel about ONE specific wine for a wine-lover's app.\nYou get the producer, wine name, grape, place and vintage (some may be missing) plus the general style it belongs to.\n- If you genuinely know this producer/wine, describe THIS wine (known=true). If not, set known=false and describe what a bottle like this typically offers, saying so plainly.\n- Never invent awards, scores, prices, owners or history. If unsure about a fact, leave it out.\n- headline: one sentence, like a search snippet. taste: 3-6 short tasting notes. food: 3-5 specific dishes. serve: one short tip (temperature/decanting/glass).\n- producer: 1-2 sentences about the producer only if known, else empty.\nReturn only JSON.",

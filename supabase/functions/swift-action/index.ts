@@ -1,8 +1,8 @@
-// Cellar · swift-action  (version 6)
+// Cellar · swift-action  (version 7: adds remembered AI answers)
 // Label reading, bottle notes, guided dinner pairing, shared household cellar, community bottle facts,
 // plus (new in 6) a settings file on the Cellar website, general-purpose storage, and a status check,
 // so most future features need no server change. Deployed automatically from GitHub.
-const SERVER_VERSION = 6;
+const SERVER_VERSION = 7;
 import postgres from "npm:postgres@3.4.5";
 // A tiny, private middleman between the Cellar website and Google's Gemini API.
 // It keeps the Gemini key secret (stored as a Supabase secret, never in the website),
@@ -29,7 +29,7 @@ const CONFIG_URL = Deno.env.get("CONFIG_URL") ?? "https://anotterbryan.github.io
 // ---------------- settings file (cached 5 minutes; built-in defaults if it can't be reached)
 type TaskDef = { prompt: string; schema?: unknown; inputs?: Record<string, number>; images?: number; search?: boolean };
 type StoreDef = { max_bytes?: number; per_key?: number };
-type Config = { version?: number | string; models?: { primary?: string | null; fallback?: string | null }; limits?: { ai_per_hour?: number; store_puts_per_hour?: number };
+type Config = { version?: number | string; cache?: { notes_days?: number; pair_days?: number }; models?: { primary?: string | null; fallback?: string | null }; limits?: { ai_per_hour?: number; store_puts_per_hour?: number };
   prompts?: Record<string, string>; schemas?: Record<string, unknown>; tasks?: Record<string, TaskDef>; stores?: Record<string, StoreDef> };
 let CFG: Config = {}, cfgAt = 0, cfgErr = "";
 async function config(): Promise<Config> {
@@ -127,6 +127,8 @@ async function db() {
     await sql`alter table cellar_community enable row level security`;
     await sql`create table if not exists cellar_store (ns text not null, key text not null, device text not null, data jsonb not null, updated_at timestamptz not null default now(), primary key (ns, key, device))`;
     await sql`alter table cellar_store enable row level security`;
+    await sql`create table if not exists cellar_ai_cache (key text primary key, task text not null, data jsonb not null, hits integer not null default 0, created_at timestamptz not null default now())`;
+    await sql`alter table cellar_ai_cache enable row level security`;
     ready = true;
   }
   return sql;
@@ -284,6 +286,26 @@ async function callGemini(model: string, parts: unknown[], schema: unknown = SCH
   return r;
 }
 
+// ---------------- remembered AI answers: the same bottle (or the same dinner) never costs quota twice.
+// Only this server writes the cache, from Gemini's own replies, so nobody can plant answers.
+async function cacheKey(task: string, parts: unknown[]) {
+  const norm = JSON.stringify(parts).toLowerCase().replace(/\s+/g, " ");
+  const h = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(task + "|" + norm));
+  return task + ":" + [...new Uint8Array(h)].map((b) => b.toString(16).padStart(2, "0")).join("").slice(0, 40);
+}
+async function cacheGet(key: string, days: number) {
+  if (!DB_URL || days <= 0) return null;
+  try {
+    const s = await db();
+    const rows = await s`update cellar_ai_cache set hits = hits + 1 where key = ${key} and created_at > now() - make_interval(days => ${days}) returning data`;
+    return rows.length ? rows[0].data : null;
+  } catch { return null; }
+}
+async function cachePut(key: string, task: string, data: unknown) {
+  if (!DB_URL) return;
+  try { const s = await db(); await s`insert into cellar_ai_cache (key, task, data) values (${key}, ${task}, ${s.json(data as never)}) on conflict (key) do update set data = excluded.data, created_at = now(), hits = 0`; } catch { /* cache is optional */ }
+}
+
 async function runGemini(parts: unknown[], schema: unknown, search: boolean) {
   const primary = modelPrimary(), fallback = modelFallback();
   const call = (m: string) => callGemini(m, parts, schema, search).catch(() => new Response("{}", { status: 503 }));   // network hiccup → try the backup model
@@ -314,9 +336,10 @@ Deno.serve(async (req) => {
   try { input = await req.json(); } catch { return new Response(JSON.stringify({ error: "Bad JSON" }), { status: 400, headers: H }); }
   const task = input.task ?? "read";
   if (task === "info") {
-    let dbOk = false; try { if (DB_URL) { await db(); dbOk = true; } } catch { /* reported as false */ }
+    let dbOk = false, cached = 0, saved = 0;
+    try { if (DB_URL) { const s = await db(); dbOk = true; const c = await s`select count(*)::int as n, coalesce(sum(hits),0)::int as h from cellar_ai_cache`; cached = c[0].n; saved = c[0].h; } } catch { /* reported as false */ }
     return new Response(JSON.stringify({ ok: true, server_version: SERVER_VERSION, config_version: CFG.version ?? null, config_error: cfgErr || null,
-      model: modelPrimary(), fallback: modelFallback(), web_search: SEARCH, database: dbOk, key_set: !!KEY,
+      remembered_answers: cached, quota_saved: saved, model: modelPrimary(), fallback: modelFallback(), web_search: SEARCH, database: dbOk, key_set: !!KEY,
       tasks: ["read", "notes", "pair", ...Object.keys(CFG.tasks ?? {})], stores: Object.keys(CFG.stores ?? {}) }), { headers: H });
   }
   if (task.startsWith("store_")) {
@@ -379,13 +402,20 @@ Deno.serve(async (req) => {
       }
     }
     const useSearch = SEARCH && task === "notes";
+    // cache notes always; cache pairings only when no personal cellar list is included
+    const days = task === "notes" ? (CFG.cache?.notes_days ?? 180) : ((input.cellar ?? []).length ? 0 : (CFG.cache?.pair_days ?? 60));
+    const ck = days > 0 ? await cacheKey(task, parts) : "";
+    if (ck) { const hit = await cacheGet(ck, days); if (hit) return new Response(JSON.stringify({ ...(hit as object), cached: true }), { headers: H }); }
     const { r, used } = await runGemini(parts, schema, useSearch);
     if (!r.ok) return new Response(JSON.stringify({ error: r.status === 429 ? "The free AI quota is used up for now." : "The AI couldn't answer this one.", status: r.status }), { status: 502, headers: H });
     const j = await r.json(); const cand = j.candidates?.[0];
     const out = parseJSON((cand?.content?.parts ?? []).map((p: { text?: string }) => p.text ?? "").join(""));
     if (!out) return new Response(JSON.stringify({ error: "The AI reply couldn't be understood." }), { status: 502, headers: H });
     const sources = (cand?.groundingMetadata?.groundingChunks ?? []).map((c: { web?: { uri?: string; title?: string } }) => c.web).filter(Boolean).slice(0, 5);
-    return new Response(JSON.stringify({ ...out, model: used, web_search: useSearch, sources }), { headers: H });
+    const result = { ...out, model: used, web_search: useSearch, sources };
+    const looksGood = task === "notes" ? !!(out.headline && Array.isArray(out.taste)) : Array.isArray(out.picks) && out.picks.length > 0;
+    if (ck && looksGood) await cachePut(ck, task, result);
+    return new Response(JSON.stringify(result), { headers: H });
   }
 
   const images = (input.images ?? []).slice(0, 2).filter((s) => typeof s === "string" && s.length < 2_500_000);
