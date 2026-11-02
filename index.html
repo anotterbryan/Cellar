@@ -19,7 +19,7 @@
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--paper);color:var(--ink);font-family:'EB Garamond',Georgia,serif;-webkit-text-size-adjust:100%}
 button,input{font:inherit}
-header{background:var(--ox2);color:#F2E3C2;padding:14px 18px 12px;position:sticky;top:0;z-index:20;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+header{background:var(--ox2);color:#F2E3C2;padding:calc(14px + env(safe-area-inset-top)) calc(18px + env(safe-area-inset-right)) 12px calc(18px + env(safe-area-inset-left));position:sticky;top:0;z-index:20;box-shadow:0 2px 8px rgba(0,0,0,.15)}
 .brand{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .brand .sc{font-family:'Cormorant SC',serif;letter-spacing:.3em;font-size:12px;color:var(--gold2)}
 .brand h1{margin:0;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:26px;line-height:1}
@@ -187,7 +187,7 @@ header .tab{display:inline-flex;align-items:center;gap:6px}
 .choice.main{background:var(--ox);border-color:var(--ox)}.choice.main .t{color:#F2E3C2}.choice.main .d{color:#e9d6b8}
 @media (max-width:700px){
  .wordmark{font-size:36px}
- header{padding:10px 14px 8px}
+ header{padding:calc(10px + env(safe-area-inset-top)) calc(14px + env(safe-area-inset-right)) 8px calc(14px + env(safe-area-inset-left))}
  header .tabs{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#3A0F18;justify-content:space-around;padding:6px 4px calc(6px + env(safe-area-inset-bottom));gap:0;box-shadow:0 -2px 10px rgba(0,0,0,.25)}
  header .tab{flex-direction:column;gap:1px;border:none;border-radius:10px;padding:4px 8px;font-size:11px;min-width:58px}
  header .tab .ti{font-size:21px}
