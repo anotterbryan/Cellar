@@ -37,3 +37,9 @@ jobs:
             -H "x-cellar-task: info" \
             -d '{"task":"info"}' | tee info.json
           grep -q '"server_version"' info.json
+          # the browser asks permission first (CORS preflight); make sure the app's headers are allowed
+          curl -sS -o /dev/null -D pre.txt -X OPTIONS "https://$PROJECT_REF.supabase.co/functions/v1/swift-action" \
+            -H "Origin: https://anotterbryan.github.io" -H "Access-Control-Request-Method: POST" \
+            -H "Access-Control-Request-Headers: apikey, authorization, content-type, x-cellar-task"
+          cat pre.txt
+          grep -qi 'access-control-allow-headers:.*x-cellar-task' pre.txt

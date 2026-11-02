@@ -60,7 +60,7 @@ function cors(origin: string | null): Record<string, string> {
   const ok = origin && (ORIGINS.includes("*") || ORIGINS.includes(origin));
   return {
     "Access-Control-Allow-Origin": ok ? origin! : ORIGINS[0],
-    "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+    "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-cellar-task",
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Vary": "Origin",
   };
