@@ -1,0 +1,29 @@
+name: Harvest Wikipedia into the Cellar knowledge base
+# Downloads Wikipedia/Wikidata pages for every wine style, grape, wine country and core topic listed in kb/targets.json,
+# saves them under kb/wiki/, and commits them. Runs when the target list changes, monthly, or by hand.
+on:
+  push:
+    branches: [main]
+    paths: ["kb/targets.json", "kb/harvest.py", ".github/workflows/harvest-wikipedia.yml"]
+  schedule:
+    - cron: "17 9 3 * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: harvest, cancel-in-progress: false }
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python kb/harvest.py all
+      - name: Save results
+        run: |
+          git config user.name "Cellar KB bot"
+          git config user.email "anotterbryan@users.noreply.github.com"
+          git add kb/wiki
+          git diff --cached --quiet || git commit -m "Knowledge base: Wikipedia harvest $(date -u +%F)"
+          git pull --rebase -q && git push

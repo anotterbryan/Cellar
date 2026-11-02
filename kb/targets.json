@@ -1,0 +1,3733 @@
+{
+ "about": "What to fetch from Wikipedia. kind = wine | grape | country | topic. candidates = titles to try in order; the harvester follows redirects and checks the page is about wine.",
+ "wines": [
+  {
+   "id": "left-bank-bordeaux",
+   "name": "Left Bank Bordeaux (Pauillac, Margaux, Saint-Julien)",
+   "candidates": [
+    "Left Bank Bordeaux",
+    "Bordeaux — Médoc wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon",
+    "Merlot",
+    "Cabernet Franc",
+    "Petit Verdot"
+   ],
+   "country": "France",
+   "region": "Bordeaux — Médoc (Left Bank)"
+  },
+  {
+   "id": "right-bank-bordeaux",
+   "name": "Right Bank Bordeaux (Saint-Émilion, Pomerol)",
+   "candidates": [
+    "Right Bank Bordeaux",
+    "Bordeaux — Libournais wine"
+   ],
+   "grapes": [
+    "Merlot",
+    "Cabernet Franc",
+    "Cabernet Sauvignon"
+   ],
+   "country": "France",
+   "region": "Bordeaux — Libournais (Right Bank)"
+  },
+  {
+   "id": "pessac-leognan-blanc",
+   "name": "Pessac-Léognan Blanc",
+   "candidates": [
+    "Pessac-Léognan Blanc",
+    "Bordeaux — Graves wine"
+   ],
+   "grapes": [
+    "Sauvignon Blanc",
+    "Sémillon"
+   ],
+   "country": "France",
+   "region": "Bordeaux — Graves (Pessac-Léognan)"
+  },
+  {
+   "id": "sauternes-barsac",
+   "name": "Sauternes & Barsac",
+   "candidates": [
+    "Sauternes & Barsac",
+    "Sauternes",
+    "Barsac",
+    "Bordeaux — Graves wine"
+   ],
+   "grapes": [
+    "Sémillon",
+    "Sauvignon Blanc",
+    "Muscadelle"
+   ],
+   "country": "France",
+   "region": "Bordeaux — Graves (Sauternais)"
+  },
+  {
+   "id": "chablis",
+   "name": "Chablis",
+   "candidates": [
+    "Chablis",
+    "Burgundy — Chablis wine"
+   ],
+   "grapes": [
+    "Chardonnay"
+   ],
+   "country": "France",
+   "region": "Burgundy — Chablis"
+  },
+  {
+   "id": "cote-de-nuits-red",
+   "name": "Côte de Nuits Red Burgundy (Gevrey, Vosne, Chambolle)",
+   "candidates": [
+    "Côte de Nuits Red Burgundy",
+    "Burgundy — Côte de Nuits wine"
+   ],
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "country": "France",
+   "region": "Burgundy — Côte de Nuits"
+  },
+  {
+   "id": "cote-de-beaune-red",
+   "name": "Côte de Beaune Red Burgundy (Volnay, Pommard)",
+   "candidates": [
+    "Côte de Beaune Red Burgundy",
+    "Burgundy — Côte de Beaune wine"
+   ],
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "country": "France",
+   "region": "Burgundy — Côte de Beaune"
+  },
+  {
+   "id": "meursault",
+   "name": "Meursault",
+   "candidates": [
+    "Meursault",
+    "Burgundy — Côte de Beaune wine"
+   ],
+   "grapes": [
+    "Chardonnay"
+   ],
+   "country": "France",
+   "region": "Burgundy — Côte de Beaune"
+  },
+  {
+   "id": "puligny-chassagne-montrachet",
+   "name": "Puligny- & Chassagne-Montrachet",
+   "candidates": [
+    "Puligny- & Chassagne-Montrachet",
+    "Puligny-",
+    "Chassagne-Montrachet",
+    "Burgundy — Côte de Beaune wine"
+   ],
+   "grapes": [
+    "Chardonnay"
+   ],
+   "country": "France",
+   "region": "Burgundy — Côte de Beaune"
+  },
+  {
+   "id": "pouilly-fuisse-macon",
+   "name": "Pouilly-Fuissé & Mâcon",
+   "candidates": [
+    "Pouilly-Fuissé & Mâcon",
+    "Pouilly-Fuissé",
+    "Mâcon",
+    "Burgundy — Mâconnais wine"
+   ],
+   "grapes": [
+    "Chardonnay"
+   ],
+   "country": "France",
+   "region": "Burgundy — Mâconnais"
+  },
+  {
+   "id": "beaujolais-villages",
+   "name": "Beaujolais-Villages",
+   "candidates": [
+    "Beaujolais-Villages",
+    "Beaujolais wine"
+   ],
+   "grapes": [
+    "Gamay"
+   ],
+   "country": "France",
+   "region": "Beaujolais"
+  },
+  {
+   "id": "morgon",
+   "name": "Morgon",
+   "candidates": [
+    "Morgon",
+    "Beaujolais — Crus wine"
+   ],
+   "grapes": [
+    "Gamay"
+   ],
+   "country": "France",
+   "region": "Beaujolais — Crus"
+  },
+  {
+   "id": "fleurie",
+   "name": "Fleurie",
+   "candidates": [
+    "Fleurie",
+    "Beaujolais — Crus wine"
+   ],
+   "grapes": [
+    "Gamay"
+   ],
+   "country": "France",
+   "region": "Beaujolais — Crus"
+  },
+  {
+   "id": "champagne-brut-nv",
+   "name": "Champagne Brut NV",
+   "candidates": [
+    "Champagne Brut NV",
+    "Champagne wine"
+   ],
+   "grapes": [
+    "Pinot Noir",
+    "Chardonnay",
+    "Meunier"
+   ],
+   "country": "France",
+   "region": "Champagne"
+  },
+  {
+   "id": "blanc-de-blancs-champagne",
+   "name": "Blanc de Blancs Champagne",
+   "candidates": [
+    "Blanc de Blancs Champagne",
+    "Champagne — Côte des Blancs wine"
+   ],
+   "grapes": [
+    "Chardonnay"
+   ],
+   "country": "France",
+   "region": "Champagne — Côte des Blancs"
+  },
+  {
+   "id": "rose-champagne",
+   "name": "Rosé Champagne",
+   "candidates": [
+    "Rosé Champagne",
+    "Champagne wine"
+   ],
+   "grapes": [
+    "Pinot Noir",
+    "Chardonnay",
+    "Meunier"
+   ],
+   "country": "France",
+   "region": "Champagne"
+  },
+  {
+   "id": "sancerre",
+   "name": "Sancerre",
+   "candidates": [
+    "Sancerre",
+    "Loire Valley wine"
+   ],
+   "grapes": [
+    "Sauvignon Blanc"
+   ],
+   "country": "France",
+   "region": "Loire Valley (Centre-Loire)"
+  },
+  {
+   "id": "vouvray",
+   "name": "Vouvray",
+   "candidates": [
+    "Vouvray",
+    "Loire Valley wine"
+   ],
+   "grapes": [
+    "Chenin Blanc"
+   ],
+   "country": "France",
+   "region": "Loire Valley (Touraine)"
+  },
+  {
+   "id": "savennieres",
+   "name": "Savennières",
+   "candidates": [
+    "Savennières",
+    "Loire Valley wine"
+   ],
+   "grapes": [
+    "Chenin Blanc"
+   ],
+   "country": "France",
+   "region": "Loire Valley (Anjou)"
+  },
+  {
+   "id": "muscadet-sevre-et-maine",
+   "name": "Muscadet Sèvre et Maine",
+   "candidates": [
+    "Muscadet Sèvre et Maine",
+    "Loire Valley wine"
+   ],
+   "grapes": [
+    "Melon de Bourgogne"
+   ],
+   "country": "France",
+   "region": "Loire Valley (Pays Nantais)"
+  },
+  {
+   "id": "chinon",
+   "name": "Chinon",
+   "candidates": [
+    "Chinon",
+    "Loire Valley wine"
+   ],
+   "grapes": [
+    "Cabernet Franc"
+   ],
+   "country": "France",
+   "region": "Loire Valley (Touraine)"
+  },
+  {
+   "id": "cremant-de-loire",
+   "name": "Crémant de Loire",
+   "candidates": [
+    "Crémant de Loire",
+    "Loire Valley wine"
+   ],
+   "grapes": [
+    "Chenin Blanc",
+    "Chardonnay",
+    "Cabernet Franc"
+   ],
+   "country": "France",
+   "region": "Loire Valley (Anjou-Saumur, Touraine)"
+  },
+  {
+   "id": "cote-rotie",
+   "name": "Côte-Rôtie",
+   "candidates": [
+    "Côte-Rôtie",
+    "Northern Rhône wine"
+   ],
+   "grapes": [
+    "Syrah",
+    "Viognier"
+   ],
+   "country": "France",
+   "region": "Northern Rhône"
+  },
+  {
+   "id": "hermitage",
+   "name": "Hermitage",
+   "candidates": [
+    "Hermitage",
+    "Northern Rhône wine"
+   ],
+   "grapes": [
+    "Syrah"
+   ],
+   "country": "France",
+   "region": "Northern Rhône"
+  },
+  {
+   "id": "crozes-hermitage",
+   "name": "Crozes-Hermitage",
+   "candidates": [
+    "Crozes-Hermitage",
+    "Northern Rhône wine"
+   ],
+   "grapes": [
+    "Syrah"
+   ],
+   "country": "France",
+   "region": "Northern Rhône"
+  },
+  {
+   "id": "condrieu",
+   "name": "Condrieu",
+   "candidates": [
+    "Condrieu",
+    "Northern Rhône wine"
+   ],
+   "grapes": [
+    "Viognier"
+   ],
+   "country": "France",
+   "region": "Northern Rhône"
+  },
+  {
+   "id": "chateauneuf-du-pape",
+   "name": "Châteauneuf-du-Pape",
+   "candidates": [
+    "Châteauneuf-du-Pape",
+    "Southern Rhône wine"
+   ],
+   "grapes": [
+    "Grenache",
+    "Syrah",
+    "Mourvèdre",
+    "Cinsault"
+   ],
+   "country": "France",
+   "region": "Southern Rhône"
+  },
+  {
+   "id": "gigondas",
+   "name": "Gigondas",
+   "candidates": [
+    "Gigondas",
+    "Southern Rhône wine"
+   ],
+   "grapes": [
+    "Grenache",
+    "Syrah",
+    "Mourvèdre"
+   ],
+   "country": "France",
+   "region": "Southern Rhône"
+  },
+  {
+   "id": "cotes-du-rhone",
+   "name": "Côtes du Rhône",
+   "candidates": [
+    "Côtes du Rhône",
+    "Rhône Valley wine"
+   ],
+   "grapes": [
+    "Grenache",
+    "Syrah",
+    "Mourvèdre"
+   ],
+   "country": "France",
+   "region": "Rhône Valley (mostly Southern Rhône)"
+  },
+  {
+   "id": "tavel",
+   "name": "Tavel",
+   "candidates": [
+    "Tavel",
+    "Southern Rhône wine"
+   ],
+   "grapes": [
+    "Grenache",
+    "Cinsault",
+    "Syrah",
+    "Mourvèdre"
+   ],
+   "country": "France",
+   "region": "Southern Rhône"
+  },
+  {
+   "id": "alsace-riesling",
+   "name": "Alsace Riesling",
+   "candidates": [
+    "Alsace Riesling",
+    "Alsace wine"
+   ],
+   "grapes": [
+    "Riesling"
+   ],
+   "country": "France",
+   "region": "Alsace"
+  },
+  {
+   "id": "alsace-gewurztraminer",
+   "name": "Alsace Gewurztraminer",
+   "candidates": [
+    "Alsace Gewurztraminer",
+    "Alsace wine"
+   ],
+   "grapes": [
+    "Gewurztraminer"
+   ],
+   "country": "France",
+   "region": "Alsace"
+  },
+  {
+   "id": "alsace-pinot-gris",
+   "name": "Alsace Pinot Gris",
+   "candidates": [
+    "Alsace Pinot Gris",
+    "Alsace wine"
+   ],
+   "grapes": [
+    "Pinot Gris"
+   ],
+   "country": "France",
+   "region": "Alsace"
+  },
+  {
+   "id": "provence-rose",
+   "name": "Provence Rosé",
+   "candidates": [
+    "Provence Rosé",
+    "Provence wine"
+   ],
+   "grapes": [
+    "Grenache",
+    "Cinsault",
+    "Syrah",
+    "Mourvèdre",
+    "Tibouren"
+   ],
+   "country": "France",
+   "region": "Provence"
+  },
+  {
+   "id": "bandol-rouge",
+   "name": "Bandol Rouge",
+   "candidates": [
+    "Bandol Rouge",
+    "Provence wine"
+   ],
+   "grapes": [
+    "Mourvèdre",
+    "Grenache",
+    "Cinsault"
+   ],
+   "country": "France",
+   "region": "Provence"
+  },
+  {
+   "id": "languedoc-red-pic-saint-loup",
+   "name": "Languedoc Red (e.g. Pic Saint-Loup)",
+   "candidates": [
+    "Languedoc Red",
+    "Languedoc wine"
+   ],
+   "grapes": [
+    "Syrah",
+    "Grenache",
+    "Mourvèdre"
+   ],
+   "country": "France",
+   "region": "Languedoc"
+  },
+  {
+   "id": "cahors",
+   "name": "Cahors",
+   "candidates": [
+    "Cahors",
+    "South West France wine"
+   ],
+   "grapes": [
+    "Malbec",
+    "Merlot",
+    "Tannat"
+   ],
+   "country": "France",
+   "region": "South West France"
+  },
+  {
+   "id": "jura-vin-jaune",
+   "name": "Jura Vin Jaune",
+   "candidates": [
+    "Jura Vin Jaune",
+    "Jura wine"
+   ],
+   "grapes": [
+    "Savagnin"
+   ],
+   "country": "France",
+   "region": "Jura"
+  },
+  {
+   "id": "barolo",
+   "name": "Barolo",
+   "candidates": [
+    "Barolo",
+    "Piedmont – Langhe wine"
+   ],
+   "grapes": [
+    "Nebbiolo"
+   ],
+   "country": "Italy",
+   "region": "Piedmont – Langhe"
+  },
+  {
+   "id": "barbaresco",
+   "name": "Barbaresco",
+   "candidates": [
+    "Barbaresco",
+    "Piedmont – Langhe wine"
+   ],
+   "grapes": [
+    "Nebbiolo"
+   ],
+   "country": "Italy",
+   "region": "Piedmont – Langhe (Barbaresco, Neive, Treiso)"
+  },
+  {
+   "id": "barbera-dasti-dalba",
+   "name": "Barbera d'Asti / d'Alba",
+   "candidates": [
+    "Barbera d'Asti / d'Alba",
+    "Barbera d'Asti",
+    "d'Alba",
+    "Piedmont – Asti & Alba wine"
+   ],
+   "grapes": [
+    "Barbera"
+   ],
+   "country": "Italy",
+   "region": "Piedmont – Asti & Alba (Langhe/Roero)"
+  },
+  {
+   "id": "moscato-dasti",
+   "name": "Moscato d'Asti",
+   "candidates": [
+    "Moscato d'Asti",
+    "Piedmont – Asti wine"
+   ],
+   "grapes": [
+    "Moscato Bianco"
+   ],
+   "country": "Italy",
+   "region": "Piedmont – Asti, Cuneo & Alessandria"
+  },
+  {
+   "id": "gavi",
+   "name": "Gavi",
+   "candidates": [
+    "Gavi",
+    "Piedmont – Alessandria wine"
+   ],
+   "grapes": [
+    "Cortese"
+   ],
+   "country": "Italy",
+   "region": "Piedmont – Alessandria (southeast)"
+  },
+  {
+   "id": "franciacorta",
+   "name": "Franciacorta",
+   "candidates": [
+    "Franciacorta",
+    "Lombardy – Brescia wine"
+   ],
+   "grapes": [
+    "Chardonnay",
+    "Pinot Nero",
+    "Pinot Bianco",
+    "Erbamat"
+   ],
+   "country": "Italy",
+   "region": "Lombardy – Brescia (Lake Iseo)"
+  },
+  {
+   "id": "soave-classico",
+   "name": "Soave Classico",
+   "candidates": [
+    "Soave Classico",
+    "Veneto – Soave & Monteforte d'Alpone hills wine"
+   ],
+   "grapes": [
+    "Garganega",
+    "Trebbiano di Soave"
+   ],
+   "country": "Italy",
+   "region": "Veneto – Soave & Monteforte d'Alpone hills"
+  },
+  {
+   "id": "valpolicella-classico-ripasso",
+   "name": "Valpolicella Classico & Ripasso",
+   "candidates": [
+    "Valpolicella Classico & Ripasso",
+    "Valpolicella Classico",
+    "Ripasso",
+    "Veneto – Valpolicella wine"
+   ],
+   "grapes": [
+    "Corvina",
+    "Corvinone",
+    "Rondinella"
+   ],
+   "country": "Italy",
+   "region": "Veneto – Valpolicella (Verona hills)"
+  },
+  {
+   "id": "amarone-della-valpolicella",
+   "name": "Amarone della Valpolicella",
+   "candidates": [
+    "Amarone della Valpolicella",
+    "Veneto – Valpolicella wine"
+   ],
+   "grapes": [
+    "Corvina",
+    "Corvinone",
+    "Rondinella"
+   ],
+   "country": "Italy",
+   "region": "Veneto – Valpolicella"
+  },
+  {
+   "id": "prosecco",
+   "name": "Prosecco",
+   "candidates": [
+    "Prosecco",
+    "Veneto & Friuli Venezia Giulia wine"
+   ],
+   "grapes": [
+    "Glera"
+   ],
+   "country": "Italy",
+   "region": "Veneto & Friuli Venezia Giulia"
+  },
+  {
+   "id": "alto-adige-friuli-pinot-grigio",
+   "name": "Alto Adige / Friuli Pinot Grigio",
+   "candidates": [
+    "Alto Adige / Friuli Pinot Grigio",
+    "Alto Adige",
+    "Friuli Pinot Grigio",
+    "Trentino-Alto Adige & Friuli Venezia Giulia wine"
+   ],
+   "grapes": [
+    "Pinot Grigio"
+   ],
+   "country": "Italy",
+   "region": "Trentino-Alto Adige & Friuli Venezia Giulia"
+  },
+  {
+   "id": "friulian-orange-ribolla",
+   "name": "Friulian Orange Wine (Ribolla Gialla)",
+   "candidates": [
+    "Friulian Orange Wine",
+    "Friuli Venezia Giulia – Collio / Oslavia wine"
+   ],
+   "grapes": [
+    "Ribolla Gialla"
+   ],
+   "country": "Italy",
+   "region": "Friuli Venezia Giulia – Collio / Oslavia"
+  },
+  {
+   "id": "chianti-classico",
+   "name": "Chianti Classico",
+   "candidates": [
+    "Chianti Classico",
+    "Tuscany – between Florence and Siena wine"
+   ],
+   "grapes": [
+    "Sangiovese",
+    "Canaiolo",
+    "Colorino"
+   ],
+   "country": "Italy",
+   "region": "Tuscany – between Florence and Siena"
+  },
+  {
+   "id": "brunello-di-montalcino",
+   "name": "Brunello di Montalcino",
+   "candidates": [
+    "Brunello di Montalcino",
+    "Tuscany – Montalcino wine"
+   ],
+   "grapes": [
+    "Sangiovese"
+   ],
+   "country": "Italy",
+   "region": "Tuscany – Montalcino"
+  },
+  {
+   "id": "vino-nobile-di-montepulciano",
+   "name": "Vino Nobile di Montepulciano",
+   "candidates": [
+    "Vino Nobile di Montepulciano",
+    "Tuscany – Montepulciano wine"
+   ],
+   "grapes": [
+    "Sangiovese (Prugnolo Gentile)",
+    "Canaiolo",
+    "Mammolo"
+   ],
+   "country": "Italy",
+   "region": "Tuscany – Montepulciano"
+  },
+  {
+   "id": "bolgheri-super-tuscan",
+   "name": "Bolgheri (Super Tuscan)",
+   "candidates": [
+    "Bolgheri",
+    "Tuscany – Bolgheri wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon",
+    "Merlot",
+    "Cabernet Franc",
+    "Petit Verdot",
+    "Syrah"
+   ],
+   "country": "Italy",
+   "region": "Tuscany – Bolgheri (Maremma coast)"
+  },
+  {
+   "id": "verdicchio-castelli-di-jesi",
+   "name": "Verdicchio dei Castelli di Jesi",
+   "candidates": [
+    "Verdicchio dei Castelli di Jesi",
+    "Marche wine"
+   ],
+   "grapes": [
+    "Verdicchio"
+   ],
+   "country": "Italy",
+   "region": "Marche"
+  },
+  {
+   "id": "montepulciano-dabruzzo",
+   "name": "Montepulciano d'Abruzzo",
+   "candidates": [
+    "Montepulciano d'Abruzzo",
+    "Abruzzo wine"
+   ],
+   "grapes": [
+    "Montepulciano"
+   ],
+   "country": "Italy",
+   "region": "Abruzzo"
+  },
+  {
+   "id": "lambrusco",
+   "name": "Lambrusco",
+   "candidates": [
+    "Lambrusco",
+    "Emilia-Romagna – Modena & Reggio Emilia wine"
+   ],
+   "grapes": [
+    "Lambrusco Sorbara",
+    "Lambrusco Grasparossa",
+    "Lambrusco Salamino"
+   ],
+   "country": "Italy",
+   "region": "Emilia-Romagna – Modena & Reggio Emilia"
+  },
+  {
+   "id": "taurasi-aglianico",
+   "name": "Taurasi (Aglianico)",
+   "candidates": [
+    "Taurasi",
+    "Campania – Irpinia wine"
+   ],
+   "grapes": [
+    "Aglianico"
+   ],
+   "country": "Italy",
+   "region": "Campania – Irpinia (Avellino)"
+  },
+  {
+   "id": "fiano-di-avellino",
+   "name": "Fiano di Avellino",
+   "candidates": [
+    "Fiano di Avellino",
+    "Campania – Irpinia wine"
+   ],
+   "grapes": [
+    "Fiano"
+   ],
+   "country": "Italy",
+   "region": "Campania – Irpinia (Avellino)"
+  },
+  {
+   "id": "primitivo-di-manduria",
+   "name": "Primitivo di Manduria",
+   "candidates": [
+    "Primitivo di Manduria",
+    "Puglia – Taranto & Brindisi wine"
+   ],
+   "grapes": [
+    "Primitivo"
+   ],
+   "country": "Italy",
+   "region": "Puglia – Taranto & Brindisi"
+  },
+  {
+   "id": "etna-rosso",
+   "name": "Etna Rosso",
+   "candidates": [
+    "Etna Rosso",
+    "Sicily – Mount Etna wine"
+   ],
+   "grapes": [
+    "Nerello Mascalese",
+    "Nerello Cappuccio"
+   ],
+   "country": "Italy",
+   "region": "Sicily – Mount Etna"
+  },
+  {
+   "id": "etna-bianco",
+   "name": "Etna Bianco",
+   "candidates": [
+    "Etna Bianco",
+    "Sicily – Mount Etna wine"
+   ],
+   "grapes": [
+    "Carricante",
+    "Catarratto"
+   ],
+   "country": "Italy",
+   "region": "Sicily – Mount Etna (esp. eastern slopes, Milo)"
+  },
+  {
+   "id": "nero-davola",
+   "name": "Nero d'Avola",
+   "candidates": [
+    "Nero d'Avola",
+    "Sicily wine"
+   ],
+   "grapes": [
+    "Nero d'Avola"
+   ],
+   "country": "Italy",
+   "region": "Sicily"
+  },
+  {
+   "id": "vermentino-di-sardegna",
+   "name": "Vermentino di Sardegna",
+   "candidates": [
+    "Vermentino di Sardegna",
+    "Sardinia wine"
+   ],
+   "grapes": [
+    "Vermentino"
+   ],
+   "country": "Italy",
+   "region": "Sardinia"
+  },
+  {
+   "id": "cannonau-di-sardegna",
+   "name": "Cannonau di Sardegna",
+   "candidates": [
+    "Cannonau di Sardegna",
+    "Sardinia wine"
+   ],
+   "grapes": [
+    "Cannonau (Grenache)"
+   ],
+   "country": "Italy",
+   "region": "Sardinia"
+  },
+  {
+   "id": "rioja-crianza",
+   "name": "Rioja Crianza",
+   "candidates": [
+    "Rioja Crianza",
+    "Rioja wine"
+   ],
+   "grapes": [
+    "Tempranillo",
+    "Garnacha",
+    "Graciano",
+    "Mazuelo"
+   ],
+   "country": "Spain",
+   "region": "Rioja"
+  },
+  {
+   "id": "rioja-reserva",
+   "name": "Rioja Reserva",
+   "candidates": [
+    "Rioja Reserva",
+    "Rioja wine"
+   ],
+   "grapes": [
+    "Tempranillo",
+    "Garnacha",
+    "Graciano",
+    "Mazuelo"
+   ],
+   "country": "Spain",
+   "region": "Rioja"
+  },
+  {
+   "id": "rioja-gran-reserva",
+   "name": "Rioja Gran Reserva",
+   "candidates": [
+    "Rioja Gran Reserva",
+    "Rioja wine"
+   ],
+   "grapes": [
+    "Tempranillo",
+    "Garnacha",
+    "Graciano",
+    "Mazuelo"
+   ],
+   "country": "Spain",
+   "region": "Rioja"
+  },
+  {
+   "id": "ribera-del-duero",
+   "name": "Ribera del Duero",
+   "candidates": [
+    "Ribera del Duero",
+    "Castilla y León — Ribera del Duero wine"
+   ],
+   "grapes": [
+    "Tempranillo (Tinto Fino)",
+    "Cabernet Sauvignon",
+    "Merlot",
+    "Malbec"
+   ],
+   "country": "Spain",
+   "region": "Castilla y León — Ribera del Duero"
+  },
+  {
+   "id": "toro",
+   "name": "Toro",
+   "candidates": [
+    "Toro",
+    "Castilla y León — Toro wine"
+   ],
+   "grapes": [
+    "Tempranillo (Tinta de Toro)",
+    "Garnacha"
+   ],
+   "country": "Spain",
+   "region": "Castilla y León — Toro"
+  },
+  {
+   "id": "priorat",
+   "name": "Priorat",
+   "candidates": [
+    "Priorat",
+    "Catalonia — Priorat wine"
+   ],
+   "grapes": [
+    "Garnacha",
+    "Cariñena (Samsó)",
+    "Syrah",
+    "Cabernet Sauvignon"
+   ],
+   "country": "Spain",
+   "region": "Catalonia — Priorat"
+  },
+  {
+   "id": "bierzo-mencia",
+   "name": "Bierzo Mencía",
+   "candidates": [
+    "Bierzo Mencía",
+    "Castilla y León — Bierzo wine"
+   ],
+   "grapes": [
+    "Mencía"
+   ],
+   "country": "Spain",
+   "region": "Castilla y León — Bierzo"
+  },
+  {
+   "id": "rias-baixas-albarino",
+   "name": "Rías Baixas Albariño",
+   "candidates": [
+    "Rías Baixas Albariño",
+    "Galicia — Rías Baixas wine"
+   ],
+   "grapes": [
+    "Albariño"
+   ],
+   "country": "Spain",
+   "region": "Galicia — Rías Baixas"
+  },
+  {
+   "id": "rueda-verdejo",
+   "name": "Rueda Verdejo",
+   "candidates": [
+    "Rueda Verdejo",
+    "Castilla y León — Rueda wine"
+   ],
+   "grapes": [
+    "Verdejo",
+    "Sauvignon Blanc",
+    "Viura"
+   ],
+   "country": "Spain",
+   "region": "Castilla y León — Rueda"
+  },
+  {
+   "id": "txakoli",
+   "name": "Txakoli",
+   "candidates": [
+    "Txakoli",
+    "Basque Country wine"
+   ],
+   "grapes": [
+    "Hondarrabi Zuri",
+    "Hondarrabi Beltza"
+   ],
+   "country": "Spain",
+   "region": "Basque Country"
+  },
+  {
+   "id": "cava",
+   "name": "Cava",
+   "candidates": [
+    "Cava",
+    "Catalonia — Penedès wine"
+   ],
+   "grapes": [
+    "Macabeo",
+    "Xarel·lo",
+    "Parellada",
+    "Chardonnay"
+   ],
+   "country": "Spain",
+   "region": "Catalonia — Penedès (mainly)"
+  },
+  {
+   "id": "spanish-garnacha",
+   "name": "Spanish Garnacha (Campo de Borja, Calatayud)",
+   "candidates": [
+    "Spanish Garnacha",
+    "Aragón — Campo de Borja wine"
+   ],
+   "grapes": [
+    "Garnacha"
+   ],
+   "country": "Spain",
+   "region": "Aragón — Campo de Borja, Calatayud"
+  },
+  {
+   "id": "jumilla-monastrell",
+   "name": "Jumilla Monastrell",
+   "candidates": [
+    "Jumilla Monastrell",
+    "Murcia/Castilla-La Mancha — Jumilla wine"
+   ],
+   "grapes": [
+    "Monastrell"
+   ],
+   "country": "Spain",
+   "region": "Murcia/Castilla-La Mancha — Jumilla"
+  },
+  {
+   "id": "fino-manzanilla-sherry",
+   "name": "Fino & Manzanilla Sherry",
+   "candidates": [
+    "Fino & Manzanilla Sherry",
+    "Fino",
+    "Manzanilla Sherry",
+    "Andalucía — Jerez de la Frontera wine"
+   ],
+   "grapes": [
+    "Palomino"
+   ],
+   "country": "Spain",
+   "region": "Andalucía — Jerez de la Frontera, El Puerto de Santa María, Sanlúcar de Barrameda"
+  },
+  {
+   "id": "amontillado-sherry",
+   "name": "Amontillado Sherry",
+   "candidates": [
+    "Amontillado Sherry",
+    "Andalucía — Jerez wine"
+   ],
+   "grapes": [
+    "Palomino"
+   ],
+   "country": "Spain",
+   "region": "Andalucía — Jerez (Sherry Triangle)"
+  },
+  {
+   "id": "oloroso-sherry",
+   "name": "Oloroso Sherry",
+   "candidates": [
+    "Oloroso Sherry",
+    "Andalucía — Jerez wine"
+   ],
+   "grapes": [
+    "Palomino"
+   ],
+   "country": "Spain",
+   "region": "Andalucía — Jerez (Sherry Triangle)"
+  },
+  {
+   "id": "pedro-ximenez-sherry",
+   "name": "Pedro Ximénez Sherry",
+   "candidates": [
+    "Pedro Ximénez Sherry",
+    "Andalucía — Jerez wine"
+   ],
+   "grapes": [
+    "Pedro Ximénez"
+   ],
+   "country": "Spain",
+   "region": "Andalucía — Jerez (Sherry Triangle)"
+  },
+  {
+   "id": "douro-red",
+   "name": "Douro Red",
+   "candidates": [
+    "Douro Red",
+    "Douro Valley wine"
+   ],
+   "grapes": [
+    "Touriga Nacional",
+    "Touriga Franca",
+    "Tinta Roriz",
+    "Tinta Barroca",
+    "Tinto Cão"
+   ],
+   "country": "Portugal",
+   "region": "Douro Valley"
+  },
+  {
+   "id": "vinho-verde",
+   "name": "Vinho Verde",
+   "candidates": [
+    "Vinho Verde",
+    "Minho — Vinho Verde wine"
+   ],
+   "grapes": [
+    "Loureiro",
+    "Alvarinho",
+    "Arinto",
+    "Trajadura",
+    "Avesso",
+    "Azal"
+   ],
+   "country": "Portugal",
+   "region": "Minho — Vinho Verde"
+  },
+  {
+   "id": "dao-red",
+   "name": "Dão Red",
+   "candidates": [
+    "Dão Red",
+    "Dão wine"
+   ],
+   "grapes": [
+    "Touriga Nacional",
+    "Alfrocheiro",
+    "Jaen (Mencía)",
+    "Tinta Roriz",
+    "Tinta Pinheira"
+   ],
+   "country": "Portugal",
+   "region": "Dão"
+  },
+  {
+   "id": "alentejo-red",
+   "name": "Alentejo Red",
+   "candidates": [
+    "Alentejo Red",
+    "Alentejo wine"
+   ],
+   "grapes": [
+    "Aragonez (Tempranillo)",
+    "Trincadeira",
+    "Alicante Bouschet",
+    "Touriga Nacional",
+    "Castelão"
+   ],
+   "country": "Portugal",
+   "region": "Alentejo"
+  },
+  {
+   "id": "ruby-reserve-port",
+   "name": "Ruby & Reserve Port",
+   "candidates": [
+    "Ruby & Reserve Port",
+    "Ruby",
+    "Reserve Port",
+    "Douro Valley wine"
+   ],
+   "grapes": [
+    "Touriga Nacional",
+    "Touriga Franca",
+    "Tinta Roriz",
+    "Tinta Barroca",
+    "Tinto Cão"
+   ],
+   "country": "Portugal",
+   "region": "Douro Valley (Porto)"
+  },
+  {
+   "id": "tawny-port",
+   "name": "Tawny Port",
+   "candidates": [
+    "Tawny Port",
+    "Douro Valley wine"
+   ],
+   "grapes": [
+    "Touriga Nacional",
+    "Touriga Franca",
+    "Tinta Roriz",
+    "Tinta Barroca",
+    "Tinto Cão"
+   ],
+   "country": "Portugal",
+   "region": "Douro Valley (Porto)"
+  },
+  {
+   "id": "vintage-port",
+   "name": "Vintage Port",
+   "candidates": [
+    "Vintage Port",
+    "Douro Valley wine"
+   ],
+   "grapes": [
+    "Touriga Nacional",
+    "Touriga Franca",
+    "Tinta Roriz",
+    "Tinta Barroca",
+    "Tinto Cão"
+   ],
+   "country": "Portugal",
+   "region": "Douro Valley (Porto)"
+  },
+  {
+   "id": "madeira",
+   "name": "Madeira",
+   "candidates": [
+    "Madeira",
+    "Madeira wine"
+   ],
+   "grapes": [
+    "Tinta Negra",
+    "Sercial",
+    "Verdelho",
+    "Boal",
+    "Malvasia"
+   ],
+   "country": "Portugal",
+   "region": "Madeira (island)"
+  },
+  {
+   "id": "mosel-riesling-kabinett",
+   "name": "Mosel Riesling Kabinett",
+   "candidates": [
+    "Mosel Riesling Kabinett",
+    "Mosel wine"
+   ],
+   "grapes": [
+    "Riesling"
+   ],
+   "country": "Germany",
+   "region": "Mosel"
+  },
+  {
+   "id": "mosel-riesling-spatlese",
+   "name": "Mosel Riesling Spätlese",
+   "candidates": [
+    "Mosel Riesling Spätlese",
+    "Mosel wine"
+   ],
+   "grapes": [
+    "Riesling"
+   ],
+   "country": "Germany",
+   "region": "Mosel"
+  },
+  {
+   "id": "riesling-auslese-beerenauslese",
+   "name": "Riesling Auslese & Beerenauslese",
+   "candidates": [
+    "Riesling Auslese & Beerenauslese",
+    "Riesling Auslese",
+    "Beerenauslese",
+    "Mosel wine"
+   ],
+   "grapes": [
+    "Riesling"
+   ],
+   "country": "Germany",
+   "region": "Mosel, Rheingau, Nahe and other regions"
+  },
+  {
+   "id": "rheingau-riesling-trocken",
+   "name": "Rheingau Riesling Trocken",
+   "candidates": [
+    "Rheingau Riesling Trocken",
+    "Rheingau wine"
+   ],
+   "grapes": [
+    "Riesling"
+   ],
+   "country": "Germany",
+   "region": "Rheingau"
+  },
+  {
+   "id": "pfalz-riesling-trocken",
+   "name": "Pfalz Riesling Trocken",
+   "candidates": [
+    "Pfalz Riesling Trocken",
+    "Pfalz wine"
+   ],
+   "grapes": [
+    "Riesling"
+   ],
+   "country": "Germany",
+   "region": "Pfalz"
+  },
+  {
+   "id": "german-spatburgunder",
+   "name": "German Spätburgunder",
+   "candidates": [
+    "German Spätburgunder",
+    "Baden wine"
+   ],
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "country": "Germany",
+   "region": "Baden, Ahr, Pfalz, Franken, Rheingau, Württemberg"
+  },
+  {
+   "id": "german-eiswein",
+   "name": "German Eiswein",
+   "candidates": [
+    "German Eiswein",
+    "Mosel wine"
+   ],
+   "grapes": [
+    "Riesling"
+   ],
+   "country": "Germany",
+   "region": "Mosel, Rheingau, Rheinhessen, Nahe and other regions"
+  },
+  {
+   "id": "wachau-gruner-veltliner",
+   "name": "Wachau Grüner Veltliner",
+   "candidates": [
+    "Wachau Grüner Veltliner",
+    "Wachau wine"
+   ],
+   "grapes": [
+    "Grüner Veltliner"
+   ],
+   "country": "Austria",
+   "region": "Wachau, Lower Austria"
+  },
+  {
+   "id": "kamptal-kremstal-gruner-veltliner",
+   "name": "Kamptal & Kremstal Grüner Veltliner",
+   "candidates": [
+    "Kamptal & Kremstal Grüner Veltliner",
+    "Kamptal",
+    "Kremstal Grüner Veltliner",
+    "Kamptal and Kremstal wine"
+   ],
+   "grapes": [
+    "Grüner Veltliner"
+   ],
+   "country": "Austria",
+   "region": "Kamptal and Kremstal, Lower Austria"
+  },
+  {
+   "id": "austrian-riesling-wachau",
+   "name": "Austrian Riesling (Wachau)",
+   "candidates": [
+    "Austrian Riesling",
+    "Wachau wine"
+   ],
+   "grapes": [
+    "Riesling"
+   ],
+   "country": "Austria",
+   "region": "Wachau, Lower Austria"
+  },
+  {
+   "id": "burgenland-blaufrankisch",
+   "name": "Burgenland Blaufränkisch",
+   "candidates": [
+    "Burgenland Blaufränkisch",
+    "Burgenland wine"
+   ],
+   "grapes": [
+    "Blaufränkisch"
+   ],
+   "country": "Austria",
+   "region": "Burgenland (Mittelburgenland, Leithaberg, Eisenberg)"
+  },
+  {
+   "id": "zweigelt",
+   "name": "Zweigelt",
+   "candidates": [
+    "Zweigelt",
+    "Burgenland wine"
+   ],
+   "grapes": [
+    "Zweigelt"
+   ],
+   "country": "Austria",
+   "region": "Burgenland (Neusiedlersee), Carnuntum, Lower Austria"
+  },
+  {
+   "id": "wiener-gemischter-satz",
+   "name": "Wiener Gemischter Satz",
+   "candidates": [
+    "Wiener Gemischter Satz",
+    "Vienna wine"
+   ],
+   "grapes": [
+    "Grüner Veltliner",
+    "Riesling",
+    "Weissburgunder",
+    "Welschriesling",
+    "Traminer"
+   ],
+   "country": "Austria",
+   "region": "Vienna (Wien)"
+  },
+  {
+   "id": "santorini-assyrtiko",
+   "name": "Santorini Assyrtiko",
+   "candidates": [
+    "Santorini Assyrtiko",
+    "Santorini wine"
+   ],
+   "grapes": [
+    "Assyrtiko"
+   ],
+   "country": "Greece",
+   "region": "Santorini, Cyclades"
+  },
+  {
+   "id": "naoussa-xinomavro",
+   "name": "Naoussa Xinomavro",
+   "candidates": [
+    "Naoussa Xinomavro",
+    "Naoussa wine"
+   ],
+   "grapes": [
+    "Xinomavro"
+   ],
+   "country": "Greece",
+   "region": "Naoussa, Macedonia"
+  },
+  {
+   "id": "nemea-agiorgitiko",
+   "name": "Nemea Agiorgitiko",
+   "candidates": [
+    "Nemea Agiorgitiko",
+    "Nemea wine"
+   ],
+   "grapes": [
+    "Agiorgitiko"
+   ],
+   "country": "Greece",
+   "region": "Nemea, Peloponnese"
+  },
+  {
+   "id": "tokaji-aszu",
+   "name": "Tokaji Aszú",
+   "candidates": [
+    "Tokaji Aszú",
+    "Tokaj wine"
+   ],
+   "grapes": [
+    "Furmint",
+    "Hárslevelű",
+    "Sárgamuskotály (Yellow Muscat)"
+   ],
+   "country": "Hungary",
+   "region": "Tokaj"
+  },
+  {
+   "id": "dry-tokaji-furmint",
+   "name": "Dry Tokaji Furmint",
+   "candidates": [
+    "Dry Tokaji Furmint",
+    "Tokaj wine"
+   ],
+   "grapes": [
+    "Furmint"
+   ],
+   "country": "Hungary",
+   "region": "Tokaj"
+  },
+  {
+   "id": "georgian-saperavi",
+   "name": "Georgian Saperavi",
+   "candidates": [
+    "Georgian Saperavi",
+    "Kakheti wine"
+   ],
+   "grapes": [
+    "Saperavi"
+   ],
+   "country": "Georgia",
+   "region": "Kakheti"
+  },
+  {
+   "id": "georgian-amber-rkatsiteli",
+   "name": "Georgian Amber Rkatsiteli (Qvevri)",
+   "candidates": [
+    "Georgian Amber Rkatsiteli",
+    "Kakheti wine"
+   ],
+   "grapes": [
+    "Rkatsiteli"
+   ],
+   "country": "Georgia",
+   "region": "Kakheti"
+  },
+  {
+   "id": "bekaa-valley-red",
+   "name": "Bekaa Valley Red (Lebanon)",
+   "candidates": [
+    "Bekaa Valley Red",
+    "Bekaa Valley wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon",
+    "Cinsault",
+    "Carignan",
+    "Syrah",
+    "Grenache"
+   ],
+   "country": "Lebanon",
+   "region": "Bekaa Valley"
+  },
+  {
+   "id": "english-sparkling-wine",
+   "name": "English Sparkling Wine",
+   "candidates": [
+    "English Sparkling Wine",
+    "Southern England wine"
+   ],
+   "grapes": [
+    "Chardonnay",
+    "Pinot Noir",
+    "Pinot Meunier"
+   ],
+   "country": "England",
+   "region": "Southern England (Sussex, Kent, Hampshire, Surrey, Dorset)"
+  },
+  {
+   "id": "canadian-icewine",
+   "name": "Canadian Icewine",
+   "candidates": [
+    "Canadian Icewine",
+    "Niagara Peninsula wine"
+   ],
+   "grapes": [
+    "Vidal",
+    "Riesling",
+    "Cabernet Franc"
+   ],
+   "country": "Canada",
+   "region": "Niagara Peninsula (Ontario); Okanagan Valley (British Columbia)"
+  },
+  {
+   "id": "japanese-koshu",
+   "name": "Japanese Koshu",
+   "candidates": [
+    "Japanese Koshu",
+    "Yamanashi Prefecture wine"
+   ],
+   "grapes": [
+    "Koshu"
+   ],
+   "country": "Japan",
+   "region": "Yamanashi Prefecture"
+  },
+  {
+   "id": "valle-de-guadalupe-red",
+   "name": "Valle de Guadalupe Red (Mexico)",
+   "candidates": [
+    "Valle de Guadalupe Red",
+    "Valle de Guadalupe wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon",
+    "Tempranillo",
+    "Merlot",
+    "Grenache",
+    "Syrah",
+    "Nebbiolo"
+   ],
+   "country": "Mexico",
+   "region": "Valle de Guadalupe, Baja California"
+  },
+  {
+   "id": "napa-valley-cabernet-sauvignon",
+   "name": "Napa Valley Cabernet Sauvignon",
+   "candidates": [
+    "Napa Valley Cabernet Sauvignon",
+    "California — Napa Valley wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon",
+    "Merlot",
+    "Cabernet Franc"
+   ],
+   "country": "USA",
+   "region": "California — Napa Valley"
+  },
+  {
+   "id": "napa-valley-sauvignon-blanc",
+   "name": "Napa Valley Sauvignon Blanc",
+   "candidates": [
+    "Napa Valley Sauvignon Blanc",
+    "California — Napa Valley wine"
+   ],
+   "grapes": [
+    "Sauvignon Blanc",
+    "Sémillon"
+   ],
+   "country": "USA",
+   "region": "California — Napa Valley"
+  },
+  {
+   "id": "rich-california-chardonnay",
+   "name": "Rich California Chardonnay (Napa, Sonoma)",
+   "candidates": [
+    "Rich California Chardonnay",
+    "California — Napa Valley & Sonoma County wine"
+   ],
+   "grapes": [
+    "Chardonnay"
+   ],
+   "country": "USA",
+   "region": "California — Napa Valley & Sonoma County"
+  },
+  {
+   "id": "sonoma-coast-chardonnay",
+   "name": "Sonoma Coast Chardonnay",
+   "candidates": [
+    "Sonoma Coast Chardonnay",
+    "California — Sonoma County wine"
+   ],
+   "grapes": [
+    "Chardonnay"
+   ],
+   "country": "USA",
+   "region": "California — Sonoma County (Sonoma Coast / West Sonoma Coast)"
+  },
+  {
+   "id": "russian-river-valley-pinot-noir",
+   "name": "Russian River Valley Pinot Noir",
+   "candidates": [
+    "Russian River Valley Pinot Noir",
+    "California — Sonoma County wine"
+   ],
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "country": "USA",
+   "region": "California — Sonoma County (Russian River Valley)"
+  },
+  {
+   "id": "sta-rita-hills-pinot-noir",
+   "name": "Sta. Rita Hills Pinot Noir",
+   "candidates": [
+    "Sta. Rita Hills Pinot Noir",
+    "California — Santa Barbara County wine"
+   ],
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "country": "USA",
+   "region": "California — Santa Barbara County (Sta. Rita Hills)"
+  },
+  {
+   "id": "dry-creek-valley-zinfandel",
+   "name": "Dry Creek Valley Zinfandel",
+   "candidates": [
+    "Dry Creek Valley Zinfandel",
+    "California — Sonoma County wine"
+   ],
+   "grapes": [
+    "Zinfandel",
+    "Petite Sirah",
+    "Carignan"
+   ],
+   "country": "USA",
+   "region": "California — Sonoma County (Dry Creek Valley)"
+  },
+  {
+   "id": "lodi-zinfandel",
+   "name": "Lodi Zinfandel",
+   "candidates": [
+    "Lodi Zinfandel",
+    "California — Central Valley wine"
+   ],
+   "grapes": [
+    "Zinfandel"
+   ],
+   "country": "USA",
+   "region": "California — Central Valley (Lodi)"
+  },
+  {
+   "id": "paso-robles-rhone-blend",
+   "name": "Paso Robles Rhône Blend",
+   "candidates": [
+    "Paso Robles Rhône Blend",
+    "California — Central Coast wine"
+   ],
+   "grapes": [
+    "Grenache",
+    "Syrah",
+    "Mourvèdre"
+   ],
+   "country": "USA",
+   "region": "California — Central Coast (Paso Robles)"
+  },
+  {
+   "id": "california-sparkling",
+   "name": "California Sparkling (Carneros, Anderson Valley)",
+   "candidates": [
+    "California Sparkling",
+    "California — Los Carneros & Anderson Valley wine"
+   ],
+   "grapes": [
+    "Chardonnay",
+    "Pinot Noir"
+   ],
+   "country": "USA",
+   "region": "California — Los Carneros & Anderson Valley (Mendocino)"
+  },
+  {
+   "id": "napa-valley-merlot",
+   "name": "Napa Valley Merlot",
+   "candidates": [
+    "Napa Valley Merlot",
+    "California — Napa Valley wine"
+   ],
+   "grapes": [
+    "Merlot",
+    "Cabernet Sauvignon"
+   ],
+   "country": "USA",
+   "region": "California — Napa Valley"
+  },
+  {
+   "id": "temecula-valley-red",
+   "name": "Temecula Valley Red",
+   "candidates": [
+    "Temecula Valley Red",
+    "California — South Coast wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon",
+    "Syrah",
+    "Sangiovese",
+    "Tempranillo",
+    "Grenache",
+    "Merlot"
+   ],
+   "country": "USA",
+   "region": "California — South Coast (Temecula Valley, Riverside County)"
+  },
+  {
+   "id": "washington-cabernet-sauvignon",
+   "name": "Washington Cabernet Sauvignon",
+   "candidates": [
+    "Washington Cabernet Sauvignon",
+    "Washington — Columbia Valley wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon",
+    "Merlot",
+    "Cabernet Franc"
+   ],
+   "country": "USA",
+   "region": "Washington — Columbia Valley (Red Mountain, Walla Walla, Horse Heaven Hills)"
+  },
+  {
+   "id": "washington-merlot",
+   "name": "Washington Merlot",
+   "candidates": [
+    "Washington Merlot",
+    "Washington — Columbia Valley wine"
+   ],
+   "grapes": [
+    "Merlot",
+    "Cabernet Sauvignon"
+   ],
+   "country": "USA",
+   "region": "Washington — Columbia Valley (Walla Walla, Red Mountain, Horse Heaven Hills)"
+  },
+  {
+   "id": "washington-syrah",
+   "name": "Washington Syrah",
+   "candidates": [
+    "Washington Syrah",
+    "Columbia Valley wine"
+   ],
+   "grapes": [
+    "Syrah"
+   ],
+   "country": "USA",
+   "region": "Columbia Valley, Walla Walla & Yakima Valley (the Rocks District lies just over the Oregon line)"
+  },
+  {
+   "id": "willamette-valley-pinot-noir",
+   "name": "Willamette Valley Pinot Noir",
+   "candidates": [
+    "Willamette Valley Pinot Noir",
+    "Oregon — Willamette Valley wine"
+   ],
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "country": "USA",
+   "region": "Oregon — Willamette Valley"
+  },
+  {
+   "id": "oregon-pinot-gris",
+   "name": "Oregon Pinot Gris",
+   "candidates": [
+    "Oregon Pinot Gris",
+    "Oregon — Willamette Valley wine"
+   ],
+   "grapes": [
+    "Pinot Gris"
+   ],
+   "country": "USA",
+   "region": "Oregon — Willamette Valley"
+  },
+  {
+   "id": "willamette-valley-chardonnay",
+   "name": "Willamette Valley Chardonnay",
+   "candidates": [
+    "Willamette Valley Chardonnay",
+    "Oregon — Willamette Valley wine"
+   ],
+   "grapes": [
+    "Chardonnay"
+   ],
+   "country": "USA",
+   "region": "Oregon — Willamette Valley"
+  },
+  {
+   "id": "finger-lakes-riesling",
+   "name": "Finger Lakes Riesling",
+   "candidates": [
+    "Finger Lakes Riesling",
+    "New York — Finger Lakes wine"
+   ],
+   "grapes": [
+    "Riesling"
+   ],
+   "country": "USA",
+   "region": "New York — Finger Lakes"
+  },
+  {
+   "id": "santa-barbara-syrah",
+   "name": "Santa Barbara Syrah",
+   "candidates": [
+    "Santa Barbara Syrah",
+    "California — Santa Barbara County wine"
+   ],
+   "grapes": [
+    "Syrah"
+   ],
+   "country": "USA",
+   "region": "California — Santa Barbara County (Ballard Canyon, Santa Maria Valley, Sta. Rita Hills)"
+  },
+  {
+   "id": "mendoza-malbec",
+   "name": "Mendoza Malbec",
+   "candidates": [
+    "Mendoza Malbec",
+    "Mendoza wine"
+   ],
+   "grapes": [
+    "Malbec"
+   ],
+   "country": "Argentina",
+   "region": "Mendoza (Luján de Cuyo, Maipú, East Mendoza)"
+  },
+  {
+   "id": "uco-valley-malbec",
+   "name": "Uco Valley Malbec",
+   "candidates": [
+    "Uco Valley Malbec",
+    "Mendoza – Uco Valley wine"
+   ],
+   "grapes": [
+    "Malbec"
+   ],
+   "country": "Argentina",
+   "region": "Mendoza – Uco Valley (Tupungato, Tunuyán, San Carlos)"
+  },
+  {
+   "id": "salta-torrontes",
+   "name": "Salta Torrontés",
+   "candidates": [
+    "Salta Torrontés",
+    "Salta – Calchaquí Valleys wine"
+   ],
+   "grapes": [
+    "Torrontés Riojano"
+   ],
+   "country": "Argentina",
+   "region": "Salta – Calchaquí Valleys (Cafayate)"
+  },
+  {
+   "id": "maipo-valley-cabernet-sauvignon",
+   "name": "Maipo Valley Cabernet Sauvignon",
+   "candidates": [
+    "Maipo Valley Cabernet Sauvignon",
+    "Central Valley – Maipo Valley wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon"
+   ],
+   "country": "Chile",
+   "region": "Central Valley – Maipo Valley (Alto Maipo, Puente Alto)"
+  },
+  {
+   "id": "colchagua-carmenere",
+   "name": "Colchagua Carmenère",
+   "candidates": [
+    "Colchagua Carmenère",
+    "Rapel Valley – Colchagua wine"
+   ],
+   "grapes": [
+    "Carmenère"
+   ],
+   "country": "Chile",
+   "region": "Rapel Valley – Colchagua (incl. Apalta)"
+  },
+  {
+   "id": "casablanca-valley-sauvignon-blanc",
+   "name": "Casablanca Valley Sauvignon Blanc",
+   "candidates": [
+    "Casablanca Valley Sauvignon Blanc",
+    "Aconcagua – Casablanca Valley wine"
+   ],
+   "grapes": [
+    "Sauvignon Blanc"
+   ],
+   "country": "Chile",
+   "region": "Aconcagua – Casablanca Valley"
+  },
+  {
+   "id": "maule-itata-old-vine-reds",
+   "name": "Maule & Itata Old-Vine Reds (País, Carignan, Cinsault)",
+   "candidates": [
+    "Maule & Itata Old-Vine Reds",
+    "Maule",
+    "Itata Old-Vine Reds",
+    "South – Maule & Itata wine"
+   ],
+   "grapes": [
+    "Carignan",
+    "País",
+    "Cinsault"
+   ],
+   "country": "Chile",
+   "region": "South – Maule & Itata (dry-farmed Secano Interior)"
+  },
+  {
+   "id": "barossa-valley-shiraz",
+   "name": "Barossa Valley Shiraz",
+   "candidates": [
+    "Barossa Valley Shiraz",
+    "South Australia – Barossa Valley wine"
+   ],
+   "grapes": [
+    "Shiraz"
+   ],
+   "country": "Australia",
+   "region": "South Australia – Barossa Valley"
+  },
+  {
+   "id": "mclaren-vale-grenache-gsm",
+   "name": "McLaren Vale Grenache & GSM",
+   "candidates": [
+    "McLaren Vale Grenache & GSM",
+    "McLaren Vale Grenache",
+    "GSM",
+    "South Australia – McLaren Vale wine"
+   ],
+   "grapes": [
+    "Grenache",
+    "Shiraz",
+    "Mourvèdre"
+   ],
+   "country": "Australia",
+   "region": "South Australia – McLaren Vale (incl. Blewitt Springs)"
+  },
+  {
+   "id": "coonawarra-cabernet-sauvignon",
+   "name": "Coonawarra Cabernet Sauvignon",
+   "candidates": [
+    "Coonawarra Cabernet Sauvignon",
+    "South Australia – Limestone Coast – Coonawarra wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon"
+   ],
+   "country": "Australia",
+   "region": "South Australia – Limestone Coast – Coonawarra"
+  },
+  {
+   "id": "margaret-river-cabernet-sauvignon",
+   "name": "Margaret River Cabernet Sauvignon",
+   "candidates": [
+    "Margaret River Cabernet Sauvignon",
+    "Western Australia – Margaret River wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon",
+    "Merlot"
+   ],
+   "country": "Australia",
+   "region": "Western Australia – Margaret River"
+  },
+  {
+   "id": "margaret-river-chardonnay",
+   "name": "Margaret River Chardonnay",
+   "candidates": [
+    "Margaret River Chardonnay",
+    "Western Australia – Margaret River wine"
+   ],
+   "grapes": [
+    "Chardonnay"
+   ],
+   "country": "Australia",
+   "region": "Western Australia – Margaret River"
+  },
+  {
+   "id": "clare-eden-valley-riesling",
+   "name": "Clare & Eden Valley Riesling",
+   "candidates": [
+    "Clare & Eden Valley Riesling",
+    "Clare",
+    "Eden Valley Riesling",
+    "South Australia – Clare Valley & Eden Valley wine"
+   ],
+   "grapes": [
+    "Riesling"
+   ],
+   "country": "Australia",
+   "region": "South Australia – Clare Valley & Eden Valley"
+  },
+  {
+   "id": "hunter-valley-semillon",
+   "name": "Hunter Valley Semillon",
+   "candidates": [
+    "Hunter Valley Semillon",
+    "New South Wales – Hunter Valley wine"
+   ],
+   "grapes": [
+    "Sémillon"
+   ],
+   "country": "Australia",
+   "region": "New South Wales – Hunter Valley"
+  },
+  {
+   "id": "yarra-valley-pinot-noir",
+   "name": "Yarra Valley Pinot Noir",
+   "candidates": [
+    "Yarra Valley Pinot Noir",
+    "Victoria – Yarra Valley wine"
+   ],
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "country": "Australia",
+   "region": "Victoria – Yarra Valley"
+  },
+  {
+   "id": "rutherglen-muscat",
+   "name": "Rutherglen Muscat",
+   "candidates": [
+    "Rutherglen Muscat",
+    "Victoria – North East Victoria – Rutherglen wine"
+   ],
+   "grapes": [
+    "Muscat à Petits Grains Rouge (Rutherglen Brown Muscat)"
+   ],
+   "country": "Australia",
+   "region": "Victoria – North East Victoria – Rutherglen"
+  },
+  {
+   "id": "marlborough-sauvignon-blanc",
+   "name": "Marlborough Sauvignon Blanc",
+   "candidates": [
+    "Marlborough Sauvignon Blanc",
+    "Marlborough wine"
+   ],
+   "grapes": [
+    "Sauvignon Blanc"
+   ],
+   "country": "New Zealand",
+   "region": "Marlborough (Wairau & Awatere Valleys)"
+  },
+  {
+   "id": "central-otago-pinot-noir",
+   "name": "Central Otago Pinot Noir",
+   "candidates": [
+    "Central Otago Pinot Noir",
+    "Central Otago wine"
+   ],
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "country": "New Zealand",
+   "region": "Central Otago (Bannockburn, Gibbston, Bendigo, Cromwell, Wanaka, Alexandra)"
+  },
+  {
+   "id": "martinborough-pinot-noir",
+   "name": "Martinborough Pinot Noir",
+   "candidates": [
+    "Martinborough Pinot Noir",
+    "Wairarapa – Martinborough wine"
+   ],
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "country": "New Zealand",
+   "region": "Wairarapa – Martinborough"
+  },
+  {
+   "id": "hawkes-bay-syrah",
+   "name": "Hawke's Bay Syrah",
+   "candidates": [
+    "Hawke's Bay Syrah",
+    "Hawke's Bay wine"
+   ],
+   "grapes": [
+    "Syrah"
+   ],
+   "country": "New Zealand",
+   "region": "Hawke's Bay (Gimblett Gravels, Bridge Pa Triangle)"
+  },
+  {
+   "id": "stellenbosch-cabernet-bordeaux-blend",
+   "name": "Stellenbosch Cabernet & Bordeaux Blend",
+   "candidates": [
+    "Stellenbosch Cabernet & Bordeaux Blend",
+    "Stellenbosch Cabernet",
+    "Bordeaux Blend",
+    "Coastal Region – Stellenbosch wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon",
+    "Merlot",
+    "Cabernet Franc"
+   ],
+   "country": "South Africa",
+   "region": "Coastal Region – Stellenbosch (Simonsberg, Helderberg)"
+  },
+  {
+   "id": "swartland-chenin-blanc",
+   "name": "Swartland Chenin Blanc",
+   "candidates": [
+    "Swartland Chenin Blanc",
+    "Coastal Region – Swartland wine"
+   ],
+   "grapes": [
+    "Chenin Blanc"
+   ],
+   "country": "South Africa",
+   "region": "Coastal Region – Swartland"
+  },
+  {
+   "id": "pinotage",
+   "name": "Pinotage",
+   "candidates": [
+    "Pinotage",
+    "Western Cape wine"
+   ],
+   "grapes": [
+    "Pinotage"
+   ],
+   "country": "South Africa",
+   "region": "Western Cape (Stellenbosch, Swartland, Walker Bay)"
+  },
+  {
+   "id": "hemel-en-aarde-pinot-noir-chardonnay",
+   "name": "Hemel-en-Aarde Pinot Noir & Chardonnay",
+   "candidates": [
+    "Hemel-en-Aarde Pinot Noir & Chardonnay",
+    "Hemel-en-Aarde Pinot Noir",
+    "Chardonnay",
+    "Cape South Coast – Walker Bay – Hemel-en-Aarde wine"
+   ],
+   "grapes": [
+    "Pinot Noir",
+    "Chardonnay"
+   ],
+   "country": "South Africa",
+   "region": "Cape South Coast – Walker Bay – Hemel-en-Aarde (Valley, Upper Valley, Ridge)"
+  },
+  {
+   "id": "cap-classique",
+   "name": "Cap Classique",
+   "candidates": [
+    "Cap Classique",
+    "Western Cape wine"
+   ],
+   "grapes": [
+    "Chardonnay",
+    "Pinot Noir",
+    "Pinot Meunier",
+    "Chenin Blanc"
+   ],
+   "country": "South Africa",
+   "region": "Western Cape (Robertson, Stellenbosch, Franschhoek, cool coastal areas)"
+  },
+  {
+   "id": "california-cabernet-sauvignon",
+   "name": "California Cabernet Sauvignon (everyday)",
+   "candidates": [
+    "California Cabernet Sauvignon",
+    "California — statewide 'California' appellation wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon",
+    "Merlot",
+    "Petite Sirah"
+   ],
+   "country": "United States",
+   "region": "California — statewide 'California' appellation (fruit blended from several regions)"
+  },
+  {
+   "id": "paso-robles-cabernet-sauvignon",
+   "name": "Paso Robles Cabernet Sauvignon",
+   "candidates": [
+    "Paso Robles Cabernet Sauvignon",
+    "California — Central Coast wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon"
+   ],
+   "country": "United States",
+   "region": "California — Central Coast (Paso Robles AVA)"
+  },
+  {
+   "id": "alexander-valley-cabernet-sauvignon",
+   "name": "Alexander Valley & Sonoma County Cabernet Sauvignon",
+   "candidates": [
+    "Alexander Valley & Sonoma County Cabernet Sauvignon",
+    "Alexander Valley",
+    "Sonoma County Cabernet Sauvignon",
+    "California — Sonoma County wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon",
+    "Merlot"
+   ],
+   "country": "United States",
+   "region": "California — Sonoma County (Alexander Valley AVA)"
+  },
+  {
+   "id": "california-red-blend",
+   "name": "California Red Blend",
+   "candidates": [
+    "California Red Blend",
+    "California — mostly statewide 'California' appellation wine"
+   ],
+   "grapes": [
+    "Zinfandel",
+    "Syrah",
+    "Petite Sirah",
+    "Merlot",
+    "Cabernet Sauvignon"
+   ],
+   "country": "United States",
+   "region": "California — mostly statewide 'California' appellation (some Napa/Sonoma-labeled)"
+  },
+  {
+   "id": "california-pinot-noir",
+   "name": "California Pinot Noir (everyday)",
+   "candidates": [
+    "California Pinot Noir",
+    "California — 'California' wine"
+   ],
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "country": "United States",
+   "region": "California — 'California', Central Coast or Monterey appellation (multi-county blends)"
+  },
+  {
+   "id": "santa-lucia-highlands-pinot-noir",
+   "name": "Santa Lucia Highlands Pinot Noir",
+   "candidates": [
+    "Santa Lucia Highlands Pinot Noir",
+    "California — Central Coast wine"
+   ],
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "country": "United States",
+   "region": "California — Central Coast, Monterey County (Santa Lucia Highlands AVA)"
+  },
+  {
+   "id": "anderson-valley-pinot-noir",
+   "name": "Anderson Valley & Mendocino Pinot Noir",
+   "candidates": [
+    "Anderson Valley & Mendocino Pinot Noir",
+    "Anderson Valley",
+    "Mendocino Pinot Noir",
+    "California — Mendocino County wine"
+   ],
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "country": "United States",
+   "region": "California — Mendocino County (Anderson Valley AVA)"
+  },
+  {
+   "id": "california-chardonnay",
+   "name": "California Chardonnay (everyday)",
+   "candidates": [
+    "California Chardonnay",
+    "California — statewide 'California' appellation wine"
+   ],
+   "grapes": [
+    "Chardonnay"
+   ],
+   "country": "United States",
+   "region": "California — statewide 'California' appellation (fruit blended from several regions)"
+  },
+  {
+   "id": "california-sauvignon-blanc",
+   "name": "California Sauvignon Blanc (everyday)",
+   "candidates": [
+    "California Sauvignon Blanc",
+    "California — California wine"
+   ],
+   "grapes": [
+    "Sauvignon Blanc"
+   ],
+   "country": "United States",
+   "region": "California — California, Sonoma County, Lake County, Mendocino and Central Coast"
+  },
+  {
+   "id": "california-pinot-grigio",
+   "name": "California Pinot Grigio",
+   "candidates": [
+    "California Pinot Grigio",
+    "California — statewide 'California' appellation wine"
+   ],
+   "grapes": [
+    "Pinot Grigio (Pinot Gris)"
+   ],
+   "country": "United States",
+   "region": "California — statewide 'California' appellation"
+  },
+  {
+   "id": "california-moscato",
+   "name": "California Moscato",
+   "candidates": [
+    "California Moscato",
+    "California — statewide 'California' appellation wine"
+   ],
+   "grapes": [
+    "Muscat of Alexandria",
+    "Muscat Blanc à Petits Grains (Muscat Canelli)"
+   ],
+   "country": "United States",
+   "region": "California — statewide 'California' appellation (largely Central Valley fruit)"
+  },
+  {
+   "id": "california-rose",
+   "name": "California Rosé",
+   "candidates": [
+    "California Rosé",
+    "California — statewide and regional appellations wine"
+   ],
+   "grapes": [
+    "Grenache",
+    "Pinot Noir",
+    "Syrah",
+    "Zinfandel"
+   ],
+   "country": "United States",
+   "region": "California — statewide and regional appellations (Central Coast, Sonoma, Lodi, Mendocino)"
+  },
+  {
+   "id": "california-merlot",
+   "name": "California Merlot (everyday)",
+   "candidates": [
+    "California Merlot",
+    "California wine"
+   ],
+   "grapes": [
+    "Merlot"
+   ],
+   "country": "United States",
+   "region": "California (statewide; Central Coast, Lodi, Sonoma and other areas)"
+  },
+  {
+   "id": "california-petite-sirah",
+   "name": "California Petite Sirah",
+   "candidates": [
+    "California Petite Sirah",
+    "California wine"
+   ],
+   "grapes": [
+    "Petite Sirah (Durif)"
+   ],
+   "country": "United States",
+   "region": "California (Lodi, Paso Robles, Napa Valley, Livermore Valley)"
+  },
+  {
+   "id": "amador-sierra-foothills-zinfandel",
+   "name": "Amador & Sierra Foothills Zinfandel",
+   "candidates": [
+    "Amador & Sierra Foothills Zinfandel",
+    "Amador",
+    "Sierra Foothills Zinfandel",
+    "Sierra Foothills — Amador County wine"
+   ],
+   "grapes": [
+    "Zinfandel"
+   ],
+   "country": "United States",
+   "region": "Sierra Foothills — Amador County (Shenandoah Valley, Fiddletown), El Dorado"
+  },
+  {
+   "id": "washington-riesling",
+   "name": "Washington Riesling",
+   "candidates": [
+    "Washington Riesling",
+    "Columbia Valley wine"
+   ],
+   "grapes": [
+    "Riesling"
+   ],
+   "country": "United States",
+   "region": "Columbia Valley"
+  },
+  {
+   "id": "washington-chardonnay",
+   "name": "Washington Chardonnay",
+   "candidates": [
+    "Washington Chardonnay",
+    "Columbia Valley wine"
+   ],
+   "grapes": [
+    "Chardonnay"
+   ],
+   "country": "United States",
+   "region": "Columbia Valley"
+  },
+  {
+   "id": "columbia-valley-red-blend",
+   "name": "Washington Red Blend (Columbia Valley)",
+   "candidates": [
+    "Washington Red Blend",
+    "Columbia Valley wine"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon",
+    "Merlot",
+    "Syrah",
+    "Cabernet Franc",
+    "Malbec",
+    "Petit Verdot"
+   ],
+   "country": "United States",
+   "region": "Columbia Valley (incl. Walla Walla Valley, Red Mountain, Horse Heaven Hills)"
+  },
+  {
+   "id": "long-island-merlot",
+   "name": "Long Island Merlot & Red Blends (New York)",
+   "candidates": [
+    "Long Island Merlot & Red Blends",
+    "Long Island Merlot",
+    "Red Blends",
+    "Long Island — North Fork of Long Island AVA wine"
+   ],
+   "grapes": [
+    "Merlot",
+    "Cabernet Franc",
+    "Cabernet Sauvignon",
+    "Petit Verdot",
+    "Malbec"
+   ],
+   "country": "United States",
+   "region": "Long Island — North Fork of Long Island AVA"
+  },
+  {
+   "id": "virginia-cabernet-franc",
+   "name": "Virginia Cabernet Franc",
+   "candidates": [
+    "Virginia Cabernet Franc",
+    "Virginia wine"
+   ],
+   "grapes": [
+    "Cabernet Franc"
+   ],
+   "country": "United States",
+   "region": "Virginia (Monticello AVA, Shenandoah Valley, Middleburg and others)"
+  },
+  {
+   "id": "virginia-viognier",
+   "name": "Virginia Viognier",
+   "candidates": [
+    "Virginia Viognier",
+    "Virginia wine"
+   ],
+   "grapes": [
+    "Viognier"
+   ],
+   "country": "United States",
+   "region": "Virginia (Monticello AVA and statewide)"
+  },
+  {
+   "id": "texas-tempranillo",
+   "name": "Texas Tempranillo (High Plains & Hill Country)",
+   "candidates": [
+    "Texas Tempranillo",
+    "Texas High Plains AVA; Texas Hill Country AVA wine"
+   ],
+   "grapes": [
+    "Tempranillo"
+   ],
+   "country": "United States",
+   "region": "Texas High Plains AVA; Texas Hill Country AVA"
+  },
+  {
+   "id": "michigan-riesling",
+   "name": "Michigan Riesling (Old Mission & Leelanau)",
+   "candidates": [
+    "Michigan Riesling",
+    "Northern Michigan — Old Mission Peninsula & Leelanau Peninsula AVAs wine"
+   ],
+   "grapes": [
+    "Riesling"
+   ],
+   "country": "United States",
+   "region": "Northern Michigan — Old Mission Peninsula & Leelanau Peninsula AVAs"
+  },
+  {
+   "id": "new-mexico-sparkling",
+   "name": "New Mexico Sparkling (Gruet)",
+   "candidates": [
+    "New Mexico Sparkling",
+    "New Mexico wine"
+   ],
+   "grapes": [
+    "Chardonnay",
+    "Pinot Noir"
+   ],
+   "country": "United States",
+   "region": "New Mexico (winery in Albuquerque; estate vineyards ~4,300 ft near Truth or Consequences, plus purchased fruit from California and Washington)"
+  },
+  {
+   "id": "cabernet-sauvignon",
+   "name": "Cabernet Sauvignon (general)",
+   "candidates": [
+    "Cabernet Sauvignon"
+   ],
+   "grapes": [
+    "Cabernet Sauvignon"
+   ],
+   "country": "Various",
+   "region": "Grown worldwide (mainly California, Chile, Australia, Washington, Bordeaux)"
+  },
+  {
+   "id": "merlot",
+   "name": "Merlot (general)",
+   "candidates": [
+    "Merlot"
+   ],
+   "grapes": [
+    "Merlot"
+   ],
+   "country": "Various",
+   "region": "Grown worldwide (mainly California, Washington, Chile, Bordeaux, Italy)"
+  },
+  {
+   "id": "pinot-noir",
+   "name": "Pinot Noir (general)",
+   "candidates": [
+    "Pinot Noir"
+   ],
+   "grapes": [
+    "Pinot Noir"
+   ],
+   "country": "Various",
+   "region": "Grown worldwide (mainly California, Oregon, Burgundy, New Zealand, Germany, Chile)"
+  },
+  {
+   "id": "syrah-shiraz",
+   "name": "Syrah / Shiraz (general)",
+   "candidates": [
+    "Syrah",
+    "Syrah / Shiraz",
+    "Shiraz"
+   ],
+   "grapes": [
+    "Syrah"
+   ],
+   "country": "Various",
+   "region": "Grown worldwide (mainly Australia, Rhône Valley, California, Washington, South Africa, Chile)"
+  },
+  {
+   "id": "zinfandel",
+   "name": "Zinfandel (general)",
+   "candidates": [
+    "Zinfandel"
+   ],
+   "grapes": [
+    "Zinfandel"
+   ],
+   "country": "Various",
+   "region": "Mainly California; also Puglia, Italy (as Primitivo)"
+  },
+  {
+   "id": "malbec",
+   "name": "Malbec (general)",
+   "candidates": [
+    "Malbec"
+   ],
+   "grapes": [
+    "Malbec"
+   ],
+   "country": "Various",
+   "region": "Mainly Argentina (Mendoza); also Cahors, France, and Chile"
+  },
+  {
+   "id": "red-blend",
+   "name": "Red Blend (general)",
+   "candidates": [
+    "Various (often Zinfandel, Merlot, Cabernet Sauvignon, Syrah/Shiraz, Petite Sirah)",
+    "Red Blend"
+   ],
+   "grapes": [
+    "Various (often Zinfandel, Merlot, Cabernet Sauvignon, Syrah/Shiraz, Petite Sirah)"
+   ],
+   "country": "Various",
+   "region": "Grown worldwide (mainly California, Australia, Spain, Chile, Washington)"
+  },
+  {
+   "id": "cabernet-franc",
+   "name": "Cabernet Franc (general)",
+   "candidates": [
+    "Cabernet Franc"
+   ],
+   "grapes": [
+    "Cabernet Franc"
+   ],
+   "country": "Various",
+   "region": "Grown worldwide (mainly Loire Valley, Bordeaux, Virginia, New York, California, Washington)"
+  },
+  {
+   "id": "grenache-garnacha",
+   "name": "Grenache / Garnacha (general)",
+   "candidates": [
+    "Grenache",
+    "Grenache / Garnacha",
+    "Garnacha"
+   ],
+   "grapes": [
+    "Grenache"
+   ],
+   "country": "Various",
+   "region": "Grown worldwide (mainly Spain, Southern Rhône, Australia, Sardinia, California)"
+  },
+  {
+   "id": "tempranillo",
+   "name": "Tempranillo (general)",
+   "candidates": [
+    "Tempranillo"
+   ],
+   "grapes": [
+    "Tempranillo"
+   ],
+   "country": "Various",
+   "region": "Mainly Spain (Rioja, Ribera del Duero, La Mancha) and Portugal; also Texas, Argentina, US West Coast"
+  },
+  {
+   "id": "sangiovese",
+   "name": "Sangiovese (general)",
+   "candidates": [
+    "Sangiovese"
+   ],
+   "grapes": [
+    "Sangiovese"
+   ],
+   "country": "Various",
+   "region": "Mainly Tuscany and central Italy; also California, Australia, Argentina, Corsica"
+  },
+  {
+   "id": "chardonnay",
+   "name": "Chardonnay (general)",
+   "candidates": [
+    "Chardonnay"
+   ],
+   "grapes": [
+    "Chardonnay"
+   ],
+   "country": "Various",
+   "region": "Grown worldwide (mainly California, France, Australia, Chile)"
+  },
+  {
+   "id": "sauvignon-blanc",
+   "name": "Sauvignon Blanc (general)",
+   "candidates": [
+    "Sauvignon Blanc"
+   ],
+   "grapes": [
+    "Sauvignon Blanc"
+   ],
+   "country": "Various",
+   "region": "Grown worldwide (mainly New Zealand, France, Chile, California, South Africa)"
+  },
+  {
+   "id": "pinot-grigio-gris",
+   "name": "Pinot Grigio / Pinot Gris (general)",
+   "candidates": [
+    "Pinot Gris",
+    "Pinot Grigio / Pinot Gris",
+    "Pinot Grigio"
+   ],
+   "grapes": [
+    "Pinot Gris"
+   ],
+   "country": "Various",
+   "region": "Grown worldwide (mainly Italy, USA, Germany, France (Alsace))"
+  },
+  {
+   "id": "riesling",
+   "name": "Riesling (general)",
+   "candidates": [
+    "Riesling"
+   ],
+   "grapes": [
+    "Riesling"
+   ],
+   "country": "Various",
+   "region": "Grown worldwide (mainly Germany, USA (Washington, New York), Alsace, Austria, Australia)"
+  },
+  {
+   "id": "moscato-muscat",
+   "name": "Moscato / Muscat (general)",
+   "candidates": [
+    "Muscat Blanc à Petits Grains",
+    "Moscato / Muscat",
+    "Moscato",
+    "Muscat"
+   ],
+   "grapes": [
+    "Muscat Blanc à Petits Grains",
+    "Muscat of Alexandria"
+   ],
+   "country": "Various",
+   "region": "Grown worldwide (mainly Italy, USA (California), Australia, Spain, France)"
+  },
+  {
+   "id": "chenin-blanc",
+   "name": "Chenin Blanc (general)",
+   "candidates": [
+    "Chenin Blanc"
+   ],
+   "grapes": [
+    "Chenin Blanc"
+   ],
+   "country": "Various",
+   "region": "Mainly South Africa, France (Loire Valley), California"
+  },
+  {
+   "id": "viognier",
+   "name": "Viognier (general)",
+   "candidates": [
+    "Viognier"
+   ],
+   "grapes": [
+    "Viognier"
+   ],
+   "country": "Various",
+   "region": "Mainly France (Rhône, Languedoc), USA (California, Virginia), Australia"
+  },
+  {
+   "id": "gewurztraminer",
+   "name": "Gewürztraminer (general)",
+   "candidates": [
+    "Gewürztraminer"
+   ],
+   "grapes": [
+    "Gewürztraminer"
+   ],
+   "country": "Various",
+   "region": "Mainly France (Alsace), Italy (Alto Adige), Germany, USA, New Zealand"
+  },
+  {
+   "id": "rose",
+   "name": "Rosé (general)",
+   "candidates": [
+    "Grenache",
+    "Rosé"
+   ],
+   "grapes": [
+    "Grenache",
+    "Cinsault",
+    "Syrah",
+    "Pinot Noir",
+    "Tempranillo",
+    "Sangiovese"
+   ],
+   "country": "Various",
+   "region": "Grown worldwide (mainly France, Spain, Italy, USA)"
+  },
+  {
+   "id": "sparkling-wine",
+   "name": "Sparkling Wine (general)",
+   "candidates": [
+    "Chardonnay",
+    "Sparkling Wine"
+   ],
+   "grapes": [
+    "Chardonnay",
+    "Pinot Noir",
+    "Chenin Blanc",
+    "French Colombard"
+   ],
+   "country": "Various",
+   "region": "Grown worldwide (mainly USA (California), France, Spain, Italy)"
+  },
+  {
+   "id": "muscadine-scuppernong",
+   "name": "Muscadine & Scuppernong (Southern US)",
+   "candidates": [
+    "Muscadine & Scuppernong",
+    "Muscadine",
+    "Scuppernong",
+    "Southeastern US wine"
+   ],
+   "grapes": [
+    "Muscadine (Vitis rotundifolia)",
+    "Scuppernong",
+    "Carlos",
+    "Noble"
+   ],
+   "country": "United States",
+   "region": "Southeastern US (North Carolina, Georgia, South Carolina, Florida, Mississippi and neighboring states)"
+  },
+  {
+   "id": "concord-niagara",
+   "name": "Concord, Niagara & Native American Grapes",
+   "candidates": [
+    "Concord, Niagara & Native American Grapes",
+    "Concord, Niagara",
+    "Native American Grapes",
+    "New York wine"
+   ],
+   "grapes": [
+    "Concord",
+    "Niagara",
+    "Catawba"
+   ],
+   "country": "United States",
+   "region": "New York (Lake Erie, Finger Lakes), Pennsylvania, Ohio, Michigan and other Great Lakes/Midwest states"
+  },
+  {
+   "id": "sweet-red",
+   "name": "Sweet Red Wine (general)",
+   "candidates": [
+    "Various (often unspecified red blends)",
+    "Sweet Red Wine"
+   ],
+   "grapes": [
+    "Various (often unspecified red blends)",
+    "Brachetto",
+    "Lambrusco"
+   ],
+   "country": "Various",
+   "region": "Mainly Italy (Piedmont, Emilia-Romagna) and the United States (California and other states)"
+  },
+  {
+   "id": "uruguay-tannat",
+   "name": "Uruguayan Tannat",
+   "candidates": [
+    "Uruguayan Tannat"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "mendoza-bonarda",
+   "name": "Argentine Bonarda",
+   "candidates": [
+    "Argentine Bonarda"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "uco-valley-cabernet-franc",
+   "name": "Argentine Cabernet Franc (Uco Valley)",
+   "candidates": [
+    "Argentine Cabernet Franc",
+    "Uco Valley"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "mendoza-cabernet-sauvignon",
+   "name": "Mendoza Cabernet Sauvignon",
+   "candidates": [
+    "Mendoza Cabernet Sauvignon"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "patagonia-pinot-noir",
+   "name": "Patagonian Pinot Noir (Argentina)",
+   "candidates": [
+    "Patagonian Pinot Noir",
+    "Argentina"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "chilean-cool-climate-syrah",
+   "name": "Chilean Cool-Climate Syrah (Elqui, Limarí, San Antonio)",
+   "candidates": [
+    "Chilean Cool-Climate Syrah",
+    "Elqui",
+    "Limarí",
+    "San Antonio"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "limari-chardonnay",
+   "name": "Chilean Coastal Chardonnay (Limarí, Casablanca)",
+   "candidates": [
+    "Chilean Coastal Chardonnay",
+    "Limarí",
+    "Casablanca"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "serra-gaucha-sparkling",
+   "name": "Brazilian Sparkling Wine (Serra Gaúcha)",
+   "candidates": [
+    "Brazilian Sparkling Wine",
+    "Serra Gaúcha"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "australian-sparkling-shiraz",
+   "name": "Australian Sparkling Shiraz",
+   "candidates": [
+    "Australian Sparkling Shiraz"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "tasmanian-sparkling",
+   "name": "Tasmanian Sparkling Wine",
+   "candidates": [
+    "Tasmanian Sparkling Wine"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "adelaide-hills-chardonnay",
+   "name": "Adelaide Hills Chardonnay",
+   "candidates": [
+    "Adelaide Hills Chardonnay"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "gimblett-gravels-red",
+   "name": "Hawke's Bay Bordeaux-Style Red (Gimblett Gravels)",
+   "candidates": [
+    "Hawke's Bay Bordeaux-Style Red",
+    "Gimblett Gravels"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "marlborough-pinot-noir",
+   "name": "Marlborough Pinot Noir",
+   "candidates": [
+    "Marlborough Pinot Noir"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "constantia-sweet",
+   "name": "Constantia Sweet Wine (Vin de Constance style)",
+   "candidates": [
+    "Constantia Sweet Wine",
+    "Vin de Constance style"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "swiss-chasselas",
+   "name": "Swiss Chasselas (Vaud, Lavaux)",
+   "candidates": [
+    "Swiss Chasselas",
+    "Vaud",
+    "Lavaux"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "valais-petite-arvine",
+   "name": "Petite Arvine (Valais)",
+   "candidates": [
+    "Petite Arvine",
+    "Valais"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "plavac-mali",
+   "name": "Croatian Plavac Mali (Dingač, Postup)",
+   "candidates": [
+    "Croatian Plavac Mali",
+    "Dingač",
+    "Postup"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "istrian-malvazija",
+   "name": "Istrian Malvazija (Croatia & Slovenia)",
+   "candidates": [
+    "Istrian Malvazija",
+    "Croatia",
+    "Slovenia"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "brda-rebula",
+   "name": "Rebula from Brda (Slovenia)",
+   "candidates": [
+    "Rebula from Brda",
+    "Slovenia"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "egri-bikaver",
+   "name": "Egri Bikavér (Bull's Blood of Eger)",
+   "candidates": [
+    "Egri Bikavér",
+    "Bull's Blood of Eger"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "feteasca-neagra",
+   "name": "Romanian Fetească Neagră",
+   "candidates": [
+    "Romanian Fetească Neagră"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "bulgarian-mavrud",
+   "name": "Bulgarian Mavrud",
+   "candidates": [
+    "Bulgarian Mavrud"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "turkish-okuzgozu-bogazkere",
+   "name": "Turkish Öküzgözü & Boğazkere",
+   "candidates": [
+    "Turkish Öküzgözü & Boğazkere"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "israel-red-blend",
+   "name": "Israeli Red Blend (Galilee, Golan Heights, Judean Hills)",
+   "candidates": [
+    "Israeli Red Blend",
+    "Galilee",
+    "Golan Heights",
+    "Judean Hills"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "ningxia-cabernet",
+   "name": "Ningxia Cabernet Sauvignon & Blends (China)",
+   "candidates": [
+    "Ningxia Cabernet Sauvignon & Blends",
+    "China"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "mantinia-moschofilero",
+   "name": "Mantinia Moschofilero (Greece)",
+   "candidates": [
+    "Mantinia Moschofilero",
+    "Greece"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "santorini-vinsanto",
+   "name": "Santorini Vinsanto",
+   "candidates": [
+    "Santorini Vinsanto"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "cyprus-commandaria",
+   "name": "Commandaria (Cyprus)",
+   "candidates": [
+    "Commandaria",
+    "Cyprus"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "english-bacchus",
+   "name": "English Bacchus",
+   "candidates": [
+    "English Bacchus"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "picpoul-de-pinet",
+   "name": "Picpoul de Pinet",
+   "candidates": [
+    "Picpoul de Pinet"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "cotes-de-gascogne-white",
+   "name": "Côtes de Gascogne White",
+   "candidates": [
+    "Côtes de Gascogne White"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "madiran",
+   "name": "Madiran",
+   "candidates": [
+    "Madiran"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "jurancon",
+   "name": "Jurançon (dry & sweet)",
+   "candidates": [
+    "Jurançon",
+    "dry",
+    "sweet"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "beaujolais-nouveau",
+   "name": "Beaujolais Nouveau",
+   "candidates": [
+    "Beaujolais Nouveau"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "cremant-alsace-bourgogne",
+   "name": "Crémant d'Alsace & Crémant de Bourgogne",
+   "candidates": [
+    "Crémant d'Alsace & Crémant de Bourgogne"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "bordeaux-superieur",
+   "name": "Everyday Bordeaux Red (Bordeaux & Bordeaux Supérieur)",
+   "candidates": [
+    "Everyday Bordeaux Red",
+    "Bordeaux",
+    "Bordeaux Supérieur"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "entre-deux-mers",
+   "name": "Entre-Deux-Mers / Bordeaux Blanc",
+   "candidates": [
+    "Entre-Deux-Mers / Bordeaux Blanc"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "german-sekt",
+   "name": "German Sekt",
+   "candidates": [
+    "German Sekt"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "franken-silvaner",
+   "name": "Franken Silvaner",
+   "candidates": [
+    "Franken Silvaner"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "dolcetto",
+   "name": "Dolcetto (Alba, Dogliani)",
+   "candidates": [
+    "Dolcetto",
+    "Alba",
+    "Dogliani"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "roero-arneis",
+   "name": "Roero Arneis",
+   "candidates": [
+    "Roero Arneis"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "lugana",
+   "name": "Lugana (Turbiana)",
+   "candidates": [
+    "Lugana",
+    "Turbiana"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "montefalco-sagrantino",
+   "name": "Montefalco Sagrantino",
+   "candidates": [
+    "Montefalco Sagrantino"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "valtellina-nebbiolo",
+   "name": "Valtellina Nebbiolo (Chiavennasca) & Sforzato",
+   "candidates": [
+    "Valtellina Nebbiolo & Sforzato",
+    "Chiavennasca"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "tuscan-vin-santo",
+   "name": "Tuscan Vin Santo",
+   "candidates": [
+    "Tuscan Vin Santo"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "valdeorras-godello",
+   "name": "Godello (Valdeorras, Bierzo)",
+   "candidates": [
+    "Godello",
+    "Valdeorras",
+    "Bierzo"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "navarra-rosado",
+   "name": "Navarra Rosado",
+   "candidates": [
+    "Navarra Rosado"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "bairrada-baga",
+   "name": "Bairrada Baga",
+   "candidates": [
+    "Bairrada Baga"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "moscatel-de-setubal",
+   "name": "Moscatel de Setúbal",
+   "candidates": [
+    "Moscatel de Setúbal"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  },
+  {
+   "id": "portuguese-rose-everyday",
+   "name": "Portuguese Off-Dry Rosé (Mateus & Lancers style)",
+   "candidates": [
+    "Portuguese Off-Dry Rosé",
+    "Mateus",
+    "Lancers style"
+   ],
+   "grapes": [],
+   "country": "",
+   "region": "",
+   "new": true
+  }
+ ],
+ "grapes": [
+  "Agiorgitiko",
+  "Aglianico",
+  "Albariño",
+  "Alfrocheiro",
+  "Alicante Bouschet",
+  "Alvarinho",
+  "Aragonez (Tempranillo)",
+  "Arinto",
+  "Assyrtiko",
+  "Avesso",
+  "Azal",
+  "Barbera",
+  "Blaufränkisch",
+  "Boal",
+  "Brachetto",
+  "Cabernet Franc",
+  "Cabernet Sauvignon",
+  "Canaiolo",
+  "Cannonau (Grenache)",
+  "Carignan",
+  "Cariñena (Samsó)",
+  "Carlos",
+  "Carmenère",
+  "Carricante",
+  "Castelão",
+  "Catarratto",
+  "Catawba",
+  "Chardonnay",
+  "Chenin Blanc",
+  "Cinsault",
+  "Colorino",
+  "Concord",
+  "Cortese",
+  "Corvina",
+  "Corvinone",
+  "Erbamat",
+  "Fiano",
+  "French Colombard",
+  "Furmint",
+  "Gamay",
+  "Garganega",
+  "Garnacha",
+  "Gewurztraminer",
+  "Gewürztraminer",
+  "Glera",
+  "Graciano",
+  "Grenache",
+  "Grüner Veltliner",
+  "Hondarrabi Beltza",
+  "Hondarrabi Zuri",
+  "Hárslevelű",
+  "Jaen (Mencía)",
+  "Koshu",
+  "Lambrusco",
+  "Lambrusco Grasparossa",
+  "Lambrusco Salamino",
+  "Lambrusco Sorbara",
+  "Loureiro",
+  "Macabeo",
+  "Malbec",
+  "Malvasia",
+  "Mammolo",
+  "Mazuelo",
+  "Melon de Bourgogne",
+  "Mencía",
+  "Merlot",
+  "Meunier",
+  "Monastrell",
+  "Montepulciano",
+  "Moscato Bianco",
+  "Mourvèdre",
+  "Muscadelle",
+  "Muscadine (Vitis rotundifolia)",
+  "Muscat Blanc à Petits Grains",
+  "Muscat of Alexandria",
+  "Nebbiolo",
+  "Nerello Cappuccio",
+  "Nerello Mascalese",
+  "Nero d'Avola",
+  "Niagara",
+  "Noble",
+  "Palomino",
+  "Parellada",
+  "País",
+  "Pedro Ximénez",
+  "Petit Verdot",
+  "Petite Sirah",
+  "Petite Sirah (Durif)",
+  "Pinot Bianco",
+  "Pinot Grigio",
+  "Pinot Grigio (Pinot Gris)",
+  "Pinot Gris",
+  "Pinot Meunier",
+  "Pinot Nero",
+  "Pinot Noir",
+  "Pinotage",
+  "Primitivo",
+  "Ribolla Gialla",
+  "Riesling",
+  "Rkatsiteli",
+  "Rondinella",
+  "Sangiovese",
+  "Sangiovese (Prugnolo Gentile)",
+  "Saperavi",
+  "Sauvignon Blanc",
+  "Savagnin",
+  "Scuppernong",
+  "Sercial",
+  "Shiraz",
+  "Syrah",
+  "Sárgamuskotály (Yellow Muscat)",
+  "Sémillon",
+  "Tannat",
+  "Tempranillo",
+  "Tempranillo (Tinta de Toro)",
+  "Tempranillo (Tinto Fino)",
+  "Tibouren",
+  "Tinta Barroca",
+  "Tinta Negra",
+  "Tinta Pinheira",
+  "Tinta Roriz",
+  "Tinto Cão",
+  "Torrontés Riojano",
+  "Touriga Franca",
+  "Touriga Nacional",
+  "Trajadura",
+  "Traminer",
+  "Trebbiano di Soave",
+  "Trincadeira",
+  "Various (often unspecified red blends)",
+  "Verdejo",
+  "Verdelho",
+  "Verdicchio",
+  "Vermentino",
+  "Vidal",
+  "Viognier",
+  "Viura",
+  "Weissburgunder",
+  "Welschriesling",
+  "Xarel·lo",
+  "Xinomavro",
+  "Zinfandel",
+  "Zweigelt"
+ ],
+ "countries": [
+  "Argentina",
+  "Australia",
+  "Austria",
+  "Brazil",
+  "Bulgaria",
+  "Canada",
+  "Chile",
+  "China",
+  "Croatia",
+  "Cyprus",
+  "England",
+  "France",
+  "Georgia",
+  "Germany",
+  "Greece",
+  "Hungary",
+  "Israel",
+  "Italy",
+  "Japan",
+  "Lebanon",
+  "Mexico",
+  "New Zealand",
+  "Portugal",
+  "Romania",
+  "Slovenia",
+  "South Africa",
+  "Spain",
+  "Switzerland",
+  "Turkey",
+  "United States",
+  "Uruguay"
+ ],
+ "topics": [
+  "Wine",
+  "Winemaking",
+  "Wine tasting",
+  "Wine tasting descriptors",
+  "Aroma of wine",
+  "Terroir",
+  "Oak (wine)",
+  "Malolactic fermentation",
+  "Sparkling wine production",
+  "Fortified wine",
+  "Dessert wine",
+  "Rosé",
+  "Orange wine",
+  "Tannin",
+  "Acids in wine",
+  "Sweetness of wine",
+  "Decanter",
+  "Wine glass",
+  "Wine and food matching",
+  "Vintage",
+  "Wine fault",
+  "Cork taint",
+  "Grape variety",
+  "Wine label",
+  "Appellation",
+  "Old World wine",
+  "New World wine",
+  "Wine cellar",
+  "Aging of wine",
+  "Wine serving temperature"
+ ]
+}
