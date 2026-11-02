@@ -1,8 +1,8 @@
-// Cellar · swift-action  (version 7: adds remembered AI answers)
+// Cellar · swift-action  (version 8: remembered AI answers; Groq as a third, last-resort backup)
 // Label reading, bottle notes, guided dinner pairing, shared household cellar, community bottle facts,
 // plus (new in 6) a settings file on the Cellar website, general-purpose storage, and a status check,
 // so most future features need no server change. Deployed automatically from GitHub.
-const SERVER_VERSION = 7;
+const SERVER_VERSION = 8;
 import postgres from "npm:postgres@3.4.5";
 // A tiny, private middleman between the Cellar website and Google's Gemini API.
 // It keeps the Gemini key secret (stored as a Supabase secret, never in the website),
@@ -14,6 +14,7 @@ import postgres from "npm:postgres@3.4.5";
 //   FALLBACK_MODEL   optional. Default "gemini-3.5-flash-lite".
 //   ALLOWED_ORIGINS  optional. Comma list. Default "https://anotterbryan.github.io".
 //   WEB_SEARCH       optional. "on" turns on Google Search grounding (requires billing on the Google account).
+//   GROQ_API_KEY     optional. Free key from https://console.groq.com/keys. Used only when both Gemini models fail.
 //   CONFIG_URL       optional. Settings file. Default https://anotterbryan.github.io/Cellar/server/config.json
 //                    (prompts, extra AI tasks, storage areas, limits). Only read from this address, so
 //                    nobody can send the server their own instructions.
@@ -24,12 +25,14 @@ const FALLBACK = Deno.env.get("FALLBACK_MODEL") ?? "gemini-3.5-flash-lite";
 const ORIGINS = (Deno.env.get("ALLOWED_ORIGINS") ?? "https://anotterbryan.github.io").split(",").map((s) => s.trim()).filter(Boolean);
 const BASE = Deno.env.get("GEMINI_BASE") ?? "https://generativelanguage.googleapis.com";
 const SEARCH = (Deno.env.get("WEB_SEARCH") ?? "off").toLowerCase() === "on";
+const GROQ_KEY = Deno.env.get("GROQ_API_KEY") ?? "";
+const GROQ_BASE = Deno.env.get("GROQ_BASE") ?? "https://api.groq.com";
 const CONFIG_URL = Deno.env.get("CONFIG_URL") ?? "https://anotterbryan.github.io/Cellar/server/config.json";
 
 // ---------------- settings file (cached 5 minutes; built-in defaults if it can't be reached)
 type TaskDef = { prompt: string; schema?: unknown; inputs?: Record<string, number>; images?: number; search?: boolean };
 type StoreDef = { max_bytes?: number; per_key?: number };
-type Config = { version?: number | string; cache?: { notes_days?: number; pair_days?: number }; models?: { primary?: string | null; fallback?: string | null }; limits?: { ai_per_hour?: number; store_puts_per_hour?: number };
+type Config = { version?: number | string; groq?: { model?: string; vision_model?: string; enabled?: boolean }; cache?: { notes_days?: number; pair_days?: number }; models?: { primary?: string | null; fallback?: string | null }; limits?: { ai_per_hour?: number; store_puts_per_hour?: number };
   prompts?: Record<string, string>; schemas?: Record<string, unknown>; tasks?: Record<string, TaskDef>; stores?: Record<string, StoreDef> };
 let CFG: Config = {}, cfgAt = 0, cfgErr = "";
 async function config(): Promise<Config> {
@@ -306,7 +309,34 @@ async function cachePut(key: string, task: string, data: unknown) {
   try { const s = await db(); await s`insert into cellar_ai_cache (key, task, data) values (${key}, ${task}, ${s.json(data as never)}) on conflict (key) do update set data = excluded.data, created_at = now(), hits = 0`; } catch { /* cache is optional */ }
 }
 
+// Groq (OpenAI-style API). Same prompt; the schema is described in words because Groq's JSON mode doesn't take one.
+async function callGroq(parts: unknown[], schema: unknown) {
+  const hasImage = parts.some((p) => (p as { inline_data?: unknown }).inline_data);
+  const model = hasImage ? (CFG.groq?.vision_model || "qwen/qwen3.8-27b") : (CFG.groq?.model || "qwen/qwen3.8-27b");
+  const content: unknown[] = [];
+  for (const p of parts as { text?: string; inline_data?: { mime_type: string; data: string } }[]) {
+    if (p.text) content.push({ type: "text", text: p.text });
+    else if (p.inline_data) content.push({ type: "image_url", image_url: { url: `data:${p.inline_data.mime_type};base64,${p.inline_data.data}` } });
+  }
+  content.push({ type: "text", text: "Respond with ONLY one JSON object (no other text) that follows this JSON schema:\n" + JSON.stringify(schema) });
+  const r = await fetch(`${GROQ_BASE}/openai/v1/chat/completions`, {
+    method: "POST", headers: { "content-type": "application/json", authorization: `Bearer ${GROQ_KEY}` },
+    body: JSON.stringify({ model, temperature: 0.2, response_format: { type: "json_object" }, messages: [{ role: "user", content: hasImage ? content : content.map((c) => (c as { text: string }).text).join("\n\n") }] }),
+  }).catch(() => null);
+  if (!r) return { r: new Response("{}", { status: 503 }), model };
+  if (!r.ok) return { r: new Response(await r.text(), { status: r.status }), model };
+  const j = await r.json();
+  const text = String(j.choices?.[0]?.message?.content ?? "").replace(/<think>[\s\S]*?<\/think>/g, "");
+  return { r: new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text }] } }] }), { status: 200 }), model };
+}
+
 async function runGemini(parts: unknown[], schema: unknown, search: boolean) {
+  const res = await runGeminiOnly(parts, schema, search);
+  if (res.r.ok || !GROQ_KEY || CFG.groq?.enabled === false || !(res.r.status === 429 || res.r.status >= 500 || res.r.status === 404)) return res;
+  const g = await callGroq(parts, schema);   // both Gemini models busy or out of free quota → Groq
+  return g.r.ok ? { r: g.r, used: "groq:" + g.model } : res;
+}
+async function runGeminiOnly(parts: unknown[], schema: unknown, search: boolean) {
   const primary = modelPrimary(), fallback = modelFallback();
   const call = (m: string) => callGemini(m, parts, schema, search).catch(() => new Response("{}", { status: 503 }));   // network hiccup → try the backup model
   let r = await call(primary), used = primary;
@@ -339,7 +369,7 @@ Deno.serve(async (req) => {
     let dbOk = false, cached = 0, saved = 0;
     try { if (DB_URL) { const s = await db(); dbOk = true; const c = await s`select count(*)::int as n, coalesce(sum(hits),0)::int as h from cellar_ai_cache`; cached = c[0].n; saved = c[0].h; } } catch { /* reported as false */ }
     return new Response(JSON.stringify({ ok: true, server_version: SERVER_VERSION, config_version: CFG.version ?? null, config_error: cfgErr || null,
-      remembered_answers: cached, quota_saved: saved, model: modelPrimary(), fallback: modelFallback(), web_search: SEARCH, database: dbOk, key_set: !!KEY,
+      remembered_answers: cached, quota_saved: saved, model: modelPrimary(), fallback: modelFallback(), groq: GROQ_KEY ? (CFG.groq?.enabled === false ? "off in settings" : (CFG.groq?.model || "qwen/qwen3.8-27b")) : null, web_search: SEARCH, database: dbOk, key_set: !!KEY,
       tasks: ["read", "notes", "pair", ...Object.keys(CFG.tasks ?? {})], stores: Object.keys(CFG.stores ?? {}) }), { headers: H });
   }
   if (task.startsWith("store_")) {

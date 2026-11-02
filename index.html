@@ -1787,7 +1787,7 @@ const HELP = {
   learn: ["Learning about wine", "Each wheel is interactive: tap a wine or a word to see how it connects. Use the search bar to jump to a specific wine or grape."],
   wheel: ["Using the wheels", "Tap any wine or word on the wheel. Its details appear below (on a phone) or on the right. Use the Region and Style filters to narrow things down, and <b>← Learn</b> to go back."]};
 // ---------------------------------------------------------------- server status (hidden owner panel)
-const NEED_SERVER = 7, ADMINKEY = "cellarLyceum.admin.v1";
+const NEED_SERVER = 8, ADMINKEY = "cellarLyceum.admin.v1";
 async function serverInfo() {
   try { const j = await aiCall({task: "info"}, "info"); return j && j.server_version ? j : {old: true}; }
   catch (e) { return e.status === 400 || e.status === 404 ? {old: true} : {down: true, err: e.message}; }
@@ -1808,7 +1808,7 @@ async function showServer() {
   ov.querySelector("#sBody").innerHTML = j.down ? `⚠️ The server didn't answer: ${esc(j.err || "")}`
     : j.old ? `⚠️ The server is an older version (5 or earlier). It still works, but needs an update for the newest features. Once automatic deploys are set up, this fixes itself.`
     : `<table style="font-size:15px">${row("Server version", j.server_version + (need ? " (update needed)" : " (up to date)"), !need)}${row("Settings file", j.config_error ? j.config_error : "loaded · " + (j.config_version || "?"), !j.config_error)}
-      ${row("AI model", j.model + " → backup " + j.fallback)}${row("Gemini key", j.key_set ? "set" : "missing", !!j.key_set)}${row("Database", j.database ? "connected" : "not connected", !!j.database)}
+      ${row("AI model", j.model + " → backup " + j.fallback)}${j.server_version >= 8 ? row("Third backup (Groq)", j.groq ? j.groq : "not set up yet", !!j.groq) : ""}${row("Gemini key", j.key_set ? "set" : "missing", !!j.key_set)}${row("Database", j.database ? "connected" : "not connected", !!j.database)}
       ${row("Remembered answers", (j.remembered_answers ?? 0) + " saved · reused " + (j.quota_saved ?? 0) + " times")}${row("AI requests", (j.tasks || []).join(", "))}${row("Storage areas", (j.stores || []).join(", ") || "none")}</table>`;
   if (S.view === "home") render();
 }
