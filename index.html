@@ -752,7 +752,7 @@ async function lookupBarcode(code) {
     if (it && it.title) return {src: "UPCitemdb", p: {product_name: it.title, brands: it.brand, generic_name: it.description, categories: it.category}, url: ""}; } catch (e) {}
   return null;
 }
-function freshSnap() { Object.assign(SNAP, {community: null, commAgree: null, shared: false, recId: null, notes: null, notesKey: null, aiFront: null, aiBack: null, aiInfo: null, aiConf: null, notWine: false, img: null, back: null, thumb: null, lines: [], text: "", fields: {}, found: {}, src: {}, edited: new Set(), match: undefined, wiki: null, saved: false, barcode: null, bcInfo: null, status: ""}); }
+function freshSnap() { Object.assign(SNAP, {bcMiss: null, community: null, commAgree: null, shared: false, recId: null, notes: null, notesKey: null, aiFront: null, aiBack: null, aiInfo: null, aiConf: null, notWine: false, img: null, back: null, thumb: null, lines: [], text: "", fields: {}, found: {}, src: {}, edited: new Set(), match: undefined, wiki: null, saved: false, barcode: null, bcInfo: null, status: ""}); }
 async function onBarcode(file) {
   if (!file) return;
   if (!(SNAP.img && !SNAP.barcode)) freshSnap();
@@ -783,7 +783,7 @@ async function useBarcode(code) {
       if (f.placeAll && f.placeAll.length) SNAP.fields.placeAll = [...new Set([...(SNAP.fields.placeAll || []), ...f.placeAll])];
       SNAP.bcInfo = {src: hit.src, name: p.product_name || p.brands || "", url: hit.url};
       setStatus(`Found barcode ${code} in ${hit.src}: “${SNAP.bcInfo.name}”.${SNAP.fields.vintage ? "" : " Barcodes don't include the year, so add the vintage from the label."}`);
-    } else setStatus(`Barcode ${code} isn't in the free product database. Snap the label to fill in the rest. Once you save the bottle, this phone will remember the barcode next time.`);
+    } else { setStatus(`Barcode ${code} isn't in the free product databases yet. Snap the label to fill in the rest, or look it up below. Once you save the bottle, the barcode is remembered (and shared with the community) for next time.`); SNAP.bcMiss = code; }
   }
   SNAP.busy = false; findWine();
 }
@@ -1605,6 +1605,7 @@ function viewSnap() {
     ${row("sweet", "Sweetness", sel("sweet", ["Dry", "Off-dry / semi-sweet", "Sweet"]))}
     ${F.abv ? `<div class="status">Alcohol on the label: ${F.abv}%</div>` : ""}${communityNote()}
     <div style="margin-top:10px"><button class="btn solid" id="snapFind">Find this wine</button>
+    ${SNAP.bcMiss && SNAP.bcMiss === SNAP.barcode ? `<div class="status" style="margin:6px 0">Look up ${esc(SNAP.bcMiss)} on: <a href="https://www.barcodelookup.com/${esc(SNAP.bcMiss)}" target="_blank" rel="noopener">Barcode Lookup</a> · <a href="https://go-upc.com/search?q=${esc(SNAP.bcMiss)}" target="_blank" rel="noopener">Go-UPC</a> · <a href="https://www.google.com/search?q=${esc(SNAP.bcMiss)}+wine" target="_blank" rel="noopener">Google</a>, then type the name into the fields above.</div>` : ""}
     ${SNAP.img ? `<label class="btn">${I("label-photo")} Add the back label<input type="file" accept="image/*" capture="environment" id="snapBack" hidden></label>` : `<label class="btn">${I("label-photo")} Snap the label too<input type="file" accept="image/*" capture="environment" id="snapFile2" hidden></label>`}
     ${!SNAP.barcode ? `<button class="btn" id="bcLive2">${I("barcode")} Add the barcode</button>` : ""}
     <button class="btn" id="snapNew">Start a new bottle</button></div>
