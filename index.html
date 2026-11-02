@@ -405,7 +405,8 @@ function panelWine(w) {
    ${kin ? `<div class="sec">Kindred (sommelier picks)</div><div class="row">${kin}</div>` : ""}
    <div class="sec">Shares the most words with</div><div class="row">${near}</div>
    ${w.confidence === "medium" ? `<div class="src" style="color:#8a6a2e">◐ Generalized profile: this style varies widely or has fewer published sources. Treat it as a guide.</div>` : ""}
-   ${srcs.length ? `<div class="src">Sources: ${esc(srcs.join(", "))}</div>` : ""}`;
+   ${srcs.length ? `<div class="src">Sources: ${esc(srcs.join(", "))}</div>` : ""}
+   ${AI.url ? `<div class="src" style="margin-top:10px"><a href="#" data-suggest="${esc(w.id)}">${I("notes")} Suggest a correction or addition</a></div>` : ""}`;
 }
 function panelWord(t) {
   const f = termFam[t], ws = (uses[t] || []);
@@ -431,6 +432,7 @@ function panelHome() {
 panel.addEventListener("click", e => {
   const swEl = e.target.closest(".sw"); if (swEl) { const d = panel.querySelector("#sayDef"); if (d) d.innerHTML = `<b>${esc(swEl.dataset.def)}</b>: ${esc(defOf(swEl.dataset.def) || "a common tasting word.")}`; return; }
   const dg = e.target.closest("[data-describe]"); if (dg) { describeGlass(dg.dataset.describe, dg.dataset.bottle); return; }
+  const sg = e.target.closest("[data-suggest]"); if (sg) { e.preventDefault(); showSuggest(sg.dataset.suggest); return; }
   const w = e.target.closest("[data-wine]"), t = e.target.closest("[data-word]");
   if (w) pick("wine", w.dataset.wine); else if (t) pick("word", t.dataset.word); });
 
@@ -974,7 +976,8 @@ async function drawCard(b, photo, Hfix) {
   if (img) { const s = 300, k = Math.max(s / img.width, s / img.height); x.save(); x.beginPath(); x.arc(W / 2, 300, s / 2, 0, Math.PI * 2); x.clip();
     x.drawImage(img, W / 2 - img.width * k / 2, 300 - img.height * k / 2, img.width * k, img.height * k); x.restore();
     x.lineWidth = 10; x.strokeStyle = "#F2E3C2"; x.beginPath(); x.arc(W / 2, 300, s / 2, 0, Math.PI * 2); x.stroke(); }
-  else { x.fillStyle = "#F2E3C2"; x.beginPath(); x.arc(W / 2, 300, 110, 0, Math.PI * 2); x.fill(); x.font = "120px serif"; x.textAlign = "center"; x.fillText("🍷", W / 2, 345); }
+  else { x.fillStyle = "#F2E3C2"; x.beginPath(); x.arc(W / 2, 300, 110, 0, Math.PI * 2); x.fill(); const gi = await loadImg("data:image/svg+xml;charset=utf-8," + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="480" height="480" fill="none" stroke="${red ? "#5A1A2B" : "#6B5320"}" color="${red ? "#5A1A2B" : "#6B5320"}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${(ICN["glass-half"] || "").replace(/currentColor/g, red ? "#5A1A2B" : "#6B5320")}</svg>`));
+    if (gi) x.drawImage(gi, W / 2 - 80, 300 - 80, 160, 160); }
   x.textAlign = "center"; x.fillStyle = "#F2E3C2"; x.font = "600 34px 'Cormorant SC', serif"; x.fillText("T H E   C E L L A R   L Y C E U M", W / 2, 90);
   let y = 500; x.fillStyle = "#6E1E2B"; x.font = "600 72px 'Cormorant Garamond', Georgia, serif";
   wrapText(x, b.name + (b.vintage ? " " + b.vintage : ""), W - 200).slice(0, 2).forEach(l => { x.fillText(l, W / 2, y); y += 78; });
@@ -1809,7 +1812,7 @@ const HELP = {
   learn: ["Learning about wine", "Each wheel is interactive: tap a wine or a word to see how it connects. Use the search bar to jump to a specific wine or grape."],
   wheel: ["Using the wheels", "Tap any wine or word on the wheel. Its details appear below (on a phone) or on the right. Use the Region and Style filters to narrow things down, and <b>← Learn</b> to go back."]};
 // ---------------------------------------------------------------- server status (hidden owner panel)
-const NEED_SERVER = 8, ADMINKEY = "cellarLyceum.admin.v1";
+const NEED_SERVER = 9, ADMINKEY = "cellarLyceum.admin.v1";
 async function serverInfo() {
   try { const j = await aiCall({task: "info"}, "info"); return j && j.server_version ? j : {old: true}; }
   catch (e) { return e.status === 400 || e.status === 404 ? {old: true} : {down: true, err: e.message}; }
@@ -1831,17 +1834,58 @@ async function showServer() {
     : j.old ? `⚠️ The server is an older version (5 or earlier). It still works, but needs an update for the newest features. Once automatic deploys are set up, this fixes itself.`
     : `<table style="font-size:15px">${row("Server version", j.server_version + (need ? " (update needed)" : " (up to date)"), !need)}${row("Settings file", j.config_error ? j.config_error : "loaded · " + (j.config_version || "?"), !j.config_error)}
       ${row("AI model", j.model + " → backup " + j.fallback)}${j.server_version >= 8 ? row("Third backup (Groq)", j.groq ? j.groq : "not set up yet", !!j.groq) : ""}${row("Gemini key", j.key_set ? "set" : "missing", !!j.key_set)}${row("Database", j.database ? "connected" : "not connected", !!j.database)}
-      ${row("Remembered answers", (j.remembered_answers ?? 0) + " saved · reused " + (j.quota_saved ?? 0) + " times")}${row("AI requests", (j.tasks || []).join(", "))}${row("Storage areas", (j.stores || []).join(", ") || "none")}</table>`;
+      ${row("Remembered answers", (j.remembered_answers ?? 0) + " saved · reused " + (j.quota_saved ?? 0) + " times")}${row("AI requests", (j.tasks || []).join(", "))}${row("Storage areas", (j.stores || []).join(", ") || "none")}</table>
+      ${(j.stores || []).includes("suggestions") ? `<div class="flab2" style="margin-top:14px">Suggestions to review</div><div id="sSug"></div>` : ""}`;
+  const sb = ov.querySelector("#sSug"); if (sb) loadSuggestions(sb);
   if (S.view === "home") render();
+}
+// ---------------------------------------------------------------- suggest a correction (reviewed before anything changes)
+const SUGAREAS = ["Tasting notes & aromas", "Structure (sweetness, acidity, tannin, body)", "Grapes, region or country", "When to drink", "Food pairings", "Serving & price", "Summary or history", "A missing wine style", "Something else"];
+function showSuggest(wineId) {
+  const w = wineId ? byId[wineId] : null, ov = document.createElement("div"); ov.className = "sheet";
+  ov.innerHTML = `<div class="sheetin"><button class="btn" id="sgClose" style="float:right">Close</button><div class="flab2" style="margin-top:0">Help improve cellar</div>
+    <div class="matchname" style="font-size:22px">${w ? esc(w.name) : "Suggest a fix or a missing wine"}</div>
+    <p class="status">Spotted something off, or know something we should add? Tell us. Every suggestion is fact-checked before anything changes, so please say where you learned it if you can.</p>
+    ${w ? "" : `<div class="fl" style="margin-top:8px">Which wine?</div><input type="text" id="sgWine" placeholder="e.g. Sicilian Frappato" maxlength="80">`}
+    <div class="fl" style="margin-top:8px">What's it about?</div><select id="sgArea">${SUGAREAS.map(a => `<option>${esc(a)}</option>`).join("")}</select>
+    <div class="fl" style="margin-top:8px">Your suggestion</div><textarea id="sgText" rows="4" maxlength="1200" placeholder="e.g. Most bottles are drier than this says."></textarea>
+    <div class="fl" style="margin-top:8px">Where did you learn it? <span class="status">(optional: a link, book or winery)</span></div><input type="text" id="sgSrc" maxlength="300">
+    <p class="status" style="font-size:13px">Please don't include personal details. Suggestions are visible to whoever reviews them.</p>
+    <button class="btn solid" id="sgSend">Send suggestion</button> <span class="status" id="sgMsg"></span></div>`;
+  document.body.appendChild(ov); ov.onclick = e => { if (e.target === ov) ov.remove(); }; ov.querySelector("#sgClose").onclick = () => ov.remove();
+  ov.querySelector("#sgSend").onclick = async () => {
+    const text = ov.querySelector("#sgText").value.trim(), msg = ov.querySelector("#sgMsg"), wn = w ? w.name : ov.querySelector("#sgWine").value.trim();
+    if (text.length < 5) { msg.textContent = "Please write a little more."; return; }
+    msg.textContent = "Sending…";
+    try {
+      await aiCall({task: "store_put", ns: "suggestions", key: w ? "wine:" + w.id : "general", device: deviceId(),
+        data: {wine: w ? w.id : null, name: wn.slice(0, 80), area: ov.querySelector("#sgArea").value, text: text.slice(0, 1200), source: ov.querySelector("#sgSrc").value.trim().slice(0, 300), at: new Date().toISOString()}}, "store_put");
+      ov.querySelector(".sheetin").innerHTML = `<div class="matchname" style="font-size:22px">Thank you ${I("community")}</div><p>Your suggestion is in the review list. It will be checked against reputable sources before anything changes.</p><button class="btn solid" id="sgOk">Close</button>`;
+      ov.querySelector("#sgOk").onclick = () => ov.remove();
+    } catch (e) { msg.textContent = "Couldn't send right now: " + e.message; }
+  };
+}
+async function loadSuggestions(box) {
+  box.innerHTML = `<div class="status">Loading suggestions…</div>`;
+  try {
+    const j = await aiCall({task: "store_recent", ns: "suggestions", limit: 60}, "store_recent"), seen = getJ("cellarLyceum.seenSug.v1", {}), L = j.entries || [];
+    box.innerHTML = !L.length ? `<div class="status">No suggestions yet.</div>` : L.map(r => { const d = r.data || {}, k = r.key + "|" + r.updated;
+      return `<div style="border-top:1px solid var(--rule);padding:8px 0;${seen[k] ? "opacity:.5" : ""}"><b>${esc(d.name || r.key)}</b> · <span class="status">${esc(d.area || "")} · ${esc(String(r.updated).slice(0, 10))}</span>
+        <div style="margin:4px 0">${esc(d.text || "")}</div>${d.source ? `<div class="status">Source: ${esc(d.source)}</div>` : ""}
+        <button class="btn" data-seen="${esc(k)}" style="padding:2px 10px;margin-top:4px">${seen[k] ? "Mark unread" : "Mark reviewed"}</button></div>`; }).join("")
+      + `<p class="status" style="margin-top:8px">These are also copied to GitHub every night, so Claude can fact-check and apply the good ones.</p>`;
+    box.querySelectorAll("[data-seen]").forEach(b => b.onclick = () => { const s2 = getJ("cellarLyceum.seenSug.v1", {}); if (s2[b.dataset.seen]) delete s2[b.dataset.seen]; else s2[b.dataset.seen] = 1; setJ("cellarLyceum.seenSug.v1", s2); loadSuggestions(box); });
+  } catch (e) { box.innerHTML = `<div class="status">Couldn't load suggestions: ${esc(e.message)}</div>`; }
 }
 function showHelp() {
   const [t, d] = HELP[WHEELS.includes(S.view) ? "wheel" : S.view] || HELP.home;
   const ov = document.createElement("div"); ov.className = "sheet";
   ov.innerHTML = `<div class="sheetin"><button class="btn" id="hClose" style="float:right">Close</button><div class="flab2" style="margin-top:0">Help</div>
-    <div class="matchname">${t}</div><p style="font-size:17px;line-height:1.5">${d}</p><p><a href="#" id="hTour">Replay the welcome tour</a></p></div>`;
+    <div class="matchname">${t}</div><p style="font-size:17px;line-height:1.5">${d}</p><p><a href="#" id="hTour">Replay the welcome tour</a>${AI.url ? ` · <a href="#" id="hSug">Suggest a fix or a missing wine</a>` : ""}</p></div>`;
   document.body.appendChild(ov); ov.onclick = e => { if (e.target === ov) ov.remove(); };
   ov.querySelector("#hClose").onclick = () => ov.remove();
   ov.querySelector("#hTour").onclick = e => { e.preventDefault(); ov.remove(); showTour(); };
+  const hs = ov.querySelector("#hSug"); if (hs) hs.onclick = e => { e.preventDefault(); ov.remove(); showSuggest(null); };
 }
 function viewAroma() {
   const g = el("g", {}, svg); const n = TERMS.length, step = 360 / n; let a = -90;

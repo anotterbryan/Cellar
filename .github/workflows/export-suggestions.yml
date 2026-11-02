@@ -1,0 +1,26 @@
+name: Save community suggestions to the repo
+# Copies the newest "Suggest a correction" entries from the Cellar server into kb/suggestions.json each night,
+# so they can be fact-checked and applied. Nothing in the app changes until a reviewed edit is committed.
+on:
+  schedule:
+    - cron: "41 10 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download suggestions
+        run: |
+          curl -sS -X POST "https://hdqslqtodpacavvgmfbd.supabase.co/functions/v1/swift-action" \
+            -H "content-type: application/json" -H "apikey: sb_publishable_apUSFmYpE6C7Yb-N3hR6iw_dRNUHNzV" \
+            -H "x-cellar-task: store_recent" -d '{"task":"store_recent","ns":"suggestions","limit":300}' > raw.json
+          python3 -c "import json;j=json.load(open('raw.json'));assert j.get('ok'),j;json.dump(j['entries'],open('kb/suggestions.json','w'),ensure_ascii=False,indent=1);print(len(j['entries']),'suggestions')"
+      - name: Save
+        run: |
+          git config user.name "Cellar KB bot"; git config user.email "anotterbryan@users.noreply.github.com"
+          git add kb/suggestions.json
+          git diff --cached --quiet || git commit -m "Community suggestions $(date -u +%F)"
+          git pull --rebase -q && git push

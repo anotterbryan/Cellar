@@ -1,8 +1,8 @@
-// Cellar · swift-action  (version 8: remembered AI answers; Groq as a third, last-resort backup)
+// Cellar · swift-action  (version 9: adds listing for review areas such as suggestions)
 // Label reading, bottle notes, guided dinner pairing, shared household cellar, community bottle facts,
 // plus (new in 6) a settings file on the Cellar website, general-purpose storage, and a status check,
 // so most future features need no server change. Deployed automatically from GitHub.
-const SERVER_VERSION = 8;
+const SERVER_VERSION = 9;
 import postgres from "npm:postgres@3.4.5";
 // A tiny, private middleman between the Cellar website and Google's Gemini API.
 // It keeps the Gemini key secret (stored as a Supabase secret, never in the website),
@@ -31,7 +31,7 @@ const CONFIG_URL = Deno.env.get("CONFIG_URL") ?? "https://anotterbryan.github.io
 
 // ---------------- settings file (cached 5 minutes; built-in defaults if it can't be reached)
 type TaskDef = { prompt: string; schema?: unknown; inputs?: Record<string, number>; images?: number; search?: boolean };
-type StoreDef = { max_bytes?: number; per_key?: number };
+type StoreDef = { max_bytes?: number; per_key?: number; listable?: boolean };
 type Config = { version?: number | string; groq?: { model?: string; vision_model?: string; enabled?: boolean }; cache?: { notes_days?: number; pair_days?: number }; models?: { primary?: string | null; fallback?: string | null }; limits?: { ai_per_hour?: number; store_puts_per_hour?: number };
   prompts?: Record<string, string>; schemas?: Record<string, unknown>; tasks?: Record<string, TaskDef>; stores?: Record<string, StoreDef> };
 let CFG: Config = {}, cfgAt = 0, cfgErr = "";
@@ -223,6 +223,12 @@ async function store(task: string, input: { ns?: unknown; key?: unknown; keys?: 
     if (input.data == null || body.length > (def.max_bytes ?? 4000)) return { error: "Too much to save", status: 413 };
     await s`insert into cellar_store (ns, key, device, data) values (${ns}, ${key}, ${device}, ${s.json(input.data as never)}) on conflict (ns, key, device) do update set data = excluded.data, updated_at = now()`;
     return { ok: true };
+  }
+  if (task === "store_recent") {   // newest entries across all keys, only for areas marked "listable" (e.g. suggestions to review)
+    if (!def.listable) return { error: "That storage area can't be listed.", status: 403 };
+    const lim = Math.min(Number((input as { limit?: unknown }).limit) || 100, 300);
+    const rows = await s`select key, data, updated_at from cellar_store where ns = ${ns} order by updated_at desc limit ${lim}`;
+    return { ok: true, entries: rows.map((r) => ({ key: r.key, data: r.data, updated: new Date(r.updated_at).toISOString() })) };
   }
   // store_get: up to per_key newest entries for each key (device ids are never returned)
   const keys = [...new Set((input.keys ?? [input.key]).map(cleanKey).filter((k) => k.length >= 2))].slice(0, 20);
