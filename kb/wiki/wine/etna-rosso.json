@@ -1,0 +1,47 @@
+{
+ "kind": "wine",
+ "key": "etna-rosso",
+ "label": "Etna Rosso",
+ "match": "search",
+ "tried": [
+  "Etna Rosso",
+  "Sicily – Mount Etna wine",
+  "Etna DOC"
+ ],
+ "title": "Etna DOC",
+ "url": "https://en.wikipedia.org/wiki/Etna_DOC",
+ "revision": 1337661048,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q3733809",
+ "image": null,
+ "categories": [
+  "Italian DOC",
+  "Mount Etna",
+  "Wines of Sicily"
+ ],
+ "lead": "Etna is a Denominazione di origine controllata (DOC) for wine from the Etna region in Italy.\nEtna D.O.C. territory is closely tied to the biggest active volcano in Europe, Etna. Much of the volcano is covered with crops and natural vegetation. Among the cultivated species the grape vine has always played a major role.",
+ "sections": [
+  "History",
+  "Appellation system",
+  "Climate",
+  "Soil",
+  "Varieties",
+  "DOC requirements",
+  "References",
+  "External links"
+ ],
+ "text": "Etna is a Denominazione di origine controllata (DOC) for wine from the Etna region in Italy.\nEtna D.O.C. territory is closely tied to the biggest active volcano in Europe, Etna. Much of the volcano is covered with crops and natural vegetation. Among the cultivated species the grape vine has always played a major role.\n\n\n== History ==\nHumans appear on the island of Sicily in the Upper Paleolithic (20,000 years B.C.). Evidence exists that ancient grapes are proved to be dated before man ever stepped on the island; however it was only during the Neolithic era when population devoted itself to agriculture and viticulture.\nLater on between 1 800 and 500 B.C. the Greeks occupied Sicily. They contributed a lot to the viticulture and the techniques of vinification. Apart from their expertise they introduced new grapes, among which \"Grechetto\". Its contemporary name is Grecanico and today it can be found in some areas of the Etna region.\nMythology is closely tied to the island as well. The early settlers – the Sicels, who inhabited the island before the Greeks, worshipped the God of wine Adranus. The Greeks prayed at Dionysus and the Romans revered the wine God Bacchus. Etna volcano and its indigenous wines are often being cited in the Greek mythology as enchanting means for healing, relaxation and amusement.\nOnly in 1968, Etna was recognized as the Controlled Denomination of Origin, the first DOC of Sicily and one of the oldest in Italy.\n\n\n== Appellation system ==\n\nD.O.C. – Denominazione di Origine Controllata is disciplining of production established with Decree of the Republic President of 11.08.1968 [1; 28] officially published on the 25.09.1968.\nAmong its purposes is to establish a method of recognizing the quality wine making and in the same time to enhance the international and national reputation of the product.\nEtna D.O.C. region is situated on the north, east and south slopes of the Etna volcano. The production area consists of the following communities: Biancavilla, S.Maria di Licodia, Paterno, Belpasso, Nicolosi, Pedara, Trecastagni, Viagrande (400-500m asl), Aci S. Antonio, Acireale, S. Venerina, Giarre, Mascali, Zafferana, Milo (900-1100m asl) - the only area for production of the indigenous Carricante grape that can be assigned with the qualification Bianco Superiore; S. Alfio, Piedimonte, Linguaglossa, Castiglione, Randazzo.\n\n\n== Climate ==\nIn the Etna region there are substantial differences in climate, not only compared to the rest of Sicily, but also from one area of the volcano to another. This is due to the fact that Etna region has semi-circular shape, spread from north to south-west. This characteristic allows for different environments to be formed each with its own microclimate, benefiting from different exposure and different level of proximity to the sea.\nAltitude in the Etna region varies between 450m asl and 1100m asl. This factor is the main reason for the temperature amplitudes between day and night and seasonally.\nA major difference compared to the rest of Sicily is in the case of precipitation. The highest levels are encountered on the east slopes of the volcano. The rain is practically absent in the summer, can also be very high during the autumn – winter period.\nDue to the above differences in the climatic conditions this affects the maturation of the grapes and therefore there is a significant difference between the harvest period of the Etna and the rest of the Sicily areas.\n\n\n== Soil ==\nThe soil is volcanic and very rich in minerals. It is formed by the disintegration of one or several types of lava of different ages and eruptive materials such as lava, ash and sand. Containing all these particles, the crops cultivated on Etna soil benefit from nutrients like iron, copper, phosphorus, magnesium and others.\nThe soils around vineyards are rocky, fast-draining, nutrient-poor, and mineral-rich (magnesium). Because of its volcanic origin, Etna's overall soil is a mix of decomposed lava, ash, and sand.\n\n\n== Varieties ==\nNerello Mascalese: Typical Etna Rosso grape. It is believed to have originated in Catania\nNerello Cappuccio: Typical Etna Rosso grape. Important composite in the Etna Rosso D.O.C. blend;\nCarricante: Typical and widespread Etna Bianco grape. Can be named Superiore if it is cultivated in the commune of Milo;\nCatarratto: The most widespread Sicilian Bianco grape;\nMinella bianca: Rarely seen white grape variety indigenous to and cultivated on the volcanic slopes of Etna. The name Minnella means \"breast\" in the local dialect, and was given due to the grape's mammarian form\n\n\n== DOC requirements ==\nEtna D.O.C. Bianco: Carricante (minimum 60%), Catarratto (no more than 40%). Can be included up to 15% other non-aromatic grapes like Minnella or Trebbiano.\nEtna D.O.C. Bianco Superiore: Carricante (minimum 80%), Catarratto or Minnella (no more than 20%). Grapes have to come exclusively from the Milo area.\nEtna D.O.C. Rosso/Rosato: Nerello Mascalese (minimum 80%), Nerello Cappuccio/Mantellato (no more than 20%). Can be included up to 10% other non-aromatic grapes, including white.\nEtna D.O.C. Spumante: Nerello Mascalese (minimum 60%) and up to 40% of other non-aromatic approved Sicilian varieties.\n\n\n== References ==\n\n\n== External links ==\nVal Demone Wine Region on Wikivoyage",
+ "facts": {
+  "country": [
+   "Q38"
+  ],
+  "instance_of": [
+   "Q282"
+  ],
+  "located_in": [
+   "Q16154"
+  ],
+  "description": "Italian controlled designation of origin wine from Sicily"
+ }
+}

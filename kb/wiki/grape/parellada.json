@@ -1,0 +1,40 @@
+{
+ "kind": "grape",
+ "key": "Parellada",
+ "label": "Parellada",
+ "match": "direct",
+ "tried": [
+  "Parellada (grape)",
+  "Parellada"
+ ],
+ "title": "Parellada",
+ "url": "https://en.wikipedia.org/wiki/Parellada",
+ "revision": 1330385312,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1751915",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/e/e3/St._Sadurni_d%27Anoia_-_white_grapes.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Grape varieties of Spain",
+  "White wine grape varieties"
+ ],
+ "lead": "Parellada (Catalan pronunciation: [pəɾəˈʎaðə]) is a Spanish white grape variety of Catalan origin specially grown in Catalonia, Spain. With Macabeu and Xarel·lo, it is one of the three traditional varieties used to make the sparkling wine Cava, which is primarily produced in Catalonia. Besides its use in Cava, it is used mostly for blending in young white wines, although some more ambitious oaked blends with Chardonnay and Sauvignon blanc are also used. Spanish plantations stood at 10,000 hectares (25,000 acres) in 2004,\nIts good acidity and freshness make these wines extremely suitable for the aperitif.",
+ "sections": [
+  "Synonyms",
+  "References"
+ ],
+ "text": "Parellada (Catalan pronunciation: [pəɾəˈʎaðə]) is a Spanish white grape variety of Catalan origin specially grown in Catalonia, Spain. With Macabeu and Xarel·lo, it is one of the three traditional varieties used to make the sparkling wine Cava, which is primarily produced in Catalonia. Besides its use in Cava, it is used mostly for blending in young white wines, although some more ambitious oaked blends with Chardonnay and Sauvignon blanc are also used. Spanish plantations stood at 10,000 hectares (25,000 acres) in 2004,\nIts good acidity and freshness make these wines extremely suitable for the aperitif.\n\n\n== Synonyms ==\nParellada is also known by the following synonyms: Martorella, Montonec, Montonech, Montonega, Montoneo, Montonero, Montonet, Parellada blanc, Perelada and Perellada.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "St. Sadurni d'Anoia - white grapes.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q30046",
+   "Q958314"
+  ],
+  "description": "grape variety"
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "kind": "grape",
+ "key": "Erbamat",
+ "label": "Erbamat",
+ "match": "search",
+ "tried": [
+  "Erbamat (grape)",
+  "Erbamat",
+  "List of Italian grape varieties"
+ ],
+ "title": "List of Italian grape varieties",
+ "url": "https://en.wikipedia.org/wiki/List_of_Italian_grape_varieties",
+ "revision": 1326081643,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q16987676",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Etna_Wine_Agriturismo%2C_Passopisciaro%2C_Sicily%2C_Italy.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Italian cuisine-related lists",
+  "Italian wine",
+  "Wine-related lists",
+  "Wine grape varieties of Italy"
+ ],
+ "lead": "",
+ "sections": [
+  "References",
+  "Supplemental references used for chart"
+ ],
+ "text": "\n== References ==\n\n\n== Supplemental references used for chart ==\nJ. Robinson, J. Harding and J. Vouillamoz Wine Grapes - A complete guide to 1,368 vine varieties, including their origins and flavours pgs XXVIII-XXX Allen Lane 2012. ISBN 978-1-846-14446-2.",
+ "facts": {
+  "instance_of": [
+   "Q13406463"
+  ],
+  "description": "Wikimedia list article"
+ }
+}

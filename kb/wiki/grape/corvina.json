@@ -1,0 +1,45 @@
+{
+ "kind": "grape",
+ "key": "Corvina",
+ "label": "Corvina",
+ "match": "direct",
+ "tried": [
+  "Corvina (grape)",
+  "Corvina"
+ ],
+ "title": "Corvina",
+ "url": "https://en.wikipedia.org/wiki/Corvina",
+ "revision": 1326081717,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q26145",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/b/b0/VIVC2863_CORVINA_VERONESE_Cluster_in_the_field_19664.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Red wine grape varieties",
+  "Wine grape varieties of Italy",
+  "Wine grapes of Veneto"
+ ],
+ "lead": "Corvina is an Italian wine grape variety that is sometimes also referred to as Corvina Veronese or Cruina. The total global wine-growing area in 2010 was 7,495 hectares (18,520 acres), all of which is grown in the Veneto region of northeast Italy, except for 19 hectares (47 acres) planted in Argentina. Corvina is used with several other grapes to create the light red regional wines Bardolino and Valpolicella that have a mild fruity flavor with hints of almond. These blends include Corvinone, Rondinella, and Molinara, and Rossignola for the latter wine. It is also used for the production of Amarone and Recioto.",
+ "sections": [
+  "Wines",
+  "Viticulture",
+  "Relationship to other grapes",
+  "References"
+ ],
+ "text": "Corvina is an Italian wine grape variety that is sometimes also referred to as Corvina Veronese or Cruina. The total global wine-growing area in 2010 was 7,495 hectares (18,520 acres), all of which is grown in the Veneto region of northeast Italy, except for 19 hectares (47 acres) planted in Argentina. Corvina is used with several other grapes to create the light red regional wines Bardolino and Valpolicella that have a mild fruity flavor with hints of almond. These blends include Corvinone, Rondinella, and Molinara, and Rossignola for the latter wine. It is also used for the production of Amarone and Recioto.\n\n\n== Wines ==\n\nCorvina produces light to medium body wines with a light crimson coloring. The grapes' naturally high acidity can make the wine somewhat tart with a slight, bitter almond note. The finish is sometimes marked with sour-cherry notes. In some regions of Valpolicella, producers are using barrel aging to add more structure and complexity to the wine. The small berries of Corvina are low in tannins and color extract but have thick skins that are ideal for drying and protecting the grape from rot.\n\n\n== Viticulture ==\nThe Corvina vine ripens late and is prone to producing high yields which can harm wine quality. During the growth cycle of the grape vine, the first few buds do not produce fruit. The vines need to be trained along a pergola which allows for a long cane that can produce more buds.\n\n\n== Relationship to other grapes ==\nHistorically in the Veneto region Corvina was often confused with Corvinone, a similar larger red grape that ripens later, but DNA profiling has shown that they are two distinct varieties. In 2005, DNA evidence showed that Corvina was a parent variety to the Venetian grape Rondinella.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Corvina bunches in august valpolicella region.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

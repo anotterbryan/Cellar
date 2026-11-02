@@ -1,0 +1,52 @@
+{
+ "kind": "wine",
+ "key": "vermentino-di-sardegna",
+ "label": "Vermentino di Sardegna",
+ "match": "direct",
+ "tried": [
+  "Vermentino di Sardegna",
+  "Sardinia wine"
+ ],
+ "title": "Sardinian wine",
+ "url": "https://en.wikipedia.org/wiki/Sardinian_wine",
+ "revision": 1349645046,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q979963",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Alghero_-_Cantine_di_Sella_%26_Mosca_%2802%29.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Sardinia",
+  "Wine of Sardinia",
+  "Wine regions of Italy"
+ ],
+ "lead": "Sardinian wine is Italian wine produced on the island of Sardinia.. Sardinia is the sixteenth Italian region for wine production.",
+ "sections": [
+  "Grape varieties",
+  "DOC/G zones",
+  "IGT zones",
+  "References"
+ ],
+ "text": "Sardinian wine is Italian wine produced on the island of Sardinia.. Sardinia is the sixteenth Italian region for wine production.\n\n\n== Grape varieties ==\n\nAlbaranzeuli bianco\nAlbaranzeuli nero\nArvesiniadu\nBarbera Sarda\nBovale\nCannonau (Grenache)\nGirò\nGreco nero\nMalvasia\nMonica\nMoscato\nNasco\nNuragus\nPascale di Cagliari\nVermentino\nVernaccia di Oristano\n\n\n== DOC/G zones ==\n\nAlghero, produced in the province of Sassari.\nArborea, produced in the province of Oristano.\nCampidano di Terralba, produced in the provinces of Cagliari and Oristano.\nCannonau di Sardegna, produced throughout the island.\nCarignano del Sulcis, produced in the province of Cagliari.\nGirò di Cagliari, produced in the provinces of Cagliari and Oristano.\nMalvasia di Bosa, produced in the province of Nuoro.\nMalvasia di Cagliari, produced in the provinces of Cagliari and Oristano.\nMandrolisai, produced in the provinces of Nuoro and Oristano.\nMonica di Cagliari, produced in the provinces of Cagliari and Oristano.\nMonica di Sardegna, produced throughout the island.\nMoscato di Cagliari, produced in the provinces of Cagliari and Oristano.\nMoscato di Sardegna, produced throughout the island.\nMoscato di Sorso Sennori, produced in the province of Sassari.\nNasco di Cagliari, produced in the provinces of Cagliari and Oristano.\nNuragus di Cagliari, produced in the provinces of Cagliari, Nuoro and Oristano.\nSardegna Semidano, produced throughout the island.\nVermentino di Gallura DOCG, produced in the provinces of Nuoro and Sassari.\nVermentino di Sardegna, produced throughout the island.\nVernaccia di Oristano, produced in the province of Oristano.\n\n\n== IGT zones ==\n\nBarbagia, produced in the province of Nuoro.\nColli del Limbara, produced in the provinces of Sassari, Olbia-Tempio and Nuoro.\nIsola dei Nuraghi. produced throughout the region of Sardegna\nMarmilla, produced in the provinces of Cagliari and Oristano.\nNurra, produced in the province of Sassari.\nOgliastra, produced in the provinces of Cagliari and Nuoro.\nParteolla, produced in the province of Cagliari.\nPlanargia, produced in the provinces of Nuoro and Oristano.\nProvincia di Nuoro, produced in the province of Nuoro.\nRomangia, produced in the province of Sassari.\nSibiola, produced in the province of Cagliari.\nTharros, produced in the province of Oristano.\nTrexenta, produced in the province of Cagliari.\nValle del Tirso, produced in the province of Oristano.\nValli di Porto Pino, produced in the province of Cagliari.\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q38"
+  ],
+  "image": [
+   "Alghero - Cantine di Sella & Mosca (02).JPG"
+  ],
+  "instance_of": [
+   "Q3958441",
+   "Q11283094",
+   "Q25500922",
+   "Q5687161"
+  ],
+  "subclass_of": [
+   "Q1125341",
+   "Q253140"
+  ],
+  "located_in": [
+   "Q1462"
+  ],
+  "description": "agricultural and economic sector related to grape cultivation in Sardinia"
+ }
+}

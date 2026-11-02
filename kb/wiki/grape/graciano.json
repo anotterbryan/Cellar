@@ -1,0 +1,44 @@
+{
+ "kind": "grape",
+ "key": "Graciano",
+ "label": "Graciano",
+ "match": "direct",
+ "tried": [
+  "Graciano (grape)",
+  "Graciano"
+ ],
+ "title": "Graciano",
+ "url": "https://en.wikipedia.org/wiki/Graciano",
+ "revision": 1377898130,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q119794",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Graciano_Viala_et_Vermorel.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Grape varieties of Spain",
+  "Red wine grape varieties"
+ ],
+ "lead": "Graciano is a Spanish red wine grape that is grown primarily in Rioja. The vine produces a low yield that are normally harvested in late October. The wine produced is characterized by its deep red color, strong aroma and ability to age well. Graciano thrives in warm, arid climates.",
+ "sections": [
+  "Wine regions",
+  "Crossings",
+  "Synonyms",
+  "References"
+ ],
+ "text": "Graciano is a Spanish red wine grape that is grown primarily in Rioja. The vine produces a low yield that are normally harvested in late October. The wine produced is characterized by its deep red color, strong aroma and ability to age well. Graciano thrives in warm, arid climates.\n\n\n== Wine regions ==\n\nIn Australia, Graciano is used either in blends with Tempranillo or as varietal wines.\nIn France, the grape is grown in Languedoc-Roussillon as Morrastel or Courouillade and in Corsica as Minustello or Minustellu.\nIn Spain, the grape produces low yields, but it is a key component of Gran Reservas in Rioja and Navarra, contributing structure and aging potential. In the Rioja DO, 395 ha (0.7%) are planted with this variety. While primarily used as a blending partner, some Rioja bodegas produce varietal Graciano wines.\nIn California, Graciano is sometimes known as Xeres.\nThe grape is also grown in Argentina.\nIn the United States, Graciano is also grown in Arizona, Texas, Oregon, and Washington.\n\n\n== Crossings ==\nThe French wine grape variety Morrastel Bouschet is a crossing of Graciano and the red-fleshed teinturier grape Bouschet Petit.\n\n\n== Synonyms ==\nBastardo Nero, Bois Dur, Bordelais, Cagliunari, Cagnonale, Cagnovali Nero, Cagnulari, Cagnulari Bastardo, Cagnulari Sardo, Cagnulatu, Caldareddu, Caldarello, Cargo Muol, Courouillade, Courouillade, Couthurier, Drug, Graciana, Graciano Tinto, Grosse Negrette, Jerusano, Karis, Marastel, Matarou, Minostello, Minustello, Monastel, Monestaou, Morastel, Morestel, Morrastel, Mourastel, Perpignan, Perpignanou Bois Dur, Plant De Ledenon, Tinta Do Padre Antonio, Tinta Miuda, Tintilla, Uva Cagnelata, Xeres, Xerez, Zinzillosa, Cendrón, Tanat Gris, Tintilla de Rota.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Graciano Viala et Vermorel.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "kind": "wine",
+ "key": "dao-red",
+ "label": "Dão Red",
+ "match": "direct",
+ "tried": [
+  "Dão Red",
+  "Dão wine"
+ ],
+ "title": "Dão DOC",
+ "url": "https://en.wikipedia.org/wiki/D%C3%A3o_DOC",
+ "revision": 1293428770,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1269612",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/5/58/Centro_NUTS_2.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Portuguese products with protected designation of origin",
+  "Wine regions of Portugal"
+ ],
+ "lead": "Dão is a Portuguese wine region situated in the Região Demarcada do Dão with the Dão-Lafões sub region of the Centro, Portugal. It is one of the oldest established wine regions in Portugal. Dão wine is produced in a mountainous region with a temperate climate, in the area of the Rio Mondego and Dão rivers in the north central region of Portugal. The region became a Denominação de Origem Controlada (DOC) appellation in 1908. The Dão region is the origin of the Touriga Nacional vine that is the principal component of port wine.",
+ "sections": [
+  "Climate and geography",
+  "History",
+  "Viticulture and wines",
+  "Subregions",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Dão is a Portuguese wine region situated in the Região Demarcada do Dão with the Dão-Lafões sub region of the Centro, Portugal. It is one of the oldest established wine regions in Portugal. Dão wine is produced in a mountainous region with a temperate climate, in the area of the Rio Mondego and Dão rivers in the north central region of Portugal. The region became a Denominação de Origem Controlada (DOC) appellation in 1908. The Dão region is the origin of the Touriga Nacional vine that is the principal component of port wine.\n\n\n== Climate and geography ==\nThe wine region is located primarily on a plateau that is sheltered on three sides by the granite mountain ranges of Serra da Estrela, Serra do Caramulo and Serra da Nave. This helps the area maintain its temperate climate away from the effects of the nearby Atlantic Ocean. The region experiences abundant rainfall in the winter months and long, warm dry summers leading up to harvest. The region's vineyards are planted on sandy well-drained soil on top of granite rock.\n\n\n== History ==\nThe first efforts to have the Dão region recognized as a separate and unique wine region came mainly from the aristocrat and winemaker João de Sacadura Botte Côrte-Real. Considered to be \"the most enlightened viticulturist of his generation\", he modernized the processes of winemaking and raised the standards of the wine produced in the region. He had many wine estates, in both Portugal and Spain, but the most celebrated were his Quinta da Aguieira and his wife's Quinta da Bica.\nThe Dão was first officially recognized as a Região Demarcada in 1908. In the 1940s, to improve the quality of the wine from the region and promote some sort of national identity, the government of Prime Minister António de Oliveira Salazar instituted new regulations establishing the mandatory use of co-operatives in the region. These co-operatives would have exclusive privilege to the grapes grown in the region and were charged with making the wine that would be sold to private merchants. Despite its intent, the regulations had an adverse effect on the Dão wine region by promoting stagnation due to lack of competition, with some co-operative firms releasing inferior quality wine and even practicing un-hygienic winemaking. In 1979, Portugal's application to the European Union prompted authorities to overturn these rules, as the EU discouraged monopolistic practices in the wine industry.\n\n\n== Viticulture and wines ==\n\nThe area is home to several dozen varieties of indigenous grapes, with the majority of wine production being made from the Touriga Nacional, Tinta Roriz, Jaen, Alfrocheiro Preto and Encruzado. 80% of the region's production is in red wines, with DOC regulations stipulating that at least 20% of the production must be from Touriga Nacional. Some of the top reserve wine may carry the designation Dão nobre (meaning noble Dão). Another reserve designation, Garrafeira, requires wines to be 0.5% higher in alcohol content than the 12.5% minimum and to spend at least two years in aging in oak. The maximum yield for red wine grapes is 70 hl/ha.\nThe red wines tend to be very tannic due to prolonged periods of maceration during winemaking. Many producers make liberal use of French and Portuguese oak. The style has been improving, with some producers concentrating on making more fruit-forward styles with smoother tannins. Historically, the white wines were known for being over-oxidized and full-bodied, but more modern winemaking has been producing white wines that are fresh, fruity and fragrant. The Encruzado is the principal grape of the area's whites, with some blends of Malvasia Fina and Bical. Garrafeira white wines require at least 0.5% more alcohol by volume than the 11.5% DOC minimum and at least 6 months aging in oak. The maximum allowable yields for white wine grapes is 80 hl/ha.\n\n\n== Subregions ==\nThere are seven subregions within Dão which may be indicated on labels together with Dão:\n\nAlva\nBesteiros\nCastendo\nSerra da Estrela\nSilgueiros\nTerras de Azurara\nTerras de Senhorim\n\n\n== See also ==\nList of Portuguese wine regions\n\n\n== References ==\n\n\n== External links ==\nSpotlight on Portugal's Dão region",
+ "facts": {
+  "coordinates": [
+   {
+    "lat": 40.5199866,
+    "lon": -7.887213
+   }
+  ],
+  "image": [
+   "Dao red wine.jpg"
+  ],
+  "instance_of": [
+   "Q2140699",
+   "Q451752"
+  ],
+  "subclass_of": [
+   "Q1754670"
+  ],
+  "country_of_origin": [
+   "Q45"
+  ],
+  "located_in": [
+   "Q74854"
+  ],
+  "description": "wine region"
+ }
+}

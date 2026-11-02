@@ -1,0 +1,37 @@
+{
+ "kind": "grape",
+ "key": "Hondarrabi Beltza",
+ "label": "Hondarrabi Beltza",
+ "match": "direct",
+ "tried": [
+  "Hondarrabi Beltza (grape)",
+  "Hondarrabi Beltza"
+ ],
+ "title": "Hondarribi Beltza",
+ "url": "https://en.wikipedia.org/wiki/Hondarribi_Beltza",
+ "revision": 1307072195,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q635851",
+ "image": null,
+ "categories": [
+  "Red wine grape varieties",
+  "Spanish wine",
+  "Wine grape stubs"
+ ],
+ "lead": "Hondarrabi Beltza is a rare variety of Vitis vinifera that is only grown in the Basque Country, Spain, where it is the most important dark-skinned grape cultivar. It is the grape used to make red and rosé txakoli wine, which are not as common as the traditional white txakoli. On the 170 hectares of plantings in the growing region around Getaria and Zarautz, the variety is often grown on its own roots (without grafting), without apparent problems caused by Phylloxera, which suggests that it may not thrive in this area.\nThe variety Gros Cabernet originated from a cross with Fer.",
+ "sections": [
+  "References"
+ ],
+ "text": "Hondarrabi Beltza is a rare variety of Vitis vinifera that is only grown in the Basque Country, Spain, where it is the most important dark-skinned grape cultivar. It is the grape used to make red and rosé txakoli wine, which are not as common as the traditional white txakoli. On the 170 hectares of plantings in the growing region around Getaria and Zarautz, the variety is often grown on its own roots (without grafting), without apparent problems caused by Phylloxera, which suggests that it may not thrive in this area.\nThe variety Gros Cabernet originated from a cross with Fer.\n\n\n== References ==",
+ "facts": {
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q30046",
+   "Q958314"
+  ],
+  "description": "variety of grape"
+ }
+}

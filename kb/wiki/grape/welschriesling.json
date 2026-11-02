@@ -1,0 +1,51 @@
+{
+ "kind": "grape",
+ "key": "Welschriesling",
+ "label": "Welschriesling",
+ "match": "direct",
+ "tried": [
+  "Welschriesling (grape)",
+  "Welschriesling"
+ ],
+ "title": "Welschriesling",
+ "url": "https://en.wikipedia.org/wiki/Welschriesling",
+ "revision": 1326082046,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q644796",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Welschriesling_grape_cluster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Austrian wine",
+  "Croatian wine",
+  "Czech wine",
+  "Hungarian wine",
+  "Slovak wine",
+  "Slovenian wines",
+  "White wine grape varieties",
+  "Wine grape varieties of Slovenia"
+ ],
+ "lead": "Welschriesling is a white wine grape variety, unrelated to the Rhine Riesling, that is grown throughout Southeastern & Central Europe. It has many synonyms, including Borba blanca.",
+ "sections": [
+  "Origin",
+  "Wine regions",
+  "Names in other languages",
+  "Characteristics",
+  "References"
+ ],
+ "text": "Welschriesling is a white wine grape variety, unrelated to the Rhine Riesling, that is grown throughout Southeastern & Central Europe. It has many synonyms, including Borba blanca.\n\n\n== Origin ==\nThe descendance of Welschriesling is uncertain. The German name Welschriesling literally means 'Romanic Riesling' (cf. Walhaz), and most of the synonyms in Southeastern & Central Europe are variations on 'Italian Riesling'. Welschriesling may have been brought to Central Europe by the ancient Romans. However, the Croatian name Graševina suggests that the origin might be somewhere to the east of the Balkans.\nA modern theory claims that Welschriesling originated in the Champagne region and came as welsch (in this case French) Riesling via Heidelberg to the lands of the Austro-Hungarian Monarchy.\n\n\n== Wine regions ==\nIn Austria, the main regions where it is grown are south and south eastern Styria, in Burgenland, and in the Weinviertel region of Lower Austria, where it is also made into sparkling wine. In Rust near Lake Neusiedl, it is used to make Botrytis dessert wines.\nIn Croatia, Graševina is the most planted white grape variety. It is grown in all the inland wine regions, particularly in Kutjevo municipality and around Ilok, both in the far east of the country.\nIn the Czech Republic, Ryzlink vlašský is grown in the South Moravian Region, particularly in the Mikulovská and Velkopavlovická wine subregions (vinařská podoblast).\nIn Hungary, Olaszrizling is the most widespread grape variety of the country, e.g. in the Csopak wine region on Lake Balaton.\nIn Italy, it is known as Riesling Italico when grown in the northern regions such as Trentino, Collio and Friuli.\nIn Romania, it is called Riesling Italian where it makes a late harvest and sparkling wine.\nIn Serbia it is the most planted grape variety by total area.\nIn Slovakia it is grown in the Modra and Nitra wine regions.\nIn Slovenia, Welschriesling is known as laški rizling ('Italian Riesling') as opposed to renski rizling ('Rhine Riesling'; i.e., Riesling proper). It is grown in the Lower Styria region of eastern Slovenia, produces dry to medium-dry wines in the Vipava Valley in western Slovenia, and is cultivated in White Carniola to the southeast with well-known superior quality wines.\n\n\n== Names in other languages ==\nAminea Gemela, Biela Sladka, Bielasladka Grasica, Glasica, Grasavina Talijanska, Grasevina, Graševina, Grašac, Grasica, Groshevina, Italianski Rizling, Laški Rizling, Nemes Olasz Rizling, Olaszrizling, Olasz Rizling, Petit Riesling, Petracine, Rakusky Rizling, Riesler, Riesli, Riesling, Riesling Italian, Riesling Italico, Risling Italyanskii, Risling Vlashskii, Rismi, Rizling Italico, Rizling vlašský, Talianska Graseviana, Talijanski Rizling, Vlasak, Italian Riesling, Ryzlink vlašský, Ryzlink\n\n\n== Characteristics ==\nAccording to wine expert Jancis Robinson, the grape is of average to low quality and notable mostly for the high productivity and yields of the vine.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Welschriesling grape cluster.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

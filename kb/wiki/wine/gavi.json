@@ -1,0 +1,57 @@
+{
+ "kind": "wine",
+ "key": "gavi",
+ "label": "Gavi",
+ "match": "search",
+ "tried": [
+  "Gavi",
+  "Piedmont – Alessandria wine",
+  "Cortese di Gavi"
+ ],
+ "title": "Cortese di Gavi",
+ "url": "https://en.wikipedia.org/wiki/Cortese_di_Gavi",
+ "revision": 1342122805,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1135592",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Gavi_DOCG_wines.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Italian DOCG",
+  "Province of Alessandria",
+  "Wines of Piedmont"
+ ],
+ "lead": "Cortese di Gavi, or simply Gavi, is an Italian dry white wine produced in a restricted area of the Province of Alessandria, Piedmont, close to the Ligurian border. The wine was awarded DOC status in 1974 and elevated to DOCG in 1998.\nThe name derives from Gavi, the comune at the centre of its production zone, and Cortese, the local variety of grape from which it is exclusively made and whose existence is reported from the 17th century.  The current style of production dates to 1876.  Cortese di Gavi made from vines within the comune of Gavi may be labeled Gavi di Gavi. Although the DOCG rules allow for sparkling spumante and metodo classico styles, most Gavi is produced as a non-sparkling still wine.",
+ "sections": [
+  "Production zone",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Cortese di Gavi, or simply Gavi, is an Italian dry white wine produced in a restricted area of the Province of Alessandria, Piedmont, close to the Ligurian border. The wine was awarded DOC status in 1974 and elevated to DOCG in 1998.\nThe name derives from Gavi, the comune at the centre of its production zone, and Cortese, the local variety of grape from which it is exclusively made and whose existence is reported from the 17th century.  The current style of production dates to 1876.  Cortese di Gavi made from vines within the comune of Gavi may be labeled Gavi di Gavi. Although the DOCG rules allow for sparkling spumante and metodo classico styles, most Gavi is produced as a non-sparkling still wine.\n\n\n== Production zone ==\nThe DOCG regulations restrict the production of Cortese di Gavi to the area formed by the following towns: Bosio, Capriata d'Orba, Carrosio, Francavilla Bisio, Gavi, Novi Ligure, Parodi Ligure, Pasturana, San Cristoforo, Serravalle Scrivia, Tassarolo.\n\n\n== See also ==\n\n\n== References ==\n\n\n== External links ==\n\"Il Vino Cortese Gavi\" (in Italian). Comune di Gavi. Archived from the original on 2020-01-23. Retrieved 2009-06-04.",
+ "facts": {
+  "country": [
+   "Q38"
+  ],
+  "coordinates": [
+   {
+    "lat": 44.68333333333333,
+    "lon": 8.802777777777779
+   }
+  ],
+  "image": [
+   "Gavi DOCG wines.jpg"
+  ],
+  "instance_of": [
+   "Q10210",
+   "Q2305591",
+   "Q282"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "located_in": [
+   "Q15097"
+  ],
+  "description": "Italian controlled and guaranteed designation of origin wine from Piedmont"
+ }
+}

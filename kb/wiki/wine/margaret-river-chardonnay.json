@@ -1,0 +1,53 @@
+{
+ "kind": "wine",
+ "key": "margaret-river-chardonnay",
+ "label": "Margaret River Chardonnay",
+ "match": "search",
+ "tried": [
+  "Margaret River Chardonnay",
+  "Western Australia – Margaret River wine",
+  "Margaret River (wine region)"
+ ],
+ "title": "Margaret River (wine region)",
+ "url": "https://en.wikipedia.org/wiki/Margaret_River_(wine_region)",
+ "revision": 1365200181,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q6759841",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Margaret_River_wine_region.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Culture of Western Australia",
+  "Margaret River, Western Australia",
+  "Wine regions of Western Australia"
+ ],
+ "lead": "Margaret River is the major geographical indication wine region in southwest Western Australia, with 5,840 hectares under vine and 215 wineries as at 2012. Margaret River wine region is made up predominantly of boutique size wine producers; although winery operations range from the smallest crushing 3.5 tonne per year to the largest around 2,500 tonne. The climate of Margaret River is more strongly maritime-influenced than any other major Australian region. It has the lowest mean annual temperature range, of only 7.6 °C, and as well as the most marked Mediterranean climate in terms of rainfall, with only 200 millimetres of the annual 1160 millimetres falling between October and April. The low diurnal and seasonal temperature range means an unusually even accumulation of warmth. Overall the climate is similar to that of Bordeaux in a dry vintage. Although the region produces just two percent of total Australian wine grape production, it produces over 20 percent of Australia's premium wine market. The principal grape varieties are split 40/60 between red and white; Cabernet Sauvignon, Chardonnay, Sauvignon blanc, Sémillon, Shiraz, Merlot and Chenin Blanc.",
+ "sections": [
+  "Sub-regions",
+  "Most widely harvested varieties by tonnes crushed",
+  "Wineries",
+  "See also",
+  "References",
+  "Citations",
+  "Sources",
+  "External links"
+ ],
+ "text": "Margaret River is the major geographical indication wine region in southwest Western Australia, with 5,840 hectares under vine and 215 wineries as at 2012. Margaret River wine region is made up predominantly of boutique size wine producers; although winery operations range from the smallest crushing 3.5 tonne per year to the largest around 2,500 tonne. The climate of Margaret River is more strongly maritime-influenced than any other major Australian region. It has the lowest mean annual temperature range, of only 7.6 °C, and as well as the most marked Mediterranean climate in terms of rainfall, with only 200 millimetres of the annual 1160 millimetres falling between October and April. The low diurnal and seasonal temperature range means an unusually even accumulation of warmth. Overall the climate is similar to that of Bordeaux in a dry vintage. Although the region produces just two percent of total Australian wine grape production, it produces over 20 percent of Australia's premium wine market. The principal grape varieties are split 40/60 between red and white; Cabernet Sauvignon, Chardonnay, Sauvignon blanc, Sémillon, Shiraz, Merlot and Chenin Blanc.\n\n\n== Sub-regions ==\nThere are no official Margaret River subregions, although in 1999 viticultural scientist Dr John Gladstones presented a paper suggesting there should be six subregions based on climate and soil differences namely: Yallingup, Carbunup, Wilyabrup, Treeton, Wallcliffe and Karridale.\n\n\n== Most widely harvested varieties by tonnes crushed ==\n\n\n== Wineries ==\n\nA sample of the wine producers in the Margaret River Wine Region include:\n\n\n== See also ==\n\nWestern Australian wine\n\n\n== References ==\n\n\n=== Citations ===\n\n\n=== Sources ===\nWeb sources\n\nBooks\n\n\n== External links ==\n\nAustralia's South West: The Margaret River wine region Archived 22 August 2011 at the Wayback Machine",
+ "facts": {
+  "country": [
+   "Q408"
+  ],
+  "coordinates": [
+   {
+    "lat": -33.955,
+    "lon": 115.075
+   }
+  ],
+  "instance_of": [
+   "Q2140699"
+  ],
+  "located_in": [
+   "Q3206"
+  ],
+  "description": "Wine region in Western Australia"
+ }
+}

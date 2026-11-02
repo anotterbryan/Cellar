@@ -1,0 +1,44 @@
+{
+ "kind": "grape",
+ "key": "Boal",
+ "label": "Boal",
+ "match": "direct",
+ "tried": [
+  "Boal (grape)"
+ ],
+ "title": "Boal (grape)",
+ "url": "https://en.wikipedia.org/wiki/Boal_(grape)",
+ "revision": 1366612251,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q501200",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/3/37/Boal.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Dessert wine",
+  "Madeira wine",
+  "White wine grape varieties"
+ ],
+ "lead": "Boal is a name given to several varieties of grape cultivated in Portugal, notably in the production of medium-rich fortified wines from Madeira Island. On many wine labels of Madeira wine, the variety's name is anglicized as Bual. Among the varieties of Madeira, Boal is typically less sweet than that from Malmsey, but more sweet than Sercial or Verdelho. The vines are also common in Portugal and Spain, where the fruit is used in the same way for fortified wines.",
+ "sections": [
+  "Madeira Boal",
+  "Notable Boal",
+  "See also",
+  "References"
+ ],
+ "text": "Boal is a name given to several varieties of grape cultivated in Portugal, notably in the production of medium-rich fortified wines from Madeira Island. On many wine labels of Madeira wine, the variety's name is anglicized as Bual. Among the varieties of Madeira, Boal is typically less sweet than that from Malmsey, but more sweet than Sercial or Verdelho. The vines are also common in Portugal and Spain, where the fruit is used in the same way for fortified wines.\n\n\n== Madeira Boal ==\nMost of the Boal grown on Madeira is more fully known as Boal Cachudo (a synonym for the Spanish variety Doña Blanca, though the two may be different grapes), which has been shown by DNA profiling to be identical to the Malvasia Fina grown in the Douro valley.\n\n\n== Notable Boal ==\nBuckingham Palace holds 25,000 bottles of wine, the oldest being a bottle of bual from 1815.\n\n\n== See also ==\nList of Port wine grapes\nList of Portuguese grape varieties\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Boal.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q45"
+  ],
+  "description": "varietal"
+ }
+}

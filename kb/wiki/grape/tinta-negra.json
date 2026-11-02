@@ -1,0 +1,44 @@
+{
+ "kind": "grape",
+ "key": "Tinta Negra",
+ "label": "Tinta Negra",
+ "match": "search",
+ "tried": [
+  "Tinta Negra (grape)",
+  "Tinta Negra",
+  "Tinta Negra Mole"
+ ],
+ "title": "Tinta Negra Mole",
+ "url": "https://en.wikipedia.org/wiki/Tinta_Negra_Mole",
+ "revision": 1298343085,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q2435939",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Tinta_Negra.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Flora of Madeira",
+  "Madeira wine",
+  "Red wine grape varieties",
+  "Wine grape stubs"
+ ],
+ "lead": "Tinta Negra Mole is a red Portuguese wine grape commonly used in the production of Madeira. It is the most widely planted variety on the Madeira islands and is considered the industry's \"workhorse grape\". \nThe grape produces very high yields of sweet, pale red wine, but is also often fermented without skin contact to produce white wine when making drier varieties of Madeira.",
+ "sections": [
+  "References"
+ ],
+ "text": "Tinta Negra Mole is a red Portuguese wine grape commonly used in the production of Madeira. It is the most widely planted variety on the Madeira islands and is considered the industry's \"workhorse grape\". \nThe grape produces very high yields of sweet, pale red wine, but is also often fermented without skin contact to produce white wine when making drier varieties of Madeira.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Tinta Negra.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q29"
+  ],
+  "description": "variety of grape"
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "kind": "grape",
+ "key": "Touriga Nacional",
+ "label": "Touriga Nacional",
+ "match": "direct",
+ "tried": [
+  "Touriga Nacional (grape)",
+  "Touriga Nacional"
+ ],
+ "title": "Touriga Nacional",
+ "url": "https://en.wikipedia.org/wiki/Touriga_Nacional",
+ "revision": 1278187534,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1503069",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Touriga_Nacional.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Portuguese wine",
+  "Red wine grape varieties"
+ ],
+ "lead": "Touriga Nacional is a variety of red wine grape, considered by many to be Portugal's finest. Despite the low yields from its small grapes, it plays a big part in the blends used for ports, and is increasingly being used for table wine in the Douro and Dão. Touriga Nacional provides structure and body to wine, with high tannins and concentrated flavors of black fruit. Jancis Robinson has compared its relationship with Touriga Francesa to the partnership between Cabernet Sauvignon and Cabernet Franc, the former providing structure, the latter filling out the bouquet.",
+ "sections": [
+  "Viticulture",
+  "Wine regions",
+  "Wines",
+  "Synonyms",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Touriga Nacional is a variety of red wine grape, considered by many to be Portugal's finest. Despite the low yields from its small grapes, it plays a big part in the blends used for ports, and is increasingly being used for table wine in the Douro and Dão. Touriga Nacional provides structure and body to wine, with high tannins and concentrated flavors of black fruit. Jancis Robinson has compared its relationship with Touriga Francesa to the partnership between Cabernet Sauvignon and Cabernet Franc, the former providing structure, the latter filling out the bouquet.\n\n\n== Viticulture ==\nThe vine is very vigorous, and good results depend on keeping it in check. In the Douro it is grown in searing heat in steep schisty vineyards that are more rock than soil. The alternative name of Mortágua pays tribute to these harsh conditions. It is usually trained under one of the Guyot systems, and needs severe pruning to keep it under control. In contrast, the vine produces just a few bunches of blue-black grapes which vary in size from 'small' to 'tiny'. Thus yields are among the lowest of any commercial grape variety. In recent years, scientists have been working on cloning the Touriga Nacional to produce vines that are able to pollinate better with the goal of increasing yields by 15% and sugar content by 10%.\n\n\n== Wine regions ==\n\nIn the late 1990s there were 2,760 hectares (6,800 acres) of Touriga Nacional in Portugal. Its poor yields mean that it represents a tiny part of the wine production in the Douro, but it plays a major part in the blends of the best ports.\nTraditionally a lot of US wine made from Touriga Nacional was fortified, and many of the producers of such 'port' have experimented with using Portuguese grapes as a way to improve their product.  553 tons of Touriga were crushed in the USA in 2006, up 26% on the previous year.\n\n\n== Wines ==\nThe tiny berries of Touriga Nacional have a high skin to pulp ratio which heightens the amount of extract in the wines. The grapes can produce intense, very aromatic wines with high tannin content.\n\n\n== Synonyms ==\nBical Tinto, Mortágua, Mortágua Preto, Preto Mortágua, Touriga, Touriga Fina, Tourigao, Tourigo Antigo, Tourigo do Dão, and Turiga.\n\n\n== See also ==\nList of Port wine grapes\nList of Portuguese grape varieties\n\n\n== References ==\n\n\n== External links ==\nInstituto dos Vinho do Douro e Porto",
+ "facts": {
+  "image": [
+   "Touriga Nacional.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q45",
+   "Q38"
+  ],
+  "description": "varietal"
+ }
+}

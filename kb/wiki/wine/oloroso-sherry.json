@@ -1,0 +1,44 @@
+{
+ "kind": "wine",
+ "key": "oloroso-sherry",
+ "label": "Oloroso Sherry",
+ "match": "search",
+ "tried": [
+  "Oloroso Sherry",
+  "Andalucía — Jerez wine",
+  "Oloroso"
+ ],
+ "title": "Oloroso",
+ "url": "https://en.wikipedia.org/wiki/Oloroso",
+ "revision": 1380431256,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q2838270",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/ValdiviaJerez55.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Sherry"
+ ],
+ "lead": "Oloroso (\"scented\" in English) is a variety of fortified wine (sherry) made in Jerez and Montilla-Moriles and produced by oxidative aging. It is normally darker than Amontillado. Oloroso is usually dark and nutty. \nUnlike the fino and Amontillado sherries, in oloroso the flor yeast is suppressed by fortification at an earlier stage. This causes the finished wine to lack the fresh yeasty taste of the fino sherries. Without the layer of flor, the sherry is exposed to air through the slightly porous walls of the American or Canadian oak casks and undergoes oxidative aging. As the wine ages, it becomes darker and stronger and is often left for many decades.\nOloroso sherry is also the base for many of the sweet sherries developed for the international market, such as Bristol Cream, in which oloroso is sweetened and sometimes has the color removed by charcoal filtering to achieve the desired effect.",
+ "sections": [
+  "Varieties",
+  "Serving",
+  "Storing",
+  "Other uses",
+  "References",
+  "Further reading",
+  "External links"
+ ],
+ "text": "Oloroso (\"scented\" in English) is a variety of fortified wine (sherry) made in Jerez and Montilla-Moriles and produced by oxidative aging. It is normally darker than Amontillado. Oloroso is usually dark and nutty. \nUnlike the fino and Amontillado sherries, in oloroso the flor yeast is suppressed by fortification at an earlier stage. This causes the finished wine to lack the fresh yeasty taste of the fino sherries. Without the layer of flor, the sherry is exposed to air through the slightly porous walls of the American or Canadian oak casks and undergoes oxidative aging. As the wine ages, it becomes darker and stronger and is often left for many decades.\nOloroso sherry is also the base for many of the sweet sherries developed for the international market, such as Bristol Cream, in which oloroso is sweetened and sometimes has the color removed by charcoal filtering to achieve the desired effect.\n\n\n== Varieties ==\nOloroso del Puerto is an oloroso from El Puerto de Santa María.\nManzanilla Olorosa is a manzanilla aged to the point that it takes on the quality of an Oloroso.\n\n\n== Serving ==\nOlorosos are dry, not sweet. Wines labelled as \"Rich Oloroso\", \"Sweet Oloroso\" or \"Oloroso Dulce\" were banned by the Andalusian regional government on 12 April 2012. They will have to be re-labelled as \"Cream Sherry: Blend of Oloroso\". The rules applicable to the sweet and fortified denominaciones de origen Montilla-Moriles and Jerez-Xérès-Sherry are:\n\nFor the full rules for the types and sweetness of sherries see the main Sherry article.\nOloroso should be served at 12–14 °C, and can be served as an apéritif with nuts, olives or figs, with game and red meats, or after a meal with rich cheeses. Sweetened Oloroso can also be taken as a long drink with ice. Cream Sherries, which are Oloroso sweetened by blending with Pedro Ximénez wine, should also be served at 12–14 °C and are usually served after a meal as a dessert wine. They can also be served with certain dishes, such as foie gras.\n\n\n== Storing ==\nBecause Oloroso Sherries have already been through years of oxidative aging, they can be safely stored for years before opening. Once opened, Oloroso will slowly lose some of its aroma and flavor, but can be kept corked and refrigerated for up to two months after opening. The older the Oloroso, the longer it will remain flavorful and drinkable - as long as 12 months.\n\n\n== Other uses ==\nHistorically the casks used to ship Oloroso Sherry to the UK, often remained in the UK where they were used in Scotland and Ireland to age whisky. Since the Spanish government changed the export laws in 1981, stipulating that sherry must be bottled in Spain, sherry casks are now manufactured purely for the whisky industry—by seasoning casks with Oloroso or other sherry prior to the distilleries using them to age their whisky. It's extremely rare that a cask used by a sherry Bodega to actually age sherry is used in the production of whisky. Single malt whisky aged in sherry casks is regarded by some as a special category with its own aficionados. This category usually refers to whether the whisky was finished (aged first in another cask and then transferred to an Oloroso cask or butt for finishing), or fully matured (taken directly off the still and matured entirely in a cask that once held Oloroso). The Oloroso wine infused in the wood of the casks imparts some of the flavor and aroma of the wine to the whisky during the aging process. Oloroso casks are also used to age brandy for the same reasons. A whisky that was matured only in Oloroso casks is often fruitier, with stronger notes of tobacco, pepper, and stewed fruits.\n\n\n== References ==\n\n\n== Further reading ==\nJulian Jeffs (September 1, 2004). Sherry (5th rev. ed.). London: Mitchell Beazley. ISBN 978-1-84000-923-1. Retrieved August 25, 2011.\n\n\n== External links ==\nOloroso article and tasting note",
+ "facts": {
+  "country": [
+   "Q29"
+  ],
+  "instance_of": [
+   "Q1432594"
+  ],
+  "subclass_of": [
+   "Q1626612"
+  ],
+  "description": "variety of sherry and Montilla-Moriles wine"
+ }
+}

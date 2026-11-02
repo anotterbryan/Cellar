@@ -1,0 +1,47 @@
+{
+ "kind": "wine",
+ "key": "alentejo-red",
+ "label": "Alentejo Red",
+ "match": "direct",
+ "tried": [
+  "Alentejo Red",
+  "Alentejo wine"
+ ],
+ "title": "Alentejo wine",
+ "url": "https://en.wikipedia.org/wiki/Alentejo_wine",
+ "revision": 1297988082,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q2832668",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Portuguese_Alentejo_wine.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Wine regions of Portugal"
+ ],
+ "lead": "Alentejo (Vinho do Alentejo, Alentejo wines) is a Portuguese wine region from the Alentejo region. The entire region is entitled to use the Vinho Regional designation Alentejano VR, while some areas are also classified at the higher Denominação de Origem Controlada (DOC) level under the designation Alentejo DOC. VR is similar to the French vin de pays and DOC to the French AOC. In the southern half of Portugal, the Alentejo region covers about a third of the country and is sparsely populated. In 2005, South Oregon University scientist Gregory V. Jones identified Alentejo (\"southern Portugal\" in his words) as the world's most challenged wine region (out of 27 world wine regions) from a climate change perspective. The region is noted for it vast cork production but has in recent years garnered attention for its table wine production. Some producers of this region still make wine in great pottery vessels, as in Roman times.",
+ "sections": [
+  "Subregions",
+  "Grapes",
+  "See also",
+  "References"
+ ],
+ "text": "Alentejo (Vinho do Alentejo, Alentejo wines) is a Portuguese wine region from the Alentejo region. The entire region is entitled to use the Vinho Regional designation Alentejano VR, while some areas are also classified at the higher Denominação de Origem Controlada (DOC) level under the designation Alentejo DOC. VR is similar to the French vin de pays and DOC to the French AOC. In the southern half of Portugal, the Alentejo region covers about a third of the country and is sparsely populated. In 2005, South Oregon University scientist Gregory V. Jones identified Alentejo (\"southern Portugal\" in his words) as the world's most challenged wine region (out of 27 world wine regions) from a climate change perspective. The region is noted for it vast cork production but has in recent years garnered attention for its table wine production. Some producers of this region still make wine in great pottery vessels, as in Roman times.\n\n\n== Subregions ==\n\nThere are eight subregions of the Alentejo region that are entitled to the Alentejo DOC designation. The names of the subregions may be indicated on the label together with the name Alentejo, for example as Alentejo-Borba. These subregions were initially created as separate Indicação de Proveniencia Regulamentada (IPR) wine regions, after which some were elevated to DOC status. In 2003, these separate DOCs and IPRs were put together as the Alentejo DOC. Listed from north to south the eight subregions are the following.\n\nPortalegre (formerly a DOC)\nBorba (formerly a DOC)\nRedondo (formerly a DOC)\nEvora (formerly an IPR)\nReguengos (formerly a DOC)\nGranja-Amareleja (formerly an IPR)\nVidigueira (formerly a DOC)\nMoura (formerly an IPR)\n\n\n== Grapes ==\nThe principal grapes of the Alentejo region includes Abundante, Alfrocheiro Preto, Alicante Bouschet, Antão Vaz, Arinto, Cabernet Sauvignon, Carignan, Chardonnay, Diagalves, Fernão Pires, Grand noir, Manteudo, Moreto, Palomino, Periquita, Rabo de Ovelha, Tempranillo, and Trincadeira.\n\n\n== See also ==\nList of Portuguese wine regions\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q45"
+  ],
+  "image": [
+   "Portuguese Alentejo wine.jpg"
+  ],
+  "instance_of": [
+   "Q2140699",
+   "Q451752"
+  ],
+  "subclass_of": [
+   "Q1754670"
+  ],
+  "located_in": [
+   "Q20963720"
+  ],
+  "description": "wine region in Alentejo, Portugal"
+ }
+}

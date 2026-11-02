@@ -1,0 +1,40 @@
+{
+ "kind": "grape",
+ "key": "Rondinella",
+ "label": "Rondinella",
+ "match": "direct",
+ "tried": [
+  "Rondinella (grape)",
+  "Rondinella"
+ ],
+ "title": "Rondinella",
+ "url": "https://en.wikipedia.org/wiki/Rondinella",
+ "revision": 1326081901,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q860892",
+ "image": null,
+ "categories": [
+  "Red wine grape varieties",
+  "Wine grape stubs",
+  "Wine grape varieties of Italy",
+  "Wine grapes of Veneto"
+ ],
+ "lead": "Rondinella  is an Italian wine grape variety. Almost all of the total global growing area of 2,481 hectares (6,130 acres) is in the Veneto region of northern Italy, and the grapes are used in wines from the Valpolicella and Bardolino wine regions. Rondinella always appears in these wines blended with Corvina (which DNA evidence has shown to be a parent variety), as a secondary constituent along with Corvinone and Molinara. The grape has rather neutral flavors but is favored by growers due to its prolific yields. The vine is very resistant to grape disease and produces grapes that, while they do not necessarily have high sugar levels, do dry out well for use in the production of Valpolicella straw wine styles such as Recioto and Amarone.",
+ "sections": [
+  "References"
+ ],
+ "text": "Rondinella  is an Italian wine grape variety. Almost all of the total global growing area of 2,481 hectares (6,130 acres) is in the Veneto region of northern Italy, and the grapes are used in wines from the Valpolicella and Bardolino wine regions. Rondinella always appears in these wines blended with Corvina (which DNA evidence has shown to be a parent variety), as a secondary constituent along with Corvinone and Molinara. The grape has rather neutral flavors but is favored by growers due to its prolific yields. The vine is very resistant to grape disease and produces grapes that, while they do not necessarily have high sugar levels, do dry out well for use in the production of Valpolicella straw wine styles such as Recioto and Amarone.\n\n\n== References ==",
+ "facts": {
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "kind": "wine",
+ "key": "bulgarian-mavrud",
+ "label": "Bulgarian Mavrud",
+ "match": "search",
+ "tried": [
+  "Bulgarian Mavrud",
+  "Mavrud"
+ ],
+ "title": "Mavrud",
+ "url": "https://en.wikipedia.org/wiki/Mavrud",
+ "revision": 1339220044,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q731972",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Mavrud.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Asenovgrad",
+  "Bulgarian wine",
+  "Grape varieties of Bulgaria",
+  "Red wine grape varieties"
+ ],
+ "lead": "Mavrud (Bulgarian: мавруд, from Greek, μαυρό (mavró), \"black\") is a red wine grape that is used as both a blending grape and for varietal wines, indigenous to the Balkan region. It is grown in the Thrace region of Bulgaria, in some regions of Albania, as well as some regions of Greece and Romania.\nThe grape has been described as a characterful, low-yielding, small-berried and late-ripening grape capable of producing tannic, spicy wine with a potential for ageing.\nIt is sometimes known as Mavroudi in Greece.",
+ "sections": [
+  "History",
+  "Legend",
+  "See also",
+  "References"
+ ],
+ "text": "Mavrud (Bulgarian: мавруд, from Greek, μαυρό (mavró), \"black\") is a red wine grape that is used as both a blending grape and for varietal wines, indigenous to the Balkan region. It is grown in the Thrace region of Bulgaria, in some regions of Albania, as well as some regions of Greece and Romania.\nThe grape has been described as a characterful, low-yielding, small-berried and late-ripening grape capable of producing tannic, spicy wine with a potential for ageing.\nIt is sometimes known as Mavroudi in Greece.\n\n\n== History ==\nRegarded as one of the most highly esteemed local wines, Mavrud vineyards are mainly found around Asenovgrad and Perushtitsa, as well as more rarely near Pazardzhik, Stara Zagora and Chirpan.\nThere is speculation amongst grape growers that Mavrud may be an ancient clone of Mourvedre, imported into Bulgaria by the Romans.\n\n\n== Legend ==\nA legend that the oenophiles of the Mavrud wine like to repeat in order to explain the restoration of this locality as wine-growing country was that during the reign of Khan Krum of Bulgaria, all vineyards were ordered destroyed. Later, a lion escaped from its cage and terrorized the city. However, a fearless young man named Mavrud (now the name of a wine grape) confronted and slew the lion. The king summoned Mavrud's mother to learn the source of such courage. She said she had secretly saved a vine, made wine, and that this was the source of Mavrud's bravery. Khan Krum ordered the vineyards replanted.\nIn the original Bulgarian version the legend says it was a monster called the lamya (ламя) which was vanquished, according to one book on wine.\n\n\n== See also ==\nBulgarian wine\nBulgarian cuisine\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Mavrud Viala Vermorel.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q219"
+  ],
+  "description": "varietal"
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "kind": "grape",
+ "key": "Corvinone",
+ "label": "Corvinone",
+ "match": "direct",
+ "tried": [
+  "Corvinone (grape)",
+  "Corvinone"
+ ],
+ "title": "Corvinone",
+ "url": "https://en.wikipedia.org/wiki/Corvinone",
+ "revision": 1326081723,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q3694900",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Corvinone_bunches_in_august_valpolicella_region.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Red wine grape varieties",
+  "Wine grape varieties of Italy",
+  "Wine grapes of Veneto"
+ ],
+ "lead": "Corvinone is a red Italian wine grape variety native to the Veneto region of northern Italy. In 2010 a total grape growing area of 930 hectares (2,300 acres) was planted worldwide, with all of it in Italy save for 1 hectare (2.5 acres) in Argentina. Seldom found in wine alone, Corvinone is blended, along with Rondinella, Molinara and other autochthonous varieties, in Corvina-dominant red wines of the Valpolicella and Bardolino regions of Veneto. Corvinone is similar enough to the more widespread Corvina variety that it has historically often been mistaken as a clone; indeed its name in Italian suggests a meaning of \"large corvina\". More recent ampelographical work and DNA profiling has shown it to be a separate variety, however.",
+ "sections": [
+  "Viticulture and winemaking",
+  "References"
+ ],
+ "text": "Corvinone is a red Italian wine grape variety native to the Veneto region of northern Italy. In 2010 a total grape growing area of 930 hectares (2,300 acres) was planted worldwide, with all of it in Italy save for 1 hectare (2.5 acres) in Argentina. Seldom found in wine alone, Corvinone is blended, along with Rondinella, Molinara and other autochthonous varieties, in Corvina-dominant red wines of the Valpolicella and Bardolino regions of Veneto. Corvinone is similar enough to the more widespread Corvina variety that it has historically often been mistaken as a clone; indeed its name in Italian suggests a meaning of \"large corvina\". More recent ampelographical work and DNA profiling has shown it to be a separate variety, however.\n\n\n== Viticulture and winemaking ==\nCorvinone produces winged pyramidal bunches, larger and more loosely packed than Corvina, and ripening later (mid-October). Individual grapes of Corvinone are larger too, making the variety suitable for drying, part of the winemaking process for several Valpolicella wine styles, most notably Amarone and Recioto. Since the 1990s, Corvinone has become more important in the blending of these red wines. Most sources say the blend is Corvina, Rondinella and Molinara, often omitting Corvinone because it was not always recognised as a separate variety. It has become more popular with winemakers than Molinara due to its denser colour and superior flavours. As a result, its growing area in Italy between 2000 and 2010 increased more than ten-fold from just 88 hectares (220 acres) to 930 hectares (2,300 acres), whilst in the same period that of Molinara dropped from 1,301 hectares (3,210 acres) to 595 hectares (1,470 acres).\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Corvinone bunches in august valpolicella region.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

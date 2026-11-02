@@ -1,0 +1,40 @@
+{
+ "kind": "grape",
+ "key": "Alfrocheiro",
+ "label": "Alfrocheiro",
+ "match": "direct",
+ "tried": [
+  "Alfrocheiro (grape)",
+  "Alfrocheiro"
+ ],
+ "title": "Alfrocheiro Preto",
+ "url": "https://en.wikipedia.org/wiki/Alfrocheiro_Preto",
+ "revision": 1304392580,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q588556",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Portuguese_Alentejo_wine.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Red wine grape varieties",
+  "Wine grape stubs"
+ ],
+ "lead": "Alfrocheiro Preto is a red Portuguese wine grape variety planted primarily in the Dão DOC and Alentejano VR. The grape is known for the deep coloring it can add to wine blends. Under the name Baboso negro, it is considered a minor Spanish red grape variety, growing mainly in the provinces of Zamora and Salamanca, in the region of Castile and León. It is one of the authorized varieties of the La Gomera and El Hierro Denominación de Origen, in the Canary Islands (Spain).",
+ "sections": [
+  "Synonyms",
+  "See also",
+  "References"
+ ],
+ "text": "Alfrocheiro Preto is a red Portuguese wine grape variety planted primarily in the Dão DOC and Alentejano VR. The grape is known for the deep coloring it can add to wine blends. Under the name Baboso negro, it is considered a minor Spanish red grape variety, growing mainly in the provinces of Zamora and Salamanca, in the region of Castile and León. It is one of the authorized varieties of the La Gomera and El Hierro Denominación de Origen, in the Canary Islands (Spain).\n\n\n== Synonyms ==\nAlfrocheiro Preto is also known under the synonyms Albarín Negro, Alfrocheiro, Alfurcheiro, Tinta Bastardinha, Tinta Francisca de Viseu, Bastardo negro, and Bruñal. The official name in Spain is Baboso negro.\n\n\n== See also ==\nList of Portuguese grape varieties\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Alfrocheiro.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "description": "varietal"
+ }
+}

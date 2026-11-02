@@ -1,0 +1,47 @@
+{
+ "kind": "grape",
+ "key": "Garganega",
+ "label": "Garganega",
+ "match": "direct",
+ "tried": [
+  "Garganega (grape)",
+  "Garganega"
+ ],
+ "title": "Garganega",
+ "url": "https://en.wikipedia.org/wiki/Garganega",
+ "revision": 1338916708,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1422786",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Garganega.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "White wine grape varieties",
+  "Wine grape varieties of Italy",
+  "Wine grapes of Veneto"
+ ],
+ "lead": "Garganega (Italian: [ɡarˈɡaːneɡa], Venetian: [ɡaɾˈɡaneɡa]; meaning \"from Gargano\") is a variety of white Italian wine grape widely grown in the Veneto region of north east Italy, particularly in the provinces of Verona and  Vicenza. It is Italy's sixth most widely planted white grape. It forms the basis of Venetian white wine Soave and is also a major portion of the blend used to make Gambellara.\nDNA typing studies in 2003 and 2008 have confirmed that the Grecanico Dorato (Grecanico) grape of Sicily is identical to Garganega. Already before these studies, ampelographers believed the grapes to be related due to the similarities of clusters, berries and leaf characteristics.",
+ "sections": [
+  "Wine regions",
+  "Viticulture and wines",
+  "Pedigree",
+  "Synonyms",
+  "See also",
+  "References"
+ ],
+ "text": "Garganega (Italian: [ɡarˈɡaːneɡa], Venetian: [ɡaɾˈɡaneɡa]; meaning \"from Gargano\") is a variety of white Italian wine grape widely grown in the Veneto region of north east Italy, particularly in the provinces of Verona and  Vicenza. It is Italy's sixth most widely planted white grape. It forms the basis of Venetian white wine Soave and is also a major portion of the blend used to make Gambellara.\nDNA typing studies in 2003 and 2008 have confirmed that the Grecanico Dorato (Grecanico) grape of Sicily is identical to Garganega. Already before these studies, ampelographers believed the grapes to be related due to the similarities of clusters, berries and leaf characteristics.\n\n\n== Wine regions ==\n\nIn the Soave region, Garganega is the primary grape and can compose anywhere from 70 to 100% of the blend with Trebbiano and Chardonnay being its usual blending partners. In the Classico zone of Soave, where yields are most often kept in check, the grape can produce a delicate wine with lemon, almond and spicy notes. In addition to Soave, Garganega is also widely grown in the Gambellara, Bianco di Custoza, Colli Berici and Colli Euganei DOCs. Outside of the Veneto, there are some plantings in the Umbria and Friuli wine regions.\nWhen grown in Sicily under the name Grecanico Dorato, the grapes ripens late and can produce a wine with tangy acidity.\n\n\n== Viticulture and wines ==\nThe Garganega vine has a tendency to ripen late and can be very vigorous. In the fertile flatlands outside the Soave Classico zone, the grape can produce excessively high yields that lead to very thin and neutral flavored wines. The acid levels in Garganega lends itself well to the production of sweet recioto wines that have the potential to improve with bottle age for a decade or more.\n\n\n== Pedigree ==\nAn Italian study published in 2008 using DNA typing showed a close genetic relationship between Garganega on the one hand and several other Italian grape varieties on the other hand: Albana, Catarratto, Empibotte, Greco Bianco del Pollino, Malvasia di Candia a Sapore Semplice, Marzemina bianca, Montonico bianco and Trebbiano Toscano (also known as Ugni blanc). It is possible that Garganega is one of the parents of each of these grape varieties. However, since the parents of Garganega have not been identified, the exact nature of the relationship in each case could not be conclusively established. The results were of particular interest, since these seven grape varieties are spread from north to south Italy (and Trebbiano Toscano beyond Italy's border), which indicates that Garganega is a key variety in the pedigree of white Italian grape varieties.\n\n\n== Synonyms ==\nGarganega is also known under the synonyms D'Oro, Decanico, Dorana di Venetia, Garganega Comune, Garganega di Gambellara, Garganega Gentile, Garganega Grossa, Garganega Piramidale, Garganega Veronese, Gracanico Dorato, Grecani, Grecanico, Grecanico Bianco, Grecanico Dorato, Grecanicu Biancu, Grecanio, Greccanico, Lizzara, Malvasia de Manresa, Ora, Oro, Ostesa, Ostesona, and Recanicu.\n\n\n== See also ==\nList of Italian grape varieties\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Garganega Recioto di Gambellara.png"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

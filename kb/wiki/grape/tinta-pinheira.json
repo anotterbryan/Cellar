@@ -1,0 +1,40 @@
+{
+ "kind": "grape",
+ "key": "Tinta Pinheira",
+ "label": "Tinta Pinheira",
+ "match": "direct",
+ "tried": [
+  "Tinta Pinheira (grape)",
+  "Tinta Pinheira"
+ ],
+ "title": "Rufete (grape)",
+ "url": "https://en.wikipedia.org/wiki/Rufete_(grape)",
+ "revision": 1012820797,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q2174722",
+ "image": null,
+ "categories": [
+  "Red wine grape varieties"
+ ],
+ "lead": "Rufete is a red Spanish/Portuguese wine grape variety that is grown primarily used in port wine production in the Douro region of Portugal. It is also grown up along the Duero basin across the border in the Spanish province of Castile and León and can be found in the Dão DOC of Portugal where the variety is known as Tinta Pinheira.",
+ "sections": [
+  "Wine regions",
+  "Viticulture and wine styles",
+  "Synonyms",
+  "References"
+ ],
+ "text": "Rufete is a red Spanish/Portuguese wine grape variety that is grown primarily used in port wine production in the Douro region of Portugal. It is also grown up along the Duero basin across the border in the Spanish province of Castile and León and can be found in the Dão DOC of Portugal where the variety is known as Tinta Pinheira.\n\n\n== Wine regions ==\n\nWhile the grape is mostly associated with the fortified wine production of the Douro, it can also be found in other smaller Portuguese and Spanish wine regions such as the Arribes Denominación de Origen (DO) right along the Portugal/Spanish border in Castile and León and the Castelo Rodrigo, Cova da Beira and Pinhel wine regions located within the larger Beiras Vinho Regional (VR) in Portugal.\n\n\n== Viticulture and wine styles ==\nRufete is known to be an early ripening vine that can produce light bodied wines that are risk of oxidizing easily if anaerobic winemaking techniques are not used.\n\n\n== Synonyms ==\nOver the years Rufete has been known under a variety of synonyms including Penamacor, Pennamaior, Pinot Aigret, Preto Rifete, Rifete, Riffete, Rofete, Rosete, Rosette, Ruceta, Rufeta, Rupeti Berra, Tinta Carvalha and Tinta Pinheira.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Rufete.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "description": "variety of grape"
+ }
+}

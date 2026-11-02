@@ -1,0 +1,52 @@
+{
+ "kind": "wine",
+ "key": "cotes-de-gascogne-white",
+ "label": "Côtes de Gascogne White",
+ "match": "search",
+ "tried": [
+  "Côtes de Gascogne White",
+  "Côtes de Gascogne"
+ ],
+ "title": "Côtes de Gascogne",
+ "url": "https://en.wikipedia.org/wiki/C%C3%B4tes_de_Gascogne",
+ "revision": 1372537896,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q839207",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/The_Gers_France_summer.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Pyrenees",
+  "Wine regions of France"
+ ],
+ "lead": "Côtes de Gascogne is a wine-growing district in Gascony producing principally white wine. It is mainly located in the département of the Gers in the former Midi-Pyrénées region (now part of the Occitanie region), and it belongs to the wine region South West France. The designation Côtes de Gascogne is used for a Vin de Pays (\"country wine\") produced in the Armagnac area. The decree of 13 September 1968 created the difference between a Vin de Pays and simpler table wine, the so-called Vin de table. The designation Côtes de Gascogne obliges the producers to respect the stricter rules and production standards, which were adopted with the decree of 25 January 1982.",
+ "sections": [
+  "Association of producers",
+  "Production",
+  "Rules for wine",
+  "Production region",
+  "Soil",
+  "Climate",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Côtes de Gascogne is a wine-growing district in Gascony producing principally white wine. It is mainly located in the département of the Gers in the former Midi-Pyrénées region (now part of the Occitanie region), and it belongs to the wine region South West France. The designation Côtes de Gascogne is used for a Vin de Pays (\"country wine\") produced in the Armagnac area. The decree of 13 September 1968 created the difference between a Vin de Pays and simpler table wine, the so-called Vin de table. The designation Côtes de Gascogne obliges the producers to respect the stricter rules and production standards, which were adopted with the decree of 25 January 1982.\n\n\n== Association of producers ==\nThe Association of Producers of the Vins de Pays Côtes de Gascogne was founded on 15 March 1979. It protects the interests of the members, determines the production standards and ensures respect of these rules. The association counts on this moment approximately 1,400 wine farmers. Of them, 1,300 are members of cooperative cellars, the so-called caves coopératives.\nThe most famous producers are Château de Tariquet, Domaine de Joÿ, Plaimont, Uby...\n\nThere are also 150 independently working wine farmers, who produce their wines themselves.\n\n\n== Production ==\nWith a permitted production quantity of 830,000 hectoliters per year, the Gers is France's largest producer of white Vin de Pays, with a production potential of more than 100 million bottles per year, of which 75% are for export.\nIn the Gers, the production volumes are more or less as follows: 91% white wine, 8% red and 1% rosé wine. This is very atypical for the southwest of France, because in neighbouring departments mainly red wine is produced.\n\n\n== Rules for wine ==\nThere are red, rosé and white wine. Wines are produced only from the defined area.\nThe types of grapes for red and rosé wine are Abouriou, Merlot, Cabernet sauvignon, Cabernet franc, Duras, Fer, Négrette, Portugias bleu, Malbec and Tannat.\nThe types of grapes for white wine are Colombard, Petit Manseng, Gros Manseng, Len de l'El, Sauvignon blanc, Sémillon, Muscadelle and Ugni blanc.\n\n\n== Production region ==\nThe Appellation d'Origine Contrôlée-région Côtes de Gascogne, Armagnac and Floc de Gascogne (a local aperitif) are identical. The three Armagnac sub-regions Armagnac-Ténarèze, Bas-Armagnac and Haut-Armagnac form in a way the Côtes de Gascogne.\nThe region is mainly in the Gers where two thirds of the vineyards, nearly 12,000 hectares are used for the production of the Côtes de Gascogne wines.\nIn Gers the cantons:  Auch, Cazaubon, Condom, Fleurance, Jegun, Lectoure, Montesquiou, Montréal, Nogaro, Riscle, Plaisance, Aignan, Valence-sur-Baïse, Vic-Fezensac.\nThe Appellation d'origine contrôlée was in 2005 extended with the Armagnac vineyards lying in twenty-five municipalities in the Bas-Armagnac which are in the department Landes and fourteen other municipalities in the Armagnac-Ténarèze which are in Lot-et-Garonne. The total surface of Côtes de Gascogne thus arrives at 15 thousand hectares.\n\n\n== Soil ==\nAlluvial soil with clay and sand.\n\n\n== Climate ==\nThe Atlantic Ocean although far away behind Les Landes still has influence, further spring is rather wet and it is sunny in the rest of the year.\n\n\n== See also ==\nFrench wine\n\n\n== References ==\n\n\n== External links ==\nSyndicat des Côtes de Gascogne[link removed]\n[1]",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "image": [
+   "Domaine Tariquet Vin de pays de côtes de Gascogne.JPG"
+  ],
+  "subclass_of": [
+   "Q630531"
+  ],
+  "country_of_origin": [
+   "Q142"
+  ],
+  "located_in": [
+   "Q12517"
+  ],
+  "description": "wine-growing district in Gascony"
+ }
+}

@@ -1,0 +1,42 @@
+{
+ "kind": "grape",
+ "key": "Hárslevelű",
+ "label": "Hárslevelű",
+ "match": "direct",
+ "tried": [
+  "Hárslevelű (grape)",
+  "Hárslevelű"
+ ],
+ "title": "Hárslevelű",
+ "url": "https://en.wikipedia.org/wiki/H%C3%A1rslevel%C5%B1",
+ "revision": 1372671950,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q979351",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/9/96/Harslevel%C5%B1_grape_cluster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Grape varieties of Hungary",
+  "White wine grape varieties"
+ ],
+ "lead": "Hárslevelű (in Hungarian), also called Lipovina (in Slovak), Frunza de tei (in Romanian), Lindenblättriger (in German) and Feuille de Tilleul (in French) is a grape variety from the Pontian Balcanica branch of Vitis vinifera.\nThe name refers to the \"linden (tree) leaf\" in each of these languages. The grape is native to the Carpathian Basin and is planted in several Hungarian wine regions, but most prominently in the tiny wine region of Somló, and especially in Tokaj-Hegyalja, where it is blended with Furmint to produce Tokaji Aszú and other dessert wines. The grape is also planted in the Slovak wine region of Tokaj where it is used to produce similar wines. Vinified as a pure varietal dry wine, Hárslevelű is capable of yielding a dense, full-bodied, green-gold wine with an intense aroma of spice, pollen and elderflowers. Hárslevelű is also planted in South Africa.",
+ "sections": [
+  "Synonyms",
+  "References"
+ ],
+ "text": "Hárslevelű (in Hungarian), also called Lipovina (in Slovak), Frunza de tei (in Romanian), Lindenblättriger (in German) and Feuille de Tilleul (in French) is a grape variety from the Pontian Balcanica branch of Vitis vinifera.\nThe name refers to the \"linden (tree) leaf\" in each of these languages. The grape is native to the Carpathian Basin and is planted in several Hungarian wine regions, but most prominently in the tiny wine region of Somló, and especially in Tokaj-Hegyalja, where it is blended with Furmint to produce Tokaji Aszú and other dessert wines. The grape is also planted in the Slovak wine region of Tokaj where it is used to produce similar wines. Vinified as a pure varietal dry wine, Hárslevelű is capable of yielding a dense, full-bodied, green-gold wine with an intense aroma of spice, pollen and elderflowers. Hárslevelű is also planted in South Africa.\n\n\n== Synonyms ==\nHárslevelű is also known under the synonyms Budai Goher, Feuille de Tilleul, Frunza de Tei, Frunze de Tei, Gars Levelyu, Garsh Levelyu, Garsleveliu, Garsz Levelju, Gorsh Levelyu, Hachat Lovelin, Harch Levelu, Harchlevelu, Hars Levelu, Hars Levelü, Hárs Levelű, Hars Levelyu, Harslevele, Hárslevele, Harst Leveliu, Harzevelu, Hosszúnyelű Fehér, Kerekes, Kereklevelű, Lämmerschwanz, Lämmerschwanz, Weisser, Lidenblättriger, Lindenblättrige, Lindenblättrige, Lindenblättriger, Lindenblütrige, Lindener, Lipolist, Lipolist Biyali, Lipovina, Musztafer, Nöthab, Tarpai, Tokai, Tokay, and Vörös.\nJuly 24 - International Lipovina Day\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Hárslevelu grapes.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q28"
+  ],
+  "description": "varietal"
+ }
+}

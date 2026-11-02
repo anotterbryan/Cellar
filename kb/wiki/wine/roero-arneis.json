@@ -1,0 +1,45 @@
+{
+ "kind": "wine",
+ "key": "roero-arneis",
+ "label": "Roero Arneis",
+ "match": "direct",
+ "tried": [
+  "Roero Arneis"
+ ],
+ "title": "Arneis",
+ "url": "https://en.wikipedia.org/wiki/Arneis",
+ "revision": 1330551314,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q693158",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/0/04/Pescaja_Langhe_Arneis_2006.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "White wine grape varieties",
+  "Wine grape varieties of Italy",
+  "Wines of Piedmont"
+ ],
+ "lead": "Arneis is a white Italian wine grape variety originating from Piedmont, Italy. It is most commonly found in the hills of the Roero, northwest of Alba, where it is part of the white Denominazione di Origine Controllata e Garantita (DOCG) wines of Roero. It can also be used to produce DOC wines in Langhe. Arneis (literally: \"worthless thing\", in Piemontese) is so called because it is regarded as a somewhat difficult variety to grow. It is a crisp and floral varietal, and has been grown for centuries in the region. The white wines made from the Arneis grape tend to be dry and full bodied with notes of pears and apricots.",
+ "sections": [
+  "History",
+  "Wine regions",
+  "Viticulture and winemaking",
+  "Synonyms",
+  "References"
+ ],
+ "text": "Arneis is a white Italian wine grape variety originating from Piedmont, Italy. It is most commonly found in the hills of the Roero, northwest of Alba, where it is part of the white Denominazione di Origine Controllata e Garantita (DOCG) wines of Roero. It can also be used to produce DOC wines in Langhe. Arneis (literally: \"worthless thing\", in Piemontese) is so called because it is regarded as a somewhat difficult variety to grow. It is a crisp and floral varietal, and has been grown for centuries in the region. The white wines made from the Arneis grape tend to be dry and full bodied with notes of pears and apricots.\n\n\n== History ==\nWine historians disagree on how long Arneis has been growing in the Piedmont region and under what name. A potential root of the name Arneis in the Piemontese dialect, renesi, makes an appearance in the description of several different grape varieties in the 15th century. Some historians believe that Arneis may be the Ranaysii grape that was documented in 1432 growing in the province of Turin around the village of Chieri. Around Canale in the province of Cuneo a Reneysium grape was documented in 1478. The first usage of the name Arneis appears in Italian ampelographer Count Giuseppe di Rovasenda's 1877 text where the grape was described as already being well established in Piedmont.\nDespite sharing several similar synonyms, Arneis has no genetic relationship to the notable Piedmontese red wine grape Nebbiolo but the two grapes do share a close historic relationship. For centuries the white Arneis grape was used to soften the tannins and harshness of Nebbiolo grape in the wines of the Barolo region, hence the common synonym of Nebbiolo bianco, Barolo bianco or \"white Barolo\". In the vineyard, Arneis was often planted with Nebbiolo in a field blend with the aim of having the sweet scent of ripe Arneis berries attract birds and keep them away from the more valuable Nebbiolo clusters.\nIn the 20th century, as Barolo producers begun focusing on 100% varietal Nebbiolo, acreage steadily declined almost to the point where the variety was on the verge of extinction. By the 1970s, only two producers were making any kind of Arneis, Bruno Giacosa and Vietti. The 1980s saw a renaissance in interest for white Piedmont wines and plantings began to increase. By 2000, there were 745 hectares (1,840 acres). By 2006 the number of plantings of Arneis declined to around 610 hectares (1,500 acres) nearly all found in the Roero and Langhe region of Piedmont.\n\n\n== Wine regions ==\n\nArneis is found primarily in the Italian wine region of Piedmont where it is featured in the white DOC/G wines of Roero and Langhe. It is permitted as a blending grape in the red Nebbiolo based wines of Roero but its use in this capacity is today rarely seen. In 2004, nearly 1 million gallons (38,000 hectoliters) of DOC designated Arneis was produced in these two regions. Outside of Piedmont, limited plantings of the grape can be found in Liguria and on the Italian island of Sardinia.\nIn the United States, Arneis is mostly found in California wine region of Sonoma County and the Oregon wine region of the Willamette Valley. Other American Viticultural Areas with some plantings of the grape include the Mendocino, Russian River Valley, Paicines and Santa Ynez Valley AVAs. It is also being grown in Willcox, Arizona.  In the 21st century, plantings of Arneis have begun appearing the Australian wine regions of Tasmania, Victoria and New South Wales as well as the New Zealand wine region of Gisborne in the North Island.\n\n\n== Viticulture and winemaking ==\n\nThe Arneis vine can be a difficult grape to cultivate, with naturally low acidity and tendency to get over ripe if it is harvested after September. Additionally, the vine is prone to powdery mildew though recent cloning research has begun to isolate clones of Arneis that have more tolerance to mildew. The vine's propensity for low crop yields and for the wine to oxidize easily, contributed to its steady decline in the early to mid 20th century. Better understanding of the variety in the later half of the century helped revive the variety as winemakers found that the chalky, sandy soils around Roero gave the grapes more acidity and structure while Arneis grapes planted in sandy clay soil developed an elegant and exotic perfume.\nArneis historical role has been as a softening for Nebbiolo, though today the grape is more commonly seen as a varietal wine. Wines fermented and/or aged in oak will be more full bodied while unoaked Arneis can have more aromatics and perfume. Arneis has the potential to produce highly perfumed wines with aromas of almonds, apricots, peaches, pears and hops. Some producers make a late harvest passito Arneis.\n\n\n== Synonyms ==\nArneis is also known under the synonyms Bianchetta, Bianchetta d'Alba, Bianchetta di Alba, Bianchetto, Bianchetto Albese, Bianchetto di Alba, Bianchetto di Verzuolo, and Nebbiolo bianco.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Pescaja Langhe Arneis 2006.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "kind": "wine",
+ "key": "amarone-della-valpolicella",
+ "label": "Amarone della Valpolicella",
+ "match": "direct",
+ "tried": [
+  "Amarone della Valpolicella"
+ ],
+ "title": "Amarone",
+ "url": "https://en.wikipedia.org/wiki/Amarone",
+ "revision": 1353567218,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q455219",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Amarone_BMK.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Italian DOCG",
+  "Wines of Veneto"
+ ],
+ "lead": "Amarone della Valpolicella, usually known as Amarone (UK: , Italian: [amaˈroːne]), is an Italian DOCG denomination of typically rich dry red wine made from the partially dried grapes of the Corvina (45–95%, of which up to 50% could be substituted with Corvinone), Rondinella (5–30%) and other approved red grape varieties (up to 25%). \nValpolicella is in the province of Verona, within the large Veneto region.\nIn Italian, the name Amarone literally means 'Great Bitter'; originally, this was to distinguish it from the Recioto produced in the same region, which is sweeter in taste.",
+ "sections": [
+  "History",
+  "Process",
+  "Variations",
+  "Characteristics and faults",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Amarone della Valpolicella, usually known as Amarone (UK: , Italian: [amaˈroːne]), is an Italian DOCG denomination of typically rich dry red wine made from the partially dried grapes of the Corvina (45–95%, of which up to 50% could be substituted with Corvinone), Rondinella (5–30%) and other approved red grape varieties (up to 25%). \nValpolicella is in the province of Verona, within the large Veneto region.\nIn Italian, the name Amarone literally means 'Great Bitter'; originally, this was to distinguish it from the Recioto produced in the same region, which is sweeter in taste.\n\n\n== History ==\nNotable wines have been produced in Valpolicella since ancient times, but the Verona wine was not marketed as Amarone before 1953. It is believed that the label Amarone was coined by Adelino Lucchese in 1936.\nThe wine was assigned denominazione di origine controllata (DOC) status in December 1990. On 4 December 2009, Amarone and Recioto della Valpolicella were promoted to the status of denominazione di origine controllata e garantita (DOCG). Total production for sale (including Recioto) in 2008 was 8.57 million bottles.\n\n\n== Process ==\nGrapes are harvested ripe in the first two weeks of October, by carefully choosing bunches having fruits not too close to each other, to let the air flow. Grapes are allowed to dry, traditionally on bamboo racks (arele in local dialect) but more commonly in plastic or wooden crates. This process is called appassimento or rasinate (to dry and shrivel) in Italian. This concentrates the remaining sugars and flavours thanks to the water evaporation and is similar to the production of French vin de paille. The pomace left over from pressing off the Amarone is used in the production of ripasso Valpolicellas.\nModern Amarone is produced in special drying chambers under controlled conditions. This approach minimizes the amount of handling of the grapes and helps prevent the onset of Botrytis cinerea. In Amarone, the quality of the grape skin is a primary concern, as that component brings the tannins, color, and intensity of flavor to the wine. The process of desiccation not only concentrates the juices within the grape, but also increases the skin contact of the grapes. The drying process creates a polymerization of the tannins in the skin that contributes to the overall balance of the finished wine.\nTypically, the length of the drying process is 120 days, but varies according to producer and the quality of the harvest. The most evident consequence of this process is the loss of weight: 35 to 45% for Corvina grapes, 30 to 40% for Molinara, and 27 to 40% for Rondinella. Following the drying process that is completed during the end of January or beginning of February, the grapes are crushed and go through a dry, low temperature fermentation process that may last up to 30 or 50 days. The reduced water content can slow down the fermentation process, increasing the risk of spoilage and potential wine faults, such as high volatile acidity. After fermentation, the wine must undergo a period of ageing of at least 2 years (calculated from 1 January of the year following the harvest). The ageing process takes place in wooden barrels, traditionally in big oak casks, but tonneaux (500 lt) or barriques (225 lt) made of either French or Slavonian oak can be used.\n\n\n=== Variations ===\nIf fermentation is stopped early, the resulting wine will contain residual sugar (more than 4 grams of sugar per litre) and produce a sweeter wine known as Recioto della Valpolicella. Recioto was the traditional wine produced according to this method, and originally, Amarone was Recioto wines that had fermented for too long. Unlike Amarone, Recioto della Valpolicella may be used to produce a sparkling wine. Ripasso is an Italian wine produced when the partially-aged Valpolicella is contacted with the pomace of the Amarone. Typically, this will take place in the spring following the harvest. The resulting wine is more tannic, with a deeper color, and having more alcohol and more extract. The word ripasso designates both the winemaking technique and the wine, and usually is found on a wine label.\n\n\n== Characteristics and faults ==\nThe final result is a very ripe, raisiny, full-bodied wine with very little acid. Alcohol content easily surpasses 15% (the legal minimum is 14%) and the resulting wine is rarely released until five years after the vintage, even though this is not a legal requirement.\nThe labor-intensive process of producing this wine poses significant risk for the development of various wine faults. Wet and rainy weather during harvest may cause the grapes to rot before drying out, requiring winemakers to be diligent in removing rotted bunches that can cause moldy flavors in the wine.\n\n\n== See also ==\n\nStraw wine\nDessert wine\n\n\n== References ==\n\n\n== External links ==\n\nConsorzio per la Tutela dei Vini Valpolicella d.o.c. (in English)\nAmarone Origin (in English)\nAmarone production regulations (in English)\nKey facts about Valpolicella wines Archived 2019-08-20 at the Wayback Machine (in English)\nAmarone wine making process (in English)",
+ "facts": {
+  "country": [
+   "Q38"
+  ],
+  "image": [
+   "Amarone BMK.jpg"
+  ],
+  "instance_of": [
+   "Q282"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "located_in": [
+   "Q16314"
+  ],
+  "description": "Italian controlled and guaranteed designation of origin wine from Veneto"
+ }
+}

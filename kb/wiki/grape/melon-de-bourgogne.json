@@ -1,0 +1,44 @@
+{
+ "kind": "grape",
+ "key": "Melon de Bourgogne",
+ "label": "Melon de Bourgogne",
+ "match": "direct",
+ "tried": [
+  "Melon de Bourgogne (grape)",
+  "Melon de Bourgogne"
+ ],
+ "title": "Melon de Bourgogne",
+ "url": "https://en.wikipedia.org/wiki/Melon_de_Bourgogne",
+ "revision": 1375975532,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1417652",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Melon_de_bourgogne.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "White wine grape varieties"
+ ],
+ "lead": "Melon de Bourgogne (French pronunciation: [məlɔ̃ də buʁɡɔɲ]) or Melon ([məlɔ̃] ) is a variety of white grape grown primarily in the Loire Valley region of France.  It is also grown in North America.  It is best known through its use in the white wine Muscadet.\nIn the U.S., Federal law prevents \"Muscadet\" from being used for American-produced wine; only the full name of the grape, or the shortened \"Melon\" can be used.",
+ "sections": [
+  "History",
+  "North America",
+  "Synonyms",
+  "References",
+  "External links"
+ ],
+ "text": "Melon de Bourgogne (French pronunciation: [məlɔ̃ də buʁɡɔɲ]) or Melon ([məlɔ̃] ) is a variety of white grape grown primarily in the Loire Valley region of France.  It is also grown in North America.  It is best known through its use in the white wine Muscadet.\nIn the U.S., Federal law prevents \"Muscadet\" from being used for American-produced wine; only the full name of the grape, or the shortened \"Melon\" can be used.\n\n\n== History ==\nAs its name suggests, the grape originated in Burgundy and was grown there until its destruction was ordered in the early 18th century. In the vineyards around Nantes and the western Loire, however, the harsh winter of 1709 destroyed so many vines that a new variety was needed, and the Melon grape was introduced. Since then, it has been used solely in the production of the light dry white wine Muscadet, which is made entirely from the Melon grape. The grape is so associated with its appellation that the grape itself is often known as Muscadet.\nDNA analysis has revealed Melon de Bourgogne to be a cross between Pinot blanc and Gouais blanc.\n\n\n== North America ==\n\nThis grape was brought to America in 1939. It was propagated incorrectly as Pinot Blanc from the 1960s into the early 1980s.\nAs of 2007, the grape is grown in Oregon, where it is known simply as Melon. The grape has been introduced into Washington by Perennial Vintners on Bainbridge Island, six miles across Puget Sound from Seattle.\n\n\n== Synonyms ==\nMelon de Bourgogne is known by many synonyms, including:\n\nAuxerrois GrosBiaune\nBlanc de Nantes\nBourgogne blanche\nBourgogne verde\nBourgogne verte\nBourguignon blanc\nClozier\nFeher Nagyburgundi\nFeuille Ronde\nGamay blanc\nGamay Blanc à Feuilles Rondes\nGamay Blanc Feuilles Rondes\nGame Kruglolistnyi\nGros Auxerrois\nGros blanc\nGrosse Saint Marie\nLyonnais\nLyonnaise blanche\nMalin blanc\nMele\nMelon\nMeurlon\nMourlon\nMuscadet\nPerry\nPetit Bourgogne\nPetit Muscadet\nPetite Biaune\nPetoin\nPetouin\nPicarneau\nPlant de Lons-Le-Saulnie\nRoussette Basse\nSpäter Weisser Burgunder\n\n\n== References ==\n\n\n== External links ==\nWine Doctor on the Pays Nantais A synopsis of the Muscadet region\nMelondeBourgogne.com, focused on Melon cultivation in the USA",
+ "facts": {
+  "image": [
+   "Melon de bourgogne.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q1173"
+  ],
+  "description": "varietal"
+ }
+}

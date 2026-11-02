@@ -1,0 +1,49 @@
+{
+ "kind": "wine",
+ "key": "valdeorras-godello",
+ "label": "Godello (Valdeorras, Bierzo)",
+ "match": "direct",
+ "tried": [
+  "Godello"
+ ],
+ "title": "Godello",
+ "url": "https://en.wikipedia.org/wiki/Godello",
+ "revision": 1330385253,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q200487",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Bierzo_Godello.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Galicia (Spain)",
+  "Grape varieties of Spain",
+  "White wine grape varieties"
+ ],
+ "lead": "Godello is a white variety of wine grape grown in northwestern Spain, in particular in Galicia. The Gouveio found in northern Portugal is thought to be the same grape variety.\nThe origins of Godello variety are located in the town of Godella (Valencia) where this variety was first planted back in the 19th century by a local landowner in their plantation of Campo Olivar by the Baron of this township. In the early 1920s the vineyards were transported by a Galician trader who took several samples up to Galicia.\nGodello can produce fine white wines, and yields the best results in Valdeorras, where plantations have increased after having previously been in decline. Total Spanish plantations of Godello stood at 1,153 hectares (2,850 acres) in 2008 (up from  880 hectares (2,200 acres) in 2004).",
+ "sections": [
+  "Synonyms",
+  "References"
+ ],
+ "text": "Godello is a white variety of wine grape grown in northwestern Spain, in particular in Galicia. The Gouveio found in northern Portugal is thought to be the same grape variety.\nThe origins of Godello variety are located in the town of Godella (Valencia) where this variety was first planted back in the 19th century by a local landowner in their plantation of Campo Olivar by the Baron of this township. In the early 1920s the vineyards were transported by a Galician trader who took several samples up to Galicia.\nGodello can produce fine white wines, and yields the best results in Valdeorras, where plantations have increased after having previously been in decline. Total Spanish plantations of Godello stood at 1,153 hectares (2,850 acres) in 2008 (up from  880 hectares (2,200 acres) in 2004).\n\n\n== Synonyms ==\nGodello is also known under the following synonyms: Agodello, Agodenho, Agudanho, Agudelha, Agudelho, Agudello, Agudelo, Agudenho, Berdello, Godelho, Godella, Godenho, Ojo de Gallo and Trincadente.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Bierzo Godello.JPG"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q29",
+   "Q38"
+  ],
+  "located_in": [
+   "Q3908",
+   "Q3934",
+   "Q3946",
+   "Q5739"
+  ],
+  "description": "Italian grape variety"
+ }
+}

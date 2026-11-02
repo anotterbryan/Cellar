@@ -1,0 +1,40 @@
+{
+ "kind": "grape",
+ "key": "Brachetto",
+ "label": "Brachetto",
+ "match": "direct",
+ "tried": [
+  "Brachetto (grape)",
+  "Brachetto"
+ ],
+ "title": "Brachetto",
+ "url": "https://en.wikipedia.org/wiki/Brachetto",
+ "revision": 1326081688,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q896583",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Brachetto_acquesi_glass.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Red wine grape varieties",
+  "Wine grape varieties of Italy",
+  "Wine grapes of Piedmont"
+ ],
+ "lead": "Brachetto (Italian pronunciation: [braˈketto]) is a red Italian wine grape variety grown predominantly in the Piedmont region of northwest Italy. At one time the grape was thought to be related to the French wine grape Braquet, but recent thought among ampelographers is that the two are distinct varieties. In Italy's region of Piedmont the grape is somewhat more widespread: production mostly falling within an area of the provinces of Asti and Alessandria between the rivers Bormida and Belbo plus various parts of the province of Cuneo.  At Canelli, on the border between the hills of Asti and the Langhe proper, the grape is known as Borgogna. The most notable wine here is the red Brachetto d'Acqui Denominazione di Origine Controllata e Garantita (DOCG) which is made in both still and spumante (fully sparkling) versions. The Piemonte Brachetto Denominazione di Origine Controllata (DOC), also a red wine, is made with a minimum of 85% Brachetto; it is usually still, but may be frizzante (lightly sparkling). The grape is also used for up to 10% of the blend for the Ruché-based Ruché di Castagnole Monferrato DOCG.",
+ "sections": [
+  "Wines",
+  "References"
+ ],
+ "text": "Brachetto (Italian pronunciation: [braˈketto]) is a red Italian wine grape variety grown predominantly in the Piedmont region of northwest Italy. At one time the grape was thought to be related to the French wine grape Braquet, but recent thought among ampelographers is that the two are distinct varieties. In Italy's region of Piedmont the grape is somewhat more widespread: production mostly falling within an area of the provinces of Asti and Alessandria between the rivers Bormida and Belbo plus various parts of the province of Cuneo.  At Canelli, on the border between the hills of Asti and the Langhe proper, the grape is known as Borgogna. The most notable wine here is the red Brachetto d'Acqui Denominazione di Origine Controllata e Garantita (DOCG) which is made in both still and spumante (fully sparkling) versions. The Piemonte Brachetto Denominazione di Origine Controllata (DOC), also a red wine, is made with a minimum of 85% Brachetto; it is usually still, but may be frizzante (lightly sparkling). The grape is also used for up to 10% of the blend for the Ruché-based Ruché di Castagnole Monferrato DOCG.\n\n\n== Wines ==\nBrachetto tend to produce \nlight-bodied, highly aromatic wines with distinctive notes of strawberries. In the DOCG region of Brachetto d'Acqui, the grape is used to produce a slightly sweet sparkling wine that is similar to Lambrusco and is sometimes called the light red equivalent of Moscato d'Asti.\n\n\n== References ==",
+ "facts": {
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

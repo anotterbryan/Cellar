@@ -1,0 +1,42 @@
+{
+ "kind": "grape",
+ "key": "Cortese",
+ "label": "Cortese",
+ "match": "direct",
+ "tried": [
+  "Cortese (grape)",
+  "Cortese"
+ ],
+ "title": "Cortese",
+ "url": "https://en.wikipedia.org/wiki/Cortese",
+ "revision": 1295032132,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1135583",
+ "image": null,
+ "categories": [
+  "White wine grape varieties",
+  "Wine grapes of Piedmont"
+ ],
+ "lead": "Cortese is a white Italian wine grape variety predominantly grown in the southeastern regions of Piedmont in the provinces of Alessandria and Asti. It is the primary grape of the Denominazione di origine controllata (DOC) wines of Cortese dell'Alto Monferrato and Colli Tortonesi as well as the Denominazione di Origine Controllata e Garantita (DOCG) wine of Cortese di Gavi. Significant plantings of Cortese can also be found in the Lombardy region of Oltrepò Pavese and the DOC white blends of the Veneto wine region of Bianco di Custoza. Cortese has a long history in Italian viticulture, with written documentation naming the grape among the plantings in a Piedmontese vineyard as early as 1659. The grape's moderate acidity and light flavors have made it a favorite for the restaurants in nearby Genoa as a wine pairing with the local seafood caught off the Ligurian coast.",
+ "sections": [
+  "History",
+  "Wine regions",
+  "Wines",
+  "Synonyms",
+  "References"
+ ],
+ "text": "Cortese is a white Italian wine grape variety predominantly grown in the southeastern regions of Piedmont in the provinces of Alessandria and Asti. It is the primary grape of the Denominazione di origine controllata (DOC) wines of Cortese dell'Alto Monferrato and Colli Tortonesi as well as the Denominazione di Origine Controllata e Garantita (DOCG) wine of Cortese di Gavi. Significant plantings of Cortese can also be found in the Lombardy region of Oltrepò Pavese and the DOC white blends of the Veneto wine region of Bianco di Custoza. Cortese has a long history in Italian viticulture, with written documentation naming the grape among the plantings in a Piedmontese vineyard as early as 1659. The grape's moderate acidity and light flavors have made it a favorite for the restaurants in nearby Genoa as a wine pairing with the local seafood caught off the Ligurian coast.\n\n\n== History ==\n\nOne of the earliest documentations of the Cortese grape dates back to a 1659 report to the Marchesa Doria from the estate manager of the family's villa in Montaldeo that states that all the vineyards were planted with Cortese and Vermentino. In 1870, the ampelographers P.P. DeMaria and Carlo Leardi noted that the Cortese was being widely cultivated in the Alessandria province of Piedmont, where it was prized for its hardiness to grape diseases and ability to produce large crop yields as well as high-quality wine.\n\n\n== Wine regions ==\nToday, Cortese is most widely associated with the DOCG wine Cortese di Gavi, produced in the Alessandria Gavi region. There are significant plantings of the grape throughout southeastern Piedmont, including the DOC wine-producing areas of Colli Tortonesi and Cortese dell'Alto Monferrato, located a few miles to the west of Gavi and of Monferrato Casalese Cortese, which extends to the Basso Monferrato north of the Tanaro. Despite the proximity to Gavi, Cortese experiences a significantly difficult time with the grapes fully ripening in Tortona and Monferrato. Piemonte Cortese DOC can be made in the Province of Cuneo to the west, along with Alessandria and Asti.\nOutside of Piedmont, the grape can be found in significant quantities in the Oltrepò Pavese, part of the Province of Pavia in Lombardy, which borders the Province of Alessandria. Further east, Garda Cortese DOC is produced in the hills near Lake Garda (provinces of Brescia and Mantova in Lombardy and the province of Verona in the Veneto). The grape may also be used as part of the blend for the Bianco di Custoza DOC, near Lake Garda in the Province of Verona. As of 2000, 7,800 acres (3,200 ha) of Cortese were planted throughout Italy.\n\n\n== Wines ==\nWines made from Cortese (particularly those from the DOCG Gavi) have long been favored by restaurants in the southern neighboring port of Genoa as a wine pairing with the local seafood caught off the Ligurian coast. The wine's moderate acidity and light, crisp flavors pair well with the delicate flavors of some fish. Cortese wines tend to be medium bodied with notes of limes and greengage. The wines can be aggressively acidic and lean in particularly cool vintages, but winemaking techniques such as malolactic fermentation and oak barrel fermentation can temper that.\n\n\n== Synonyms ==\nCortese is also known under the synonyms Bianca Fernanda, Corteis, Cortese Bianca, Cortese Bianco, Cortese d'Asti, Cortese dell'Astigliano, Courteis, Cortesi, Courteisa, Fernanda Bianca, and Raverusto.\n\n\n== References ==",
+ "facts": {
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

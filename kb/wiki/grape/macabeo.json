@@ -1,0 +1,44 @@
+{
+ "kind": "grape",
+ "key": "Macabeo",
+ "label": "Macabeo",
+ "match": "direct",
+ "tried": [
+  "Macabeo (grape)",
+  "Macabeo"
+ ],
+ "title": "Macabeo",
+ "url": "https://en.wikipedia.org/wiki/Macabeo",
+ "revision": 1330385281,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1756570",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Maccabeo_blanc.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Grape varieties of Spain",
+  "White wine grape varieties"
+ ],
+ "lead": "Macabeo, also called Viura or Macabeu (Catalan: [məkəˈβew], French: [makabø]), is a white variety of wine grape.\nIt is widely grown in the Rioja region of northeastern Spain, the Cava producing areas south of Barcelona, and the Languedoc-Roussillon region of France. Spanish plantations stood at nearly 45,000 hectares (110,000 acres) in 2015, making it the second most grown white grape variety in Spain. In France, plantations accounted for 2,800 hectares (6,900 acres) in 2007.\nSince 2009, some Macabeo is grown in Israel.",
+ "sections": [
+  "Styles and winemaking",
+  "Synonyms",
+  "References"
+ ],
+ "text": "Macabeo, also called Viura or Macabeu (Catalan: [məkəˈβew], French: [makabø]), is a white variety of wine grape.\nIt is widely grown in the Rioja region of northeastern Spain, the Cava producing areas south of Barcelona, and the Languedoc-Roussillon region of France. Spanish plantations stood at nearly 45,000 hectares (110,000 acres) in 2015, making it the second most grown white grape variety in Spain. In France, plantations accounted for 2,800 hectares (6,900 acres) in 2007.\nSince 2009, some Macabeo is grown in Israel.\n\n\n== Styles and winemaking ==\n\nThe grape is mostly used to make mildly acidic and young white wines mostly suitable for early consumption or blending with other varieties, both red and white. \nSome of the most pleasurable examples of the variety are planted along the Pyrenees, where it is used to produce highly saline and textural white wine. \nIt is often the main grape of white Rioja and is sometimes blended in small amounts with Tempranillo and red Garnacha, both in unoaked and oaked versions. It was introduced in Rioja after the phylloxera epidemic, where it largely replaced Malvasia and Garnacha blanca, partially because of the ability of its wines to better withstand oxidation.  Some producers of white Rioja make superior wines (Reserva and Gran Reserva) subjected to extended ageing that can span decades, resulting in a highly distinctive and aromatic wine.\nMacabeo (or Macabeu, as it is known in Catalan) is traditionally blended with Xarel·lo and Parellada to make cava, the best-known sparkling wine of Spain, and it is also used on its own in varietal wines. It is also used in the base spirit used to create Obsello Absinthe.\nIn Roussillon, late-picked Macabeo is also used in fortified wine (vin doux naturel). As well as on its own as exceptional young white wine\n\n\n== Synonyms ==\nMacabeo is also known by the following synonyms: Alcañol, Alcañón, Blanca de Daroca, Charas blanc, Forcalla, Gredelín, Lardot, Listan Andaludschii, Listan Andaluzskii, Lloza, Macaban, Macabeu, Maccabeo, Maccabeou, Maccabeu, Makkobeo, Malvoisie, Provensal, Queue de Renard, Rossan, Subirat, Tokay, Viura. Some of these synonyms are also proper names of other grape varieties.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Maccabeo blanc.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q29",
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

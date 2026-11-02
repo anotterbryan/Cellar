@@ -1,0 +1,44 @@
+{
+ "kind": "grape",
+ "key": "Sercial",
+ "label": "Sercial",
+ "match": "direct",
+ "tried": [
+  "Sercial (grape)",
+  "Sercial"
+ ],
+ "title": "Sercial",
+ "url": "https://en.wikipedia.org/wiki/Sercial",
+ "revision": 1294987853,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q164081",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Sercial.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Madeira wine",
+  "Portugal stubs",
+  "White wine grape varieties",
+  "Wine grape stubs"
+ ],
+ "lead": "Sercial is the name of a white grape grown in Portugal, especially on the island of Madeira. It has given its name to the driest of the four classic varieties of Madeira fortified wine.\nThe grape is grown in diminishing quantities at the southern end of the island. After phylloxera devastated Madeira's vineyards, the grape became more common on the mainland, where it is known as esgana or esgana cão, meaning respectively strangler or dog strangler. Its late ripening allows it to retain its characteristic acidity.\n\nThe anglicised name Sercial came to be associated with the Madeira style rather than the grape variety, being the lightest, most acidic and delicate expression of Madeira that takes the longest to mature. European Union rules for varietal names on wine labels require Madeiras labelled Sercial to be made from a minimum of 85% Sercial.\nFor unknown reasons, Sercial was the name given to the Gascony grape Ondenc when it was planted in Australia.",
+ "sections": [
+  "See also",
+  "References"
+ ],
+ "text": "Sercial is the name of a white grape grown in Portugal, especially on the island of Madeira. It has given its name to the driest of the four classic varieties of Madeira fortified wine.\nThe grape is grown in diminishing quantities at the southern end of the island. After phylloxera devastated Madeira's vineyards, the grape became more common on the mainland, where it is known as esgana or esgana cão, meaning respectively strangler or dog strangler. Its late ripening allows it to retain its characteristic acidity.\n\nThe anglicised name Sercial came to be associated with the Madeira style rather than the grape variety, being the lightest, most acidic and delicate expression of Madeira that takes the longest to mature. European Union rules for varietal names on wine labels require Madeiras labelled Sercial to be made from a minimum of 85% Sercial.\nFor unknown reasons, Sercial was the name given to the Gascony grape Ondenc when it was planted in Australia.\n\n\n== See also ==\nList of Portuguese grape varieties\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Sercial.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q45"
+  ],
+  "description": "varietal"
+ }
+}

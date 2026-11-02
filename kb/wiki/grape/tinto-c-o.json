@@ -1,0 +1,50 @@
+{
+ "kind": "grape",
+ "key": "Tinto Cão",
+ "label": "Tinto Cão",
+ "match": "direct",
+ "tried": [
+  "Tinto Cão (grape)",
+  "Tinto Cão"
+ ],
+ "title": "Tinta Cão",
+ "url": "https://en.wikipedia.org/wiki/Tinta_C%C3%A3o",
+ "revision": 1381555101,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q501534",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Tinta_Cao_leaf.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Portuguese wine",
+  "Red wine grape varieties"
+ ],
+ "lead": "Tinta Cão, also known as Tinto Cão, is a red wine grape variety of Vitis vinifera originating in northern Portugal. It is associated particularly with the Douro and Dão regions and is used in Port wine and unfortified red wines. The variety ripens late and produces relatively low yields. Its wines can have pronounced acidity and tannins, with potential for ageing.",
+ "sections": [
+  "History and names",
+  "Ampelography",
+  "Viticulture",
+  "Wine",
+  "Distribution",
+  "Relationships with other varieties",
+  "Research",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Tinta Cão, also known as Tinto Cão, is a red wine grape variety of Vitis vinifera originating in northern Portugal. It is associated particularly with the Douro and Dão regions and is used in Port wine and unfortified red wines. The variety ripens late and produces relatively low yields. Its wines can have pronounced acidity and tannins, with potential for ageing.\n\n\n== History and names ==\nHistorical accounts place the variety in the Douro in the late eighteenth century. According to the specialist reference Vine to Wine Circle, Lacerda Lobo recorded it in the Alijó and Sabrosa areas in 1790. Rebello da Fonseca referred to it as Tinto Cam in 1791 and included it among the Douro varieties used to make good wine.\nPortugal's 2020 national catalogue of grapevine varieties lists the variety under the name Tinto Cão.\n\n\n== Ampelography ==\nThe flowers are hermaphroditic, and the mature leaves are pentagonal and five-lobed. The young shoots have red striping on the dorsal sides of their nodes and internodes. The berries are medium-sized, blue-black and covered with a waxy bloom; their flesh is uncoloured.\n\n\n== Viticulture ==\nTinta Cão is a late-ripening variety. It prefers warm, sunny conditions and soils of moderate fertility that retain some moisture. It is sensitive to water stress, which can cause premature leaf loss. The Portuguese Instituto da Vinha e do Vinho describes it as moderately susceptible to downy mildew, less susceptible to bunch rot, and particularly susceptible to the green leafhopper.\nThe viticultural association ADVID gives a typical yield of 4–6 tonnes per hectare. Its profile also reports on selected clones numbered 188–194, with mean yields of 1.4–1.7 kg per vine, compared with 1.3 kg per vine for the experimental clonal population.\nADVID places Tinta Cão in an intermediate group of thermal requirements, drawing on a study of 44 Portuguese grapevine varieties. That study assessed heat and winter-chilling accumulation and modelled changes for 2041–2070 under the RCP4.5 and RCP8.5 climate scenarios.\n\n\n== Wine ==\nWine character depends on the ripeness of the grapes and the growing conditions. A profile by viticulturist Peter Dry describes wines from fully ripe fruit as having moderate colour, medium to high acidity, berry aromas and rounded tannins. Insufficiently ripe fruit can produce lighter-coloured wines with herbaceous characteristics. Dry considers the variety better suited to blending than to varietal wine.\nADVID reports must acidity of 5–7 g/L and potential alcohol of 12.5–13.5% for late-harvested grapes. Tinta Cão can be blended with Tinta Roriz, Tinta Barroca, Touriga Franca and Touriga Nacional.\n\n\n== Distribution ==\nThe Douro is the principal Portuguese growing region, with plantings also in the Dão. A 2013 profile published through the Australian Wine Research Institute recorded small plantings in California and cultivation in several Australian wine regions.\nADVID's technical profile lists Tinta Cão for the following Portuguese wine designations:\n\nDOC: Trás-os-Montes, Douro, Porto, Dão, Bairrada, Beira Interior, Do Tejo, Palmela and Alentejo.\nIGP: Transmontano, Duriense, Terras de Cister, Terras do Dão, Beira Atlântico, Terras da Beira, Lisboa, Tejo, Península de Setúbal and Alentejano.\n\n\n== Relationships with other varieties ==\nA 2004 study of 24 Portuguese grapevine cultivars from the Douro and Vinho Verde regions used RAPD markers to compare their genetic profiles. Tinta Cão and Tinta Francisca grouped closely in the analysis.\nTinta Cão is a parent of Rubired, a teinturier variety with pigmented berry flesh, obtained by crossing it with Alicante Ganzin. Rubired was developed by Harold Olmo at the University of California, Davis, and released in 1958.\n\n\n== Research ==\nField experiments at the University of Trás-os-Montes and Alto Douro investigated the effects of chitosan treatments on Tinta Cão. A study published in 2019 reported increased concentrations of phenolic compounds, anthocyanins and tannins in treated berries, together with higher antioxidant activity in laboratory assays. A study published in 2020 reported increases in several anthocyanins and other phenolic compounds in berry skins, accompanied by changes in the expression of genes involved in their synthesis and transport. ADVID's summary notes that the reported results were based on a single viticultural year and depended on the experimental conditions.\n\n\n== See also ==\nList of Port wine grapes\nList of Portuguese wine grape varieties\n\n\n== References ==\n\n\n== External links ==\n Media related to Tinta Cão at Wikimedia Commons\nTinto Cao in the Vitis International Variety Catalogue\nTinta Cão at Towardia",
+ "facts": {
+  "image": [
+   "Tinto cão par Alexis Kreyder.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q45"
+  ],
+  "description": "wine grape"
+ }
+}

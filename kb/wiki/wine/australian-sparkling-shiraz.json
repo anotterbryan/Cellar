@@ -1,0 +1,31 @@
+{
+ "kind": "wine",
+ "key": "australian-sparkling-shiraz",
+ "label": "Australian Sparkling Shiraz",
+ "match": "search",
+ "tried": [
+  "Australian Sparkling Shiraz",
+  "Sparkling Shiraz"
+ ],
+ "title": "Sparkling Shiraz",
+ "url": "https://en.wikipedia.org/wiki/Sparkling_Shiraz",
+ "revision": 1381981964,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q17055472",
+ "image": null,
+ "categories": [
+  "Australian wine",
+  "Red wine grape varieties",
+  "Sparkling wines"
+ ],
+ "lead": "Sparkling Shiraz is an Australian wine style. The wine style has been claimed to have been created in 1895 by Edmond Mazure. Before the enforcement of appellations d'origine contrôlée, the style was called Sparkling Burgundy.\nThe wine begins as a Shiraz on its first fermentation. Its secondary fermentation takes place in its bottle, or méthode champenoise.\nThe Sparkling Shiraz style has been described as \"uniquely Australian\".",
+ "sections": [
+  "See also",
+  "References"
+ ],
+ "text": "Sparkling Shiraz is an Australian wine style. The wine style has been claimed to have been created in 1895 by Edmond Mazure. Before the enforcement of appellations d'origine contrôlée, the style was called Sparkling Burgundy.\nThe wine begins as a Shiraz on its first fermentation. Its secondary fermentation takes place in its bottle, or méthode champenoise.\nThe Sparkling Shiraz style has been described as \"uniquely Australian\".\n\n\n== See also ==\n\nAustralian wine\n\n\n== References ==",
+ "facts": {
+  "description": "Australian wine style"
+ }
+}

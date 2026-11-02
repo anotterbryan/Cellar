@@ -1,0 +1,39 @@
+{
+ "kind": "grape",
+ "key": "Muscadelle",
+ "label": "Muscadelle",
+ "match": "direct",
+ "tried": [
+  "Muscadelle (grape)",
+  "Muscadelle"
+ ],
+ "title": "Muscadelle",
+ "url": "https://en.wikipedia.org/wiki/Muscadelle",
+ "revision": 1356192017,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1934770",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/Muscadelle_-_inflorescence.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "White wine grape varieties"
+ ],
+ "lead": "Muscadelle (French pronunciation: [myskadɛl] ) is a white wine grape variety. It has a simple aroma of grape juice and raisins like grapes of the Muscat family of grapes, but it is unrelated. \nDNA analysis has indicated that Muscadelle is a cross between Gouais blanc and an unidentified grape variety.",
+ "sections": [
+  "Wine regions",
+  "Synonyms",
+  "References"
+ ],
+ "text": "Muscadelle (French pronunciation: [myskadɛl] ) is a white wine grape variety. It has a simple aroma of grape juice and raisins like grapes of the Muscat family of grapes, but it is unrelated. \nDNA analysis has indicated that Muscadelle is a cross between Gouais blanc and an unidentified grape variety.\n\n\n== Wine regions ==\nIn France, it is a minor constituent in the dry and sweet wines of Bordeaux, such as Sauternes. It rarely makes up more than 10% of the blend, which is dominated by Sémillon and Sauvignon blanc. Throughout the 1990s and the beginning of the 21st century, plantings of the grape were falling. Some sweet wines from Monbazillac, on the other hand, can have a higher proportion of Muscadelle.\nIn Australia, the grape is used to make a fortified wine, now known as Topaque (formerly Tokay). Those made in the Rutherglen region generally receive considerable aging in hot cellars, leading to a maderised and oxidative character. A few other Australian wine regions, including the Barossa Valley, make similar wines. A few other Australian wineries use Muscadelle to make table wines in a similar way to French wineries. In accordance with an agreement reached with the EU, Australian producers phased out their use of the term Tokay by 2020, most choosing instead the name Topaque to represent this style.\nThe name, Tokay, convinced some Australian producers that the grape was Pinot gris (which used to be called Tokay by producers in Alsace). Others thought the grape might have been Hárslevelű, one of the components of the famous Hungarian sweet wine Tokaji. However, since the 1970s it has been accepted that Australian Tokay is in fact Muscadelle.\n\n\n== Synonyms ==\nMuscadelle is also known under the synonyms Angelicaut, Angelico, Blanc Cadillac, Blanche Douce, Bouillenc Muscat, Buillenc, Cadillac, Catape, Colle, Colle Musquette, Doucanelle, Douzanelle, Enfin, Guepie, Guilan Doux, Guilan Muscat, Guilan Musque, Guillan, Guillan Musque, Guinlhan Musque, Marmesie, Marseillais, Muscade, Muscadela, Muscadelle de Bordelais, Muscadet, Muscadet Doux, Muscalea, Muscat Fou, Musquette, Pedro Ximenes Krimsky, Raisimotte, Raisin de Musco, Raisinote, Raisinotte, Rousselou, Sauvignon à Gros Grains, Sauvignon Muscadelle, Sauvignon vert, Tokay, Vesparo, and White Angelica.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Muscadelle - inflorescence.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "description": "white wine grape variety"
+ }
+}

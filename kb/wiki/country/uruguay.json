@@ -1,0 +1,48 @@
+{
+ "kind": "country",
+ "key": "Uruguay",
+ "label": "Uruguay",
+ "match": "direct",
+ "tried": [
+  "Uruguay wine"
+ ],
+ "title": "Uruguayan wine",
+ "url": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+ "revision": 1345493565,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q682082",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/Uruguay_tannat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Agriculture in Uruguay",
+  "Uruguayan drinks",
+  "Uruguayan wine",
+  "Wine by country"
+ ],
+ "lead": "Uruguayan wine was produced in the quantity of 102,964 tonnes from 9,023 hectares (22,300 acres) of vineyards in 2023, the fourth-greatest quantity in South America. Uruguay is most known for red wines produced from Tannat grapes, but   white wines made from albariño are beginning to receive attention internationally.",
+ "sections": [
+  "History",
+  "Classification system",
+  "Wine regions",
+  "Grape varieties",
+  "See also",
+  "References"
+ ],
+ "text": "Uruguayan wine was produced in the quantity of 102,964 tonnes from 9,023 hectares (22,300 acres) of vineyards in 2023, the fourth-greatest quantity in South America. Uruguay is most known for red wines produced from Tannat grapes, but   white wines made from albariño are beginning to receive attention internationally.\n\n\n== History ==\nThe modern wine industry in Uruguay dates back to 1870, when Tannat was introduced to the country by Don Pascual Harriague, a Basque. At the start, immigrants of mainly Basque and Italian origin were involved. In 1870,\nAlbariño was introduced to Uruguay in 1954 by immigrants from A Coruña, in the Galician region of Spain. \nWhen the Mercosur free trade association started to take shape in the late 1980s, Uruguay took steps to increase the quality of its wines and stepped up its marketing efforts, due to fear of being out-competed by Brazilian wines and Argentine wines, which had lower production costs.\n\n\n== Classification system ==\nThere are two levels of classification for Uruguay wines:\n\nVino de calidad preferente (VCP), a \"quality wine\" category. Wines must be made from Vitis vinifera varieties and are required to be sold in bottles of 75 cl or smaller.\nVino común (VC), a \"table wine\" category. VC wines are often sold in demijohns and tetra paks, and much of it is rosé.\n\n\n== Wine regions ==\n\nUruguay's wine regions correspond to its administrative regions. While the country's other forms of agriculture are grouped into cardinal-intercardinal-oriented zones, which are then further divided by departments, there has never been an official grouping of wine regions into the larger zones – based on publications released by the Ministry of Livestock, Agriculture, and Fish.\nThe majority of vineyards and wineries are located in the hills north of the capital Montevideo, particularly in the departments: Canelones, Montevideo, Colonia, and San José. With the disappearance of vineyards in Flores, Rio Negro, and Treinta y Tres, roughly from 1989 to 2007, there are currently vineyards in 15 out of 19 departments.\n\n\n== Grape varieties ==\nAmong the vinifera grapes, Tannat is the most common (36%). Other common varieties are Merlot (10%), Chardonnay (7%), Cabernet Sauvignon (6%), Sauvignon blanc (6%), and Cabernet Franc (4%). Muscat Hamburg is still a common variety for  rosé table wines.\n\n\n== See also ==\nWinemaking\nAgriculture in Uruguay\nCulture of Uruguay\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q77"
+  ],
+  "image": [
+   "Uruguay tannat.jpg"
+  ],
+  "instance_of": [
+   "Q74817647"
+  ],
+  "subclass_of": [
+   "Q253140",
+   "Q282"
+  ],
+  "description": "wine making in Uruguay"
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "kind": "wine",
+ "key": "pouilly-fuisse-macon",
+ "label": "Pouilly-Fuissé & Mâcon",
+ "match": "direct",
+ "tried": [
+  "Pouilly-Fuissé & Mâcon",
+  "Pouilly-Fuissé"
+ ],
+ "title": "Pouilly-Fuissé",
+ "url": "https://en.wikipedia.org/wiki/Pouilly-Fuiss%C3%A9",
+ "revision": 1373179515,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q390514",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Village_de_Solutr%C3%A9.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Burgundy (historical region) AOCs"
+ ],
+ "lead": "Pouilly-Fuissé (French pronunciation: [puji fɥise]) is an appellation (AOC) for white wine in the Mâconnais subregion of Burgundy in central France, located in the communes of Fuissé, Solutré-Pouilly, Vergisson and Chaintré. Pouilly-Fuissé has Chardonnay as the only grape variety.\nPouilly-Fuissé is the best-known part of Mâconnais. The AOC was created on September 11, 1936. It was granted premier cru designation in September 2020. There are currently 22 premier cru climats.  The area used to be known simply as \"Pouilly\", but when the AOC laws were introduced, it was split into three: Pouilly-Fuissé, Pouilly-Loché and Pouilly-Vinzelles.",
+ "sections": [
+  "Style",
+  "Geography",
+  "Production",
+  "AOC regulations",
+  "Notable residents",
+  "Other \"Pouilly\" wines",
+  "Notes"
+ ],
+ "text": "Pouilly-Fuissé (French pronunciation: [puji fɥise]) is an appellation (AOC) for white wine in the Mâconnais subregion of Burgundy in central France, located in the communes of Fuissé, Solutré-Pouilly, Vergisson and Chaintré. Pouilly-Fuissé has Chardonnay as the only grape variety.\nPouilly-Fuissé is the best-known part of Mâconnais. The AOC was created on September 11, 1936. It was granted premier cru designation in September 2020. There are currently 22 premier cru climats.  The area used to be known simply as \"Pouilly\", but when the AOC laws were introduced, it was split into three: Pouilly-Fuissé, Pouilly-Loché and Pouilly-Vinzelles.\n\n\n== Style ==\nChardonnay is the only permitted grape here, and many of the wines produced are considered the same quality level as those made in the Côte de Beaune, without costing nearly as much. \nOak aging is up to the producer, and there are many examples of wine produced with or without oak. Either way, the aromas and flavors of nuts, yellow fruit like lemon, pineapple, and apples predominate. With age, honey and brioche become dominant. The best of these wines can age up to 20 years.\n\n\n== Geography ==\nWest of Mâcon the land rises up to form Mont de Pouilly and other limestone hills, covered in the alkaline clay that best suits Chardonnay.  The villages of Vergisson, Solutré-Pouilly, Fuissé and Chaintré shelter at their feet.\n\n\n== Production ==\n\nIn 2008, 757.20 hectares (1,871.1 acres) of vineyard area was in production within the Pouilly-Fuissé AOC, and 39,147 hectoliters of wine were produced, corresponding to 5.2 million bottles of wine.\n\n\n== AOC regulations ==\nThe AOC regulations only allow Chardonnay to be used. The allowed base yield is 50 hectolitre per hectare and the grapes must reach a maturity of at least 11.0 per cent potential alcohol.\n\n\n== Notable residents ==\nThe négociant Georges Duboeuf of the Beaujolais wine region grew up on a small vineyard in the region.\n\n\n== Other \"Pouilly\" wines ==\nThe wines of Pouilly-Fuissé should not be confused with the Sauvignon blanc-based wines of Pouilly-Fumé and the Chasselas-based Pouilly-sur-Loire, both from the area around Pouilly-sur-Loire in the Loire Valley.\n\n\n== Notes ==",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "image": [
+   "Solutre vom Felsen aus01.jpg"
+  ],
+  "instance_of": [
+   "Q630531"
+  ],
+  "subclass_of": [
+   "Q1016093"
+  ],
+  "located_in": [
+   "Q12736"
+  ],
+  "description": "French wine region in Burgundy"
+ }
+}

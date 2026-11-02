@@ -1,0 +1,43 @@
+{
+ "kind": "grape",
+ "key": "Palomino",
+ "label": "Palomino",
+ "match": "direct",
+ "tried": [
+  "Palomino (grape)"
+ ],
+ "title": "Palomino (grape)",
+ "url": "https://en.wikipedia.org/wiki/Palomino_(grape)",
+ "revision": 1292258139,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q657693",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Palomino_Viala_et_Vermorel.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Fortified wine",
+  "Grape varieties of Spain",
+  "White wine grape varieties"
+ ],
+ "lead": "Palomino Fino is a white grape widely grown in Spain and South Africa, and best known for its use in the manufacture of sherry. It is also grown in the Douro region of Portugal where it is used for table and fortified wines.",
+ "sections": [
+  "Wine regions",
+  "References",
+  "External links"
+ ],
+ "text": "Palomino Fino is a white grape widely grown in Spain and South Africa, and best known for its use in the manufacture of sherry. It is also grown in the Douro region of Portugal where it is used for table and fortified wines.\n\n\n== Wine regions ==\n\nIn Spain, the grape is split into the sub-varieties Palomino Fino, Palomino Basto, and Palomino de Jerez, of which Palomino Fino is by far the most important, being the principal grape used in the manufacture of sherry. The wine formed by fermentation of the grape is low in both acidity and sugar which, whilst suitable for sherry, ensures that any table wine made from it is of a consistently low quality, unless aided by acidification. It is the fourth most common white grape variety grown in Spain, with 20,261 hectares (50,066 acres) in 2015. There are substantial plantings in Andalusia for sherry production, and it is also widely grown on the Canary Islands, and in Galicia.\nIn France, it is referred to as Listán, and in South Africa as Fransdruif or White French. It is also found in Australia and California where it is also used mainly to produce fortified wines. The grape was once thought to be the Golden Chasselas, a grape grown in California. The wine-must has tendency to oxidise quickly, a characteristic that can be ignored when used for sherry production.\n\n\n== References ==\n\n\n== External links ==\nPalomino and other sherry grapes on SherryNotes",
+ "facts": {
+  "image": [
+   "PalominoListan Blanco grapes growing in Tenerife.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q29"
+  ],
+  "description": "wine grape"
+ }
+}

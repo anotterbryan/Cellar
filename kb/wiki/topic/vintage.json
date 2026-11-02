@@ -1,0 +1,38 @@
+{
+ "kind": "topic",
+ "key": "Vintage",
+ "label": "Vintage",
+ "match": "direct",
+ "tried": [
+  "Vintage"
+ ],
+ "title": "Vintage",
+ "url": "https://en.wikipedia.org/wiki/Vintage",
+ "revision": 1364749374,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1975981",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Cup_vintage_Cdm_Paris_320_n1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Viticulture",
+  "Wine terminology"
+ ],
+ "lead": "In winemaking, vintage is the process of picking grapes to create wine. A vintage wine is one made from grapes that were all, or primarily, grown and harvested in a single specified year. In certain wines, it can denote quality, as in Port wine, where Port houses make and declare vintage Port in their best years. From this tradition, a common, though not strictly correct, usage applies the term to any wine that is perceived to be particularly old or of a particularly high quality.\nMost countries allow a vintage wine to include a portion of wine that is not from the year denoted on the label. In Chile and South Africa, the requirement is 75% same-year content for vintage-dated wine. In Australia, New Zealand, and the member states of the European Union, the requirement is 85%. In the United States, the requirement is 85%, unless the wine is designated with an AVA, (e.g., Napa Valley), in which case it is 95%. Technically, the 85% rule in the United States applies equally to imports, but there are difficulties in enforcing the regulation.\nThe opposite of a vintage wine is a nonvintage wine (often seen on a wine list as 'NV'), which is usually a blend from the produce of two or more years. This is a common practice for winemakers seeking a consistent style of wine, year on year.",
+ "sections": [
+  "Etymology",
+  "Importance of vintage",
+  "Weil blind tastings",
+  "Miscellaneous",
+  "See also",
+  "References",
+  "Further reading",
+  "External links"
+ ],
+ "text": "In winemaking, vintage is the process of picking grapes to create wine. A vintage wine is one made from grapes that were all, or primarily, grown and harvested in a single specified year. In certain wines, it can denote quality, as in Port wine, where Port houses make and declare vintage Port in their best years. From this tradition, a common, though not strictly correct, usage applies the term to any wine that is perceived to be particularly old or of a particularly high quality.\nMost countries allow a vintage wine to include a portion of wine that is not from the year denoted on the label. In Chile and South Africa, the requirement is 75% same-year content for vintage-dated wine. In Australia, New Zealand, and the member states of the European Union, the requirement is 85%. In the United States, the requirement is 85%, unless the wine is designated with an AVA, (e.g., Napa Valley), in which case it is 95%. Technically, the 85% rule in the United States applies equally to imports, but there are difficulties in enforcing the regulation.\nThe opposite of a vintage wine is a nonvintage wine (often seen on a wine list as 'NV'), which is usually a blend from the produce of two or more years. This is a common practice for winemakers seeking a consistent style of wine, year on year.\n\n\n== Etymology ==\nThe word vintage was first used in the early 15th century. It was adapted from the Old French vendange ('wine harvest') deriving from the Latin vindemia ('grape-gathering'), in turn coming from vinum ('wine') and demere ('to remove').\n\n\n== Importance of vintage ==\n\nThe importance assigned to vintage is both varied and disputed.\nFor wine produced in regions at the colder climatic limits of wine production, vintage can be very important, because some seasons will be much warmer and produce riper grapes and better wine. On the other hand, a poor growing season can lead to grapes failing to reach optimal ripeness, resulting in grape juice that is higher in acid and lower in sugar, which affects the quality of the resulting wine.\nIn many wine regions, especially in the New World, growing seasons are much more uniform. In dry regions, the systematic and controlled use of irrigation also contributes to uniform vintages. However, such wines are regularly labeled by vintage because of consumer demand.\n\nWines of superior vintages from prestigious producers and regions will often command much higher prices than those from average vintages. This is especially the case if wines are likely to improve further with some age in the bottle. Some wines are only labeled with a vintage in better-than-average years, to maintain their quality and reputation, while the vast majority of wines are produced to be drunk young and fresh. In such cases, a vintage is usually considered less important. However, it can serve to protect consumers against buying a wine that would not be expected to improve with age and could be past its best, such as with Beaujolais nouveau, a wine style made to be consumed within months of its bottling.\nThe importance of vintage may sometimes be exaggerated. For example, New York Times wine columnist Frank J. Prial declared the vintage chart to be dead, writing that \"winemakers of the world have rendered the vintage chart obsolete\"; Bill Marsano wrote that \"winemakers now have the technology and skills to make good and even very good wines in undistinguished years\". James Laube of  Wine Spectator has asserted that \"even an average vintage can yield some grand wines\".\n\n\n=== Weil blind tastings ===\nRoman Weil, co-chairman of the Oenonomy Society of the US and professor at the University of Chicago, tested the controversial hypothesis that experienced wine drinkers \"cannot distinguish in blind tastings the wine of years rated high from those of years rated low, or, if they can, they do not agree with the vintage chart's preferences\".\nWeil used wines ranging from four to 17 years beyond their vintage with 240 wine drinkers and found that the tasters could not distinguish between wines of good and bad vintages except for Bordeaux wines. Even when they could make a distinction, the match between the tasters' individual assessments and the charts' rankings were little better than tossing a coin. When the tests were replicated with wine experts, including French wine academics, the results were again the same as chance.\nWeil does not consider a vintage chart to be useless. He suggests using one to help \"find good buys in wine\", as wine made in years considered to be worse than average for vintages may be priced far below its actual quality.\n\n\n== Miscellaneous ==\nIn Spain, wine regulators publish official classifications of each vintage.\nA common Bordelais saying is \"The best vintage is the vintage we have to sell\"\n\n\n== See also ==\nComet vintages\n\n\n== References ==\n\n\n== Further reading ==\nGreene, Joshua. \"Bordeaux 2005\". Wine & Spirits, June 2006, 25(3), 24–26.\nLaube, James. \"A caveat for Cabernet\". Wine Spectator, June 15, 2006, 31(4), 37.\nPrial, Frank J. \"Wine talk: So who needs vintage charts\". New York Times, February 9, 2000, B1 & B14.\nMarsano, Bill. \"Vintage nonsense\". Hemisphere (United Airlines' inflight magazine), May 2001.\nWeil, Roman L. \"Parker v. Prial: The death of the vintage chart\". Oenometrie VIII. Eighth annual meeting of the Vineyard Data Quantification Society (VDQS) in\n\n\n== External links ==\n\n Media related to Wine vintages at Wikimedia Commons\nRibeiro Denomination of Origin\nThe Decanter's Vintage Guides",
+ "facts": {
+  "subclass_of": [
+   "Q205892"
+  ],
+  "description": "process of yielding grapes or wine during one season"
+ }
+}

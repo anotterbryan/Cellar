@@ -1,0 +1,51 @@
+{
+ "kind": "wine",
+ "key": "jurancon",
+ "label": "Jurançon (dry & sweet)",
+ "match": "direct",
+ "tried": [
+  "Jurançon"
+ ],
+ "title": "Jurançon",
+ "url": "https://en.wikipedia.org/wiki/Juran%C3%A7on",
+ "revision": 1381857607,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q199726",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Juranson.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Béarn",
+  "Communes of Pyrénées-Atlantiques",
+  "Pau arrondissement geography stubs"
+ ],
+ "lead": "Jurançon (French pronunciation: [ʒyʁɑ̃sɔ̃] ; Occitan: Juranson) is a commune in the Pyrénées-Atlantiques department in Nouvelle-Aquitaine, France. It is part of the traditional province of Béarn.",
+ "sections": [
+  "Population",
+  "See also",
+  "References"
+ ],
+ "text": "Jurançon (French pronunciation: [ʒyʁɑ̃sɔ̃] ; Occitan: Juranson) is a commune in the Pyrénées-Atlantiques department in Nouvelle-Aquitaine, France. It is part of the traditional province of Béarn.\n\n\n== Population ==\n\n\n== See also ==\nJurançon AOC, a wine from this commune\nCommunes of the Pyrénées-Atlantiques department\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "coordinates": [
+   {
+    "lat": 43.287222222222,
+    "lon": -0.38805555555556
+   }
+  ],
+  "image": [
+   "Juranson.jpg"
+  ],
+  "instance_of": [
+   "Q484170"
+  ],
+  "located_in": [
+   "Q1343600",
+   "Q12703",
+   "Q681862"
+  ],
+  "description": "commune in Pyrénées-Atlantiques, France"
+ }
+}

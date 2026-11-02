@@ -1,0 +1,41 @@
+{
+ "kind": "grape",
+ "key": "Catarratto",
+ "label": "Catarratto",
+ "match": "direct",
+ "tried": [
+  "Catarratto (grape)",
+  "Catarratto"
+ ],
+ "title": "Catarratto",
+ "url": "https://en.wikipedia.org/wiki/Catarratto",
+ "revision": 1327665887,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q469331",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/Catarratto.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "White wine grape varieties"
+ ],
+ "lead": "Catarratto is a white Italian wine grape planted primarily in Sicily where it is the most widely planted grape. Catarratto can make full bodied wines with lemon notes. In the Etna DOC, the grape is often blended with Minella bianca and Carricante.",
+ "sections": [
+  "Subvarieties and phenotypes",
+  "Pedigree",
+  "Synonyms",
+  "References",
+  "External links"
+ ],
+ "text": "Catarratto is a white Italian wine grape planted primarily in Sicily where it is the most widely planted grape. Catarratto can make full bodied wines with lemon notes. In the Etna DOC, the grape is often blended with Minella bianca and Carricante.\n\n\n== Subvarieties and phenotypes ==\nCatarratto exists in different phenotypes characterised by different pruinosity, i.e., different amount of whitish \"bloom\" on the grape berries. When this bloom is largely absent, the grapes give a more glossy impression. Catarratto Bianco Comune is characterised by a high amount of bloom, while Catarratto Bianco Lucido has a limited amount of bloom, and is more glossy or 'lucid'. The distinction between the two was first described by the Ampelographic Commission of Palermo in 1883, which gave them their names. They are also registered as two different grape varieties in Italy, but DNA typing has shown them to be identical. Thus, the two phenotypes have resulted from massal selection of vines showing intravarietal variability of vines having been propagated vegetatively (by cuttings) from the same original seedling. A third variety or phenotype, Catarratto Bianco Extra Lucido, with a complete absence of bloom, was selected by B. Pastena in 1971 among Catarratto Bianco Lucido vines. This was also shown to be genetically identical with the other two, as was assumed by its origin.\n\n\n== Pedigree ==\nAn Italian study published in 2008 using DNA typing (the same study that showed the three Catarrattos to be identical) showed a close genetic relationship between Garganega on the one hand and Catarratto and several other grape varieties on the other hand. It is therefore possible that Garganega is one of the parents of Catarratto, however, since the parents of Garganega have not been identified, the exact nature of the relationship could not be conclusively established.\n\n\n== Synonyms ==\nCatarratto is also known under the synonyms Castellaro, Cataratto Bertolaro, Cataratto Bianco Nostrale, Cataratto Carteddaro, Catarratto Bertolare, Catarratto Bertolaro, Catarratto Bianco Latino, Catarratto Bianco Nostrale\nCatarratto Carteddaro.\n\n\n== References ==\n\n\n== External links ==\nVal di Mazara Wine Region on Wikivoyage\nVal Demone Wine Region on Wikivoyage",
+ "facts": {
+  "image": [
+   "Catarratto.jpg"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "white Italian wine grape planted primarily in Sicily"
+ }
+}

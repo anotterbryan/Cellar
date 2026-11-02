@@ -1,0 +1,39 @@
+{
+ "kind": "grape",
+ "key": "Xarel·lo",
+ "label": "Xarel·lo",
+ "match": "direct",
+ "tried": [
+  "Xarel·lo (grape)",
+  "Xarel·lo"
+ ],
+ "title": "Xarel·lo",
+ "url": "https://en.wikipedia.org/wiki/Xarel%C2%B7lo",
+ "revision": 1330385345,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q127174",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Xarel_lo_Cava_grapes.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Grape varieties of Spain",
+  "White wine grape varieties"
+ ],
+ "lead": "Xarel·lo (Catalan pronunciation: [ʃəˈɾɛlːu]) is a white grape variety of Spanish origin specially grown in Catalonia.\nWith Macabeo and Parellada, Xarel·lo is one of the three traditional varieties used to make the sparkling wine cava. Spanish plantations stood at 8,043 hectares (19,870 acres) in 2008. Xarel·lo wine can be strongly flavored and is more aromatic than the other two cava grape varieties.\nWhile historically the grape was only produced as part of regional blend in Penedès and Cava, modern winemaking has evolved in the last 20 years to where it is being seen in the form of varietal wines. High-end Cavas have been produced which feature the grape prominently such as Gramona's Enoteca or then as 100% of the finished wine in: Sabaté i Coca's Reserva Familiar, Recaredo's Turó d'en Mota, and Mas del Serral from Raventos i Blanc.",
+ "sections": [
+  "Synonyms",
+  "References"
+ ],
+ "text": "Xarel·lo (Catalan pronunciation: [ʃəˈɾɛlːu]) is a white grape variety of Spanish origin specially grown in Catalonia.\nWith Macabeo and Parellada, Xarel·lo is one of the three traditional varieties used to make the sparkling wine cava. Spanish plantations stood at 8,043 hectares (19,870 acres) in 2008. Xarel·lo wine can be strongly flavored and is more aromatic than the other two cava grape varieties.\nWhile historically the grape was only produced as part of regional blend in Penedès and Cava, modern winemaking has evolved in the last 20 years to where it is being seen in the form of varietal wines. High-end Cavas have been produced which feature the grape prominently such as Gramona's Enoteca or then as 100% of the finished wine in: Sabaté i Coca's Reserva Familiar, Recaredo's Turó d'en Mota, and Mas del Serral from Raventos i Blanc.\n\n\n== Synonyms ==\nXarel·lo is also known by the following synonyms: Cartoixà, Cartuja, Pansa, Pansa Blanca, Pansal, Premsal Blanca, Xarelo Blanco, Xerello.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Xarel lo Cava grapes.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "description": "white grape variety"
+ }
+}

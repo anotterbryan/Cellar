@@ -1,0 +1,41 @@
+{
+ "kind": "wine",
+ "key": "german-spatburgunder",
+ "label": "German Spätburgunder",
+ "match": "direct",
+ "tried": [
+  "German Spätburgunder",
+  "Baden wine"
+ ],
+ "title": "Baden (wine region)",
+ "url": "https://en.wikipedia.org/wiki/Baden_(wine_region)",
+ "revision": 1343190178,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q647902",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Kaiserstuhl_Terrassen2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Baden cuisine",
+  "Wine regions of Germany"
+ ],
+ "lead": "Baden is a region (Anbaugebiet) for quality wine in Germany, and is located in the historical region of Baden in southwestern Germany, which today forms part of the federal state of Baden-Württemberg. Under German wine legislation, Baden and Württemberg are separate wine regions.\nWith 15,906 hectares (39,300 acres) under vine in 2008, Baden is Germany's third largest wine region, but seems to be much less known on export markets in comparison to many smaller German regions, and in comparison to the neighbouring French region of Alsace, which is of similar size. Winemaking cooperatives are very common in Baden, number around 100, and are responsible for 85% of the region's production.",
+ "sections": [
+  "History",
+  "Geography",
+  "Grape varieties",
+  "References"
+ ],
+ "text": "Baden is a region (Anbaugebiet) for quality wine in Germany, and is located in the historical region of Baden in southwestern Germany, which today forms part of the federal state of Baden-Württemberg. Under German wine legislation, Baden and Württemberg are separate wine regions.\nWith 15,906 hectares (39,300 acres) under vine in 2008, Baden is Germany's third largest wine region, but seems to be much less known on export markets in comparison to many smaller German regions, and in comparison to the neighbouring French region of Alsace, which is of similar size. Winemaking cooperatives are very common in Baden, number around 100, and are responsible for 85% of the region's production.\n\n\n== History ==\nAlthough this wine region has a long history of winemaking neither the colour nor quality of the earliest wines is now known. In the Kraichgau the high noble Counts of Katzenelnbogen received their title and were famous for supporting viticulture since the 12th century. Later they showed up in the history of wine again when they planted Riesling for the first time in Rüsselsheim.\n\n\n== Geography ==\n\nBaden is Germany's longest wine region, approximately 400 km (250miles) and reaching from the border of Franken in the north to Lake Constance in the south, and is primarily situated on the eastern bank of river Rhine.\nMuch of Baden is situated in the Rhine rift, which is protected by the Black Forest and the Vosges mountains to the west of Rhine, and is therefore Germany's warmest location. Therefore, its wines are usually more full-bodied and higher in alcohol than wines from other German regions, and it is the only German wine region situated in European Union wine growing zone B rather than A. Alsace is in France on the other side of Rhine from Baden.\nDue to its very large north-south length, Baden is divided into nine districts (Bereiche), which is more than any other German wine region. From north to south, these districts are:\n\nTauberfranken, in the northeastern outskirts of the region and neighbouring Franconia. The wines are similar to the wines of Franconia, and are sold in the round Bocksbeutel bottle characteristic of Franconia.\nBadische Bergstrasse, the vineyards of which is a continuation of those of the small region Hessische Bergstrasse. This district is situated around the city of Heidelberg.\nKraichgau, just to the south of Badische Bergstrasse, and north-east of the city of Karlsruhe.\nOrtenau, from Baden-Baden to just south of Offenburg is one of the more well-known districts.\nBreisgau, from just south of Offenburg and to Freiburg. According to meteorological statistics, it has the highest average temperature and the number of sunshine hours of the region.\nKaiserstuhl, a cluster of hills of volcanic origin northwest of Freiburg with characteristic terraced vineyards. Its wines are powerful and it is probably the best-known district of Baden.\nTuniberg is situated on flatter land just south of Kaiserstuhl and west of Freiburg, and produces wines of a lighter style.\nMarkgräflerland stretches from Freiburg to the Swiss border at Basel, and is known for its easy-drinking Gutedel (Chasselas) wines.\nBodensee is situated in the southeastern outskirts of the region, on the northwestern shores of Lake Constance, which is known as Bodensee in German.\n\n\n== Grape varieties ==\n\nGrape varieties of the Pinot family are responsible for almost 55% of the vineyards of Baden, with Spätburgunder (Pinot noir) covering 36.8% of Baden's vineyards in 2008 or 5,855 hectares (14,470 acres), Grauburgunder (Pinot gris) 10.5% and Weißburgunder (Pinot blanc) 7.3%. Baden thus has larger total plantations of these three Pinot varieties than any other German wine region. Correspondingly, Riesling (7.3% in 2008) plays a smaller role than in most other regions, although it is more common around some villages. Müller-Thurgau is grown on 17.2% of Baden's vineyards, and plantings have decreased considerably in recent years to be replaced by Spätburgunder and other red grape varieties. Gutedel (Chasselas) is also grown on 6.9% of the vineyard surface, making Baden practically the only region in Germany where Gutedel wines are produced, and the region accounts for over 97% of Germany's plantings of this variety. In total, there are 44% red grape varieties in Baden, and 56% white.\nThe most cultivated grape varieties, by area in 2008, were:\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q183"
+  ],
+  "instance_of": [
+   "Q2140699"
+  ],
+  "located_in": [
+   "Q985"
+  ],
+  "description": "wine-producing region"
+ }
+}

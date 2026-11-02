@@ -1,0 +1,39 @@
+{
+ "kind": "grape",
+ "key": "Colorino",
+ "label": "Colorino",
+ "match": "direct",
+ "tried": [
+  "Colorino (grape)",
+  "Colorino"
+ ],
+ "title": "Colorino",
+ "url": "https://en.wikipedia.org/wiki/Colorino",
+ "revision": 1050418664,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1111611",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Vin_Chianti.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Red wine grape varieties"
+ ],
+ "lead": "Colorino is a red Italian wine grape variety planted primarily in Tuscany. The grape is known for its deep dark colouring and is used primarily as a colouring agent in red blends. In the history of Chianti it played a minor role, mostly for its affinity and use to the governo winemaking technique. Like Canaiolo, Colorino did not rot easily while going through the partial drying process to later be added to the fermenting grape must. However, the grape did not provide the same level of fruit and softening effect that Canaiolo did and fell out of favour. In the late 1980s, there was a surge of interest in the variety among Tuscan winemakers who saw in this local grape variety similarity to the role Petit Verdot plays in Bordeaux blends. Colorino was planted and used to add darker colours and structure from phenolic compounds in the grape's thick skin without the overpowering aromatics that Cabernet Sauvignon could add. This enthusiasm was short-lived and by the turn of the 21st century Colorino returned once again to a minor role in Tuscan wines.",
+ "sections": [
+  "Wine regions",
+  "Synonyms",
+  "References"
+ ],
+ "text": "Colorino is a red Italian wine grape variety planted primarily in Tuscany. The grape is known for its deep dark colouring and is used primarily as a colouring agent in red blends. In the history of Chianti it played a minor role, mostly for its affinity and use to the governo winemaking technique. Like Canaiolo, Colorino did not rot easily while going through the partial drying process to later be added to the fermenting grape must. However, the grape did not provide the same level of fruit and softening effect that Canaiolo did and fell out of favour. In the late 1980s, there was a surge of interest in the variety among Tuscan winemakers who saw in this local grape variety similarity to the role Petit Verdot plays in Bordeaux blends. Colorino was planted and used to add darker colours and structure from phenolic compounds in the grape's thick skin without the overpowering aromatics that Cabernet Sauvignon could add. This enthusiasm was short-lived and by the turn of the 21st century Colorino returned once again to a minor role in Tuscan wines. \n\n\n== Wine regions ==\nIn addition to Tuscany, the grape is also found in the Umbria region of Central Italy. It is a principal grape variety in the Denominazione di Origine Controllata (DOC) wines of Montecarlo in Tuscany as well as Rosso Orvietano and Lago di Corbara in Umbria.\n\n\n== Synonyms ==\nColorino is known under a variety of synonyms throughout Italy. These include Abrostine, Abrostino, Abrostolo Dolce, Abrustano Nero, Broustiana Rose, Colore, Colorino di Lucca, Colorino di Valdarno, Colorino Pisano, Jomarello, Lambrusco, Raverusto and Tintiglia-II.\n\n\n== References ==",
+ "facts": {
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

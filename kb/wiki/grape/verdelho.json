@@ -1,0 +1,47 @@
+{
+ "kind": "grape",
+ "key": "Verdelho",
+ "label": "Verdelho",
+ "match": "direct",
+ "tried": [
+  "Verdelho (grape)",
+  "Verdelho"
+ ],
+ "title": "Verdelho",
+ "url": "https://en.wikipedia.org/wiki/Verdelho",
+ "revision": 1348980033,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1540261",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Verdelho.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Flora of Madeira",
+  "Madeira wine",
+  "White wine grape varieties"
+ ],
+ "lead": "Verdelho is a white wine grape grown throughout Portugal, though most associated with the island of Madeira, and also gives its name to one of the four main types of Madeira wine. At the turn of the 20th century, it was the most widely planted white grape in Madeira.",
+ "sections": [
+  "Madeira",
+  "Other regions",
+  "Viticulture",
+  "Confusion with other grapes",
+  "See also",
+  "References"
+ ],
+ "text": "Verdelho is a white wine grape grown throughout Portugal, though most associated with the island of Madeira, and also gives its name to one of the four main types of Madeira wine. At the turn of the 20th century, it was the most widely planted white grape in Madeira.\n\n\n== Madeira ==\nThe grape has traditionally been one of the most popular grapes planted on the small island of Madeira since vines were first planted there in the 15th century. It was however badly affected by the Phylloxera plague and the number of vines has decreased greatly in the century since then. Since 1993 any Maderia wine labeled as Verdelho must contain at least 85 percent of the grape, which was not previously required.\n\nThe variety of Madeira wine known as Verdelho lies between those of Sercial and Bual in style, being drier than Bual but not as dry as Sercial. The variety is known for its high acidity when aged, but if drunk young generally possesses more fruit flavor than the other Madeiras. Some producers are experimenting with making a table-style wine by allowing the grapes to ripen more prior to harvesting and blending with the grape Arnsburger to balance Verdelho's naturally high acidity.\n\n\n== Other regions ==\nVerdelho is one of the three traditional varieties grown on Pico Island in the Azores, which exported it to mainland Europe (most notably the cellars of Czar Nicholas II ) before the variety was all but wiped out in the phylloxera plague. Returning to their roots, the islands of the Azores have been planting the grape again, which is made into fortified wines like Lajido.\nThe grape is also grown in the Douro valley, where it is sometimes confused with the Gouveio grape. It is also a small component of some Vinho do Dão.\nPortuguese Verdelho is noted for its higher sugar content compared to what is typically achieved in the warmer climate of Madeira.\nVerdelho can also be found in Argentina, with at least one producer marketing a varietal called simply Verdelho.\nIn Spain Verdelho is grown under the synonym Verdello. (Not be confused with the Italian grape Verdello).\nThe grape has been successful in the vineyards of Australia, particularly the South Burnett wine region in Queensland, Hunter Valley, Langhorne Creek, Cowra and the Swan Valley. Australian versions of Verdelho are noted for their intense flavors with hints of lime and honeysuckle and the oily texture that the wines can get after some aging.\nIn the Hunter Valley, producers such as Tulloch Wines have contributed to the development of Verdelho as a table wine. Tulloch produced one of the first standalone Verdelho wines in 1973 and 1984, with early vintages highlighting the importance of precise harvest timing to maintain freshness and balance. A slightly sweeter style introduced in 1982, with a touch of residual sugar, proved popular and remains influential. The variety is also recognized through National Verdelho Day, celebrated annually on 8 August, reflecting its growing presence in the Australian wine industry.\nAs one of the few heat-loving white grapes, Verdelho is well adapted to the California Sierra foothills. By the 1870s the grape was extensively grown in what is now Amador County. Currently Verdelho is grown in Amador and Solano counties, near Lodi, as well as one vineyard in Napa Valley. Approximately 200 acres in California are devoted to the grape. California Verdelho wines are noted for floral and citrus aromas.\n\n\n== Viticulture ==\nVerdelho is a moderately vigorous vine that produces small bunches of small oval berries with a high skin to juice ratio. The skins of the berry can be thick and taste \"hard\" when eaten. The grapes ripen early but can be prone to powdery mildew. The vines can also be susceptible to frost during the spring.\n\n\n== Confusion with other grapes ==\nVerdelho is often confused with Verdelho Tinto, a red grape also grown in Madeira. The grapes are related but still different, similar to how Pinot noir and Pinot gris are related (as crosses which exhibit new characteristics and become a new varietal and the originating grapes trackable in DNA as the \"parents\"). Verdelho is also confused with the similarly named Verdelho Feijão and the Gouveio of Portugal, the Italian grape Verduzzo and the Verdejo white grape grown in Spain.\n\n\n== See also ==\nList of Port wine grapes\nList of Portuguese grape varieties\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Cacho de uvas da Casta Verdelho.JPG"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q45"
+  ],
+  "description": "varietal"
+ }
+}

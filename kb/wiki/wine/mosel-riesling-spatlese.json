@@ -1,0 +1,36 @@
+{
+ "kind": "wine",
+ "key": "mosel-riesling-spatlese",
+ "label": "Mosel Riesling Spätlese",
+ "match": "direct",
+ "tried": [
+  "Mosel Riesling Spätlese",
+  "Mosel wine"
+ ],
+ "title": "Moselle wine",
+ "url": "https://en.wikipedia.org/wiki/Moselle_wine",
+ "revision": 1250802391,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q108989191",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Brauneberg_Juffer.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "French wine AOCs",
+  "Wine regions of France",
+  "Wine regions of Germany"
+ ],
+ "lead": "Moselle wine is produced in three countries along the river Moselle: France, Luxembourg (the Musel) and Germany (the Mosel). Moselle wines are mainly white and are made in some of the coldest climates used for commercial winemaking.",
+ "sections": [
+  "France",
+  "Luxembourg",
+  "Germany",
+  "References"
+ ],
+ "text": "Moselle wine is produced in three countries along the river Moselle: France, Luxembourg (the Musel) and Germany (the Mosel). Moselle wines are mainly white and are made in some of the coldest climates used for commercial winemaking.\n\n\n== France ==\nIn France, in Lorraine around the city of Metz, about 1500 hectoliters of wine annually is produced as AOC Moselle. These wines together with Côtes de Toul make up the 200 hectares of \"wines of the east\" (vins de l'Est). The most commonly grown grape varieties are Auxerrois Blanc and Müller-Thurgau, and the other allowed varieties are Gamay, Gewürztraminer, Meunier, Pinot noir, Pinot blanc, Pinot gris and Riesling. Previously, the name \"Vins de Moselle\" was used, between 1995 and 2010 the official name was VDQS Moselle. As the area under vine is very small, these wines are seldom seen on the export market.\n\n\n== Luxembourg ==\n\nIn southeastern Luxembourg, along the country's 42 km river border with Germany, 1 290 hectares of vines are used to produce wine under the designation Appellation Contrôlée Moselle Luxembourgeoise. Common varieties and their proportion of vineyard area in 2002 are Müller-Thurgau (usually under the name Rivaner) at 31.4%, Auxerrois blanc (13.1%), Riesling (12.9%), Pinot gris (12.7%), Elbling (10.9%), Pinot blanc (10.5%), Pinot noir (6.2%), Gewürztraminer (1.1%) and Chardonnay (0.9%). Rivaner and Elbling are on the decline, and while Riesling is usually considered the premier variety wherever it is grown, in Luxembourg Auxerrois tends to be considered as the most successful variety. Luxembourg wines in general have been described as lighter-style Alsace wine but are not very often encountered outside Luxembourg and neighbouring Belgium as most of the production tends to be consumed by the Luxembourgers themselves.\nSparkling wine (Crémant de Luxembourg) makes up a significant portion of the production, but is a designation within AC Moselle Luxembourgeoise rather than a separate appellation, which is usually the case with French Crémants.\n\n\n== Germany ==\n\nMosel is one of 13 German wine-growing regions (Anbaugebiete) for quality wines, with 9 080 hectares under vine in 2005, and one of the most well-known. The region also includes vineyards situated on the Saar and Ruwer rivers. The main varieties are Riesling (57.7% in 2005), Müller-Thurgau (15.0%), Elbling (6.6%) and Kerner (4.9%). High-quality Mosel wine is synonymous with Riesling, and most of the Elbling ends up in non-varietally labelled Sekt (sparkling wine).\n\n\n== References ==",
+ "facts": {
+  "instance_of": [
+   "Q2140699"
+  ],
+  "description": "type of European white wine"
+ }
+}

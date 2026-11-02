@@ -1,0 +1,50 @@
+{
+ "kind": "wine",
+ "key": "crozes-hermitage",
+ "label": "Crozes-Hermitage",
+ "match": "direct",
+ "tried": [
+  "Crozes-Hermitage"
+ ],
+ "title": "Crozes-Hermitage",
+ "url": "https://en.wikipedia.org/wiki/Crozes-Hermitage",
+ "revision": 1381827264,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q860165",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/5/50/VM_PHOTOS_CROZES_PLACE_DE_LA_MAIRIE.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Communes of Drôme",
+  "Drôme geography stubs"
+ ],
+ "lead": "Crozes-Hermitage (French pronunciation: [kʁoz ɛʁmitaʒ]; Occitan: Croses e Ermitatge) is a commune in the Drôme department in southeastern France.",
+ "sections": [
+  "Population",
+  "Wine",
+  "See also",
+  "References"
+ ],
+ "text": "Crozes-Hermitage (French pronunciation: [kʁoz ɛʁmitaʒ]; Occitan: Croses e Ermitatge) is a commune in the Drôme department in southeastern France.\n\n\n== Population ==\n\n\n== Wine ==\n\nWine is produced under the Crozes-Hermitage AOC designation.\n\n\n== See also ==\nCommunes of the Drôme department\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "coordinates": [
+   {
+    "lat": 45.09,
+    "lon": 4.8458333333333
+   }
+  ],
+  "image": [
+   "Mairie Crozes-Hermitage 2012-05-01-005.jpg"
+  ],
+  "instance_of": [
+   "Q484170"
+  ],
+  "located_in": [
+   "Q3364",
+   "Q702697"
+  ],
+  "description": "commune in Drôme, France"
+ }
+}

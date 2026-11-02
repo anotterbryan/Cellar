@@ -1,0 +1,48 @@
+{
+ "kind": "grape",
+ "key": "Carricante",
+ "label": "Carricante",
+ "match": "direct",
+ "tried": [
+  "Carricante (grape)",
+  "Carricante"
+ ],
+ "title": "Carricante",
+ "url": "https://en.wikipedia.org/wiki/Carricante",
+ "revision": 1329524663,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1044986",
+ "image": null,
+ "categories": [
+  "White wine grape varieties",
+  "Wine grape stubs"
+ ],
+ "lead": "Carricante is a white grape variety indigenous to Sicily, Italy. This late-ripening vine is the main variety used in the Etna DOC. It is usually found blended with Catarratto and Minella bianca. As a varietal wine, Carricante produces a fresh, straw-yellow, lightly fragrant white wine. The name Carricante comes from the Italian caricare (to load, to burden), in reference to the variety's heavy yields. It is not related to the variety Nocera, which is sometimes called Carricante nero. Carricante is grown at high altitudes on Mount Etna relative to other grapes, growing at around 950 meters above sea level on the eastern slopes and at 1,050 meters on the southern slopes. Wines made from it tend to be high in total acidity with a low pH and have traditionally been subject to malolactic fermentation.",
+ "sections": [
+  "Synonyms",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Carricante is a white grape variety indigenous to Sicily, Italy. This late-ripening vine is the main variety used in the Etna DOC. It is usually found blended with Catarratto and Minella bianca. As a varietal wine, Carricante produces a fresh, straw-yellow, lightly fragrant white wine. The name Carricante comes from the Italian caricare (to load, to burden), in reference to the variety's heavy yields. It is not related to the variety Nocera, which is sometimes called Carricante nero. Carricante is grown at high altitudes on Mount Etna relative to other grapes, growing at around 950 meters above sea level on the eastern slopes and at 1,050 meters on the southern slopes. Wines made from it tend to be high in total acidity with a low pH and have traditionally been subject to malolactic fermentation.\n\n\n== Synonyms ==\nCarricante is also known under the synonyms Carricanti, Catanese Bianco, Catarratto alla porta bianca di Sicilia, Catarratto amantidatu, Catarratto Mantellato, Catarratto Scalugnatu, Catarratto Scarugnatu, Nocera Bianca.\n\n\n== See also ==\nList of Italian grape varieties\n\n\n== References ==\n\n\n== External links ==\nVal di Mazara Wine Region on Wikivoyage\nVal Demone Wine Region on Wikivoyage",
+ "facts": {
+  "country": [
+   "Q38"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "located_in": [
+   "Q1460",
+   "Q16154"
+  ],
+  "description": "Italian grape variety"
+ }
+}

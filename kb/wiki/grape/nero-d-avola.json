@@ -1,0 +1,46 @@
+{
+ "kind": "grape",
+ "key": "Nero d'Avola",
+ "label": "Nero d'Avola",
+ "match": "direct",
+ "tried": [
+  "Nero d'Avola (grape)",
+  "Nero d'Avola"
+ ],
+ "title": "Nero d'Avola",
+ "url": "https://en.wikipedia.org/wiki/Nero_d%27Avola",
+ "revision": 1344028493,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1713890",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Grappolo_di_Nero_d%27Avola.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Crops originating from Europe",
+  "Red wine grape varieties",
+  "Wine grape varieties of Italy"
+ ],
+ "lead": "Nero d'Avola (Italian: [ˈneːro ˈdaːvola]; lit. 'Black of Avola') is \"the most important red wine grape in Sicily\" and is one of Italy's most important indigenous varieties. It is named after Avola in the far south of Sicily, and its wines are compared to New World Shirazes, with sweet tannins and plum or peppery flavours. It also contributes to Marsala Rubino blends.",
+ "sections": [
+  "History",
+  "Viticulture",
+  "Sensory properties",
+  "References",
+  "External links"
+ ],
+ "text": "Nero d'Avola (Italian: [ˈneːro ˈdaːvola]; lit. 'Black of Avola') is \"the most important red wine grape in Sicily\" and is one of Italy's most important indigenous varieties. It is named after Avola in the far south of Sicily, and its wines are compared to New World Shirazes, with sweet tannins and plum or peppery flavours. It also contributes to Marsala Rubino blends.\n\n\n== History ==\n\"The Black Grape of Avola\" appears to have been selected by growers near Avola (a small town in south east Sicily) several hundred years ago. Initially, it was confined to the southern tip of the island, but more recently has spread throughout the island.\nNero d'Avola is also known as Calabrese by Sicilians, \"particularly older ones\", as well as by the Italian National Registry of Vine Varieties. \"There has been speculation that Calabrese is an indication of Calabrian origin, but it is widely accepted as an Italianization of the old dialect name Calavrisi ... which means 'grape from Avola.'\"\n\n\n== Viticulture ==\n\nThe vine likes hot and relatively dry climates. The districts around Noto (above all Buonivini) and Pachino in the south of the province of Siracusa are reputed for the quality of their Nero d'Avola wines. The first American producer of Nero d'Avola is Chiarito Vineyards in Ukiah, California (Mendocino County). In 2020, Sonoma County's Hanna Winery planted  2.4 acres of Nero on a Hillside block in their Alexander Valley Vineyard. In 2022 Hanna planted an additional 2.4 acres at their Dry Creek Mountain Vineyard. According to Hanna’s winemaker, Jeff Hinchliffe ( who had consulted for Chiarito Vineyard years before) the variety is resistant to raisining and flavor degradation during heat events. Nero d'Avola is also cultivated in Australia, particularly in the hot Riverland and Sunraysia areas where winemakers are producing light, juicy, fragrant wines. The variety is also found in Malta, Turkey and recently in South Africa too.\n\n\n== Sensory properties ==\nColour: cherry or ruby red.\nPerfume: typically winy, fruity, strongly reminiscent of blackberries.\nFlavour: dry, slightly acidic, rounded, warm and full-bodied. Unique retro-nasal fruit impression.\nServing temperature: ambient.\n\n\n== References ==\n\n\n== External links ==\nSicily Wine website\nVal di Mazara Wine Region on Wikivoyage\nVal Demone Wine Region on Wikivoyage",
+ "facts": {
+  "image": [
+   "Grappolo di Nero d'Avola.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

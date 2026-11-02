@@ -1,0 +1,39 @@
+{
+ "kind": "wine",
+ "key": "kamptal-kremstal-gruner-veltliner",
+ "label": "Kamptal & Kremstal Grüner Veltliner",
+ "match": "direct",
+ "tried": [
+  "Kamptal & Kremstal Grüner Veltliner",
+  "Kamptal"
+ ],
+ "title": "Kamptal",
+ "url": "https://en.wikipedia.org/wiki/Kamptal",
+ "revision": 1141115353,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q55615631",
+ "image": null,
+ "categories": [
+  "Austria stubs",
+  "Geography of Lower Austria",
+  "Wine regions of Austria",
+  "Wine stubs"
+ ],
+ "lead": "Kamptal is an Austrian wine, tourism, culture and health region located in Waldviertel, Lower Austria. It is named by the river Kamp.\nTo the north of Krems lies Langenlois, which is the main vine-town of Kamptal, the valley of the river Kamp. The sandstone slopes are so steep that only a thin layer of soil is retained. Exposure to the sun is high. Riesling thrives on these steep slopes; closer to the Danube the valley broadens and more red grapes are grown.\nAnother prominent town in the Kamptal is Gars am Kamp.",
+ "sections": [
+  "Notable wineries",
+  "See also",
+  "References"
+ ],
+ "text": "Kamptal is an Austrian wine, tourism, culture and health region located in Waldviertel, Lower Austria. It is named by the river Kamp.\nTo the north of Krems lies Langenlois, which is the main vine-town of Kamptal, the valley of the river Kamp. The sandstone slopes are so steep that only a thin layer of soil is retained. Exposure to the sun is high. Riesling thrives on these steep slopes; closer to the Danube the valley broadens and more red grapes are grown.\nAnother prominent town in the Kamptal is Gars am Kamp.\n\n\n== Notable wineries ==\nSchloss Gobelsburg\n\n\n== See also ==\nDialog im Kamptal, non-partisan initiative\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q40"
+  ],
+  "instance_of": [
+   "Q82794"
+  ],
+  "description": "geographical region in Lower Austria, bassin of Kamp river"
+ }
+}

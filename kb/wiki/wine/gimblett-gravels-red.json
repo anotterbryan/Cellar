@@ -1,0 +1,48 @@
+{
+ "kind": "wine",
+ "key": "gimblett-gravels-red",
+ "label": "Hawke's Bay Bordeaux-Style Red (Gimblett Gravels)",
+ "match": "direct",
+ "tried": [
+  "Hawke's Bay Bordeaux-Style Red",
+  "Gimblett Gravels"
+ ],
+ "title": "Hawke's Bay wine region",
+ "url": "https://en.wikipedia.org/wiki/Hawke%27s_Bay_wine_region",
+ "revision": 1355705629,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q85765961",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/HB_Vineyard_autumn.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Geography of Hawke's Bay",
+  "Wine regions of New Zealand"
+ ],
+ "lead": "The Hawke's Bay wine region is New Zealand's oldest and second-largest wine-production region, on the east coast of the North Island. Production reached 41,000 tonnes in 2018 from 4,681 hectares (11,570 acres) of planted vines, representing 10.2% of total national production. Some of the oldest wineries still operating in New Zealand, including Te Mata Estate, Church Road, and Mission Estate, were established in the Hawke's Bay area in the late 19th century. Despite this, it was only established as a geographical indication (GI) in 2018. The GI protects any wine produced within the boundaries of the entire Hawke's Bay Region, but in practice the vineyards are chiefly concentrated in the plains and low hills surrounding the cities of Napier and Hastings.",
+ "sections": [
+  "Climate",
+  "Wines",
+  "Sub-regions",
+  "Gimblett Gravels",
+  "Bridge Pa Triangle",
+  "Te Mata",
+  "Te Awanga",
+  "Central Hawke's Bay",
+  "References",
+  "External links"
+ ],
+ "text": "The Hawke's Bay wine region is New Zealand's oldest and second-largest wine-production region, on the east coast of the North Island. Production reached 41,000 tonnes in 2018 from 4,681 hectares (11,570 acres) of planted vines, representing 10.2% of total national production. Some of the oldest wineries still operating in New Zealand, including Te Mata Estate, Church Road, and Mission Estate, were established in the Hawke's Bay area in the late 19th century. Despite this, it was only established as a geographical indication (GI) in 2018. The GI protects any wine produced within the boundaries of the entire Hawke's Bay Region, but in practice the vineyards are chiefly concentrated in the plains and low hills surrounding the cities of Napier and Hastings.\n\n\n== Climate ==\n\n\n== Wines ==\n\nRed wines made from Merlot blends and Syrah are consistently well reviewed. Varietal white wines from Chardonnay, Sauvignon Blanc, Pinot Gris and Viognier are also produced.\n\n\n== Sub-regions ==\nThere are several sub-regions within the Hawke's Bay GI, most notably Gimblett Gravels and Bridge Pa Triangle, which have developed reputations for fine red wines.\n\n\n=== Gimblett Gravels ===\n\nThe Gimblett Gravels is an area of approximately 800 hectares (2,000 acres) defined by the extent of a particular local soil stratum known as the Omahu Gravels. It is one of the few wine regions in the world defined by a soil type rather than the usual geographical, municipal or political boundaries. The designation is controlled as a registered trademark owned by the Gimblett Gravels Winegrowers Association, available only to its members. Membership is open to any producer that can show their vineyards are on the Gimblett Gravels soil (and thus by definition within the Gimblett Gravels area), and membership then allows the use of the label designation on any wines sourced (minimum 95%) from these vineyards. There are no other grape growing or winemaking regulations. Notable producers are Trinity Hill, Forrest Estate (Cornerstone), Čuvar, Craggy Range, Church Road, Stonecroft, and Pask.\n\n\n=== Bridge Pa Triangle ===\n\nAlso known as the Ngatarawa Triangle, the Bridge Pa Triangle wine district is approximately 2,100 hectares (5,200 acres) traced by three roads: Ngatarawa Road, State Highway 50 and Maraekakaho Road. The area adjoins the Gimblett Gravels to the north, and contains the old riverbed of the nearby Ngaruroro River before it changed course after an earthquake in the 1860s. The soils include free draining alluvial gravels and shallow clay-loam soils over Lake Taupō pumice tephras. Vineyards were first established in the area in 1981 by Alwyn Corban and Garry Glazebrook, who founded Ngatarawa Wines. Their successes attracted others to the area, and the Bridge Pa Triangle Wine District organisation was eventually incorporated in 2015. Membership allows producers to use the Bridge Pa Triangle logo and branding on the label as long as the wine has a minimum of 85% of the grapes sourced from the area. There are no other grape or wine-production regulations. Notable wineries in the area include Alpha Domus, Sileni Estates, Red Metal and Ash Ridge. Several other producers make single vineyard wines from their plantings in the Bridge Pa Triangle area, most notably the award-winning Syrah from Te Mata Estate's \"Bullnose\" vineyard.\n\n\n=== Te Mata ===\nThe Te Mata Special Character Zone is an area of hills adjacent to Havelock North and Te Mata Peak. It was first protected by the Hawke's Bay Regional Council in 1996, making it New Zealand's first legally protected wine growing area. The principal producers in the region are Te Mata Estate, Craggy Range and Black Barn, but other producers have vineyards in the area, including De La Terre and Trinity Hill.\n\n\n=== Te Awanga ===\nSeveral vineyards are established in the coastal area around the small town of Te Awanga, 12 kilometres (7.5 mi) east of Hastings. The area has the sunny warm Hawke's Bay climate, moderated by cool coastal breezes at night. Notable producers here are Beach House, Clearview Estate, and Elephant Hill.\n\n\n=== Central Hawke's Bay ===\nGrowers 50 kilometres (31 mi) further south around the towns of Waipawa and Waipukurau registered their own sub-region geographical indication in 2019, which covers roughly the southern half of the larger Hawke's Bay GI, with the same boundary as the Central Hawke's Bay District local authority. The principal producers are Lime Rock, Junction Wines and Pukeora Estate.\n\n\n== References ==\n\n\n== External links ==\nHawke's Bay Winegrowers\nGimblett Gravels Wine Growing District\nBridge Pa Triangle Wine District",
+ "facts": {
+  "country": [
+   "Q664"
+  ],
+  "instance_of": [
+   "Q2140699",
+   "Q117085231"
+  ],
+  "located_in": [
+   "Q251825"
+  ],
+  "description": "wine region in New Zealand"
+ }
+}

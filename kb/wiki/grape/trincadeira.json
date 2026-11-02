@@ -1,0 +1,39 @@
+{
+ "kind": "grape",
+ "key": "Trincadeira",
+ "label": "Trincadeira",
+ "match": "direct",
+ "tried": [
+  "Trincadeira (grape)",
+  "Trincadeira"
+ ],
+ "title": "Tinta Amarela",
+ "url": "https://en.wikipedia.org/wiki/Tinta_Amarela",
+ "revision": 1012808813,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q477351",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tinta_amarella_Viala_et_Vermorel.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Red wine grape varieties",
+  "Wine grape stubs"
+ ],
+ "lead": "Tinta Amarela or Trincadeira is a red wine grape that is commonly used in Port wine production. The grape is noted for its dark coloring. Its use in the Douro region has been increasing in recent years. The vine is susceptible to rot and performs better in dry, hot climates.\nIt is one of the most widely planted grape varieties in Portugal.  It is the oldest and most widely planted grape variety in the Alentejo region, where it is called Trincadeira. The wine tends to be full-bodied and rich, with aromas of blackberries, herbs and flowers.",
+ "sections": [
+  "See also",
+  "References"
+ ],
+ "text": "Tinta Amarela or Trincadeira is a red wine grape that is commonly used in Port wine production. The grape is noted for its dark coloring. Its use in the Douro region has been increasing in recent years. The vine is susceptible to rot and performs better in dry, hot climates.\nIt is one of the most widely planted grape varieties in Portugal.  It is the oldest and most widely planted grape variety in the Alentejo region, where it is called Trincadeira. The wine tends to be full-bodied and rich, with aromas of blackberries, herbs and flowers.\n\n\n== See also ==\nList of Port wine grapes\nList of Portuguese grape varieties\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Trincadeira - Ampélographie.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "description": "varietal"
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "kind": "grape",
+ "key": "Gamay",
+ "label": "Gamay",
+ "match": "direct",
+ "tried": [
+  "Gamay (grape)",
+  "Gamay"
+ ],
+ "title": "Gamay",
+ "url": "https://en.wikipedia.org/wiki/Gamay",
+ "revision": 1269650375,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q12982",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/Gamay.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Red wine grape varieties"
+ ],
+ "lead": "Gamay (French pronunciation: [ɡamɛ] ) is a purple-colored grape variety used to make red wines, most notably grown in Beaujolais and in the Loire Valley around Tours. Its full name is Gamay Noir à Jus Blanc. It is a very old cultivar, mentioned as long ago as the 15th century. It has been often cultivated because it makes for abundant production;  however, it can produce wines of distinction when planted on acidic soils, which help to soften the grape's naturally high acidity.",
+ "sections": [
+  "History",
+  "Characteristics",
+  "Regional production",
+  "Similarly named grapes and offspring",
+  "References",
+  "External links"
+ ],
+ "text": "Gamay (French pronunciation: [ɡamɛ] ) is a purple-colored grape variety used to make red wines, most notably grown in Beaujolais and in the Loire Valley around Tours. Its full name is Gamay Noir à Jus Blanc. It is a very old cultivar, mentioned as long ago as the 15th century. It has been often cultivated because it makes for abundant production;  however, it can produce wines of distinction when planted on acidic soils, which help to soften the grape's naturally high acidity.\n\n\n== History ==\n\nThe Gamay grape is thought to have appeared first in the village of the Gamay, south of Beaune, in the 1360s. The grape brought relief to the village growers following the decline of the Black Death. In contrast to the Pinot noir variety, Gamay ripened two weeks earlier and was easier to cultivate. It also produced a strong, fruitier wine in a much larger abundance.\nIn July 1395, the Duke of Burgundy Philippe the Bold outlawed the cultivation of the grape, referring to it as the \"disloyal Gaamez\" that in spite of its ability to grow in abundance was full of \"very great and horrible harshness\", due in part to the variety's occupation of land that could be used for the more \"elegant\" Pinot Noir. Sixty years later Philippe the Good issued another edict against Gamay in which he stated the reasoning for the ban is that \"The Dukes of Burgundy are known as the lords of the best wines in Christendom. We will maintain our reputation\".\n\n\n== Characteristics ==\n\nGamay is a very vigorous vine which tends not to root very deeply on alkaline soils resulting in pronounced hydrological stress on the vines over the growing season with a correspondingly high level of acidity in the grapes.  The acidity is softened through carbonic maceration, a process that also allows the vibrant youthful fruit expressions reminiscent of bright crushed strawberries and raspberries, as well as deep floral notes of lilac and violets.\nGamay-based wines are typically light bodied and fruity.   Wines meant to be drunk after some modest aging tend to have more body and are produced by whole-berry maceration.  The latter are produced mostly in the designated 'Cru Beaujolais' areas   where the wines typically have the flavor of sour cherries, black pepper, and dried berry, as well as fresh-cut stone and chalk.\n\n\n== Regional production ==\n\nIn addition to being well suited to the terroir of Beaujolais, Gamay is grown extensively in the Loire Valley around Tours, where it is typically blended with Cabernet Franc and Côt, a local clone of Malbec.  These wines are similar to those of Crus Beaujolais but with raspberry notes and the signature fresh-peppery nose of the Cabernet Franc.\nGamay is also the grape of the Beaujolais nouveau, produced exclusively from the more alkaline soils of Southern Beaujolais where the grape is incapable of making drinkable wines without aggressive carbonic maceration. The acid levels of the grape grown in the limestone Pierres Doreés of the South are too high for making wines with any appeal beyond the early release Nouveaux.\nGamay is commonly grown in the Niagara Peninsula in Canada, some producers being in the Short Hills Bench, Beamsville Bench and St. David's Bench, as well as in Prince Edward County and British Columbia. Château des Charmes in Niagara-on-the-Lake has a regional clone which they discovered, Gamay Noir Droit, which is a recognized mutation. \nGamay is also widely grown in Switzerland in the area of the Lake of Geneva.\nIt is also grown successfully by a small number of wineries in Australia to make a range of wines including light-bodied red wines suitable for early drinking. \nGamay has also been introduced into Oregon's Willamette Valley wine region, a place known for its wines made from Pinot noir, another Burgundian grape.  It was introduced by Amity Vineyards in 1988. \nIn 1991, Rebecca's Vineyard planted Gamay and was one of a few Oregon vineyards selling the grapes. LaBete winery was the first to make a vineyard designate of Gamay from Rebecca's Vineyard. Since then, Rebecca's Vineyard stopped selling Gamay to those who would only blend into their Pinot Noir for flavor and color enhancement, and to only sell to those who would produce stand alone Gamay. Younger wineries like Division Winemaking Co., who are now the largest producer of Gamay in Oregon, have helped raise awareness and availability of the grape in Oregon. Significant new plantings are underway in the Willamette Valley and there's even a festival called I Love Gamay held in nearby Portland. \nTasting notes published by the vineyards at Amity, WillaKenzie, Division, Brickhouse, and Methven describe wines that match the basic profiles of Crus Beaujolais.\n\n\n== Similarly named grapes and offspring ==\nThe Gamay name has become attached to other varieties grown in California, which at one time were thought to be the true Gamay. The grape 'Napa Gamay' is now known as Valdiguié, and the name Napa Gamay has not appeared on labels from 2007 onwards.   Gamay Beaujolais is considered to be an early ripening Californian clone of Pinot noir. Despite similar names the grapes Gamay du Rhône and Gamay St-Laurent are not the Beaujolais grape either but rather the southwestern France grape Abouriou.\nIn 1929, Gamay was crossed with the table grape Seidentraube (also known as Luglienga bianca) to produce the white wine grape Regner.\n\n\n== References ==\n\n\n== External links ==\n Media related to Gamay (cépage) at Wikimedia Commons",
+ "facts": {
+  "image": [
+   "Gamay.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q142",
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

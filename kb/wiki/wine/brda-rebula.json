@@ -1,0 +1,46 @@
+{
+ "kind": "wine",
+ "key": "brda-rebula",
+ "label": "Rebula from Brda (Slovenia)",
+ "match": "search",
+ "tried": [
+  "Rebula from Brda",
+  "Slovenia",
+  "Ribolla Gialla"
+ ],
+ "title": "Ribolla Gialla",
+ "url": "https://en.wikipedia.org/wiki/Ribolla_Gialla",
+ "revision": 1369923078,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1398398",
+ "image": null,
+ "categories": [
+  "White wine grape varieties",
+  "Wine grape varieties of Italy"
+ ],
+ "lead": "Ribolla Gialla (also known as Ribolla, in Slovenian: Rumena rebula, in Croatian: Jarbola) is a white wine grape grown most famously in the Friuli Venezia Giulia region of northeast Italy, however, most of it is grown in Slovenia, where it is known as Rebula. In Friuli Venezia Giulia, the grape thrives in the region around Corno di Rosazzo and Gorizia. In Slovenia, the grape is grown prominently in the Brda and Vipava Valley regions. The grape is not related to the Friuli red wine grape Schioppettino, which is also known as Ribolla Nera. The obscure, lower quality Ribolla Verde grape is a mutated version that is not widely used.",
+ "sections": [
+  "History",
+  "Wine",
+  "Synonyms",
+  "See also",
+  "References"
+ ],
+ "text": "Ribolla Gialla (also known as Ribolla, in Slovenian: Rumena rebula, in Croatian: Jarbola) is a white wine grape grown most famously in the Friuli Venezia Giulia region of northeast Italy, however, most of it is grown in Slovenia, where it is known as Rebula. In Friuli Venezia Giulia, the grape thrives in the region around Corno di Rosazzo and Gorizia. In Slovenia, the grape is grown prominently in the Brda and Vipava Valley regions. The grape is not related to the Friuli red wine grape Schioppettino, which is also known as Ribolla Nera. The obscure, lower quality Ribolla Verde grape is a mutated version that is not widely used.\n\n\n== History ==\n\nTheories that the grape originated in Greece as Robola, were disproved following DNA profiling in 2007 and 2008, which showed there was no genetic relationship between Robola and Ribolla Gialla. It is now thought to have originated in the Friuli Collio / Gorizia Hills region. The first written documentation of the grape was in a 1289 notarial contract on vineyard land in the Friuli region. During the 14th century, the Italian poet Giovanni Boccaccio listed indulgence of Ribolla wines as one of the sins of gluttony in his diatribe on the subject. When the Duke of Austria, Leopold III, established reign over Trieste one of his stipulations was that the city supply him each year with 100 urns of the region's best Ribolla wine. By 1402, the reputation of the wine made from the grape was high enough for the city of Udine to feel compelled to enact a law which prohibited the adulteration of any wine made from Ribolla. In the 18th century, the Italian writer Antonio Musnig rated Ribolla wine as the finest white wine in the Friuli. The phylloxera epidemic of the 19th century took a hard toll on Ribolla plantings with many Friuli vineyards owners choosing to replant their land with imported French wine grapes like Merlot and Sauvignon blanc rather than the local grape varieties. By the 1990s less than 1% of all white Friuli wines created under a Denominazione di origine controllata (DOC) designation contained Ribolla. By the beginning of the 21st century, international interest in the wines of the Friuli Venezia Giulia had led to an increase in plantings of the grape. Today it has a more prominent roles in the white DOC wines of Colli Orientali del Friuli and Collio Goriziano.\n\n\n== Wine ==\nThe white wine made from the Ribolla grape is typically a light bodied wine with high acidity and floral notes. The wine can produce a more New World style with some oak aging. A number of producers in the Collio Goriziano, Gorizia Hills, and Vipava Valley regions ferment the variety with its skins, to produce a more substantial style, now commonly known as orange wine. As the wine ages, it can develop some nutty flavors. In Friuli Venezia Giulia, the wines of the southern regions have a little more body than the wines of the central regions.\n\n\n== Synonyms ==\nOver the years Ribolla Gialla has been known under a variety of synonyms, including Avola, Erbula, Gargania, Garganja, Glera (not to be confused with the Prosecco grape also called Glera), Goricka Ribola, Jarbola, Jerbula, Pignolo, Rabiola, Rabola, Rabolla, Rabolla Dzhalla di Rozatsio, Rabuele, Raibola, Rebolla, Reboula jaune, Rébula, Rebula Bela, Rebula rumena, Rebula zuta, Ribola, Ribola Bijela, Ribola Djiala, Ribolla, Ribolla Bianca, Ribolla Dzhalla, Ribolla Gialla di Rosazz, Ribolla Gialla di Rosazzo, Ribollat, Ribuela, Ribuele, Ribuele Zale, Ribula Zuta, Ribuole, Robolla, Rosazzo, Rumena Rebula and Zelena Rebula.\n\n\n== See also ==\nList of Italian grape varieties\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Friuli 029 Cantine Aperte - Rocca Bernarda.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

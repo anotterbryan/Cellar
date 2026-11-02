@@ -1,0 +1,51 @@
+{
+ "kind": "wine",
+ "key": "barbera-dasti-dalba",
+ "label": "Barbera d'Asti / d'Alba",
+ "match": "direct",
+ "tried": [
+  "Barbera d'Asti / d'Alba",
+  "Barbera d'Asti"
+ ],
+ "title": "Barbera d'Asti",
+ "url": "https://en.wikipedia.org/wiki/Barbera_d%27Asti",
+ "revision": 1325993486,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q391703",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Barbera_d%27Asti%2C_DOCG_label.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Italian DOCG",
+  "Province of Alessandria",
+  "Province of Asti",
+  "Vineyard Landscape of Piedmont: Langhe-Roero and Monferrato",
+  "Wines of Piedmont"
+ ],
+ "lead": "Barbera d'Asti is an Italian red wine made from the Barbera grape. It is produced in the hilly areas of the provinces of Asti (67 municipalities) and Alexandria (51 municipalities). Barbera d'Asti was accredited with DOC status in 1970, and DOCG status followed in 2008.\nUnder the DOCG rules, a minimum of 90% Barbera grapes must be used; the balance may be made up with either Freisa, Grignolino or Dolcetto grapes.\nThe wine must be made before the date of 1 March immediately following the harvest, and must reach a minimum alcohol content of 11.5% ABV. Barbera d'Asti Superiore must have an alcoholic strength of at least 12.5% by volume, and be aged for at least 14 months, 6 months of which stored in oak or chestnut barrels. Many superiore producers refine it in small oak barriques to obtain a rounder taste. The superiore has the following sub-zones indicated on the label: Nizza, Tinella, or Colli Astiani (Asti).\nThe superiore wine has a strong additional aging potential; it can often be aged from ten to twenty years.\nThe Nizza DOCG  was added to Asti's Barbera portfolio in 2014. The Nizza production rules require the use of 100% Barbera grapes, a maximum yield of 7 tonnes per hectare, and minimum aging of 18 months, of which 6 months must be in oak barrels. The minimum alcoholic strength is 13%, or 13.5% if produced by a single, named vineyard.",
+ "sections": [
+  "History",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Barbera d'Asti is an Italian red wine made from the Barbera grape. It is produced in the hilly areas of the provinces of Asti (67 municipalities) and Alexandria (51 municipalities). Barbera d'Asti was accredited with DOC status in 1970, and DOCG status followed in 2008.\nUnder the DOCG rules, a minimum of 90% Barbera grapes must be used; the balance may be made up with either Freisa, Grignolino or Dolcetto grapes.\nThe wine must be made before the date of 1 March immediately following the harvest, and must reach a minimum alcohol content of 11.5% ABV. Barbera d'Asti Superiore must have an alcoholic strength of at least 12.5% by volume, and be aged for at least 14 months, 6 months of which stored in oak or chestnut barrels. Many superiore producers refine it in small oak barriques to obtain a rounder taste. The superiore has the following sub-zones indicated on the label: Nizza, Tinella, or Colli Astiani (Asti).\nThe superiore wine has a strong additional aging potential; it can often be aged from ten to twenty years.\nThe Nizza DOCG  was added to Asti's Barbera portfolio in 2014. The Nizza production rules require the use of 100% Barbera grapes, a maximum yield of 7 tonnes per hectare, and minimum aging of 18 months, of which 6 months must be in oak barrels. The minimum alcoholic strength is 13%, or 13.5% if produced by a single, named vineyard.\n\n\n== History ==\nThe Barbera grape is believed to have originated in the hills of Montferrat in central Piedmont, Italy and is known from the thirteenth century. The first written proof of vinification is stored in the city hall of Nizza Monferrato and dates back to the seventeenth century. The wine enters officially in the role of Piedmontese wines in 1798, the date of the first Ampelography made by Giuseppe Nuvolone-Pergamo, count of Scandaluzza from the Accademia di Agricoltura di Torino (Agricultural Society of Turin).\nBarbera spread rapidly in the 19th and 20th centuries, and is today considered to be Piedmont's principal red grape variety.\n\n\n== See also ==\nList of Italian grape varieties\nList of Italian DOCG wines\n\n\n== References ==\n\n\n== External links ==\nConsorzio Barbera d’Asti e vini del Monferrato",
+ "facts": {
+  "country": [
+   "Q38"
+  ],
+  "image": [
+   "Barbera d'Asti - Cascina Castlet.jpg"
+  ],
+  "instance_of": [
+   "Q282"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "located_in": [
+   "Q15099",
+   "Q15097"
+  ],
+  "description": "Italian controlled and guaranteed designation of origin wine from Piedmont"
+ }
+}

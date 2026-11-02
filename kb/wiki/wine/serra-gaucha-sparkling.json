@@ -1,0 +1,42 @@
+{
+ "kind": "wine",
+ "key": "serra-gaucha-sparkling",
+ "label": "Brazilian Sparkling Wine (Serra Gaúcha)",
+ "match": "direct",
+ "tried": [
+  "Brazilian Sparkling Wine",
+  "Serra Gaúcha"
+ ],
+ "title": "Serra Gaúcha",
+ "url": "https://en.wikipedia.org/wiki/Serra_Ga%C3%BAcha",
+ "revision": 1364738386,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q177231",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Gramado_Rio_Grande_do_Sul_2018.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Landforms of Rio Grande do Sul",
+  "Mountain ranges of Brazil"
+ ],
+ "lead": "The Serra Gaúcha (Gaucho Highlands) is a cultural region comprising the mountainous areas in the northeastern portion of Rio Grande do Sul state in southern Brazil. Most of its inhabitants are of German and Italian ancestry.  Consequently, the cities in the Serra Gaúcha reflect German and Italian influences through their architecture, gastronomy, and culture. Geographically, it is part of the Serra Geral mountain range.\n\nSeveral tourist routes run through the most picturesque cities of the Serra Gaúcha, particularly the Rota Romântica, following the tracks of German colonization; the Italian-flavored Caminhos da Colônia; the wine tasting Rota da Uva e o Vinho; and the Região das Hortênsias, landscaped with beautiful hydrangeas (\"hortênsias\" in Portuguese).\nThe hot springs in Nova Prata are also one of the region's tourist highlights. The most important cities among the 75 municipalities of the Serra Gaúcha are Caxias do Sul, Bento Gonçalves, Garibaldi, Farroupilha, Gramado, Canela, Veranópolis, Nova Prata, Vacaria, Nova Petrópolis, Flores da Cunha and Carlos Barbosa.",
+ "sections": [
+  "History",
+  "External links"
+ ],
+ "text": "The Serra Gaúcha (Gaucho Highlands) is a cultural region comprising the mountainous areas in the northeastern portion of Rio Grande do Sul state in southern Brazil. Most of its inhabitants are of German and Italian ancestry.  Consequently, the cities in the Serra Gaúcha reflect German and Italian influences through their architecture, gastronomy, and culture. Geographically, it is part of the Serra Geral mountain range.\n\nSeveral tourist routes run through the most picturesque cities of the Serra Gaúcha, particularly the Rota Romântica, following the tracks of German colonization; the Italian-flavored Caminhos da Colônia; the wine tasting Rota da Uva e o Vinho; and the Região das Hortênsias, landscaped with beautiful hydrangeas (\"hortênsias\" in Portuguese).\nThe hot springs in Nova Prata are also one of the region's tourist highlights. The most important cities among the 75 municipalities of the Serra Gaúcha are Caxias do Sul, Bento Gonçalves, Garibaldi, Farroupilha, Gramado, Canela, Veranópolis, Nova Prata, Vacaria, Nova Petrópolis, Flores da Cunha and Carlos Barbosa.\n\n\n== History ==\nThe region was settled by European immigrants during the 19th century. Germans started arriving in 1824 and Italians in 1875. Germans settled in the lowlands, close to river springs, while Italians populated the highlands. As a result, the region has a unique blend of German and Italian cultures, reflected in the local architecture and cuisine.\n\nSeveral small towns resemble German villages from centuries ago, but on a backdrop of luscious subtropical rainforest and araucarias. Many Brazilians in the region still speak German, mainly the Riograndenser Hunsrückisch dialect.\nIn the towns settled by Italian immigrants, wine production is considered an important component of the local culture and vineyards can be seen everywhere. The city of Caxias do Sul celebrates the region's wine heritage during the Festa da Uva festival. Italian culture is still very strong in the community, and it's not rare to hear locals speaking Northern-Italian Talian dialect.\n\n\n== External links ==\n(in Portuguese) Serra Gaúcha website Archived 2022-12-22 at the Wayback Machine\nhttps://web.archive.org/web/20061106131951/http://www.gramado.com/\nhttp://www.novapratars.com.br\nhttps://web.archive.org/web/20090927190150/http://www.gramado.art.br/",
+ "facts": {
+  "country": [
+   "Q155"
+  ],
+  "coordinates": [
+   {
+    "lat": -29,
+    "lon": -51.25
+   }
+  ],
+  "instance_of": [
+   "Q46831"
+  ],
+  "description": "mountain"
+ }
+}

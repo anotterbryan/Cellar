@@ -1,0 +1,45 @@
+{
+ "kind": "grape",
+ "key": "Xinomavro",
+ "label": "Xinomavro",
+ "match": "direct",
+ "tried": [
+  "Xinomavro (grape)",
+  "Xinomavro"
+ ],
+ "title": "Xinomavro",
+ "url": "https://en.wikipedia.org/wiki/Xinomavro",
+ "revision": 1270066909,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1974545",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Popolka-Xinomavro.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Grape varieties of Greece",
+  "Imathia",
+  "Red wine grape varieties",
+  "Wine grape stubs"
+ ],
+ "lead": "Xinomavro (Greek: Ξινόμαυρο [ksiˈno̞mavro̞], lit. 'sour black') is the principal red wine grape of the uplands of Naousa in the regional unit of Imathia, and around Amyntaio, in Macedonia, Greece.  This grape is primarily cultivated in Naousa, Goumenissa, Amyntaio, Rapsani, Trikomo, Siatista, Velventos, and, on a lesser scale, on Mount Athos, at Ossa, Ioannina, Magnesia, Kastoria and Trikala.  In 2010, the total  global cultivated area  was 1,971 hectares (4,870 acres)  and was entirely in Greece, but by 2013 this had grown to 2,239 hectares (5,530 acres) worldwide, with some initial plantings in Gansu, China.",
+ "sections": [
+  "Wine regions",
+  "References"
+ ],
+ "text": "Xinomavro (Greek: Ξινόμαυρο [ksiˈno̞mavro̞], lit. 'sour black') is the principal red wine grape of the uplands of Naousa in the regional unit of Imathia, and around Amyntaio, in Macedonia, Greece.  This grape is primarily cultivated in Naousa, Goumenissa, Amyntaio, Rapsani, Trikomo, Siatista, Velventos, and, on a lesser scale, on Mount Athos, at Ossa, Ioannina, Magnesia, Kastoria and Trikala.  In 2010, the total  global cultivated area  was 1,971 hectares (4,870 acres)  and was entirely in Greece, but by 2013 this had grown to 2,239 hectares (5,530 acres) worldwide, with some initial plantings in Gansu, China.\n\n\n== Wine regions ==\nRed wine made from Xinomavro in the Naousa region has become one of Greece's most important and well regarded wines. The Naousa Protected Designation of Origin (PDO) was established in 1971 and mandates the use of 100% Xinomavro grapes. Good examples age well due to the wine's high acidity and tannin content, and can be similar enough to wines made from Nebbiolo grapes that comparisons are often made to Italy's highly regarded Barolo.\nIn Goumenissa the grape is often blended with Negoska to produce very fruity wines with high alcohol levels.\nIn recent years, artificial aging of red xinomavro wines has been a topic of research for several purposes.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Popolka-Xinomavro.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q12875668",
+   "Q38"
+  ],
+  "description": "variety of grape"
+ }
+}

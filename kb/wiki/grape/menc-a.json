@@ -1,0 +1,43 @@
+{
+ "kind": "grape",
+ "key": "Mencía",
+ "label": "Mencía",
+ "match": "direct",
+ "tried": [
+  "Mencía (grape)"
+ ],
+ "title": "Mencía (grape)",
+ "url": "https://en.wikipedia.org/wiki/Menc%C3%ADa_(grape)",
+ "revision": 1330385298,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1293271",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Uva_Mencia.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Galicia (Spain)",
+  "Grape varieties of Spain",
+  "Red wine grape varieties"
+ ],
+ "lead": "Mencía, known as Jaen in Portugal, is a grape variety native to the western part of the Iberian Peninsula. In Spain, it is planted on over 9,100 hectares (22,000 acres), with another 2,500 hectares (6,200 acres) in neighboring Portugal. It is primarily found in the Bierzo, Ribeira Sacra, Valdeorras, Monterrei and Dão wine regions.\nMost wines produced from Mencía have traditionally been light, pale, relatively fragrant red wines for early consumption. This style  of wine was the result of post-Phylloxera plantations on fertile plains, which tended to give high yields but diluted wine. In recent years, much more concentrated and complex wines have been produced by a new generation of winemakers, primarily from old vines growing on hillsides, often on schist soils, in combination with careful vineyard management. This has led to a renewed interest in Mencía and the denominaciones de origens using it, such as Bierzo, Valdeorras, Ribeira Sacra, Monterrei and the little-known Liébana.\nSince the 1990s, the grape is increasing in popularity, and an increasing number of noted Spanish winemakers are now working with it. In California, the Ojai Vineyard debuted the varietal in the 2023 vintage.",
+ "sections": [
+  "Relationship to other grapes",
+  "Synonyms",
+  "References"
+ ],
+ "text": "Mencía, known as Jaen in Portugal, is a grape variety native to the western part of the Iberian Peninsula. In Spain, it is planted on over 9,100 hectares (22,000 acres), with another 2,500 hectares (6,200 acres) in neighboring Portugal. It is primarily found in the Bierzo, Ribeira Sacra, Valdeorras, Monterrei and Dão wine regions.\nMost wines produced from Mencía have traditionally been light, pale, relatively fragrant red wines for early consumption. This style  of wine was the result of post-Phylloxera plantations on fertile plains, which tended to give high yields but diluted wine. In recent years, much more concentrated and complex wines have been produced by a new generation of winemakers, primarily from old vines growing on hillsides, often on schist soils, in combination with careful vineyard management. This has led to a renewed interest in Mencía and the denominaciones de origens using it, such as Bierzo, Valdeorras, Ribeira Sacra, Monterrei and the little-known Liébana.\nSince the 1990s, the grape is increasing in popularity, and an increasing number of noted Spanish winemakers are now working with it. In California, the Ojai Vineyard debuted the varietal in the 2023 vintage.\n\n\n== Relationship to other grapes ==\n\nIt was once thought to be an ancient clone of Cabernet Franc, with which it shares some of its aromas, an impression which has been dispelled with DNA profiling.\nInstead, DNA profiling carried out by the Department of Vegetal Biology of the Universidad Politécnica de Madrid has concluded that Mencía is identical to Portugal's Jaen do Dão (or Jaen for short) grape variety. However, just recently it has been determined via microsatellite DNA fingerprinting analysis (a.k.a. DNA profiling) that, contrary to what was previously believed, Mencía (Jaén do Dão) likely originated in Portugal since it was the result of a crossing between Alfrocheiro and Patorra, two Portuguese red grape cultivars from the Dão and the Douro regions respectively.\n\n\n== Synonyms ==\nOver the years, Mencía has been known under a variety of synonyms including: Fernao Pires Tinta, Giao, Jaen, Loureiro Tinto, Mencin, Negra, Negro, Mencia Roble, Tinto Mencia and Tinto Mollar. It is known as Jaén colorado in León, not to be confused with Jaén blanco or Jaén rosado (both of which are variants of Cayetana) and Jaén tinto from Huelva.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Uva Mencia.JPG"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q29"
+  ],
+  "description": "grape variety"
+ }
+}

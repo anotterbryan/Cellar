@@ -1,0 +1,43 @@
+{
+ "kind": "grape",
+ "key": "Hondarrabi Zuri",
+ "label": "Hondarrabi Zuri",
+ "match": "direct",
+ "tried": [
+  "Hondarrabi Zuri (grape)",
+  "Hondarrabi Zuri"
+ ],
+ "title": "Hondarrabi Zuri",
+ "url": "https://en.wikipedia.org/wiki/Hondarrabi_Zuri",
+ "revision": 1375175351,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1354215",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Mahats_mordo_bat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Grape varieties of Spain",
+  "White wine grape varieties"
+ ],
+ "lead": "Hondarrabi Zuri is a white variety of Vitis vinifera (Grape) that is native to the Basque Country, Spain.\nThe bunches are small and compact and the berries small, round and golden in colour. The must produces a pale yellow wine, with aromas of citrus fruit, ripe fruit, herbs and flowers. It is the main grape used to make Txakoli wine.",
+ "sections": [
+  "Hondarrabi Zuri",
+  "Characteristic",
+  "Regions",
+  "Synonyms",
+  "References"
+ ],
+ "text": "Hondarrabi Zuri is a white variety of Vitis vinifera (Grape) that is native to the Basque Country, Spain.\nThe bunches are small and compact and the berries small, round and golden in colour. The must produces a pale yellow wine, with aromas of citrus fruit, ripe fruit, herbs and flowers. It is the main grape used to make Txakoli wine.\n\n\n== Hondarrabi Zuri ==\nHondarrabi Zuri is a synonym for any of three grape varieties of Vitis vinifera found in South West France and Basque, an autonomous region of Spain, including:\n\nCrouchen\nCourbu Blanc\nNoah\n\n\n== Characteristic ==\nUntil the 19th century there were many hectares of hondarrabi zuri in the region. The aristocrat Wilhelm von Humboldt came to compare his wines with the most prestigious of Alsace and the Rhineland. It is not a very productive vine, so it has not managed to recover the previous number of hectares. It rarely exceeds 8,000 kg/ha or 60 hl/ha.\nSome Basque producers blend Hondarrabi Zuri with the red Hondarrabi Beltza variety or with small amounts of Petit Corbu and Gros Manseng, to create wines with more aromatic complexity.\nHondarrabi zuri vines produce grapes and bunches of small size. The wines have intense aromas of pear and exotic fruits, as well as citrus, herbaceous and floral nuances, with notable acidity and a medium to moderate alcohol content. In good vintages, when the maturation circumstances are optimal, it is possible to obtain aromatic, powerful and very balanced wines. The quality of the chacolíes that are produced with hondarribi zuri has nothing to do with that of others that are produced in the area with unsuitable varieties and incorrect production techniques, which produce wines that are not very aromatic, excessively acidic, light and often with a significant amount of dissolved carbon dioxide.\n\n\n== Regions ==\nIn a subregion of Basque, called Txakoli, Hondarrabi Zuri is a synonym for both Courbu Blanc and Crouchen.[1] Hondarrabi Zuri is the predominant grape variety used in Txakoli's white wines. In Txakoli, Hondarrabi Zuri can be found with three different spellings: Hondarrabi Zuri, Hondarribi Zuri and Ondaria Zuria.\nHondarrabi Zuri, is grown in the following Denominaciones de Origen (DOs):\n\nDO Txakoli de Álava\nDO Getariako Txakolina\nDO Bizkaiko Txakolina\n\n\n== Synonyms ==\nThis variety is known by synonyms such as ondarrabi zuri, ondarabiya zuriya, ondarrabi txuri, ondarrubi zurilla, oudanabi, tocuri, txuri, zuri and zuria. Likewise, hondarrabi zuri is a synonym of the French courbu blanc grape.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Mahats mordo bat.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q30046",
+   "Q958314"
+  ],
+  "description": "varietal"
+ }
+}

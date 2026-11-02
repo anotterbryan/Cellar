@@ -1,0 +1,47 @@
+{
+ "kind": "wine",
+ "key": "hermitage",
+ "label": "Hermitage",
+ "match": "search",
+ "tried": [
+  "Hermitage",
+  "Northern Rhône wine",
+  "Hermitage AOC"
+ ],
+ "title": "Hermitage AOC",
+ "url": "https://en.wikipedia.org/wiki/Hermitage_AOC",
+ "revision": 1346569718,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1431347",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Hermitage_from_Tournon_P1420064.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "1930s establishments in France",
+  "Rhône wine AOCs"
+ ],
+ "lead": "Hermitage (French pronunciation: [ɛʁmitaʒ]) is a French wine Appellation d'Origine Contrôlée (AOC) in the northern Rhône wine region of France south of Lyon. It produces mostly red wine from the Syrah grape; however, small quantities of white wine are also produced from Roussane and Marsanne grapes. The hill is seen by some as the spiritual home of the Syrah grape variety.",
+ "sections": [
+  "History",
+  "Geography",
+  "Grape varieties",
+  "Notable producers",
+  "References",
+  "External links"
+ ],
+ "text": "Hermitage (French pronunciation: [ɛʁmitaʒ]) is a French wine Appellation d'Origine Contrôlée (AOC) in the northern Rhône wine region of France south of Lyon. It produces mostly red wine from the Syrah grape; however, small quantities of white wine are also produced from Roussane and Marsanne grapes. The hill is seen by some as the spiritual home of the Syrah grape variety.\n\n\n== History ==\nAccording to legend, the Knight Gaspard de Stérimberg returned home wounded in 1224 from the Albigensian Crusade and was given permission by the Queen of France to build a small refuge to recover in, where he remained living as a hermit (ermite in French). The chapel on top was built in honor of Saint Christopher and today is owned by the negociant Paul Jaboulet Âiné. Louis XIII made the wine a wine of the court after being offered a glass during a visit to the region in 1642. Louis XIV presented King Charles II of England with 200 casks of fine wine including examples from Hermitage, Champagne and Burgundy. The Romanovs also imported the wine. In the 19th century, wines from Bordeaux were often \"hermitaged\" (hermitagé, that is, blended with Hermitage) and could fetch higher prices as a result. The appellation was established in its modern form in 1937.\n\n\n== Geography ==\nThe appellation fans out from the town of Tain l'Hermitage. The vines grow on the south west side of a steep granite hill facing the afternoon sun and can be divided into a number of smaller vineyards. These are \"Les Bessards\" to the west, \"L'Hermite and \"La Chapelle on the top of the mountain, and \"Bessards\", \"Le Méal\", \"Les Greffieux\", and \"Murets\" to the east. With 345 acres (140 ha) of vines, in soil composed greatly of granite and gravels, Hermitage produces 730,000 bottles of mostly red wines, annually.\n\n\n== Grape varieties ==\n\nSyrah is the primary red grape of Hermitage, mostly used on its own although the appellation rules do allow the addition of 15% or less of Marsanne and/or Roussanne grapes. Hermitage reds tend toward being very earthy, with aromas of leather, red berries, earth, and cocoa/coffee.  Because of the high levels of tannin they are usually aged longer than American or Australian Syrahs  and are often cellared up to 40 years.\nRich, dry, white wines are also produced from a blend of Marsanne and Roussanne. These wines are also usually left to age, for up to 15 years.  Vin de paille or Straw Wine is also produced in this region.\n\n\n== Notable producers ==\nThe most notable producer of Hermitage is Domaine Jean-Louis Chave, whose estate can trace its origins back to 1481. Others of note include Chapoutier, Jaboulet, and Delas.\n\n\n== References ==\n\n\n== External links ==\nCotes du Rhone wines Web Sites",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "image": [
+   "Thain1.jpg"
+  ],
+  "subclass_of": [
+   "Q630531"
+  ],
+  "located_in": [
+   "Q3364"
+  ],
+  "description": "appellation d'origine contrôlée"
+ }
+}

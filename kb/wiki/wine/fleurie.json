@@ -1,0 +1,51 @@
+{
+ "kind": "wine",
+ "key": "fleurie",
+ "label": "Fleurie",
+ "match": "direct",
+ "tried": [
+  "Fleurie"
+ ],
+ "title": "Fleurie",
+ "url": "https://en.wikipedia.org/wiki/Fleurie",
+ "revision": 1381850691,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1356894",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/Fleurie_Rhone_France_28_May_2012.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Communes of Rhône (department)",
+  "Rhône (department) geography stubs"
+ ],
+ "lead": "Fleurie (French pronunciation: [fløʁi]) is a commune in the Rhône department in eastern France.\nMedieval charters record Fleurie as Floriacum.\nFleurie AOC is a division of the Beaujolais wine region.",
+ "sections": [
+  "Notable residents",
+  "See also",
+  "References"
+ ],
+ "text": "Fleurie (French pronunciation: [fløʁi]) is a commune in the Rhône department in eastern France.\nMedieval charters record Fleurie as Floriacum.\nFleurie AOC is a division of the Beaujolais wine region.\n\n\n== Notable residents ==\nIn the 1970s the British Conservative politician and tax fugitive Ernest Marples (1907–78) owned a Fleurie château and vineyard, to which he retired after fleeing from an Inland Revenue investigation in 1975.\n\nDésiré Charnay (1828–1915), an archaeologist specializing in Mayan and Aztec studies\n\n\n== See also ==\nCommunes of the Rhône department\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "coordinates": [
+   {
+    "lat": 46.192222222222,
+    "lon": 4.6975
+   }
+  ],
+  "image": [
+   "Fleurie Rhone France 28 May 2012.jpg"
+  ],
+  "instance_of": [
+   "Q484170"
+  ],
+  "located_in": [
+   "Q46130",
+   "Q702787",
+   "Q18914778",
+   "Q46130"
+  ],
+  "description": "commune in Rhône, France"
+ }
+}

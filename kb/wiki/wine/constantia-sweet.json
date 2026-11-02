@@ -1,0 +1,42 @@
+{
+ "kind": "wine",
+ "key": "constantia-sweet",
+ "label": "Constantia Sweet Wine (Vin de Constance style)",
+ "match": "search",
+ "tried": [
+  "Constantia Sweet Wine",
+  "Vin de Constance style",
+  "Constantia (wine)"
+ ],
+ "title": "Constantia (wine)",
+ "url": "https://en.wikipedia.org/wiki/Constantia_(wine)",
+ "revision": 1338929238,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1127722",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Vin_de_Constance.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Dessert wine",
+  "Economy of Cape Town",
+  "South African wine"
+ ],
+ "lead": "Constantia, a South African dessert wine, is made from Muscat Blanc à Petits Grains (Muscat de Frontignan) grapes grown in the district of Constantia, City of Cape Town. In the eighteenth and nineteenth centuries it was widely exported to Europe. However, production of Constantia ceased in the late-nineteenth century following the devastation of South African vineyards in the phylloxera epidemic. Production resumed at Klein Constantia in 1986, at Groot Constantia in 2003 and at Buitenverwachting in 2007.",
+ "sections": [
+  "History",
+  "In popular culture",
+  "References"
+ ],
+ "text": "Constantia, a South African dessert wine, is made from Muscat Blanc à Petits Grains (Muscat de Frontignan) grapes grown in the district of Constantia, City of Cape Town. In the eighteenth and nineteenth centuries it was widely exported to Europe. However, production of Constantia ceased in the late-nineteenth century following the devastation of South African vineyards in the phylloxera epidemic. Production resumed at Klein Constantia in 1986, at Groot Constantia in 2003 and at Buitenverwachting in 2007.\n\n\n== History ==\nIn 1685, the Constantia estate was established in a valley facing False Bay by the Governor of the Cape, Simon van der Stel, whose \"Constantia wyn\" soon acquired a good reputation. In 1705, naturalist François Valentyn called it \"The choicest wine to be found at the Cape...so divine and enticing in taste.\" But it was Hendrik Cloete, who bought the homestead in 1778, who really made Constantia famous with an unfortified sweet wine made from a blend of mostly Muscat de Frontignan (Muscat Blanc à Petits Grains), some Pontac, red and white Muscadelle, and a little Chenin Blanc. It became a favorite of European kings and emperors, including Frederick the Great, Queen Victoria, and Napoleon, who had it shipped to him by the barrel while in exile on St Helena. In 1861, however, the Gladstone government removed empire preferential tariffs and, as a result, exports nearly dried up. The golden era was brought to an end in the 1890s when the vineyards were decimated by phylloxera and powdery mildew. \nIn 1980, Duggie Jooste bought Klein Constantia, redeveloped the farm and, with the help of then winemaker Ross Gower and Professor Chris Orferr of Stellenbosch University, created and began selling a new version of the early Constantia wine made from Muscat Blanc à Petits Grains. All three Constantia estates produce a sweet wine they consider an homage to the original recipe, with \"Grand Constance\" at Groot Constantia, \"1769\" at Buitenverwachting, and \"Vin de Constance\" at Klein Constantia.\n\n\n== In popular culture ==\nIn Sense and Sensibility (1811), Jane Austen's character Mrs Jennings recommends a glass of \"the finest old Constantia wine\" for the broken-hearted Marianne, on the grounds that it helped her late husband's colicky gout; Elinor, though amused by the incongruity, still drinks the wine to try \"its healing powers on a disappointed heart\" – her own.\nIn Charles Dickens' last (and unfinished) novel, The Mystery of Edwin Drood, Constantia wine is served to the reverend Septimus by his mother. \"As, whenever the Reverend Septimus fell a-musing, his good mother took it to be an infallible sign that he ‘wanted support,’ the blooming old lady made all haste to the dining-room closet, to produce from it the support embodied in a glass of Constantia and a home-made biscuit.\"\nIn Charles Baudelaire's  Les fleurs du mal poem XXVI entitled Sed non satiata Baudelaire compares the charms of his beloved to the pleasures brought by Nuits-Saint-Georges and Constantia wine: \"Even more than Constantia, than opium, than Nuits, I prefer the elixir of your mouth, where love performs its slow dance.\"\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q258"
+  ],
+  "image": [
+   "GrootConstantiaHomestead.jpg"
+  ],
+  "instance_of": [
+   "Q1200945"
+  ],
+  "description": "dessert wine"
+ }
+}

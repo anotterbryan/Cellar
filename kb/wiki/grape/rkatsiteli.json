@@ -1,0 +1,55 @@
+{
+ "kind": "grape",
+ "key": "Rkatsiteli",
+ "label": "Rkatsiteli",
+ "match": "direct",
+ "tried": [
+  "Rkatsiteli (grape)",
+  "Rkatsiteli"
+ ],
+ "title": "Rkatsiteli",
+ "url": "https://en.wikipedia.org/wiki/Rkatsiteli",
+ "revision": 1343357653,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q576472",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/5/57/Rkatsiteli.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Georgian products with protected designation of origin",
+  "Georgian wine",
+  "Georgian words and phrases",
+  "Grape varieties of Georgia (country)",
+  "White wine grape varieties"
+ ],
+ "lead": "Rkatsiteli (; Georgian: რქაწითელი, romanized: rkats'iteli; literally \"red stem\" or \"red horned\") is a kind of grape used to produce white wine.",
+ "sections": [
+  "History",
+  "Wine regions",
+  "Other regions",
+  "Viticulture",
+  "Wine style",
+  "References"
+ ],
+ "text": "Rkatsiteli (; Georgian: რქაწითელი, romanized: rkats'iteli; literally \"red stem\" or \"red horned\") is a kind of grape used to produce white wine.\n\n\n== History ==\nThis ancient vinifera originates in Georgia and is believed to be one of the oldest grape varieties.  \nRkatsiteli was the most widely planted grape variety in the Soviet Union and, by 1978, was responsible for 18% of all Soviet wine production. There it was used to make everything from table wine to liqueurs to Sherry-like fortified wine. Before President Gorbachev's vine pull scheme, it was possibly the world's most widely planted white wine grape.\nIn Kakheti it was particularly known for its sweet dessert wines fashioned in the same manner as port wine. There were many attempts to create a sparkling wine from the grape, but its naturally high alcohol levels prevented it from being much of a success.\nIn Georgia, Rkatsiteli is not only widely cultivated but also featured in wine tourism experiences, especially in the Kakheti region. Many vineyards offer tastings and educational tours focused on traditional qvevri fermentation using Rkatsiteli grapes.\n\n\n== Wine regions ==\nThe grape is mostly planted in its ancestral home of Georgia, though there are still sizable plantings in other Eastern European countries like Russia, Armenia, Bulgaria, Moldova, Romania, Serbia, and North Macedonia, Azerbaijan and Ukraine.\n\n\n=== Other regions ===\nIt is also planted, in small amounts, in Australia and the eastern United States, mainly in the Finger Lakes region of New York state, Massachusetts, New Jersey, Virginia and North Carolina. There have also been some experimental plantings in California, the Grand Valley AVA and West Elks AVA of Colorado and China (where the grape is known as Baiyu).\n\n\n== Viticulture ==\nThe high acidity of the grape is prone to make the wines excessively tart, so winemakers try to pick the grapes as late as possible to maximize the sugar balance to offset the acidity. In most regions of Eastern Europe harvest is typically in mid-October. Rkatsiteli is sometimes blended with Mtsvane to create a fruity, aromatic wine.\n\n\n== Wine style ==\nRkatsiteli makes a noticeably acidic, balanced white wine with spicy and floral notes in the aroma.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Rka-tziteli.jpg",
+   "Rkatsiteli.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q30046",
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q230",
+   "Q399",
+   "Q265",
+   "Q863",
+   "Q232"
+  ],
+  "description": "Type of grape"
+ }
+}

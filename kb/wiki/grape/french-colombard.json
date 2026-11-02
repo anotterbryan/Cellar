@@ -1,0 +1,41 @@
+{
+ "kind": "grape",
+ "key": "French Colombard",
+ "label": "French Colombard",
+ "match": "direct",
+ "tried": [
+  "French Colombard (grape)",
+  "French Colombard"
+ ],
+ "title": "Colombard",
+ "url": "https://en.wikipedia.org/wiki/Colombard",
+ "revision": 1149400907,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1110390",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Colombard_raisin.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "White wine grape varieties"
+ ],
+ "lead": "Colombard (also known as French Colombard in North America) is a white French wine grape variety that may be the offspring of Chenin blanc and Gouais blanc. This makes the grape the sibling of the Armagnac Meslier-Saint-François and the nearly extinct Cognac grape Balzac blanc.\nIn France, it was traditionally grown in the Charentes and Gascony for distilling into Cognac and Armagnac respectively. Today it is still among the permitted white grape varieties in Bordeaux wine, and in Gascony for Vins de Pays Côtes de Gascogne and the white Floc de Gascogne. aperitif drink. The wine is known for its distinctive flavours of Guava.\nOld vine grapes are crushed by some northern Californian producers and made into a fruity white wine of interesting character in both dry and sweet versions. This grape is mainly grown in California to provide backbone, due to its natural acidic character, for white \"jug wine\" blends. Additionally, it is widely grown in South Africa, where it is known as Colombar, and to a lesser extent in Australia and Israel.",
+ "sections": [
+  "Synonyms",
+  "References"
+ ],
+ "text": "Colombard (also known as French Colombard in North America) is a white French wine grape variety that may be the offspring of Chenin blanc and Gouais blanc. This makes the grape the sibling of the Armagnac Meslier-Saint-François and the nearly extinct Cognac grape Balzac blanc.\nIn France, it was traditionally grown in the Charentes and Gascony for distilling into Cognac and Armagnac respectively. Today it is still among the permitted white grape varieties in Bordeaux wine, and in Gascony for Vins de Pays Côtes de Gascogne and the white Floc de Gascogne. aperitif drink. The wine is known for its distinctive flavours of Guava.\nOld vine grapes are crushed by some northern Californian producers and made into a fruity white wine of interesting character in both dry and sweet versions. This grape is mainly grown in California to provide backbone, due to its natural acidic character, for white \"jug wine\" blends. Additionally, it is widely grown in South Africa, where it is known as Colombar, and to a lesser extent in Australia and Israel.\n\n\n== Synonyms ==\nColombard is also known under the synonyms Bardero, Blanc Emery, Blanquette, Bon blanc, Chabrier vert, Charbrier vert, Colombar, Colombard bijeli, Colombeau, Colombie, Colombier, Coulombier, Cubzadais, Donne rousse, Donne verte, French Colombard, Gros Blanc Doux, Gros Blanc Roux, Guenille, Kolombar, Martin Cot, Pied Tendre, Quene Tendre, Quene vert, Queue Tendre, Queue verte, and West's White Prolific.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Colombard raisin.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q3266"
+  ],
+  "description": "varietal"
+ }
+}

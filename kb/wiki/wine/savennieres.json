@@ -1,0 +1,51 @@
+{
+ "kind": "wine",
+ "key": "savennieres",
+ "label": "Savennières",
+ "match": "direct",
+ "tried": [
+  "Savennières"
+ ],
+ "title": "Savennières",
+ "url": "https://en.wikipedia.org/wiki/Savenni%C3%A8res",
+ "revision": 1381913920,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q387232",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/8/8d/P1290021_Savenni%C3%A8res_eglise_St-Pierre-St-Romain_rwk2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Communes of Maine-et-Loire"
+ ],
+ "lead": "Savennières (French pronunciation: [savənjɛʁ] ) is a commune in the Maine-et-Loire department in western France.\nIt lies near the river Loire 15 km (9.3 mi) south west of Angers and is best known for its production of highly rated white wine.\nWith production predominantly centred on the Chenin blanc grape, it is famed for its particularly long-lasting dry white wine comparable to that of Vouvray.",
+ "sections": [
+  "Savennières wine",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Savennières (French pronunciation: [savənjɛʁ] ) is a commune in the Maine-et-Loire department in western France.\nIt lies near the river Loire 15 km (9.3 mi) south west of Angers and is best known for its production of highly rated white wine.\nWith production predominantly centred on the Chenin blanc grape, it is famed for its particularly long-lasting dry white wine comparable to that of Vouvray.\n\n\n== Savennières wine ==\n\nThe area around Savennières is used for the production of white wine from Chenin blanc grapes. The wines are mostly dry, often produced in a powerful style, and the best examples (such as those produced by Nicolas Joly's Château de la Roche aux Moines) are highly regarded by international wine critics. The Savennières Appellation d'Origine Controlée (AOC) spreads over 3 hills of schist, located on the right (northwest) bank of the Loire river, totaling about 300 hectares, of which about half are currently in production.\n\n\n== See also ==\nFrench wine\n\n\n== References ==\n\n\n== External links ==\n\nOfficial website",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "coordinates": [
+   {
+    "lat": 47.383055555556,
+    "lon": -0.6575
+   }
+  ],
+  "image": [
+   "P1290021 Savennières eglise St-Pierre-St-Romain rwk2.jpg"
+  ],
+  "instance_of": [
+   "Q484170"
+  ],
+  "located_in": [
+   "Q1727155",
+   "Q1120190",
+   "Q12584",
+   "Q700420"
+  ],
+  "description": "commune in Maine-et-Loire, France"
+ }
+}

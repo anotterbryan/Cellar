@@ -1,0 +1,49 @@
+{
+ "kind": "grape",
+ "key": "Zweigelt",
+ "label": "Zweigelt",
+ "match": "direct",
+ "tried": [
+  "Zweigelt (grape)",
+  "Zweigelt"
+ ],
+ "title": "Zweigelt",
+ "url": "https://en.wikipedia.org/wiki/Zweigelt",
+ "revision": 1381044788,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q232825",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Traubenwelke_Zweigelt.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Austrian wine",
+  "Czech wine",
+  "Food and drink introduced in 1922",
+  "Hungarian wine",
+  "Red wine grape varieties"
+ ],
+ "lead": "The Zweigelt (German: [ˈt͡svaɪ̯ɡl̩t] ), also known as Rotburger, is an Austrian variety created in 1922 by Friedrich Zweigelt (1888–1964), who later became Director of the Federal Institute and Experimental Station of Viticulture, Fruit Production and Horticulture (1938–1945). Zweigelt is a crossing between the St. Laurent and Blaufränkisch grape varieties.",
+ "sections": [
+  "Wine regions",
+  "Naming and synonyms",
+  "Viticultural characteristics",
+  "See also",
+  "References"
+ ],
+ "text": "The Zweigelt (German: [ˈt͡svaɪ̯ɡl̩t] ), also known as Rotburger, is an Austrian variety created in 1922 by Friedrich Zweigelt (1888–1964), who later became Director of the Federal Institute and Experimental Station of Viticulture, Fruit Production and Horticulture (1938–1945). Zweigelt is a crossing between the St. Laurent and Blaufränkisch grape varieties.\n\n\n== Wine regions ==\nWidely planted in Austria, Zweigelt vines have made inroads in the Canadian wine regions of Ontario's Niagara Peninsula and of British Columbia, with limited plantings in Hungary, Australia and New Zealand. In the Czech Republic it is known as Zweigeltrebe and is the third-most widely planted red-grape variety, comprising approximately 4.7% of total vineyards. It grows in most of the wine regions in Slovakia. As of 2010, newly established Belgian and Polish vineyards have also started to plant Zweigelt. As of 2014, Washington state has several small plantings (only a few acres) of Zweigelt, including Wilridge Winery and Perennial Vintners.\n\n\n== Naming and synonyms ==\nZweigelt is also known as Rotburger (not to be confused with Rotberger), Zweigeltrebe, and Blauer Zweigelt.\nThe Austrian viticulturist, Dr. Laurenz (Lenz) Moser (1905–1978), recognized the suitability of the \"St. Laurent × Blaufränkisch\" variety for high-trained vines as early as the 1950s. Moser considered the designation \"St. Laurent × Blaufränkisch\" to be too long, and from this point onwards argued that the crossing should be named after its original grower, Friedrich Zweigelt. By 1958, the naming process had reached a stage at which it could no longer be stopped.\nThe official designation \"Zweigeltrebe Blau\" appeared for the first time in 1972, when the new Grape Variety Index for Qualitätsweine (Quality Wines) was launched. The name of the variety was altered to \"Blauer Zweigelt\" in 1978, and the synonym \"Rotburger\" was created at the same time. The aim here was to make it clear that the new cultivations of Blauburger, Goldburger and Rotburger/Blauer Zweigelt all shared a common origin. No evidence can be found to support the widespread assertion that Zweigelt himself had applied the designation \"Rotburger\" to his new variety.\n\"Rotburger\" remains a valid synonym and continues to be used as a label designation by Austrian vintners, although most producers prefer the name Zweigelt. The problem of naming the variety after a committed Nazi was first addressed publicly in December 2018.\n\n\n== Viticultural characteristics ==\nIn the Puget Sound AVA it tends to ripen 1–2 weeks earlier than Pinot Noir, and has very large heavy clusters of dark blue-almost-black grapes. The wine tends to be darker in color than Pinot Noir grown in the same area, and produces a larger crop than Pinot Noir.\n\n\n== See also ==\nBlauburger – red grape created by Zweigelt the following year\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Zweigelt DSC 4458.JPG"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q40",
+   "Q38"
+  ],
+  "description": "varietal"
+ }
+}

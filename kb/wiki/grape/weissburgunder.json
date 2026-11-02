@@ -1,0 +1,48 @@
+{
+ "kind": "grape",
+ "key": "Weissburgunder",
+ "label": "Weissburgunder",
+ "match": "direct",
+ "tried": [
+  "Weissburgunder (grape)",
+  "Weissburgunder"
+ ],
+ "title": "Pinot blanc",
+ "url": "https://en.wikipedia.org/wiki/Pinot_blanc",
+ "revision": 1364188369,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q950514",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Pinot-blanc.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Champagne grape varieties",
+  "White wine grape varieties"
+ ],
+ "lead": "Pinot blanc (French pronunciation: [pino blɑ̃] ) or Pinot bianco is a white wine grape. It is a point genetic mutation of Pinot noir. Pinot noir is genetically unstable and will occasionally experience a point mutation in which a vine bears all black fruit except for one cane which produces white fruit.",
+ "sections": [
+  "Origins and regional production",
+  "Relationship to other grapes",
+  "Wine characteristics",
+  "Names in other regions",
+  "See also",
+  "References"
+ ],
+ "text": "Pinot blanc (French pronunciation: [pino blɑ̃] ) or Pinot bianco is a white wine grape. It is a point genetic mutation of Pinot noir. Pinot noir is genetically unstable and will occasionally experience a point mutation in which a vine bears all black fruit except for one cane which produces white fruit.\n\n\n== Origins and regional production ==\n\nIn Alsace, Germany, Luxembourg, Italy, Hungary, Czech Republic and Slovakia, the wine produced from this grape is a full-bodied white. In Germany, where it is known as Weißer Burgunder or Weißburgunder, there were 5,540 hectares (13,700 acres) of Pinot blanc in 2018. The most powerful versions are usually made in Baden and Palatinate.  In 2018, there were 1,232 hectares (3,040 acres) of Pinot blanc in France, with most of the plantations found in Alsace, where it is used for both still white wines and is the most common variety used for sparkling wine, Crémant d'Alsace. Somewhat confusingly, the designation \"Pinot blanc\" for Alsace AOC wine does not necessarily mean that the wine is varietally pure Pinot blanc. (This is in difference to Pinot gris, which is a \"true\" varietal designation in Alsace.) Rather, the designation means that it is a white wine made from Pinot varieties. Under Alsace appellation rules, the varieties Pinot blanc, Auxerrois blanc, Pinot gris and Pinot noir (vinified white, without skin contact) may all be used, but a blend of Pinot blanc and Auxerrois blanc is the most common. The most full-bodied \"Pinot blanc\" wines from Alsace, with a spicy and smokey character and moderate acidity, are probably dominated by Auxerrois grapes.\n\nHistorically, Pinot blanc was used both in Burgundy and Champagne. It is still allowed in Bourgogne blanc blend and small amounts of Pinot blanc may in principle be blended into some Burgundy wines, but very small amounts are cultivated in either region. In the Champagne region, Pinot blanc is often called Blanc Vrai.\n\nIn the United States it is mainly produced in California. In the United States, many of the vines called Pinot blanc are actually a different variety, Melon de Bourgogne/Muscadet, that resembles Chardonnay when on the vine. This mistake was discovered around the mid-1980s by a French oenologist who was examining rootstock while visiting University of California, Davis, and now Pinot blanc purchased from a nursery will be the genuine article. The grape is also grown in Austria and Hungary as well as in Burgundy, France. In Canada, Pinot blanc is often used to make ice wine. Canada's Okanagan Valley has developed a reputation for Pinot blanc as its signature wine.\nPinot blanc has also been confused with Chardonnay, and wineries often vinify it in a similar style, using barrel fermentation, new oak and malolactic fermentation. It can also be treated more lightly and made into a crisper wine that still has some ability to age.\n\n\n== Relationship to other grapes ==\nDuring a series of trials between 1930 and 1935, Pinot blanc was crossed with Riesling to create the white Italian wine grape variety Manzoni bianco.\n\n\n== Wine characteristics ==\nIn Alsace, Italy and Hungary, the wine produced from this grape is a full-bodied dry white wine while in Germany and Austria they can be either dry or sweet. One of the components of the wine Vin Santo can be Pinot blanc.\n\nIn France the grape is often blended with Klevner, sometimes referred to by locals as \"true Pinot\", and Auxerrois grapes, in order to give it a more Alsatian flavor.\nBottles labeled Pinot blanc offer fruity aromas, often of apple, citrus fruit, and floral characteristics. Bottles that are varietally pure, although more difficult to find, provide stronger floral characteristics, stone fruits and a headier minerality. Regardless of their exact composition, most wines under the label 'Pinot blanc' are rather high in acidity and are vinified in tank, though more prestigious examples are fermented in large, 100% used oak barrels. Pinot blanc wines are usually made for immediate consumption.\n\n\n== Names in other regions ==\nPinot blanc's name varies by region. In Austria it may be bottled as Weissburgunder or Klevner. Weissburgunder is also used in the Südtirol/Alto Adige region of north east Italy (also occasionally named so in Alsace) and in Germany. Hungary calls it Fehér Burgundi. Spain and Italy refer to it as Pinot bianco. In the Czech Republic it is known as Rulandské Bílé, in Slovakia Rulandské Biele and in Croatia Pinot bijeli or Burgundac bijeli. In Serbia it is called Бели пино, Бели бургундац, Пино блан.\n\n\n== See also ==\nInternational variety\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Pinot blanc - Ampélographie.jpg"
+  ],
+  "instance_of": [
+   "Q958314",
+   "Q1567764"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q142",
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

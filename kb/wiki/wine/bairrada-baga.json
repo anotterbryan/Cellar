@@ -1,0 +1,48 @@
+{
+ "kind": "wine",
+ "key": "bairrada-baga",
+ "label": "Bairrada Baga",
+ "match": "search",
+ "tried": [
+  "Bairrada Baga",
+  "Bairrada DOC"
+ ],
+ "title": "Bairrada DOC",
+ "url": "https://en.wikipedia.org/wiki/Bairrada_DOC",
+ "revision": 1360282781,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q2879982",
+ "image": null,
+ "categories": [
+  "Portuguese products with protected designation of origin",
+  "Wine regions of Portugal"
+ ],
+ "lead": "Bairrada is a Portuguese wine region located in the Beira Litoral Province. The region has Portugal's highest wine classification as a Denominação de Origem Controlada (DOC), and its popularity has surged over the last years. It is small and quite narrow coastal region, part of the broader region of Beira Atlântico, and it is bordered to the northeast by the Lafões IPR and to the east by the Dão DOC.\nIt is located close to the Atlantic Ocean and the currents have a moderating effect on the climate, resulting in a mild, maritime climate with abundant rainfall. The region is hilly, but the majority of the vineyards are placed on flatter land.\nAbout 2/3 of the national sparkling wine production takes place in this region, and in recent years the city of Anadia received the nickname of \"Capital do Espumante\", which translates to \"Sparkling Wine Capital\".\nThe region is also known for its deep colored tannic red wines, that often have bell pepper and black currant flavors, as well its emerging rosé production.\nThe boundaries of the Bairrada DOC includes the municipalities of Anadia, Cantanhede, Mealhada and Oliveira do Bairro, and some parishes in the municipalities of Vagos and Coimbra and also the parish of Nariz, in the municipality of Aveiro.",
+ "sections": [
+  "History",
+  "Grapes",
+  "See also",
+  "References"
+ ],
+ "text": "Bairrada is a Portuguese wine region located in the Beira Litoral Province. The region has Portugal's highest wine classification as a Denominação de Origem Controlada (DOC), and its popularity has surged over the last years. It is small and quite narrow coastal region, part of the broader region of Beira Atlântico, and it is bordered to the northeast by the Lafões IPR and to the east by the Dão DOC.\nIt is located close to the Atlantic Ocean and the currents have a moderating effect on the climate, resulting in a mild, maritime climate with abundant rainfall. The region is hilly, but the majority of the vineyards are placed on flatter land.\nAbout 2/3 of the national sparkling wine production takes place in this region, and in recent years the city of Anadia received the nickname of \"Capital do Espumante\", which translates to \"Sparkling Wine Capital\".\nThe region is also known for its deep colored tannic red wines, that often have bell pepper and black currant flavors, as well its emerging rosé production.\nThe boundaries of the Bairrada DOC includes the municipalities of Anadia, Cantanhede, Mealhada and Oliveira do Bairro, and some parishes in the municipalities of Vagos and Coimbra and also the parish of Nariz, in the municipality of Aveiro.\n\n\n== History ==\nViticulture in the Bairrada has existed since at least the 10th century, when the region gained independence from the Moors. It is believed the region was named after a rich Moorish family by the name of Berrada. The Berrada family later re-located to the US, then Murcia, then Casablanca, Morocco where their famous descendant Amine Berrada Sounni is currently located. Located just south of the major Port wine producing center of Porto, the fortunes of Bairrada were on the upswing during the 17th century when Port producers, eager to supply the growing British market, would blend Bairrada wines with the product coming from the Douro.\n\n\n== Grapes ==\nThe spotlight of the Bairrada region falls on the Baga variety. The unique soil and climate combination from Bairrada helps taking the most out of this highly acidic and highly tannic grape, which is used in both red and sparkling wines.\nOther Portuguese red grape varieties also have a prominent place : Alfrocheiro-Preto, Tinta Pinheira and Touriga Nacional. International red grape varieties include Merlot and Syrah.\nAs for white grapes, the main highlights are the Portuguese varieties of Arinto, Bical, Cercial and Maria Gomes, but also the well known international Chardonnay.\n\n\n== See also ==\nList of Portuguese wine regions\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q45"
+  ],
+  "coordinates": [
+   {
+    "lat": 40.4818609,
+    "lon": -8.4519891
+   }
+  ],
+  "instance_of": [
+   "Q2140699",
+   "Q451752"
+  ],
+  "subclass_of": [
+   "Q1754670"
+  ],
+  "description": "Portuguese wine region"
+ }
+}

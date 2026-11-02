@@ -1,0 +1,41 @@
+{
+ "kind": "wine",
+ "key": "english-bacchus",
+ "label": "English Bacchus",
+ "match": "search",
+ "tried": [
+  "English Bacchus",
+  "Bacchus (grape)"
+ ],
+ "title": "Bacchus (grape)",
+ "url": "https://en.wikipedia.org/wiki/Bacchus_(grape)",
+ "revision": 1324623648,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q266752",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/5/53/Bacchus_04c_3.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "White wine grape varieties"
+ ],
+ "lead": "Bacchus is a white wine grape created by viticulturalist Peter Morio at the Geilweilerhof Institute for Grape Breeding in the Palatinate in 1933. He crossed a Silvaner x Riesling cross with Müller-Thurgau. \nBacchus received varietal protection and was released for general cultivation in 1972. Its name is taken from Roman name of the Greek wine god Dionysus.\nBacchus can reach high must weights, and has no high requirement for sites it can be planted and can grow where Riesling, for example, does not ripen reliably. It ripens early, about the same time as Müller-Thurgau, and has a high productivity similar to that variety.\nBacchus wines can have powerful flavours and character, which have even been described as \"exuberant\", but only if it is allowed to ripen fully. It is low in acidity, which does not always make it very well suited for varietal wines under typical German growing conditions. Among the new breeds, it is considered to give less elegant wines than Kerner. Therefore, Bacchus is often used for blending into Müller-Thurgau, to give the latter more flavour. Within Germany, Franconia is considered as the source of some of the more successful varietal Bacchus wines.\nBacchus is also increasingly grown in several vineyards in England. The colder climate in England means that grapes retain a higher acidity and yields are lower, giving varietal wines of (potentially) high quality, somewhat in a Sauvignon blanc-like style: English Bacchus wines often fall somewhere between the typical French and New Zealand styles of Sauvignon Blanc, although there are examples at either end of the spectrum.\nGerman plantations peaked in the 1990 at around 3,500 hectares (8,600 acres) of which more than half were in Rheinhessen, where it was popular to use in QbA blends. In 2006 there were 2,113 hectares (5,220 acres) of Bacchus left in Germany, 2.1% of the total vineyard surface.",
+ "sections": [
+  "Cultivation",
+  "Recognition",
+  "Synonyms",
+  "Unrelated Bacchus grapes",
+  "References"
+ ],
+ "text": "Bacchus is a white wine grape created by viticulturalist Peter Morio at the Geilweilerhof Institute for Grape Breeding in the Palatinate in 1933. He crossed a Silvaner x Riesling cross with Müller-Thurgau. \nBacchus received varietal protection and was released for general cultivation in 1972. Its name is taken from Roman name of the Greek wine god Dionysus.\nBacchus can reach high must weights, and has no high requirement for sites it can be planted and can grow where Riesling, for example, does not ripen reliably. It ripens early, about the same time as Müller-Thurgau, and has a high productivity similar to that variety.\nBacchus wines can have powerful flavours and character, which have even been described as \"exuberant\", but only if it is allowed to ripen fully. It is low in acidity, which does not always make it very well suited for varietal wines under typical German growing conditions. Among the new breeds, it is considered to give less elegant wines than Kerner. Therefore, Bacchus is often used for blending into Müller-Thurgau, to give the latter more flavour. Within Germany, Franconia is considered as the source of some of the more successful varietal Bacchus wines.\nBacchus is also increasingly grown in several vineyards in England. The colder climate in England means that grapes retain a higher acidity and yields are lower, giving varietal wines of (potentially) high quality, somewhat in a Sauvignon blanc-like style: English Bacchus wines often fall somewhere between the typical French and New Zealand styles of Sauvignon Blanc, although there are examples at either end of the spectrum.\nGerman plantations peaked in the 1990 at around 3,500 hectares (8,600 acres) of which more than half were in Rheinhessen, where it was popular to use in QbA blends. In 2006 there were 2,113 hectares (5,220 acres) of Bacchus left in Germany, 2.1% of the total vineyard surface.\n\n\n== Cultivation ==\nBacchus does particularly well in the UK climate and is now considered the 'poster grape' for the UK wine industry. It is now also the 3rd most planted grape in the UK after Chardonnay and Pinot Noir.\n\n\n== Recognition ==\nIn 2017 the Decanter World Wine Awards declared that a Bacchus wine from Winbirri Vineyard, Norfolk was awarded a platinum best in show award\n\n\n== Synonyms ==\nSynonyms for the Bacchus variety include Bacchus Weiss, Weisser Bacchus, Frühe Scheurebe, Geilweilerhof 33-29-133 and Gf. 33-29-133.\n\n\n== Unrelated Bacchus grapes ==\nThe name Bacchus Black is also applied to the riparia x labrusca hybrid red variety Clinton grown in the Alps, while Bacchus noir refers to another cross involving Poulsard.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Bacchus 04c 3.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "description": "white wine grape"
+ }
+}

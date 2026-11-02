@@ -1,0 +1,43 @@
+{
+ "kind": "grape",
+ "key": "Mammolo",
+ "label": "Mammolo",
+ "match": "direct",
+ "tried": [
+  "Mammolo (grape)",
+  "Mammolo"
+ ],
+ "title": "Mammolo",
+ "url": "https://en.wikipedia.org/wiki/Mammolo",
+ "revision": 1336139801,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q690100",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/e/e8/VIVC10837_SCIACCARELLO_Cluster_in_the_field_20362.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Red wine grape varieties"
+ ],
+ "lead": "Mammolo is a red Italian wine grape that is planted primarily in Tuscany. While its use has been diminishing, Mammolo was historically included in the blended Sangiovese-based wines of Chianti where it contributed a distinctive violet or mammole aroma. In addition to small plantings in the Chianti zone, Mammolo can be found in the Vino Nobile di Montepulciano region of Tuscany and in scattered vineyards throughout Central Italy.",
+ "sections": [
+  "Offspring",
+  "Synonyms",
+  "See also",
+  "References"
+ ],
+ "text": "Mammolo is a red Italian wine grape that is planted primarily in Tuscany. While its use has been diminishing, Mammolo was historically included in the blended Sangiovese-based wines of Chianti where it contributed a distinctive violet or mammole aroma. In addition to small plantings in the Chianti zone, Mammolo can be found in the Vino Nobile di Montepulciano region of Tuscany and in scattered vineyards throughout Central Italy.\n\n\n== Offspring ==\nMammolo is believed to be a parent vine of the Ligurian/Tuscan vine Pollera nera and Colombana nera.\n\n\n== Synonyms ==\nMammolo is known under a variety of synonyms throughout Central Italy. These include Fegeri, Mammola asciutta, Mammola minuto, Mammoli, Mammolo asciutto, Mammolo di Montepulciano, Mammolo fiorentino, Mammolo nero, Mammolo nero primaticio, Mammolo normale, Mammolo piccola rooso nero, Mammolo pratese, Mammolo rosso, Mammolo rosso tondo, Mammolo serrato, Mammolo tondo, Mammolo toscana, Mammolone di Lucca, Uva mammola asciuta, Uva mammola near, Uva mammola scrigiolante, Uva Mammolo nero and Uva mammolo tonda.\n\n\n== See also ==\nSciacarello\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "VIVC10837 SCIACCARELLO Cluster in the field 20362.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "kind": "grape",
+ "key": "Castelão",
+ "label": "Castelão",
+ "match": "direct",
+ "tried": [
+  "Castelão (grape)"
+ ],
+ "title": "Castelão (grape)",
+ "url": "https://en.wikipedia.org/wiki/Castel%C3%A3o_(grape)",
+ "revision": 1099084969,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q478166",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Castelao.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Red wine grape varieties",
+  "Wine grape stubs"
+ ],
+ "lead": "Castelão, in Portugal also known as Periquita and João de Santarém, is a red wine grape found primarily in the south coastal regions but is grown all over Portugal and is sometimes used in Port wine production.\nThe vine thrives in sandy soils but is able to adapt to a variety of conditions. It produces a wine that can be harshly tannic in its youth but softens as it ages. In the Algarve VR, it is often blended with Negra Mole to produce a wine with less aging potential but less harsh in its youth.",
+ "sections": [
+  "Synonyms",
+  "See also",
+  "References"
+ ],
+ "text": "Castelão, in Portugal also known as Periquita and João de Santarém, is a red wine grape found primarily in the south coastal regions but is grown all over Portugal and is sometimes used in Port wine production.\nThe vine thrives in sandy soils but is able to adapt to a variety of conditions. It produces a wine that can be harshly tannic in its youth but softens as it ages. In the Algarve VR, it is often blended with Negra Mole to produce a wine with less aging potential but less harsh in its youth.\n\n\n== Synonyms ==\nBastardo Castico, Bastardo Espanhol, Castelana, Castelão Francês, Castelão Real, Casteleão, Castellam, Castellão, Castellão Portugues, Castico, João de Periquita, João de Santarém, João de Santarém Tinto, João Mendes, Joao Pinto Mendes, João Santarém, Lariao Preto, Mortagua, Mortagua de Vide Branca, Olho de Lebre, Perikvita, Periquita, Piriquita, Piriquito, Pirriquita, Santarém, Santarém Tinto, Trincadeira.\nThe variety Tinta Amarela is also called Trincadeira, but is not related to Castelão.\n\n\n== See also ==\nList of Port wine grapes\nList of Portuguese wine grape varieties\n\n\n== References ==",
+ "facts": {
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "description": "red wine grape"
+ }
+}

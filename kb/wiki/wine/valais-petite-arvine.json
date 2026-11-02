@@ -1,0 +1,40 @@
+{
+ "kind": "wine",
+ "key": "valais-petite-arvine",
+ "label": "Petite Arvine (Valais)",
+ "match": "direct",
+ "tried": [
+  "Petite Arvine"
+ ],
+ "title": "Petite Arvine",
+ "url": "https://en.wikipedia.org/wiki/Petite_Arvine",
+ "revision": 1356021978,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q392270",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Arvine_Viala_Vermorel.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "White wine grape varieties"
+ ],
+ "lead": "Petite Arvine (French pronunciation: [pətit aʁvin]) or Arvine is a white wine grape planted in the Valais region of Switzerland. Total Swiss plantations of the variety in 2009 stood at 154 hectares (380 acres).\nThe grape has been grown in the Valais region in Switzerland since 1602. Derived from Latin the name indicates the vine may have originated from the Savoyard Arve valley.\nPetite Arvine has a reputation as a high-class grape variety, the best of the Valais white wine grapes. Its wines are rich in extract and are found as dry, medium-dry and sweet wines.\nThis textured wine contains a generous amount of extract from its thick-skinned berries.",
+ "sections": [
+  "References"
+ ],
+ "text": "Petite Arvine (French pronunciation: [pətit aʁvin]) or Arvine is a white wine grape planted in the Valais region of Switzerland. Total Swiss plantations of the variety in 2009 stood at 154 hectares (380 acres).\nThe grape has been grown in the Valais region in Switzerland since 1602. Derived from Latin the name indicates the vine may have originated from the Savoyard Arve valley.\nPetite Arvine has a reputation as a high-class grape variety, the best of the Valais white wine grapes. Its wines are rich in extract and are found as dry, medium-dry and sweet wines.\nThis textured wine contains a generous amount of extract from its thick-skinned berries.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Christophe Laurent - Petite Arvine.JPG",
+   "Arvine Viala Vermorel.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

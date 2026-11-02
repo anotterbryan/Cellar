@@ -1,0 +1,43 @@
+{
+ "kind": "grape",
+ "key": "Tibouren",
+ "label": "Tibouren",
+ "match": "direct",
+ "tried": [
+  "Tibouren (grape)",
+  "Tibouren"
+ ],
+ "title": "Tibouren",
+ "url": "https://en.wikipedia.org/wiki/Tibouren",
+ "revision": 1286902315,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q520535",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/VIVC12434_TIBOUREN_Cluster_in_the_laboratory_4963.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Red wine grape varieties"
+ ],
+ "lead": "Tibouren or Rossese di Dolceacqua is a red French wine grape variety that is primarily grown in Provence and Liguria but originated in Greece and possibly even the Middle East. Intensely aromatic, with an earthy bouquet that wine expert Jancis Robinson describes as garrigue, Tibouren is often used in the production of rosés.\nWhile the unique aroma and character of the wines produced by Tibouren are valued by producers, it is not a widely planted variety. This is due, in part, to the viticultural issues of the grape's sensitivity to coulure and tendency to produce highly irregular yields from vintage to vintage. The wines produced from Rossese are a local specialty found around Dolceacqua.",
+ "sections": [
+  "History",
+  "Wine regions",
+  "Viticulture and winemaking",
+  "Synonyms",
+  "Clones and other varieties",
+  "References"
+ ],
+ "text": "Tibouren or Rossese di Dolceacqua is a red French wine grape variety that is primarily grown in Provence and Liguria but originated in Greece and possibly even the Middle East. Intensely aromatic, with an earthy bouquet that wine expert Jancis Robinson describes as garrigue, Tibouren is often used in the production of rosés.\nWhile the unique aroma and character of the wines produced by Tibouren are valued by producers, it is not a widely planted variety. This is due, in part, to the viticultural issues of the grape's sensitivity to coulure and tendency to produce highly irregular yields from vintage to vintage. The wines produced from Rossese are a local specialty found around Dolceacqua.\n\n\n== History ==\n\nWhile Tibouren today is almost exclusively associated with the Provence wine region, French ampelographer Pierre Galet suspects that the grape probably has Greek origins or possibly Middle Eastern. Galet's theory derives from the uniquely shaped leaves of the Tibouren vine, which include deeply incised lobes that are usually seen in Vitis families of the Middle East. He speculates that over the evolution of the grape its ancestor vines were brought to Greece and from there it was probably introduced to France by the Ancient Greeks at their settlement in Marseille.\nOne competing theory is that the variety was a relatively recent import to Provence that was introduced to Saint-Tropez, to the east of Marseille, in the 18th century by a naval sea captain named Antiboul (from which several synonyms of Tibouren are derived).\n\n\n== Wine regions ==\nTibouren is a permitted grape variety in several Appellation d'Origine Contrôlée (AOC) wine regions of Provence, most notably the large Côtes de Provence AOC, which accounts for more than 75% of all Provence wine. The AOC runs non-contiguously from Nice west to Marseille and is the source of many rosé wines. Here Tibouren, like all grape varieties in the AOC, is limited to a maximum yield of 55 hectoliters per hectare with the finish wine needing to attain a minimum alcohol level of 11%. While it is primarily used for rosés it can also be included in red wine blends. Tibouren is often blended with, for both reds and rosés, Grenache, Syrah, Cinsault, Mourvedre, Carignan and Cabernet Sauvignon.\n\n\n== Viticulture and winemaking ==\n\nTibouren can be a difficult grape to cultivate due to the irregularly of the harvest yields it produces, often brought on by its sensitivity to coulure. This is one reason why Tibouren is often used as a blending grape rather than as a varietal wine. In blends, particularly the rosés of Provence, Tibouren contributes earthy aroma notes that are often described as garrigue.\n\n\n== Synonyms ==\nOver the years, Tibouren and its wines have been known under a variety of synonyms including Antibois, Antiboulen, Antiboulène, Antibouren, Antibourin, Gaysserin, Geysserin, Gueipperim noir, Guesserin, Rosese, Rosese Nero, Rosseis, Rossese, Rossese di Dolceacqua, Rossese di Ventimiglia, Rossese Nericcio, Rossese Nero, Rossese Rossa, Sarreiron, Tiboulen, Tiboulin, Tibouren noir, Tibourin and Tibourin noir.\n\n\n=== Clones and other varieties ===\nAccording to the Vitis International Variety Catalogue, a few clonal variants of Tibouren exist that are distinct from the main dark-skinned noir variety. These include a white wine grape variety, Tibouren blanc, and a non-hermaphroditic female grape vine known as Tibouren gris. \nA separate white French wine grape variety, known as Bicane (best known for being a parent of Gutenborner), has Tibouren gris as a synonym but there is currently no known connection between this grape and Tibouren noir.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "VIVC12434 TIBOUREN Cluster in the laboratory 4963.jpg",
+   "Several Rhone and Provence roses.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "description": "grape variety"
+ }
+}

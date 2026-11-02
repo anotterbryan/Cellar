@@ -1,0 +1,45 @@
+{
+ "kind": "wine",
+ "key": "pfalz-riesling-trocken",
+ "label": "Pfalz Riesling Trocken",
+ "match": "direct",
+ "tried": [
+  "Pfalz Riesling Trocken",
+  "Pfalz wine"
+ ],
+ "title": "Palatinate (wine region)",
+ "url": "https://en.wikipedia.org/wiki/Palatinate_(wine_region)",
+ "revision": 1301470254,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q185439",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/6/61/Gimmeldingen-weinberg-im-herbst-mit-weinbiet.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Geography of Rhineland-Palatinate",
+  "Wine regions of Germany"
+ ],
+ "lead": "Palatinate (; German: Pfalz [pfalts] ) is a German wine-growing region (Weinbaugebiet) in the area of Bad Dürkheim, Neustadt an der Weinstraße, and Landau in Rhineland-Palatinate. Before 1993, it was known as Rhine Palatinate (Rheinpfalz). With 23,698 hectares (58,560 acres) under cultivation in 2022, the region is the second largest wine region in Germany after Rheinhessen. There are about 6,800 vintners producing around 2.3 million hectolitres of wine annually.",
+ "sections": [
+  "History",
+  "Climate and geography",
+  "Subregions",
+  "Grapes and wine",
+  "Culture",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Palatinate (; German: Pfalz [pfalts] ) is a German wine-growing region (Weinbaugebiet) in the area of Bad Dürkheim, Neustadt an der Weinstraße, and Landau in Rhineland-Palatinate. Before 1993, it was known as Rhine Palatinate (Rheinpfalz). With 23,698 hectares (58,560 acres) under cultivation in 2022, the region is the second largest wine region in Germany after Rheinhessen. There are about 6,800 vintners producing around 2.3 million hectolitres of wine annually.\n\n\n== History ==\nAlthough wild varieties of the vine were most probably native in the Palatinate region, the Romans brought the cultivated vine and winegrowing techniques around 1 A.D. Several Roman landhouses (villa rusticae) were found in the Palatinate region, for example near Wachenheim and Ungstein.\nThe Flurbereinigung restructuring of the 1980s raised the quality of the area's vineyards to modern standards and by the end of the 20th century, Palatinate wines were garnering international notice for their quality.\n\n\n== Climate and geography ==\nThe Palatinate wine region overlaps with, but is not coextensive with, the traditional German region of Palatinate, making up only 5% of its area. The wine region is an 80 km (50 mi) stretch situated under the lee of the Palatinate Forest on the Haardt Mountains, a continuation of Alsace's Vosges Mountains. Its climate is much like that of Alsace (France) in the south or Baden (Germany) in the east; and it is one of the warmest, sunniest and driest of German wine regions, with only parts of Baden (the only Zone B region in Germany), such as the Kaiserstuhl, being warmer. The vineyards are planted on a mixture of sandstone and volcanic soil.\n\n\n== Subregions ==\nThe region is divided into two districts (Bereich), Südliche Weinstraße (Southern Wine Route) in the south and Mittelhaardt-Deutsche Weinstraße (Central Haardt-German Wine Route) in the north. The Northern vineyards are located north of Neustadt an der Weinstraße in a region often listed on wine labels as Mittelhaardt and includes the following towns and villages:\n\nBad Dürkheim\nDeidesheim\nForst an der Weinstraße\nFreinsheim\nKallstadt\nRuppertsberg\nWachenheim\nUngstein\nLambsheim\nKirchheim\nBockenheim\nThe Southern subregion located south of Neustadt an der Weinstraße has significant plantings of the varieties Grauburgunder (Pinot gris) and Weissburgunder (Pinot blanc) but also produces some Riesling. The soil here ranges from sandstone to slate. The subregion includes the following villages:\n\nBirkweiler\nBurrweiler\nFrankweiler\nSiebeldingen\nRhodt\n\n\n== Grapes and wine ==\nThere are 45 white and 22 red grape varieties permitted to be cultivated in the Palatinate. Overall the production is split between 61% white wine and 39% red wine. For many years the dominant grapes of the region were the Müller-Thurgau, Kerner and Morio Muscat with Riesling always having a strong foothold in the Mittelhaardt. Toward the end of the 20th century, plantings of Riesling began to increase in the south as well as an increase in plantings of red wine varieties such as Spätburgunder (Pinot noir), Portugieser and Dornfelder.\nThe wines of the Palatinate are traditionally dry (trocken) with a full body, though some examples of sweet Portugieser still exist. The red wines often reach alcohol levels of 13% and go through malolactic fermentation and spend some time in oak. Since the 1990s there has been increased production in the sparkling wine (Sekt) made from Riesling.\nThe most cultivated grape varieties, by area in 2022, were:\n\n\n== Culture ==\n\nUnlike most other German wine regions, wine is not only served straight, but is also mixed with sparkling water to make up a popular refreshing drink called Schorle, a term that also describes juice, mixed with water. Every wine making city or village has its own Weinfest (wine festival) once a year, dedicated to drinking the local wines. On such occasions, wine is normally consumed as Schorle. It is traditionally served in 50 cl glasses called Schoppen (meaning 1⁄2 litre) as well as in the typical 25 cl ones called Viertel (\"quarter\", for 1⁄4 litre). \nThey are of a special shape specific to the region and are known as the Dubbeglas, widening from bottom to top and featuring indentations or large dimples (Dubbe) that give the glass its name.  The older, undimpled cylindrical half-litre Schoppenglas is also frequently seen in the region. The German Wine Route (Deutsche Weinstraße) traverses this wine region. The region also produces spirits, sparkling wines, wine vinegar, and grape seed oil.\n\n\n== See also ==\n\nGerman Wine Route\n\n\n== References ==\n\n\n== External links ==\nPfalzwein official site (in English)",
+ "facts": {
+  "country": [
+   "Q183"
+  ],
+  "instance_of": [
+   "Q2140699"
+  ],
+  "located_in": [
+   "Q1200"
+  ],
+  "description": "German wine region"
+ }
+}

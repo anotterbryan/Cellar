@@ -1,0 +1,52 @@
+{
+ "kind": "wine",
+ "key": "taurasi-aglianico",
+ "label": "Taurasi (Aglianico)",
+ "match": "direct",
+ "tried": [
+  "Taurasi"
+ ],
+ "title": "Taurasi",
+ "url": "https://en.wikipedia.org/wiki/Taurasi",
+ "revision": 1376814914,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q55126",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/b/be/Taurasi_%285289110742%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Cities and towns in Campania",
+  "Municipalities of the Province of Avellino",
+  "Province of Avellino geography stubs"
+ ],
+ "lead": "Taurasi is a town and municipality in the province of Avellino, Campania,  southern Italy. In antiquity, it was a town in Samnium. The town's name probably derives from the Latin Taurus. Over time, it changed from Taurasos  to Taurasia (not to be confused with the Taurasia founded in northern Italy by the Taurini, which is now called Turin) before changing to its current form. Taurasi is best known for its increasingly famous red wine also named Taurasi, made of Aglianico grapes along with Piedirosso and Barbera grapes.",
+ "sections": [
+  "History",
+  "Main sights",
+  "Wines",
+  "References",
+  "Cited sources",
+  "External links"
+ ],
+ "text": "Taurasi is a town and municipality in the province of Avellino, Campania,  southern Italy. In antiquity, it was a town in Samnium. The town's name probably derives from the Latin Taurus. Over time, it changed from Taurasos  to Taurasia (not to be confused with the Taurasia founded in northern Italy by the Taurini, which is now called Turin) before changing to its current form. Taurasi is best known for its increasingly famous red wine also named Taurasi, made of Aglianico grapes along with Piedirosso and Barbera grapes.\n\n\n== History ==\nAccording to the epitaph on the sarcophagus of Lucius Cornelius Scipio Barbatus, consul of Rome in 298 BC, he captured Taurasia (and Cisauna) from the Samnites. However, modern scholars have ruled out that ancient Taurasia (surely located north-east of Beneventum) could be related to modern Taurasi.\n\n\n== Main sights ==\nPorta Maggiore (Main Gate). It was built by the Lombards in the seventh century above Roman ruins discovered during restoration works in 1997. It is the main point of entry for the historical centre. In the past, it was the passageway through the city walls.\nPalazzo Baronale, called simply \"castle\" by the locals. Its origins date back to Roman times, but it is now in Renaissance style. It has a large hall that used to be a court of justice, a chapel, and a hall of arms.\nChiesa dell’Immacolata, a church which was completed in 1590. It is thought that it is an extension of the church of San Cataldo, which dates back to the seventh century. It also had the crypt of the  Confraternita dell'Immacolata Concezione, which hosts the body of Saint Benigno the martyr since 1804.\n\n\n== Wines ==\n\nThe town was centred on a Longobard castle, which was enlarged by the Normans. Taurasi is the centre of production of the red wine Taurasi DOCG. It is a full-bodied dry wine with an aromatic vein. The wine must be aged for three years, of which one must be in chestnut or oak casks. In the three succeeding years, the wine can be tasted in the fullness of its quality and is particularly good as an accompaniment to roasted red meats.The variety of grapes it is made from, Aglianico, is believed to have been introduced by Hellenic peoples around the time of the foundation of Cumae. It is found in virtually the whole of southern Italy, but the wines produced from it are considerably different, depending on the places where the vines grow. Aglianico has a medium-sized cluster of grapes which is cylindrical-conical in shape.\n\n\n== References ==\n\n\n== Cited sources ==\n\n\n== External links ==\nTaurasi DOCG wines on taurasidocg.com.\nsito del vino Taurasi Archived 2019-11-08 at the Wayback Machine (in Italian)",
+ "facts": {
+  "country": [
+   "Q38"
+  ],
+  "coordinates": [
+   {
+    "lat": 41.0151864,
+    "lon": 14.96356
+   }
+  ],
+  "image": [
+   "Taurasi (5289110742).jpg"
+  ],
+  "instance_of": [
+   "Q747074"
+  ],
+  "located_in": [
+   "Q16120"
+  ],
+  "description": "Italian comune"
+ }
+}

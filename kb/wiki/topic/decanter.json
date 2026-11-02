@@ -1,0 +1,43 @@
+{
+ "kind": "topic",
+ "key": "Decanter",
+ "label": "Decanter",
+ "match": "direct",
+ "tried": [
+  "Decanter"
+ ],
+ "title": "Decanter",
+ "url": "https://en.wikipedia.org/wiki/Decanter",
+ "revision": 1302865273,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q3917316",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Decanter_and_Stopper_LACMA_56.35.30a-b.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Kitchenware",
+  "Liquid containers",
+  "Wine accessories"
+ ],
+ "lead": "A decanter is a vessel that is used to hold the decantation of a liquid (such as wine) which may contain sediment. Decanters, which have a varied shape and design, have been traditionally made from glass or crystal. Their volume is usually equivalent to one standard bottle of wine (0.75 litre).\nA carafe, which is also traditionally used for serving alcoholic beverages, is similar in design to a decanter but is not supplied with a stopper.",
+ "sections": [
+  "History",
+  "Decanting process",
+  "Decanting cradles",
+  "Aeration",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "A decanter is a vessel that is used to hold the decantation of a liquid (such as wine) which may contain sediment. Decanters, which have a varied shape and design, have been traditionally made from glass or crystal. Their volume is usually equivalent to one standard bottle of wine (0.75 litre).\nA carafe, which is also traditionally used for serving alcoholic beverages, is similar in design to a decanter but is not supplied with a stopper.\n\n\n== History ==\n\nThroughout the history of wine, decanters have played a significant role in the serving of wine. The vessels would be filled with wine from amphoras and brought to the table where they could be more easily handled by a single servant.\nThe Ancient Romans pioneered the use of glass as a material. After the fall of the Western Roman Empire, glass production became scarce, causing the majority of decanters to be made of bronze, silver, gold, or earthenware. The Venetians reintroduced glass decanters during the Renaissance period and pioneered the style of a long slender neck that opens to a wide body, increasing the exposed surface area of the wine, allowing it to react with air.\nIn the 1730s, British glass makers introduced the stopper to limit exposure to air. Since then, there has been little change to the basic design of the decanter.\n\n\n== Decanting process ==\nLiquid from another vessel is poured into the decanter in order to separate a small volume of liquid, containing the sediment, from a larger volume of \"clear\" liquid, which is free of such. In the process, the sediment is left in the original vessel, and the clear liquid is transferred to the decanter. This is analogous to racking, but performed just before serving.\nDecanters have been used for serving wines that are laden with sediments in the original bottle. These sediments could be the result of a very old wine or one that was not filtered or clarified during the winemaking process. In most modern winemaking, the need to decant for this purpose has been significantly reduced, because many wines no longer produce a significant amount of sediment as they age.\n\n\n== Decanting cradles ==\nBaskets called decanting cradles, usually made of wicker or metal, are used to decant bottles that have been stored on their side without needing to turn them upright, thereby avoiding stirring up sediment. These are particularly useful in restaurants, for service of a wine ordered during a meal, but less important at home, where a bottle can be stood upright the day before. More complicated decanting machines also exist to facilitate smoothly pouring, without disturbing sediment.\n\n\n== Aeration ==\n\nAnother reason for decanting wine is to aerate it, or allow it to \"breathe\". The decanter is meant to mimic the effects of swirling the wine glass to stimulate the oxidation processes which triggers the release of more aromatic compounds. It is thought to benefit the wine by smoothing some of the harsher aspects of the wine (like tannins or potential wine faults like mercaptans).\nMany wine writers, such as Karen MacNeil, in the book The Wine Bible, advocate decanting for aeration, especially with very tannic wines like Barolo, Bordeaux, Cabernet Sauvignon, Port, and Rhône wines while noting that decanting could be harmful for more delicate wines like Chianti and Pinot noir.\nThe effectiveness of decanting is a topic of debate, with some wine experts such as oenologist Émile Peynaud, claiming that the prolonged exposure to oxygen diffuses and dissipates more aroma compounds than it stimulates, in contrast to the effects of the smaller scale exposure and immediate release that swirling the wine in a drinker's glass has.\nIt has been reported that the process of decanting over a period of a few hours does not have the effect of softening tannins. The softening of tannins occurs during the winemaking and oak ageing when tannins go through a process of polymerization that can last days or weeks; decanting merely alters the perception of sulfites and other chemical compounds in the wine through oxidation, which can give some drinkers the sense of softer tannins in the wine.\nIn line with the view that decanting can dissipate aromas, the wine expert, Kerin O'Keefe, prefers to let the wine evolve slowly and naturally in the bottle, by uncorking it a few hours ahead, a practice suggested by wine producers such as Bartolo Mascarello and Franco Biondi Santi.\nOther wine experts, such as writer Jancis Robinson, tout the aesthetic value of using a decanter, especially one with an elegant design and made with clear glass, and believe that for all but the most fragile of wines that there is not much significant damage to the wine by decanting it.\n\n\n== See also ==\n\nWine accessory\nWine tasting\n\n\n== References ==\n\n\n== External links ==\n Media related to Decanters at Wikimedia Commons",
+ "facts": {
+  "image": [
+   "New Decanter.jpg"
+  ],
+  "subclass_of": [
+   "Q987767",
+   "Q1183543",
+   "Q26037047"
+  ],
+  "description": "vessel to hold a liquid"
+ }
+}

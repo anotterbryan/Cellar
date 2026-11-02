@@ -1,0 +1,45 @@
+{
+ "kind": "grape",
+ "key": "Trajadura",
+ "label": "Trajadura",
+ "match": "direct",
+ "tried": [
+  "Trajadura (grape)",
+  "Trajadura"
+ ],
+ "title": "Treixadura",
+ "url": "https://en.wikipedia.org/wiki/Treixadura",
+ "revision": 1012821298,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q604569",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Racimos_de_Treixadura.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "White wine grape varieties"
+ ],
+ "lead": "Treixadura or Trajadura is white Portuguese wine grape variety grown primarily in the Vinho Verde wine region of northeast Portugal and the Galician wine regions of Ribeiro and Rías Baixas in Spain where the variety is known as Treixadura. The grape is primarily a blending variety that adds body and light lemony aromatics to wines. It is most commonly blended with Loureiro and Alvarinho in Rías Baixas while in Ribeiro it is often blended with Torrontés and Lado.",
+ "sections": [
+  "Wine regions",
+  "Synonyms",
+  "References"
+ ],
+ "text": "Treixadura or Trajadura is white Portuguese wine grape variety grown primarily in the Vinho Verde wine region of northeast Portugal and the Galician wine regions of Ribeiro and Rías Baixas in Spain where the variety is known as Treixadura. The grape is primarily a blending variety that adds body and light lemony aromatics to wines. It is most commonly blended with Loureiro and Alvarinho in Rías Baixas while in Ribeiro it is often blended with Torrontés and Lado.\n\n\n== Wine regions ==\nIn Portugal, Treixadura is primarily found in the Minho wines of Vinho Verde which includes 58,000 hectares (143,300 acres) of DOC plantings near the Spanish border and another 12,000 ha (29,650) outside the DOC boundaries. While Alvarinho is the most widely planted white grape in this region, Treixadura is grown and blended with Alvarinho as well as Loureiro, Paderna, Azal Branco and Avesso.\nIn Spain, while Treixadura is most commonly found in the Rías Baixas and Ribeiro Denominación de Origen (DO)s, it is also found in other Galician wines such as the Monterrei DO where it is blended with Dona Blanca, Godello and Palomino. In Rías Baixas the grape is often blended with Albariño (Alvarinho), Loureira, Caíño blanco, Torrontes and Godello. In Ribeiro it is often blended with Albariño, Albilla, Godello, Palomino, Loureira, Macabeo and Torrontes.\n\n\n== Synonyms ==\nIn addition to its Spanish synonym Trajadura it has also been known as Treixadura blanca, Teixadura blanca, Tragadura, Trinca dente, Trincadente, Trincadeira and Verdello Rubio.\nThe synonym Trincadeira is shared with red Portuguese grape variety Tinta Amarela with most references to Trincadeira usually pertaining to the red grape instead of Trajadura.\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q29"
+  ],
+  "image": [
+   "Racimos de Treixadura.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "located_in": [
+   "Q3908"
+  ],
+  "description": "variety of grape"
+ }
+}

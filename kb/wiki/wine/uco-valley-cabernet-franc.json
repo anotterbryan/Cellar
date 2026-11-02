@@ -1,0 +1,48 @@
+{
+ "kind": "wine",
+ "key": "uco-valley-cabernet-franc",
+ "label": "Argentine Cabernet Franc (Uco Valley)",
+ "match": "direct",
+ "tried": [
+  "Argentine Cabernet Franc",
+  "Uco Valley"
+ ],
+ "title": "Uco Valley",
+ "url": "https://en.wikipedia.org/wiki/Uco_Valley",
+ "revision": 1363210773,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q7876801",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Vineyard_in_Mendoza%2C_Argentina.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Wine regions of Argentina"
+ ],
+ "lead": "Valle de Uco is a viticultural region southwest of Mendoza, in Argentina. Situated along the Tunuyán River, the Uco Valley is widely considered one of the top wine regions in Mendoza, and all of Argentina. The annual average temperature is 14 °C (57 °F) and altitudes range from 900–1,200 metres (3,000–3,900 ft) above sea level.\nThe combination of high elevation, alluvial soils, irrigation sourced from the Andes Mountains, a long growing season with over 250 sunny days a year, little rain and vast temperature differences between day and night are all conducive to growing quality wine grapes.  These climate and geography elements come together to provide excellent fruit ripening and concentration, developing colors, aromas, flavors and textures resulting in wines that are deep in color, intense in aromas and rich in flavors. The Uco Valley figures prominently in the Argentina Wine Route for tourist visitors.\nTraditionally, the varietals grown in this area are Sémillon and Malbec; together with Bonarda and Barbera in a smaller amount.",
+ "sections": [
+  "Climate",
+  "References",
+  "External links"
+ ],
+ "text": "Valle de Uco is a viticultural region southwest of Mendoza, in Argentina. Situated along the Tunuyán River, the Uco Valley is widely considered one of the top wine regions in Mendoza, and all of Argentina. The annual average temperature is 14 °C (57 °F) and altitudes range from 900–1,200 metres (3,000–3,900 ft) above sea level.\nThe combination of high elevation, alluvial soils, irrigation sourced from the Andes Mountains, a long growing season with over 250 sunny days a year, little rain and vast temperature differences between day and night are all conducive to growing quality wine grapes.  These climate and geography elements come together to provide excellent fruit ripening and concentration, developing colors, aromas, flavors and textures resulting in wines that are deep in color, intense in aromas and rich in flavors. The Uco Valley figures prominently in the Argentina Wine Route for tourist visitors.\nTraditionally, the varietals grown in this area are Sémillon and Malbec; together with Bonarda and Barbera in a smaller amount.\n\n\n== Climate ==\n\n\n== References ==\n\n\n== External links ==\nUco Valley guide.",
+ "facts": {
+  "country": [
+   "Q414"
+  ],
+  "coordinates": [
+   {
+    "lat": -33.6167,
+    "lon": -69.1333
+   }
+  ],
+  "image": [
+   "Bodega Diamandes.jpg"
+  ],
+  "instance_of": [
+   "Q486972"
+  ],
+  "located_in": [
+   "Q1191226"
+  ],
+  "description": "human settlement in Argentina"
+ }
+}

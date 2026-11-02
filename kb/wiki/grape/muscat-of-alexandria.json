@@ -1,0 +1,44 @@
+{
+ "kind": "grape",
+ "key": "Muscat of Alexandria",
+ "label": "Muscat of Alexandria",
+ "match": "direct",
+ "tried": [
+  "Muscat of Alexandria (grape)",
+  "Muscat of Alexandria"
+ ],
+ "title": "Muscat of Alexandria",
+ "url": "https://en.wikipedia.org/wiki/Muscat_of_Alexandria",
+ "revision": 1327238421,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1651827",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/0/06/Muscat_d%27Alexandrie_Viala_et_Vermorel.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Flora of Egypt",
+  "Table grape varieties",
+  "White wine grape varieties"
+ ],
+ "lead": "Muscat of Alexandria is a white wine grape that is a member of the Muscat family of Vitis vinifera. It is considered an \"ancient vine\", and wine experts believe it is one of the oldest genetically unmodified vines still in existence. The grape originated in North Africa, and the name is probably derived from its association with Ancient Egyptians who used the grape for wine making. It is also a table grape used for eating and raisins.\nMuscat of Alexandria is cultivated very heavily on the island of Lemnos in the North Eastern Aegean region of Greece, and reputedly Cleopatra drank muscat wine from there. In Italy wine is made from the grape on the island of Pantelleria, and it is grown in Calabria and Sicily where it is known as Zibibbo. In Spain, the grape is the sixth most planted white grape variety with 10,318 hectares (25,496 acres) grown in 2015, mainly in Málaga, Alicante, Valencia, and the Canary Islands. It is an important grape in the wine industries of Australia, Bolivia and South Africa.",
+ "sections": [
+  "Viticulture",
+  "Wine characteristics",
+  "References"
+ ],
+ "text": "Muscat of Alexandria is a white wine grape that is a member of the Muscat family of Vitis vinifera. It is considered an \"ancient vine\", and wine experts believe it is one of the oldest genetically unmodified vines still in existence. The grape originated in North Africa, and the name is probably derived from its association with Ancient Egyptians who used the grape for wine making. It is also a table grape used for eating and raisins.\nMuscat of Alexandria is cultivated very heavily on the island of Lemnos in the North Eastern Aegean region of Greece, and reputedly Cleopatra drank muscat wine from there. In Italy wine is made from the grape on the island of Pantelleria, and it is grown in Calabria and Sicily where it is known as Zibibbo. In Spain, the grape is the sixth most planted white grape variety with 10,318 hectares (25,496 acres) grown in 2015, mainly in Málaga, Alicante, Valencia, and the Canary Islands. It is an important grape in the wine industries of Australia, Bolivia and South Africa.\n\n\n== Viticulture ==\nThe vine thrives in a hot climate and is particularly sensitive to the cold during its flowering season. In the northern hemisphere it is ripe in August, and is a seeded grape.\n\n\n== Wine characteristics ==\nWine made from Muscat of Alexandria has a distinctive taste of grapes, and was popular in the post-World War II era when tastes tended towards the sweet and uncomplicated.  The vines are prolific producers but are very susceptible to powdery mildew and so are only grown in the most arid regions.\nProduction was mainly in California, Australia and South Africa, but the wine styles originated in southern Europe and northern Africa, Turkey and the Levant.  Much was used in the production of sherry and port as well as brandy, either distilled as brandy spirit or for base wine.  As demand for these wines declined from the 1960s, gordo blanco was used to create still and sparkling wines using European-sounding labels like \"Riesling\", \"Moselle\" and \"Champagne\" and \"Liebfrauwein\" (until such use was banned by law and trade agreements) which bore only a stylistic resemblance to their inspiration. In Málaga the grape is often blended with Pedro Ximénez to create a strong wine that varies in color from gold to dark black. In Australia, the grape is used principally to increase the alcohol content in both white and red wines in a cool season, in wines sold as \"Moscato\", and in cheap bladder pack wines. In Portugal, Vinho Moscatel (Moscatel Wine) is a sweet wine widely produced in the Setúbal Peninsula region, just south of Lisbon, as well as in Favaios, Alijó and other areas of the Portuguese Douro, in northern Portugal. In Bolivia, the grape has been used since at least the 1700s to make \"singani,\" the distinctive wine brandy produced in the Cinti Valley and in the Central Valley of Tarija.\nC13-norisoprenoids, such as 3-Oxo-α-ionol, are present in Muscat leaves.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Muscat d'Alexandrie Viala et Vermorel.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

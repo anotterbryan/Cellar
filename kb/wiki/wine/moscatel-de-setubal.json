@@ -1,0 +1,44 @@
+{
+ "kind": "wine",
+ "key": "moscatel-de-setubal",
+ "label": "Moscatel de Setúbal",
+ "match": "direct",
+ "tried": [
+  "Moscatel de Setúbal"
+ ],
+ "title": "Setúbal DOC",
+ "url": "https://en.wikipedia.org/wiki/Set%C3%BAbal_DOC",
+ "revision": 1355306668,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q281996",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Muscat_de_Set%C3%BAbal.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Portuguese products with protected designation of origin",
+  "Wine regions of Portugal"
+ ],
+ "lead": "Moscatel de Setúbal is a Portuguese muscatel produced around the Setúbal Municipality on the Península de Setúbal. The region is known primarily for its fortified Muscat wines known as Moscatel de Setúbal. The style was believed to have been invented by José Maria da Fonseca, the founder of José Maria da Fonseca, the oldest industrial-scale table wine producer in Portugal dating back to 1834. J.M. Fonseca company still holds a quasi-monopoly control over the production of Moscatel de Setúbal today.",
+ "sections": [
+  "Wine styles",
+  "Grapes",
+  "See also",
+  "References"
+ ],
+ "text": "Moscatel de Setúbal is a Portuguese muscatel produced around the Setúbal Municipality on the Península de Setúbal. The region is known primarily for its fortified Muscat wines known as Moscatel de Setúbal. The style was believed to have been invented by José Maria da Fonseca, the founder of José Maria da Fonseca, the oldest industrial-scale table wine producer in Portugal dating back to 1834. J.M. Fonseca company still holds a quasi-monopoly control over the production of Moscatel de Setúbal today.\n\n\n== Wine styles ==\nSimilar to Port, Moscatel de Setúbal wines are wood aged until they are bottled. They can be made from grapes of a single vintage or in a \"non-vintage\" style as a blend of several vintages. The wines tend to be at their freshest and more fruity styles at up to around 5–6 years of age, where they have pronounced apricot notes. As they age, the wines get darker with more raisin, caramel and nutty aromas and flavors.\n\n\n== Grapes ==\nThe DOC regulations for Moscatel de Setúbal specify that the wines are to be composed primarily of Muscat of Alexandria or Moscatel Roxo. The blend can include up to 30% of Arinto, Boais, Diagalves, Fernao Pires, Malvasia, Olho de Lebre, Rabo de Ovelha, Roupeiro, Talia, Tamarez and Vital.\n\n\n== See also ==\nList of Portuguese wine regions\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Muscat de Setúbal.jpg"
+  ],
+  "instance_of": [
+   "Q2140699",
+   "Q451752"
+  ],
+  "subclass_of": [
+   "Q1754670"
+  ],
+  "country_of_origin": [
+   "Q45"
+  ],
+  "description": "Portuguese muscatel"
+ }
+}

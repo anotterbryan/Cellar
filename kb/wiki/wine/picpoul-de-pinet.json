@@ -1,0 +1,43 @@
+{
+ "kind": "wine",
+ "key": "picpoul-de-pinet",
+ "label": "Picpoul de Pinet",
+ "match": "direct",
+ "tried": [
+  "Picpoul de Pinet"
+ ],
+ "title": "Piquepoul",
+ "url": "https://en.wikipedia.org/wiki/Piquepoul",
+ "revision": 1328048780,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q443679",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Picpoul.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Grape varieties of France",
+  "Languedoc-Roussillon wine AOCs",
+  "Red wine grape varieties",
+  "White wine grape varieties"
+ ],
+ "lead": "Piquepoul (French pronunciation: [pikpul] ), Picpoul, or Picapoll is a variety of wine grape grown primarily in the Rhone Valley and Languedoc regions of France as well as Catalonia, Spain. It exists both in dark-skinned (Piquepoul noir) and light-skinned (Piquepoul blanc) versions, as well as a very little grown Piquepoul gris. Piquepoul blanc is the most common of the Piquepouls, with 1,000 hectares (2,500 acres) cultivated in France in 2000, and an increasing trend.\nPiquepoul tends to bud late and has some sensitivity to powdery mildew.",
+ "sections": [
+  "History",
+  "Piquepoul wines",
+  "Picpoul de Pinet",
+  "Synonyms",
+  "References"
+ ],
+ "text": "Piquepoul (French pronunciation: [pikpul] ), Picpoul, or Picapoll is a variety of wine grape grown primarily in the Rhone Valley and Languedoc regions of France as well as Catalonia, Spain. It exists both in dark-skinned (Piquepoul noir) and light-skinned (Piquepoul blanc) versions, as well as a very little grown Piquepoul gris. Piquepoul blanc is the most common of the Piquepouls, with 1,000 hectares (2,500 acres) cultivated in France in 2000, and an increasing trend.\nPiquepoul tends to bud late and has some sensitivity to powdery mildew.\n\n\n== History ==\nPiquepoul has a long history in the Languedoc region, and along with Cinsault and Clairette blanche is one of the oldest domestic grape varieties of that region. It was blended with Clairette blanche to produce the wine Picardan in the 17th & 18th centuries.\nAfter the Great French Wine Blight, when large shifts in varieties planted took place, Piquepoul lost popularity due to its susceptibility to fungal diseases such as powdery mildew and its low yield.\n\n\n== Piquepoul wines ==\nIn Languedoc, Piquepoul blanc which is low in alcohol and high in acidity is used both for blending and for varietal wines. Its fresh, citrus notes are described as dry, tart, and 'lip-stinging' making it suited for accompanying seafood. Red wines produced from Picpoul noir are high in alcohol, are richly scented, but have a very pale colour, which has made the variety more popular as a blending ingredient than as a producer of varietal wines.\nBoth the blanc and noir versions of Piquepoul are permitted blending grapes for the production of Châteauneuf-du-Pape. However, in 2004 only 0.15% of the appellation's surface was planted with the Piquepoul varieties.\nIn the New World, Piquepoul is being successfully grown in the foothills of the Chiricahua Mountains (5000 feet above sea level) in the Willcox AVA of southern Arizona. It is also grown in the Red Mountain AVA of eastern Washington State.\nPiquepoul blanc is being grown in Sonoma, California.\nPiquepoul blanc is also grown successfully in the Texas Hill Country AVA and Texas High Plains AVAs.\nIn Australia, Piquepoul blanc was first planted in 2013, and the first commercial release of wine was in 2017. Cuttings of the variety were imported for the wine's suitability for drinking with oysters.\n\n\n=== Picpoul de Pinet ===\nPicpoul de Pinet is an AOC within the Languedoc AOC  for white wines made exclusively from Piquepoul blanc in the communes of Pinet, Mèze, Florensac, Castelnau-de-Guers, Montagnac and Pomérols.\nThe wines are green-gold in color, full-bodied, and show lemon flavours. They have a soft, delicate nose, with pleasant hints of acacia and hawthorn blossom. Modernization of the winemaking has led to increased interest in these wines.\n\n\n== Synonyms ==\nSynonyms for Piquepoul blanc include Avello, Avillo, Extra, Feher Piquepoul, Languedocien, Picapoll, Picapolla, Picapulla, Picpoul, Picpoul de Pinet.\nSynonyms for Piquepoul gris include Avillo, Languedocien, Picapulla, Picpoul, Pikepul Seryi, Piquepoul rose, Szürke Piquepoul.\nSynonyms for Piquepoul noir include Avillo, Kek Piquepoul, Languedocien, Pical, Pical negro, Pical Polho, Picalpolho, Picapoll, Picapoll Negro, Picapouia, Picapouya, Picapulla, Picpouille, Picpoul, Picpoule, Picquepoul, Pikepul Chernyi, Pique Poule, Piquerette noire.\nPicpoul is also a synonym for the variety Folle blanche, which has no known relationship to Piquepoul.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Picpoul.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "description": "varietal, Piquepoul Noir and its mutations"
+ }
+}

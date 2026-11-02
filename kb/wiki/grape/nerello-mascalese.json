@@ -1,0 +1,40 @@
+{
+ "kind": "grape",
+ "key": "Nerello Mascalese",
+ "label": "Nerello Mascalese",
+ "match": "direct",
+ "tried": [
+  "Nerello Mascalese (grape)",
+  "Nerello Mascalese"
+ ],
+ "title": "Nerello mascalese",
+ "url": "https://en.wikipedia.org/wiki/Nerello_mascalese",
+ "revision": 1327665760,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1977939",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Nerello_mascalese_wine.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Red wine grape varieties",
+  "Wine grape stubs",
+  "Wine grape varieties of Italy"
+ ],
+ "lead": "Nerello mascalese is a name given to a variety of red wine grapes named after the Mascali area in Catania, that grow primarily in Sicily and Sardinia.\nIt is grown mainly on the northeastern side of Sicily (near Mascali, where the grape is thought to have originated) and is thought to be superior in quality to the Nerello Cappuccio. There is an experimental vineyard in Agliano Terme, Piedmont, where Nerello has been planted by the winery, Vini Ragerra, and they are credited with being the first to plant and vinify Nerello in this region. While it can be used for blending, the grape is often made into varietal wine. The grape is believed to be an offspring of the Calabrian wine grape Mantonico bianco.\nThe Nerello Cappuccio, is used together with mascalese in the Etna DOC as a blending grape that adds color and alcohol to the wine. It is one of the three grapes used to make the wine Corvo Rosso.\nAn Italian study published in 2008 using DNA typing showed a close genetic relationship between Sangiovese on the one hand and ten other Italian grape varieties on the other hand, including Nerello. It is therefore likely that Nerello is a crossing of Sangiovese and another, so far unidentified, grape variety.\nThe organoleptic characteristics of the monovarietal Nerello Mascalese generally are a ruby red color, with subtle grenade tones; a strong fruity scent of red berry fruits, with slight floral shades, a spicy hint, and a delicate effusion of vanilla and tobacco, with a persistent trace of licorice; and a dry, tannic, persistent and harmonic taste, with a strong body. At sight, the wine seems surely more mature than it appears when smelled or tasted. Treating this vine variety in a traditional way, it can produce a wine presenting the above-described characteristics.",
+ "sections": [
+  "References",
+  "External links"
+ ],
+ "text": "Nerello mascalese is a name given to a variety of red wine grapes named after the Mascali area in Catania, that grow primarily in Sicily and Sardinia.\nIt is grown mainly on the northeastern side of Sicily (near Mascali, where the grape is thought to have originated) and is thought to be superior in quality to the Nerello Cappuccio. There is an experimental vineyard in Agliano Terme, Piedmont, where Nerello has been planted by the winery, Vini Ragerra, and they are credited with being the first to plant and vinify Nerello in this region. While it can be used for blending, the grape is often made into varietal wine. The grape is believed to be an offspring of the Calabrian wine grape Mantonico bianco.\nThe Nerello Cappuccio, is used together with mascalese in the Etna DOC as a blending grape that adds color and alcohol to the wine. It is one of the three grapes used to make the wine Corvo Rosso.\nAn Italian study published in 2008 using DNA typing showed a close genetic relationship between Sangiovese on the one hand and ten other Italian grape varieties on the other hand, including Nerello. It is therefore likely that Nerello is a crossing of Sangiovese and another, so far unidentified, grape variety.\nThe organoleptic characteristics of the monovarietal Nerello Mascalese generally are a ruby red color, with subtle grenade tones; a strong fruity scent of red berry fruits, with slight floral shades, a spicy hint, and a delicate effusion of vanilla and tobacco, with a persistent trace of licorice; and a dry, tannic, persistent and harmonic taste, with a strong body. At sight, the wine seems surely more mature than it appears when smelled or tasted. Treating this vine variety in a traditional way, it can produce a wine presenting the above-described characteristics.\n\n\n== References ==\n\n\n== External links ==\nVal di Marara Wine Region on Wikivoyage\nVal Demone Wine Region on Wikivoyage",
+ "facts": {
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

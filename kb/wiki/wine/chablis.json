@@ -1,0 +1,54 @@
+{
+ "kind": "wine",
+ "key": "chablis",
+ "label": "Chablis",
+ "match": "direct",
+ "tried": [
+  "Chablis"
+ ],
+ "title": "Chablis",
+ "url": "https://en.wikipedia.org/wiki/Chablis",
+ "revision": 1381824309,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q331232",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Chablis_and_Premier_Cru_Vaulorent.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Auxerre arrondissement geography stubs",
+  "Champagne (province)",
+  "Communes of Yonne"
+ ],
+ "lead": "Chablis (French pronunciation: [ʃabli] ) is a town and commune in the Yonne department in Bourgogne-Franche-Comté in north-central France.\nIt lies in the valley of the River Serein.",
+ "sections": [
+  "Wine",
+  "Population",
+  "Events",
+  "Climate",
+  "See also",
+  "References"
+ ],
+ "text": "Chablis (French pronunciation: [ʃabli] ) is a town and commune in the Yonne department in Bourgogne-Franche-Comté in north-central France.\nIt lies in the valley of the River Serein.\n\n\n== Wine ==\n\nThe village of Chablis gives its name to one of the most famous French white wines. Chablis is made with Chardonnay, a grape that grows particularly well in the region.\n\n\n== Population ==\n\n\n== Events ==\nEach year the Festival du Chablisien is held May to June in Chablis, featuring classical, jazz, and world music.\nThe fifth stage of the 2007 Tour de France departed from Chablis towards Autun.\n\n\n== Climate ==\n\n\n== See also ==\nCommunes of the Yonne department\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "coordinates": [
+   {
+    "lat": 47.815,
+    "lon": 3.7969444444444
+   }
+  ],
+  "image": [
+   "Chablis - centre ville.jpg"
+  ],
+  "instance_of": [
+   "Q484170"
+  ],
+  "located_in": [
+   "Q12816",
+   "Q16305467",
+   "Q700534"
+  ],
+  "description": "commune in Yonne, France"
+ }
+}

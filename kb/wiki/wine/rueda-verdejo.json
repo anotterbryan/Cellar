@@ -1,0 +1,45 @@
+{
+ "kind": "wine",
+ "key": "rueda-verdejo",
+ "label": "Rueda Verdejo",
+ "match": "search",
+ "tried": [
+  "Rueda Verdejo",
+  "Castilla y León — Rueda wine",
+  "Verdejo"
+ ],
+ "title": "Verdejo",
+ "url": "https://en.wikipedia.org/wiki/Verdejo",
+ "revision": 1380628354,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q456276",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Rueda_Verdejo.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Spanish wine",
+  "White wine grape varieties",
+  "Wine grape stubs"
+ ],
+ "lead": "Verdejo is a variety of wine grape that has long been grown in the Rueda region of Spain. The grape originated in North Africa, and was spread to Rueda in about the 11th Century, possibly by Mozarabs. Verdejo was generally used to make a strongly oxidized, Sherry-like wine. \nIn the mid-20th century, Verdejo almost became extinct, had it not been for the local winegrower Ángel Rodríguez Vidal (Bodega Martinsancho), who opted for this variety and contributed to re-establishing its prominence in the region. In recognition of his work, he was honoured with the Cross of the Order of Agricultural Merit by King Juan Carlos I of Spain. \nIn the 1970s, the winemaking company Marqués de Riscal began to develop a fresher style of white wine based on Verdejo with the help of French oenologist Émile Peynaud. In 1980, white wines from the Rueda region were recognized by a Denominación de Origen (DO). Wines labeled Rueda must contain 50% Verdejo; the remainder is typically Sauvignon blanc or Macabeo. Wines designated \"Rueda Verdejo\" must contain 85% Verdejo, and are often 100% Verdejo.\nThe Verdejo grapes are generally harvested at night. This means that the grapes enter the cellar at the lower night-time temperature of 10–15 °C (50–59 °F) instead of the daytime temperature, which can be as high as 28–30 °C (82–86 °F) in September. Lower temperatures means less oxidation (and therefore less browning) of the juice. Verdejo wines are aromatic, often soft, and full-bodied.",
+ "sections": [
+  "History",
+  "References"
+ ],
+ "text": "Verdejo is a variety of wine grape that has long been grown in the Rueda region of Spain. The grape originated in North Africa, and was spread to Rueda in about the 11th Century, possibly by Mozarabs. Verdejo was generally used to make a strongly oxidized, Sherry-like wine. \nIn the mid-20th century, Verdejo almost became extinct, had it not been for the local winegrower Ángel Rodríguez Vidal (Bodega Martinsancho), who opted for this variety and contributed to re-establishing its prominence in the region. In recognition of his work, he was honoured with the Cross of the Order of Agricultural Merit by King Juan Carlos I of Spain. \nIn the 1970s, the winemaking company Marqués de Riscal began to develop a fresher style of white wine based on Verdejo with the help of French oenologist Émile Peynaud. In 1980, white wines from the Rueda region were recognized by a Denominación de Origen (DO). Wines labeled Rueda must contain 50% Verdejo; the remainder is typically Sauvignon blanc or Macabeo. Wines designated \"Rueda Verdejo\" must contain 85% Verdejo, and are often 100% Verdejo.\nThe Verdejo grapes are generally harvested at night. This means that the grapes enter the cellar at the lower night-time temperature of 10–15 °C (50–59 °F) instead of the daytime temperature, which can be as high as 28–30 °C (82–86 °F) in September. Lower temperatures means less oxidation (and therefore less browning) of the juice. Verdejo wines are aromatic, often soft, and full-bodied.\n\n\n== History ==\nAfter the Reconquest of Toledo, the Duero area was repopulated by Asturians, Vascones and Mozarabs. It is probable that the grape was brought from Algaida, in North Africa, along the silver route. The first vines of this variety in Spain were planted in Toro and Tierra del vino and the region of Madrigal de las Altas Torres (hence its name madrigal white) and Rueda during the reign of Alfonso VI (11th–12th centuries).\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Rueda Verdejo.JPG"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q29",
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

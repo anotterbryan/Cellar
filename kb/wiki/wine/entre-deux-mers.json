@@ -1,0 +1,46 @@
+{
+ "kind": "wine",
+ "key": "entre-deux-mers",
+ "label": "Entre-Deux-Mers / Bordeaux Blanc",
+ "match": "search",
+ "tried": [
+  "Entre-Deux-Mers / Bordeaux Blanc",
+  "Entre-Deux-Mers"
+ ],
+ "title": "Entre-Deux-Mers",
+ "url": "https://en.wikipedia.org/wiki/Entre-Deux-Mers",
+ "revision": 1267948456,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q3558190",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/d/dc/E2m.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Bordeaux",
+  "Bordeaux wine",
+  "Geography of Gironde"
+ ],
+ "lead": "Entre-Deux-Mers is a French region, well known as a  Bordeaux wine growing region. The geographical area is situated between the rivers Garonne and Dordogne, and is bounded in the east by the border of the Gironde department and in the west by the Bec d'Ambès, the confluence of the Garonne and the Dordogne.\nAt 3,000 hectares (7,400 acres), it is the largest sub-region of Bordeaux, although, as there are large areas of forest, only half the land is used for growing grapes. The total area under vine is about 1,500 hectares (3,700 acres), with about 250 growers making wine there.",
+ "sections": [
+  "Name",
+  "Wine region and Appellation",
+  "Characteristics",
+  "References",
+  "See also"
+ ],
+ "text": "Entre-Deux-Mers is a French region, well known as a  Bordeaux wine growing region. The geographical area is situated between the rivers Garonne and Dordogne, and is bounded in the east by the border of the Gironde department and in the west by the Bec d'Ambès, the confluence of the Garonne and the Dordogne.\nAt 3,000 hectares (7,400 acres), it is the largest sub-region of Bordeaux, although, as there are large areas of forest, only half the land is used for growing grapes. The total area under vine is about 1,500 hectares (3,700 acres), with about 250 growers making wine there.\n\n\n== Name ==\nThe name of the region is derived, not from the French word \"mer\" (\"sea\"), but from \"marée\" (\"tide\"). Thus, it means \"between two tides\", a reference to its location between two tidal rivers.\n\n\n== Wine region and Appellation ==\n\nBoth red and white wine is produced in Entre-Deux-Mers, mainly the dry white carries the appellation d'origine contrôlée (AOC) \"Entre-Deux-Mers\".\nThe red is mostly sold as Bordeaux or Bordeaux Supérieur. From 2023 also red wines can be sold under AOP Entre-Deux-Mers. But have slightly stricter rules than Bordeaux or Bordeaux supérieur.\nMany growers switched from the white grape varieties to the more profitable red ones in the mid-20th century.\nSyrupy and sweet white wines are also produced in the south of the geographical region : Cadillac, Loupiac, Sainte-Croix-du-Mont.\n\n\n=== Characteristics ===\nThe Entre-Deux-Mers appellation has the following characteristics:\n\nDry white wine: less than 4 grams / litre of residual sugar;\nBlend of three grape varieties: Sauvignon Blanc (primarily), Sémillon and Muscadelle;\nMinimum alcoholic content of 11.5%.\nThe wine is typically enjoyed young – within one year of vintage – but has some aging potential, owing to the Sémillon.\n\n\n== References ==\n\n\n== See also ==\nBordeaux wine regions\nWhite wine",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "image": [
+   "GirondePays.png"
+  ],
+  "instance_of": [
+   "Q2140699"
+  ],
+  "located_in": [
+   "Q12526"
+  ],
+  "description": "French wine growing region"
+ }
+}

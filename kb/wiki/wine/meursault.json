@@ -1,0 +1,54 @@
+{
+ "kind": "wine",
+ "key": "meursault",
+ "label": "Meursault",
+ "match": "direct",
+ "tried": [
+  "Meursault"
+ ],
+ "title": "Meursault",
+ "url": "https://en.wikipedia.org/wiki/Meursault",
+ "revision": 1381870517,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q16140",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/9/93/Meursault_-_Ch%C3%A2teau-fort_-_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Communes of Côte-d'Or"
+ ],
+ "lead": "Meursault (French pronunciation: [mœʁso]) is a commune in the Côte-d'Or department and region of Bourgogne-Franche-Comté in eastern France.",
+ "sections": [
+  "Etymology",
+  "Geography and viticulture",
+  "History",
+  "Administration",
+  "Population",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Meursault (French pronunciation: [mœʁso]) is a commune in the Côte-d'Or department and region of Bourgogne-Franche-Comté in eastern France.\n\n\n== Etymology ==\nThe oldest attested form of the toponym Meursault dates from 1094, as Murassalt and Mussalt, in a charter by the Cluny Abbey. However, these forms may have been a scribal error, given that in the attested forms of the toponym, the letter a does not appear in the second syllable of the toponym. The same letter does not reappear until the 13th century, which suggests that the charters of the abbey were recopied during that era.\nLater on, the toponym has been attested in various forms, such as Muresaldum (1119), Muressalt (1148), Muressaut (1155), Murissalt (1168), Muresauth (1168), Meuressault (1549), Murseau (1686), and finally Meursault (1713).\nLebel suggests that Muressalt (1148) or Murissalt (1168) may have phonetically evolved from *mureis salt, which would have been eventually derived from *muriscu saltu, the latter being composed of the Latin word muru “wall” with a Germanic suffix -isc (possibly from Proto-West Germanic -isk), and saltu, a Latin word meaning “forest” (it was used as frequently as its synonym silva, but went on to be replaced by the Germanic word bosk which eventually became French bois).\nThe existence of a forest in Meursault could be corroborated by the name of the river that passes the town: Le Ruisseau des Clous, which appeared as Agine in medieval texts (since 1155). Lebel gives the reconstruction of this name as *Hagina, a derivation from haga “enclosed forest” followed by a Germanic suffix -ina (possibly from Proto-Germanic -*īnaz). The Franks called enclosed forests haga or *hagja, which remains in the Burgundian language as age, and is also related to French haie and English hedge.\nAn attempt to suggest the etymology of the toponym Meursault was first done by Antoine Gandelot (1714-1785), in his work Histoire de la ville de Beaune et de ses antiquités. The author states that the name Meursault is derived from Latin Murissaltus, and suggests that it means \"the forest of the rat\" without giving further explanations. Many travel guides and wine buying guides have reused this etymology, and some even suggest that it could mean “the falls of the rat”, “the rat” supposedly being the name of a forest that once covered Meursault. This can be explained due to the word muris being a homonym, as it can either be the genitive singular of ᴍūs “rat” or the dative/ablative plural of ᴍūʀᴜs “wall”. The same could be said for the Latin word saltus, as it can either mean “leap/jump/fall” or “forest”.\nFurthermore, Berthoud and Matruchot suggested minor saltus, but has less support among researchers.\n\n\n== Geography and viticulture ==\n\nMeursault is an Appellation d'origine contrôlée (AOC) in the Côte de Beaune subregion of the Burgundy wine region. It lies along the foot of the Côte-d'Or escarpment, around Beaune and with the broad Saône valley plain to its east. Meursault produces mainly white wines from Chardonnay grapes, primarily in a style with a clear oak influence, which have led to descriptions such as \"buttery\" to be applied to powerful examples of Meursault wines. Within the Meursault AOC there are some Premier Cru vineyards, but no Grand Cru. This has however not stopped the wines of Meursault from competing with the white burgundies from the villages Chassagne-Montrachet and Puligny-Montrachet, where several Grands Crus are situated. The town of Meursault is home to the international wine event La Paulée de Meursault.\n\n\n== History ==\nMeursault is situated on a prehistoric settlement.\nMont Mélian is a Gallo-Roman camp.  The old Roman Fort remains are still visible on the hill (known and signposted as \"La Montagne\") above the village. The name of Meursault derives from muris saltus, the \"mouse-leap\" stream of the Ruisseau des Cloux, so named by the Roman soldiers.\nThe hôpital de Meursault is an old hospital, dating from the twelfth century, that was originally used to treat leprosy.\nMeursault was used in the film La Grande Vadrouille.  The town hall, very recognisable with its burgundy-coloured roof, was depicted as the local Wehrmacht headquarters.\n\n\n== Administration ==\n\n\n== Population ==\n\n\n== See also ==\nFrench wine\nCommunes of the Côte-d'Or département\nRoute des Grands Crus\n\n\n== References ==\n\n\n== External links ==\n\nCartographical details[link removed] (in French)\nMeursault Tourist Office (in French)\nCommune de Meursault DICRIM: Document d'Information Communal sur les Risques Majeurs (in French)",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "coordinates": [
+   {
+    "lat": 46.978055555556,
+    "lon": 4.7705555555556
+   }
+  ],
+  "image": [
+   "Meursault Hôtel de ville 2.jpg"
+  ],
+  "instance_of": [
+   "Q484170"
+  ],
+  "located_in": [
+   "Q14836",
+   "Q3342",
+   "Q14812"
+  ],
+  "description": "commune in Côte-d'Or, France"
+ }
+}

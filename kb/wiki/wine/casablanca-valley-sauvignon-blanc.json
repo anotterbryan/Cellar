@@ -1,0 +1,60 @@
+{
+ "kind": "wine",
+ "key": "casablanca-valley-sauvignon-blanc",
+ "label": "Casablanca Valley Sauvignon Blanc",
+ "match": "search",
+ "tried": [
+  "Casablanca Valley Sauvignon Blanc",
+  "Aconcagua – Casablanca Valley wine",
+  "Casablanca, Chile"
+ ],
+ "title": "Casablanca, Chile",
+ "url": "https://en.wikipedia.org/wiki/Casablanca,_Chile",
+ "revision": 1375330519,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q3742",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/0/04/Plaza_Casablanca.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "1753 establishments in the Spanish Empire",
+  "Communes of Chile",
+  "Populated places in Valparaíso Province",
+  "Wine regions of Chile"
+ ],
+ "lead": "Casablanca (Spanish pronunciation: [kasaˈβlaŋka]), meaning \"white house\", is a Chilean city and commune located in Valparaíso Province, Valparaíso Region.",
+ "sections": [
+  "Geography",
+  "Demographics",
+  "Administration",
+  "Casablanca Valley wine region",
+  "Grape distribution by varietal",
+  "Sister city relations",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Casablanca (Spanish pronunciation: [kasaˈβlaŋka]), meaning \"white house\", is a Chilean city and commune located in Valparaíso Province, Valparaíso Region.\n\n\n== Geography ==\nThe city of Casablanca is located on Route 68 between Santiago and the city of Valparaíso, at about 30 minutes southeast of Valparaíso and 50 minutes northwest of Santiago traveling by car. It is a region known for white wine grapes, especially Sauvignon blanc and Chardonnay. The commune of Casablanca spans an area of 952.5 km2 (368 sq mi).\n\n\n== Demographics ==\nAccording to the 2002 census of the National Statistics Institute, Casablanca spans an area of 952.5 km2 (368 sq mi) and has 21,874 inhabitants (11,127 men and 10,747 women). Of these, 15,209 (69.5%) lived in urban areas and 6,665 (30.5%) in rural areas. The population grew by 31.9% (5,284 persons) between the 1992 and 2002 censuses.\n\n\n== Administration ==\nAs a commune, Casablanca is a third-level administrative division of Chile, administered by a municipal council, which is headed by a directly elected alcalde. The 2021-2024 mayor is Francisco Riquelme López (FA). The communal council has the following members:\n\nRodrigo Martínez Roca\nRoberto Burgos González\nPedro Caussade Pitté\nÁngel Poggi Saa\nLaura Reyes Salazar\nEnrique Heck Escalante\nWithin the electoral divisions of Chile, Casablanca belongs to the 15th electoral district and 6th senatorial constituency.\n\n\n== Casablanca Valley wine region ==\nThe Casablanca Valley is a wine-producing region 75 km (47 mi) northwest of Santiago. It is a Denomination of Origin (DO) defined by the Chilean Appellation system, the legally defined and protected geographical indication used to identify where the grapes for a wine were grown. The valley takes its name from the commune of Casablanca and stretches roughly 30 km (19 miles) east-west from eastern border of the Valparaíso province in the Valparaíso region.\nVines were first planted here in the mid-1980s during the revitalization of the Chilean wine industry and it quickly became known for its white wines, most notably Sauvignon Blanc and Chardonnay, as well as Pinot Noir, which thrives in its cooler climate.\nAlthough the valley is located at 33°S, much closer to the Equator than any European vineyard, viticulture here is possible because of the cooling influence of the Pacific Ocean, in the shape of cool morning fog and greater cloud cover than is found elsewhere in the north of Chile.\n\n\n=== Grape distribution by varietal ===\nClimate: Cool Mediterranean climate with pronounced maritime influence. 540 mm (21.2 in) of rain per year.\nSoils: clay and sandy soils.\nPrimary grapes: Chardonnay, Pinot Noir, Sauvignon Blanc.\n\nTotal hectares planted: 1,429 ha (3531 acres).\n\n\n== Sister city relations ==\n – Napa, California, USA\n\n\n== See also ==\nColchagua Valley\nMaipo Valley\nChilean wine\n\n\n== References ==\n\n\n== External links ==\n(in Spanish) Municipality of Casablanca",
+ "facts": {
+  "country": [
+   "Q298"
+  ],
+  "coordinates": [
+   {
+    "lat": -33.316666666667,
+    "lon": -71.416666666667
+   }
+  ],
+  "image": [
+   "Plaza Casablanca.jpg"
+  ],
+  "instance_of": [
+   "Q1840161",
+   "Q515"
+  ],
+  "located_in": [
+   "Q721744",
+   "Q17621228"
+  ],
+  "description": "Chilean commune"
+ }
+}

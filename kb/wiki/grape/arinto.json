@@ -1,0 +1,44 @@
+{
+ "kind": "grape",
+ "key": "Arinto",
+ "label": "Arinto",
+ "match": "direct",
+ "tried": [
+  "Arinto (grape)",
+  "Arinto"
+ ],
+ "title": "Arinto",
+ "url": "https://en.wikipedia.org/wiki/Arinto",
+ "revision": 1146109681,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q358657",
+ "image": null,
+ "categories": [
+  "Portuguese wine",
+  "White wine grape varieties",
+  "Wine grape stubs"
+ ],
+ "lead": "Arinto or Arinto de Bucelas is a white Portuguese wine grape planted primarily in the Bucelas, Tejo and Vinho Verde regions. It can produce high acid wines with lemon notes.",
+ "sections": [
+  "Synonyms",
+  "See also",
+  "References"
+ ],
+ "text": "Arinto or Arinto de Bucelas is a white Portuguese wine grape planted primarily in the Bucelas, Tejo and Vinho Verde regions. It can produce high acid wines with lemon notes.\n\n\n== Synonyms ==\nArinto is also known by the synonyms Arintho, Arintho du Dao, Arinto Cachudo, Arinto Cercial, Arinto d'Anadia, Arinto de Bucelas, Arinto do Douro, Arinto Galego, Asal Espanhol, Asal Galego, Assario branco, Boal Cachudo, Branco Espanhol, Cerceal, Chapeludo, Malvasia Fina, Pe de Perdiz branco, Pederna, and Pedernao.\nArinto (or Arintho) is also part of the name of, or a synonym of other varieties. Notably, Arinto is a synonym of Malvasia Fina and Loureira, and Arinto tinto is a synonym of Tempranillo. Arinto dos Açores, the most common grape variety in the Azores, is a distinct variety, and may be related to verdelho.\n\n\n== See also ==\nList of Portuguese wine grape varieties\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Arintho - Ampélographie.png"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

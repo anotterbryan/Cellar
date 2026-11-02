@@ -1,0 +1,41 @@
+{
+ "kind": "topic",
+ "key": "Orange wine",
+ "label": "Orange wine",
+ "match": "direct",
+ "tried": [
+  "Orange wine"
+ ],
+ "title": "Orange wine",
+ "url": "https://en.wikipedia.org/wiki/Orange_wine",
+ "revision": 1380311365,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q30587928",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Oranger_Wein.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Wine styles"
+ ],
+ "lead": "Orange wine, also known as skin-contact white wine, skin-fermented white wine, or amber wine, is a type of wine made from white wine grapes where the grape skins are not removed but stay in contact with the juice for days or even months, as is more typical with red wines. This contrasts with conventional white wine production, which involves crushing the grapes and quickly moving the juice off the skins into the fermentation vessel. The skins contain color pigment, phenols and tannins that would normally be considered undesirable for white wines, while for red wines skin contact and maceration is a vital part of the winemaking process that gives red wine its color, flavor, and texture. Orange wines tend to be natural (a.k.a. minimal intervention) wines. The International Organisation of Vine and Wine describes orange/amber wine as \"White wine with maceration\" and prescribes the minimum duration of the maceration phase to be 1 month.",
+ "sections": [
+  "History",
+  "Terminology",
+  "Production",
+  "See also",
+  "References"
+ ],
+ "text": "Orange wine, also known as skin-contact white wine, skin-fermented white wine, or amber wine, is a type of wine made from white wine grapes where the grape skins are not removed but stay in contact with the juice for days or even months, as is more typical with red wines. This contrasts with conventional white wine production, which involves crushing the grapes and quickly moving the juice off the skins into the fermentation vessel. The skins contain color pigment, phenols and tannins that would normally be considered undesirable for white wines, while for red wines skin contact and maceration is a vital part of the winemaking process that gives red wine its color, flavor, and texture. Orange wines tend to be natural (a.k.a. minimal intervention) wines. The International Organisation of Vine and Wine describes orange/amber wine as \"White wine with maceration\" and prescribes the minimum duration of the maceration phase to be 1 month.\n\n\n== History ==\nThe practice has a long history in winemaking dating back thousands of years in the country of Georgia and hundreds of years in Slovenia and Friuli-Venezia Giulia.  \nEighteenth and Nineteenth-century accounts describe skin-contact fermentation in qvevri as the standard method for making white wine in much of Kakheti region, which was mainly sold in Tbilisi. During the Soviet era (1921-1991), industrial wineries adopted so called \"European-style\" white winemaking, leading to a decline in commercial qvevri skin-contact wine production. The tradition, however, continued in communities and households and experienced a revival after Georgia's independence in 1991. \nThe practice was repopularized by Italian and Slovenian winemakers after visiting Georgia and importing qvevris, initially in the cross-border Friuli-Venezia Giulia wine and Gorizia Hills regions, while there is also production in Spain, Slovenia, Croatia, Slovakia, Austria, Germany, New Zealand, California, and China.\nSkin-fermented white wines were common in Italy until the 1950s and 1960s, but fell out of fashion when technically 'correct' and fresh white wines came to dominate the market.\n\n\n== Terminology ==\nThe popular term orange wine was coined by a British wine importer, David A. Harvey, in 2004. This style of wines can also be known by their color references of having an amber or orange tinge that the base white wine receives due to its contact with the coloring pigments of the grape skins.\nIn Georgia, skin-contact white wine is known as “karvisperi ghvino\", which translates as amber wine. This term was introduced by Sandro Shanshiashvili in his 1920 poem \"Wine\".  The term qvevri wine (Georgian: ქვევრის ღვინო, qvevris ghvino) is also commonly used term in Georgia, although both red and white wines, with or without skin maceration, can be made in qvevri.  \n\n\n== Production ==\n\nThe basic differences between wine colors result from grape color and the duration of skin contact.\n\nRed wine uses red grapes whose skins stay in contact for a period of one week to one month, which produces with a red color. Orange wine uses the same process, but with white grapes that produce a lighter wine color after pressing. Rosé results from the same process of skin contact using red grapes, but their skins only stay in contact a few hours before pressing, which results in a characteristic light pink hue. White wine can originate from both red and white grapes whose skins are removed immediately. Because the grape skins do not \"participate\" in the fermentation, white wine possesses a green to slightly yellow neutral hue.  \nTwo main methods of producing orange wine is in Georgia. The most popular is eastern Georgian -  Kakhetian, this method uses grape seeds, skin and stems (known as \"chacha) in the fermentation process, which often lasts for 6 months. Wine made with Kakhetian method is usually deep amber color. Another popular method is Western Georgian -  Imeretian, where less pomace (usually 1/3) is added, and maceration often continues for 15-30 days, resulting in a wine that is lighter in color - usually orange or yellow. Both methods involve wine maceration in qvevri, which is buried in the cellar, providing a constant underground temperature of around 14-15 °C, which acts as natural climate control.     \n\n\n== See also ==\n Wine portal\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Glass quevri rkatsiteli.JPG"
+  ],
+  "instance_of": [
+   "Q282"
+  ],
+  "subclass_of": [
+   "Q282",
+   "Q10210"
+  ],
+  "description": "white wine made with prolonged skin contact, giving an amber-orange colour and tannins"
+ }
+}

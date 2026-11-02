@@ -1,0 +1,59 @@
+{
+ "kind": "grape",
+ "key": "Petit Verdot",
+ "label": "Petit Verdot",
+ "match": "direct",
+ "tried": [
+  "Petit Verdot (grape)",
+  "Petit Verdot"
+ ],
+ "title": "Petit Verdot",
+ "url": "https://en.wikipedia.org/wiki/Petit_Verdot",
+ "revision": 1364821913,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q637453",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/f/fa/01_Petit_verdot.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Red wine grape varieties"
+ ],
+ "lead": "Petit Verdot is a variety of red wine grape, principally used in classic Bordeaux blends. It ripens much later than the other varieties in Bordeaux, often too late, so it fell out of favour in its home region. When it does ripen it adds tannin, colour and flavour, in small amounts, to the blend. Petit verdot has attracted attention among winemakers in the New World, where it ripens more reliably and has been made into single varietal wine. It is also useful in 'stiffening' the mid palate of Cabernet Sauvignon blends.\nWhen young its aromas have been likened to banana and pencil shavings. Strong tones of violet and leather develop as it matures.",
+ "sections": [
+  "History",
+  "Distribution and wines",
+  "Argentina",
+  "Australia",
+  "Chile",
+  "France",
+  "Italy",
+  "Lebanon",
+  "Peru",
+  "Portugal",
+  "United States",
+  "Vine and viticulture",
+  "Synonyms",
+  "See also",
+  "References",
+  "Citations",
+  "General and cited sources",
+  "Further reading",
+  "External links"
+ ],
+ "text": "Petit Verdot is a variety of red wine grape, principally used in classic Bordeaux blends. It ripens much later than the other varieties in Bordeaux, often too late, so it fell out of favour in its home region. When it does ripen it adds tannin, colour and flavour, in small amounts, to the blend. Petit verdot has attracted attention among winemakers in the New World, where it ripens more reliably and has been made into single varietal wine. It is also useful in 'stiffening' the mid palate of Cabernet Sauvignon blends.\nWhen young its aromas have been likened to banana and pencil shavings. Strong tones of violet and leather develop as it matures.\n\n\n== History ==\n\nPetit Verdot probably predates Cabernet Sauvignon in Bordeaux, but its origins are unclear. There are records of it in the eighteenth century, but its characteristics suggest an origin in much hotter climes than the Gironde. It is likely that it originates from the Pyrénées-Atlantiques where it was possibly domesticated from wild grapevines.\nIt is one parent of Tressot, the other parent being Duras, a grape from the upper Tarn valley near Toulouse. It's possible that both were brought to the region by the Romans as they moved inland from the Mediterranean.\n\n\n== Distribution and wines ==\n\n\n=== Argentina ===\nThere are some blocks of Petit Verdot in Argentina, although for many years it was labelled as Fer.\n\n\n=== Australia ===\nVerdot was included in James Busby's collection of 1832, and it was trialled by Sir William Macarthur in the 1840s. In 2000 there were 1600 hectares in Australia with Kingston Estate in South Australia having the largest planting, four times more than in France. It is increasingly being used to make massive, brooding, single varietal wines that will age for several years – Pirramimma has championed this approach and Warrumbungle Wines releases only aged / cellar vintages to highlight the aging potential.\n\n\n=== Chile ===\nChile had 137 ha in 2003.\n\n\n=== France ===\nAlmost all the Petit Verdot in France is planted in Bordeaux, mostly in the Médoc where it is used in small amounts to give structure to the classic Bordeaux blend. However the late ripening means that in some years the entire crop is lost and it only properly ripens once every four years, so it has fallen out of favour, particularly with the trend towards earlier-maturing wine.\n\n\n=== Italy ===\nIn Italy, it is sometimes cultivated in Maremma (Tuscany) and Lazio. Some Marche IGP is also made 100% with Petit Verdot.\n\n\n=== Lebanon ===\nIn Lebanon, it is sometime found in Bekaa Valley, and be added to cabernet sauvignon and merlot.\n\n\n=== Peru ===\n\nIn Peru, Petit Verdot vines are grown in the southern Ica Region. The desert weather from Ica allows producers to make 100% varietal Petit Verdot wines. Tacama winery produces one of its high end wines, \"Don Manuel\", with 100% Petit Verdot grapes.\n\n\n=== Portugal ===\nIn Portugal it is sometime cultivated in Alentejo with great results due to this region's specific climatic conditions.\n\n\n=== United States ===\nThe profusion of Meritage Bordeaux blends has seen considerable interest in the variety in California, where there was 360 ha in 2003. The more consistent, warmer climate is a big help in reliably ripening the grape, and producers are starting to experiment with single varietals. It is also planted in Arizona, Colorado, Oregon, Texas, Michigan, Virginia, Ohio, Maryland, Missouri, North Carolina, New Jersey, Pennsylvania, New York, New Mexico, and Washington.\nIn addition to the countries above, Petit Verdot is used as 'seasoning' in Bordeaux-style blends in British Columbia, New Zealand, South Africa and Spain.\n\n\n== Vine and viticulture ==\nThe leaves have three to five lobes with a distinctively elongated central lobe. The small, cylindrical bunches are winged, with small black berries.\nThe name Petit Verdot ('small green') refers to one of the main problems with the grape, that often the berries fail to develop properly without the right weather during flowering. It also refers to the late ripening which usually comes too late for the Bordeaux climate. Petit Verdot also has a peculiar characteristic in that it produces more than two clusters per shoot.\n\n\n== Synonyms ==\nBouton, Carmelin, Heran, Lambrusquet Noir, Petit Verdau, Petit Verdot Noir, Verdot and Verdot Rouge.\n\n\n== See also ==\nBordeaux wine\n\n\n== References ==\n\n\n=== Citations ===\n\n\n=== General and cited sources ===\nRobinson, Jancis (2006). The Oxford Companion to Wine (Third ed.). Oxford University Press. ISBN 0-19-860990-6.\n\n\n== Further reading ==\nRobinson, Jancis (1986). Vines, Grapes & Wines. Mitchell Beazley. ISBN 1-85732-999-6.\n\n\n== External links ==\nGreat overview from a South African producers magazine\nPetit Verdot on the rise in Bordeaux from decanter.com",
+ "facts": {
+  "image": [
+   "01 Petit verdot.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q142",
+   "Q38"
+  ],
+  "description": "varietal"
+ }
+}

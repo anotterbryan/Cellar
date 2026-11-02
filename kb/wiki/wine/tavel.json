@@ -1,0 +1,53 @@
+{
+ "kind": "wine",
+ "key": "tavel",
+ "label": "Tavel",
+ "match": "search",
+ "tried": [
+  "Tavel",
+  "Southern Rhône wine",
+  "Tavel AOC"
+ ],
+ "title": "Tavel AOC",
+ "url": "https://en.wikipedia.org/wiki/Tavel_AOC",
+ "revision": 1269715365,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q3516286",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Vin_%22Le_mas_Duclaux%22_%28TAVEL%2CFR30%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "1930s establishments in France",
+  "Rhône wine AOCs"
+ ],
+ "lead": "Tavel (French pronunciation: [tavɛl]) is a wine-growing Appellation d'Origine Contrôlée in the southern Rhône wine region of France, across the Rhône River from Châteauneuf-du-Pape AOC and just north of Avignon. Tavel wines are all rosé wines  and must have a minimum alcohol content of 11%. The 933 hectares produce an average yield of 42 hectolitres per hectare The vineyards are located in the commune of Tavel only.\nTavel is reputed to have been a favourite wine of kings Philippe le Bel and Louis XIV, the Popes of Avignon, the 19th century novelist, Honoré de Balzac, the 20th-century writer, Ernest Hemingway, and is one of the few rosé wines that can benefit from aging.",
+ "sections": [
+  "History",
+  "Climate and geography",
+  "Grapes and wine",
+  "Winemaking",
+  "See also",
+  "References"
+ ],
+ "text": "Tavel (French pronunciation: [tavɛl]) is a wine-growing Appellation d'Origine Contrôlée in the southern Rhône wine region of France, across the Rhône River from Châteauneuf-du-Pape AOC and just north of Avignon. Tavel wines are all rosé wines  and must have a minimum alcohol content of 11%. The 933 hectares produce an average yield of 42 hectolitres per hectare The vineyards are located in the commune of Tavel only.\nTavel is reputed to have been a favourite wine of kings Philippe le Bel and Louis XIV, the Popes of Avignon, the 19th century novelist, Honoré de Balzac, the 20th-century writer, Ernest Hemingway, and is one of the few rosé wines that can benefit from aging.\n\n\n== History ==\nThe wine of Tavel is historically famous. Philip IV is supposed to have travelled through Tavel on one of his tours of the kingdom. He was reportedly offered a glass, which he emptied without getting off his horse and afterwards proclaimed Tavel the only good wine in the world. The Sun King, Louis XIV, is also supposed to have been fond of the wine, which helped maintain its reputation until the vineyards were affected by the phylloxera epidemic. Tavel achieved AOC status in 1936 when the system was introduced. At that point the grapes were mostly grown on the sandy flat lands closer to town, where vines were easier to cultivate but produced a lower quality of wine. In 1965 the hillsides were cleared of forest and prepared for growing vines.\n\n\n== Climate and geography ==\nIn Tavel there are three types of soil. One west of the village is dominated by limestone and slate. Here, low-yielding vines grow giving deep and aromatic wines. Another type is the flat sandy rocky fields, easy to cultivate and good for ripening. The third is dominated by galets roulés, the smooth round stones also found in Châteauneuf-du-Pape and is located east of the town in the direction of Châteauneuf-du-Pape.\n\n\n== Grapes and wine ==\nGrenache and Cinsault are the main grapes used in the appellation's wines, along with Syrah and Mourvedre, although the latter two were not permitted until 1969. Tavel wines are dry and tend to have more body and structure than most rosés. They can be cellared, but are usually drunk young.\n\n\n=== Winemaking ===\nRosé wine cannot legally be made in France by blending red and white wines together. However, rosé wine can blend red and white grapes (before fermentation), pressed to remove the juice from the skins after a short period of maceration (10–36 hours) in order to extract some colour. In Tavel, some of the must is kept with the skins longer and then blended into the lighter must, which is what makes the wine more powerful, more tannic and darker than other rosés. The potential alcohol is high, with an upper limit of 14.5% for the appellation.\n\n\n== See also ==\n\nList of Vins de Primeur\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "coordinates": [
+   {
+    "lat": 44.011944444444445,
+    "lon": 4.700555555555556
+   }
+  ],
+  "image": [
+   "Tavel vignobles.jpg"
+  ],
+  "subclass_of": [
+   "Q630531"
+  ],
+  "located_in": [
+   "Q12515"
+  ],
+  "description": "French wine"
+ }
+}

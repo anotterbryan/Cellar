@@ -1,0 +1,51 @@
+{
+ "kind": "grape",
+ "key": "Loureiro",
+ "label": "Loureiro",
+ "match": "direct",
+ "tried": [
+  "Loureiro (grape)"
+ ],
+ "title": "Loureiro (grape)",
+ "url": "https://en.wikipedia.org/wiki/Loureiro_(grape)",
+ "revision": 1330385279,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1474000",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/Loureiro.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Galicia (Spain)",
+  "Grape varieties of Spain",
+  "White wine grape varieties",
+  "Wine grape stubs"
+ ],
+ "lead": "Loureiro is a white wine grape cultivated in the northwest of the Iberian Peninsula. This includes Galicia,  Spain and Minho,  Portugal. In the latter, it is notably cultivated along the Lima River, a sub-region of Vinho Verde (wines produced in Minho).",
+ "sections": [
+  "Viticulture",
+  "Synonyms",
+  "See also",
+  "References"
+ ],
+ "text": "Loureiro is a white wine grape cultivated in the northwest of the Iberian Peninsula. This includes Galicia,  Spain and Minho,  Portugal. In the latter, it is notably cultivated along the Lima River, a sub-region of Vinho Verde (wines produced in Minho).\n\n\n== Viticulture ==\nIts bud break is early-medium and its ripening period is medium-late. Its vigor is medium-strong. It is suitable for somewhat humid or medium-dry soils. It has a medium sensitivity to mildew, is sensitive to powdery mildew and is very sensitive to botrytis.\n\n\n== Synonyms ==\nLoureiro is also known under the synonyms Branco Redondo, Branco Redondos, Dorado, Dourada, Dourado, False Pedro, Gallego Dourado, Loeireiro Blanco, Loureiro, Loureiro Blanco, Marques, Marquez, and Rutherglen Pedro.\n\n\n== See also ==\nList of Portuguese grape varieties\n\n\n== References ==",
+ "facts": {
+  "coordinates": [
+   {
+    "lat": 41.63,
+    "lon": -8.427
+   }
+  ],
+  "image": [
+   "Loureiro.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q29"
+  ],
+  "description": "grape variety"
+ }
+}

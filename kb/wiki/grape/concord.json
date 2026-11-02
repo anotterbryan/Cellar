@@ -1,0 +1,46 @@
+{
+ "kind": "grape",
+ "key": "Concord",
+ "label": "Concord",
+ "match": "direct",
+ "tried": [
+  "Concord (grape)"
+ ],
+ "title": "Concord grape",
+ "url": "https://en.wikipedia.org/wiki/Concord_grape",
+ "revision": 1378835272,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q393047",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/d/df/ConcordGrapes.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Concord, Massachusetts",
+  "Hybrid grape varieties",
+  "Red wine grape varieties",
+  "Table grape varieties"
+ ],
+ "lead": "The Concord grape is a cultivar derived from the grape species Vitis labrusca (also known as fox grape) that is used mainly for manufacturing grape juice. It is a hybrid grape, crossed with one-third Vitis vinifera, and is named after Concord, Massachusetts where it was first cultivated. \nIn the early 20th century, it was a common grape variety planted in the western United States. In the 21st century, the state of Washington produces more Concord grapes than any other state, and is the location of major grape juice production, particularly by Welch's in Grandview.",
+ "sections": [
+  "Description",
+  "Production and distribution",
+  "Usage",
+  "History",
+  "Gallery",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "The Concord grape is a cultivar derived from the grape species Vitis labrusca (also known as fox grape) that is used mainly for manufacturing grape juice. It is a hybrid grape, crossed with one-third Vitis vinifera, and is named after Concord, Massachusetts where it was first cultivated. \nIn the early 20th century, it was a common grape variety planted in the western United States. In the 21st century, the state of Washington produces more Concord grapes than any other state, and is the location of major grape juice production, particularly by Welch's in Grandview.\n\n\n== Description ==\nThe skin of a Concord grape is typically dark blue or purple and often is covered with a glaucous epicuticular wax \"bloom\" that can be rubbed off. It is a slip-skin variety, meaning the skin is easily separated from the fruit. The Concord grape has a large seed and is highly aromatic. It is sometimes described as having a \"foxy\" flavor, referring to a sweet, musky accent.\nThe Concord grape is particularly prone to the physiological disorder black spot.\n\n\n== Production and distribution ==\nIn the United States, 417,800 tons were produced in 2011. \nThe major growing areas are the Finger Lakes District of New York, the Lake Erie Viticultural Area, areas around Lake Ontario, Southwestern Michigan, and the Yakima Valley in Washington. The grape is sometimes found growing wild.\nConcord was the most widely grown grape variety on the North American continent in 1923 and accounted for at least 75 percent of the vines in the eastern United States. Cultivation of Concord grapes began in the Yakima Valley in 1904.\n\n\n== Usage ==\nConcord grapes are the main grapes used to manufacture grape juice, with Welch's as the largest juice producer. They may be used to make grape jelly, grape juice, grape pies, grape-flavored soft drinks, and candy. They are the usual grapes used in the traditional peanut butter and jelly sandwich, and Concord grape jelly is a staple product in U.S. supermarkets. Their distinctive purple color has led to grape-flavored soft drinks and candy being artificially colored purple. The dark-colored Concord juice is also used in some churches as a non-alcoholic alternative to wine in the service of communion.\nWhile Concord grapes are grown mainly to make juice, they are occasionally found as a table grape, especially in New England.\nThe grape is sometimes used to make wine, particularly kosher and sacramental wine. The oldest sacramental winery in America, O-Neh-Da Vineyard, still produces a Concord wine for the altar. Traditionally, most commercially produced Concord wines are sweet, but dry versions are possible if adequate fruit ripeness is achieved.\n\n\n== History ==\n\nThe Concord grape was developed in 1849 by Ephraim Wales Bull in Concord, Massachusetts. Bull planted seeds from wild Vitis labrusca, and evaluated over 22,000 seedlings, including hybrids crossed with Vitis vinifera, before finding what he considered the ideal Concord grape. Genetic testing confirmed that Concord grape is roughly one-third Vitis vinifera. The selected Concord vine was planted next to other cultivars, including Catawba, which was later confirmed to be a parent of Concord using systematic SSR analysis.\nIn 1853, Bull's grape won first place at the Boston Horticultural Society Exhibition. It was then introduced to the market in 1854. Dr. Thomas Bramwell Welch developed the first Concord grape juice in his house in 1869. Through the process of pasteurization, the juice did not ferment. Welch transferred the juice operations to Westfield, New York, processing 300 tons of grapes into juice in 1897. By the 21st century, Welch's grape juice was manufactured in a large juicing factory located in Grandview, Washington.\n\n\n== Gallery ==\n\n\n== See also ==\nMuscadine\nScuppernong\n\n\n== References ==\n\n\n== External links ==\n\nConcord Grape Association",
+ "facts": {
+  "image": [
+   "ConcordGrapes.jpg"
+  ],
+  "instance_of": [
+   "Q1639967"
+  ],
+  "country_of_origin": [
+   "Q30"
+  ],
+  "description": "grape variety"
+ }
+}

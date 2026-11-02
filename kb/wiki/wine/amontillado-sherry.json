@@ -1,0 +1,43 @@
+{
+ "kind": "wine",
+ "key": "amontillado-sherry",
+ "label": "Amontillado Sherry",
+ "match": "search",
+ "tried": [
+  "Amontillado Sherry",
+  "Andalucía — Jerez wine",
+  "Amontillado"
+ ],
+ "title": "Amontillado",
+ "url": "https://en.wikipedia.org/wiki/Amontillado",
+ "revision": 1382405388,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q2668300",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/6/60/Amontillado_sherry.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Sherry"
+ ],
+ "lead": "Amontillado (Spanish pronunciation: [amontiˈʎaðo]) is a variety of sherry wine characterised by being darker than fino sherry, but lighter than oloroso sherry. Amontillado wine is named after the Montilla municipality, in Andalusia, Spain, where the style of sherry originated in the 18th century; commercially, the name \"Amontillado\" is used as a measure of colour to label any style of sherry that lay between the categories of fino and oloroso.\nAn Amontillado sherry begins as a fino, fortified to approximately 15.5% alcohol with a cap of flor yeast limiting its exposure to the air. A cask of fino is considered to be amontillado if the layer of flor fails to develop adequately, is intentionally killed by additional fortification, or is allowed to die off through non-replenishment. Without the layer of flor, amontillado must be fortified to approximately 17.5% alcohol so that it does not oxidise too quickly. After the additional fortification, Amontillado oxidises slowly, exposed to oxygen through the slightly porous American or Canadian oak casks, and gains a darker colour and richer flavour than fino.\nAmontillado is characterized by nutty aromas, tobacco, aromatic herbs and often sturdy, polished notes of oak. The fusion of two different ageing processes gives Amontillado wines a specific flavour.",
+ "sections": [
+  "Varieties",
+  "Serving",
+  "Storing",
+  "In popular culture",
+  "References",
+  "Further reading"
+ ],
+ "text": "Amontillado (Spanish pronunciation: [amontiˈʎaðo]) is a variety of sherry wine characterised by being darker than fino sherry, but lighter than oloroso sherry. Amontillado wine is named after the Montilla municipality, in Andalusia, Spain, where the style of sherry originated in the 18th century; commercially, the name \"Amontillado\" is used as a measure of colour to label any style of sherry that lay between the categories of fino and oloroso.\nAn Amontillado sherry begins as a fino, fortified to approximately 15.5% alcohol with a cap of flor yeast limiting its exposure to the air. A cask of fino is considered to be amontillado if the layer of flor fails to develop adequately, is intentionally killed by additional fortification, or is allowed to die off through non-replenishment. Without the layer of flor, amontillado must be fortified to approximately 17.5% alcohol so that it does not oxidise too quickly. After the additional fortification, Amontillado oxidises slowly, exposed to oxygen through the slightly porous American or Canadian oak casks, and gains a darker colour and richer flavour than fino.\nAmontillado is characterized by nutty aromas, tobacco, aromatic herbs and often sturdy, polished notes of oak. The fusion of two different ageing processes gives Amontillado wines a specific flavour.\n\n\n== Varieties ==\nAmontillado can be produced in several different manners. A fino amontillado is a wine that has begun the transformation from a fino to an amontillado, but has not been aged long enough to complete the process. Amontillado del puerto is an amontillado made in El Puerto de Santa María. Naturally dry, they are sometimes sold lightly to medium sweetened but these can no longer be labelled as amontillado. On 12 April 2012, the rules applicable to the sweet and fortified Denominación de origen Montilla-Moriles and Jerez-Xérès-Sherry were changed to prohibit sweet amontillado. They have to be labelled as Medium Sherry: blend of Amontillado or suchlike.\nThe classification by sweetness is:\n\n\n== Serving ==\n\nAmontillado is usually served slightly chilled and may be served either as an apéritif or as an accompaniment to food such as chicken or rabbit. Classically it was served with a fine, or thin, soup, such as a beef consommé.\n\n\n== Storing ==\nDue to its oxidative aging and preparation, amontillado is more stable than fino and may be stored for a few years before opening. After opening, it can be kept for up to two months, if corked and refrigerated.\n\n\n== In popular culture ==\nAmontillado is referenced in a short story by Edgar Allan Poe; The Cask of Amontillado in which Montresor obtains revenge against Fortunato by getting him drunk and inviting him into the catacombs beneath his palazzo under the promise of a cask of Amontillado before bricking him into a cell.\n\n\n== References ==\n\n\n== Further reading ==\nJulian Jeffs (1 September 2004). Sherry (5th rev. ed.). London: Mitchell Beazley. ISBN 978-1-84000-923-1. Retrieved 25 August 2011.",
+ "facts": {
+  "country": [
+   "Q29"
+  ],
+  "instance_of": [
+   "Q16398"
+  ],
+  "subclass_of": [
+   "Q1432594"
+  ],
+  "description": "variety of sherry, darker than fino but lighter than oloroso, originating from the Montilla region of Spain in the 18th century"
+ }
+}

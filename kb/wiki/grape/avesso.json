@@ -1,0 +1,37 @@
+{
+ "kind": "grape",
+ "key": "Avesso",
+ "label": "Avesso",
+ "match": "direct",
+ "tried": [
+  "Avesso (grape)",
+  "Avesso"
+ ],
+ "title": "Avesso",
+ "url": "https://en.wikipedia.org/wiki/Avesso",
+ "revision": 1346405868,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q790671",
+ "image": null,
+ "categories": [
+  "White wine grape varieties",
+  "Wine grape stubs"
+ ],
+ "lead": "Avesso is a white Portuguese wine grape planted primarily in the Minho region of Portugal. It can make full-bodied aromatic wines. Ampelographers believe it may be related to the Portuguese grape Jaen.",
+ "sections": [
+  "Synonyms",
+  "See also",
+  "References"
+ ],
+ "text": "Avesso is a white Portuguese wine grape planted primarily in the Minho region of Portugal. It can make full-bodied aromatic wines. Ampelographers believe it may be related to the Portuguese grape Jaen.\n\n\n== Synonyms ==\nAvesso is also known under the synonyms Bornal, Bornao, Borracal Branco, and Borral.\n\n\n== See also ==\nList of Portuguese grape varieties\n\n\n== References ==",
+ "facts": {
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "description": "varietal"
+ }
+}

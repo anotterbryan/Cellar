@@ -1,0 +1,42 @@
+{
+ "kind": "grape",
+ "key": "Touriga Franca",
+ "label": "Touriga Franca",
+ "match": "direct",
+ "tried": [
+  "Touriga Franca (grape)",
+  "Touriga Franca"
+ ],
+ "title": "Touriga Francesa",
+ "url": "https://en.wikipedia.org/wiki/Touriga_Francesa",
+ "revision": 1343154427,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q431045",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Touriga_Franca.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Portuguese wine",
+  "Red wine grape varieties"
+ ],
+ "lead": "Touriga Francesa (or Touriga Franca) is one of the major grape varieties used to produce port wine. Touriga Francesa is lighter and more perfumed than Touriga Nacional, adding finesse to the wine. Touriga Francesa has been described by Jancis Robinson as playing \"Cabernet Franc to Touriga Nacional’s Cabernet Sauvignon\". It is a cross of two other indigenous Portuguese wine grape varieties Mourisco tinto and Touriga Nacional. Touriga Francesa is quite similar to Touriga Nacional, needing harsh conditions to keep vigor down as it gets on the steep arid slopes of the Douro. It is usually trained low to the ground under one of the Royat systems. Yields are medium (1.5 kilograms (3.3 lb) per vine), not as low as Touriga Nacional .",
+ "sections": [
+  "Wine regions",
+  "Synonyms",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Touriga Francesa (or Touriga Franca) is one of the major grape varieties used to produce port wine. Touriga Francesa is lighter and more perfumed than Touriga Nacional, adding finesse to the wine. Touriga Francesa has been described by Jancis Robinson as playing \"Cabernet Franc to Touriga Nacional’s Cabernet Sauvignon\". It is a cross of two other indigenous Portuguese wine grape varieties Mourisco tinto and Touriga Nacional. Touriga Francesa is quite similar to Touriga Nacional, needing harsh conditions to keep vigor down as it gets on the steep arid slopes of the Douro. It is usually trained low to the ground under one of the Royat systems. Yields are medium (1.5 kilograms (3.3 lb) per vine), not as low as Touriga Nacional .\n\n\n== Wine regions ==\nIn Australia, there have been experimental plantings of the grape in Tasmania and other areas for port style wines.\nIn Portugal, Touriga Francesa is the fifth most planted grape, with 7,440 hectares. It plays an important part in port blends.  Like Nacional, the variety is increasingly being used for unfortified red wine in the Douro and in the Dão.\n\n\n== Synonyms ==\nAlbino de Souza, Touriga Francesa, Touriga Franca, Touriga Francesca.\n\n\n== See also ==\nList of Port wine grapes\nList of Portuguese grape varieties\n\n\n== References ==\n\n\n== External links ==\nInstituto dos Vinho do Douro e Porto\nVinha online",
+ "facts": {
+  "image": [
+   "Touriga Franca.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "description": "varietal"
+ }
+}

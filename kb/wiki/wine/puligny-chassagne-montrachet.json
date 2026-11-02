@@ -1,0 +1,53 @@
+{
+ "kind": "wine",
+ "key": "puligny-chassagne-montrachet",
+ "label": "Puligny- & Chassagne-Montrachet",
+ "match": "direct",
+ "tried": [
+  "Puligny- & Chassagne-Montrachet",
+  "Puligny-",
+  "Chassagne-Montrachet"
+ ],
+ "title": "Chassagne-Montrachet",
+ "url": "https://en.wikipedia.org/wiki/Chassagne-Montrachet",
+ "revision": 1381830722,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q16302",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Chassagne-Montrachet_-_Vignoble_-_3.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Beaune arrondissement geography stubs",
+  "Communes of Côte-d'Or"
+ ],
+ "lead": "Chassagne-Montrachet (French pronunciation: [ʃasaɲ mɔ̃ʁaʃɛ]) is a commune in the Côte-d'Or department of Bourgogne-Franche-Comté in eastern France.\nIt used to be known under the name Chassagne-le-Haut, but the name was changed to Chassagne-Montrachet by a decree on November 27, 1879. Around this time, many Burgundy villages appended the name of their most famous vineyard to that of the village name.",
+ "sections": [
+  "Population and politics",
+  "Wine",
+  "See also",
+  "References"
+ ],
+ "text": "Chassagne-Montrachet (French pronunciation: [ʃasaɲ mɔ̃ʁaʃɛ]) is a commune in the Côte-d'Or department of Bourgogne-Franche-Comté in eastern France.\nIt used to be known under the name Chassagne-le-Haut, but the name was changed to Chassagne-Montrachet by a decree on November 27, 1879. Around this time, many Burgundy villages appended the name of their most famous vineyard to that of the village name.\n\n\n== Population and politics ==\n\nChassagne-Montrachet leans to the right in presidential elections. In 2017 it gave 43% of its vote to François Fillon amidst a poor national showing of 20%.\n\n\n== Wine ==\n\nChassagne-Montrachet is an appellation consisting of 350 ha (865 acres) of clayish limestone located south of Côte de Beaune. Most wine produced in the village is white wine from the Chardonnay grape, although red wine is also made from the Pinot noir grape.\nThe village shares two Grand Cru vineyards - Montrachet and Bâtard-Montrachet - with the neighbouring village of Puligny-Montrachet, and also includes the entirety of a third, Criots-Bâtard-Montrachet, within its boundaries. These three vineyards produce some of the most expensive and long-lived white wines in the world.\n\n\n== See also ==\nMontrachet\nFrench Wine\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "coordinates": [
+   {
+    "lat": 46.936944444444,
+    "lon": 4.7283333333333
+   }
+  ],
+  "image": [
+   "Chassagne-Montrachet (Côte-d'Or, Fr) église.JPG"
+  ],
+  "instance_of": [
+   "Q484170"
+  ],
+  "located_in": [
+   "Q14851",
+   "Q3342",
+   "Q14812"
+  ],
+  "description": "commune in Côte-d'Or, France"
+ }
+}

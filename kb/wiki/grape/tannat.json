@@ -1,0 +1,46 @@
+{
+ "kind": "grape",
+ "key": "Tannat",
+ "label": "Tannat",
+ "match": "direct",
+ "tried": [
+  "Tannat (grape)",
+  "Tannat"
+ ],
+ "title": "Tannat",
+ "url": "https://en.wikipedia.org/wiki/Tannat",
+ "revision": 1376829273,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q928151",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Tannat_Viala_et_Vermorel.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "French wine",
+  "Red wine grape varieties",
+  "Uruguayan wine"
+ ],
+ "lead": "Tannat is a red wine grape, historically grown in South West France in the Madiran AOC, and is now one of the most prominent grapes in Uruguay, where it is considered the \"national grape\".\nTannat is also grown in  Argentina, Australia, Brazil, Bolivia, Peru, South Africa, and in the Italian region of Apulia, where it is used as a blending grape. In the US states of Maryland, Virginia, and North Carolina there are small experimental plantings of the vine, and plantings in California have increased dramatically in the first years of the 21st century. There are small plantings in Washington State which have shown excellent results. It has also been increasingly planted in Arizona, Oregon and Texas.\nTannat wines produced in Uruguay are usually quite different in character from Madiran wines, being lighter in body and lower in tannins. It is also used to make full bodied rosé. In France, efforts to solve the harsh tannic nature of the grape led to the development of the winemaking technique known as micro-oxygenation.",
+ "sections": [
+  "France",
+  "Uruguay",
+  "United States",
+  "References"
+ ],
+ "text": "Tannat is a red wine grape, historically grown in South West France in the Madiran AOC, and is now one of the most prominent grapes in Uruguay, where it is considered the \"national grape\".\nTannat is also grown in  Argentina, Australia, Brazil, Bolivia, Peru, South Africa, and in the Italian region of Apulia, where it is used as a blending grape. In the US states of Maryland, Virginia, and North Carolina there are small experimental plantings of the vine, and plantings in California have increased dramatically in the first years of the 21st century. There are small plantings in Washington State which have shown excellent results. It has also been increasingly planted in Arizona, Oregon and Texas.\nTannat wines produced in Uruguay are usually quite different in character from Madiran wines, being lighter in body and lower in tannins. It is also used to make full bodied rosé. In France, efforts to solve the harsh tannic nature of the grape led to the development of the winemaking technique known as micro-oxygenation.\n\n\n== France ==\n\nTannat is mainly found near the French Pyrénées (Béarn, Basque country, Gascony). The wine is notable for its very high tannin levels and is often blended with Cabernet Sauvignon, Cabernet franc and Fer to soften the astringency and make it more approachable. In addition to Madiran, Tannat is also produced in Irouléguy, Tursan and Béarn, and it is a minor constituent of Cahors wine. Modern winemaking in the region has begun to emphasize the fruit more and use oak aging to help soften the tannins. Now the wines typically spend about 20 months in oak prior to release.\nA French Tannat is characterized by its firm, tannic structure with raspberry aromas and the ability to age well. They often have a deep dark color with high level of alcohol. The rosés produced in Irouléguy go through very limited maceration time with the skins in order to keep the wines from getting too tannic. The resulting wines are typically full bodied and very fruity. In Béarn both red and rosés are produced from blends that include 60% Tannat and a 40% mix of Manseng noir, Fer and Courbu noir.\nIn 1990, Madiran winemaker Patrick Ducournau experimented with adding controlled amounts of oxygen aeration into Tannat while fermenting and ended up developing the modern winemaking process of micro-oxygenation.\n\n\n== Uruguay ==\n\nThe Tannat vine was introduced to Uruguay by Basque settlers, especially Pascual Harriague, in the 19th century. Along with the Manseng vine it quickly started to flourish in its new home. Today it is often blended with Pinot noir and Merlot and is made in a variety of styles including those reminiscent of Port and Beaujolais. From Uruguay the vine spread to Argentina and from there Flying Winemakers promoted the grape's resurgence in California at the end of the 20th century.\nPlantings of Tannat (also known in Uruguay as Harriague) have been increasing in Uruguay each year as that country's wine industry develops. The Tannat wines produced here are characterized by more elegant and softer tannins and blackberry fruit notes. Vineyards in Uruguay have begun to distinguish between the \"old vines\" that are descendants from the original cuttings brought over from Europe and the new clones being produced today. The newer vines tend to produce more powerful wines with higher alcohol levels but less acidity and complex fruit characteristics. Some wineries use both vines to make blends. The grape is also blended with more well known ones such as Merlot to make excellent alternatives to California and Australian offerings.\n\n\n== United States ==\n\nIn the late 19th century, University of California-Berkeley agriculture professor Eugene W. Hilgard imported the Tannat vine from Southwest France and began to grow it in the university's vineyards. The grape did not receive much attention until the late 20th century, when South American varietals of the grape variety began to receive international acclaim. In the 1990s several plantings began to appear in California in the Paso Robles and Santa Cruz Mountains AVAs with such producers as Bonny Doon Vineyard using it in blends with Cabernet Franc and Tablas Creek Vineyard, Joseph Swan,\nand Kaz Winery selling it as a stand-alone varietal. In north-central Washington State, within the Lake Chelan AVA, a small but impressive planting (C R Sandidge Wines Purtteman Estate vineyard) has been producing exceptional varietal Tannat. In northern California, Westwood Estate Wines planted their vines in the late 1990s and they produce either a blended or varietal Tannat. Other Californian wine producers began using it in blends and also with their Sangiovese and Syrah wines. Vineyards in Texas, Arizona, Oregon, Maryland and Virginia began sourcing cuttings from California. In 2002, the Bureau of Alcohol, Tobacco, Firearms and Explosives approved Tablas Creek Vineyard's petition to add Tannat to the list of grape varieties that could be made into a varietal wine.  By 2005, Tannat acreage in California had increased to 140 acres (57 ha).  As of 2016, there were 579 acres of Tannat planted in California, most from Tablas Creek cuttings, and nearly half planted in just the previous 5 years.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Tannat Viala et Vermorel.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q142",
+   "Q38"
+  ],
+  "description": "Red wine grape variety"
+ }
+}

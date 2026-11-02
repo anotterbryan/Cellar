@@ -1,0 +1,49 @@
+{
+ "kind": "grape",
+ "key": "Scuppernong",
+ "label": "Scuppernong",
+ "match": "direct",
+ "tried": [
+  "Scuppernong (grape)",
+  "Scuppernong"
+ ],
+ "title": "Scuppernong",
+ "url": "https://en.wikipedia.org/wiki/Scuppernong",
+ "revision": 1380569005,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q2261774",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Muscadines.Scuppernongs.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "American wine",
+  "Crops originating from the United States",
+  "Cuisine of the Southern United States",
+  "Grape varieties",
+  "Symbols of North Carolina"
+ ],
+ "lead": "The scuppernong  is a large variety of muscadine (Vitis rotundifolia), a species of grape native to the southern United States. It is usually a greenish or bronze color and is similar in appearance and texture to a white grape, but rounder and larger. \nFirst known as the \"big white grape\",  the grape is commonly known as the \"scuplin\" in some areas of the Deep South and also as the \"scufalum\", \"scupanon\", \"scupadine\", \"scuppernine\", \"scupnun\", or \"scufadine\" in other parts of the South. The scuppernong is the state fruit of North Carolina.",
+ "sections": [
+  "History",
+  "Cultivation",
+  "The \"Mother Vine\"",
+  "References",
+  "Further reading",
+  "External links"
+ ],
+ "text": "The scuppernong  is a large variety of muscadine (Vitis rotundifolia), a species of grape native to the southern United States. It is usually a greenish or bronze color and is similar in appearance and texture to a white grape, but rounder and larger. \nFirst known as the \"big white grape\",  the grape is commonly known as the \"scuplin\" in some areas of the Deep South and also as the \"scufalum\", \"scupanon\", \"scupadine\", \"scuppernine\", \"scupnun\", or \"scufadine\" in other parts of the South. The scuppernong is the state fruit of North Carolina.\n\n\n== History ==\n\nThe name comes from the Scuppernong River in North Carolina mainly along the coastal plain. It was first mentioned as a \"white grape\" in a written logbook by the Florentine explorer Giovanni de Verrazzano while exploring the Cape Fear River Valley in 1524. He wrote of \"...[m]any vines growing naturally there...\". Sir Walter Raleigh's explorers, the captains Philip Amadas and Arthur Barlowe, wrote in 1584 that North Carolina's coast was \"...so full of grapes as the very beating and surge of the sea overflowed them...in all the world, the like abundance is not to be found.\" \nHe may have been referring to Sargasso seaweed from coral reefs, which can be seen washed up on shore after a major storm off the North Carolina coast. The seaweed has berrylike gas-filled bladders looking much like grapes to keep the fronds afloat. \nHowever, in 1585, Governor Ralph Lane, when describing North Carolina to Raleigh, stated: \"We have discovered the main to be the goodliest soil under the cope of heaven, so abounding with sweet trees that bring rich and pleasant, grapes of such greatness, yet wild, as France, Spain, nor Italy hath no greater...\".\nThe Scuppernong grape  was first cultivated during the 17th century, particularly in Tyrell County, North Carolina. Isaac Alexander found it while hunting along the banks of a stream feeding into Scuppernong Lake in 1755; it is mentioned in the North Carolina official state toast. The name itself traces back to the Algonquian word ascopo, meaning \"sweet bay tree\".\n\n\n== Cultivation ==\n\nThe fruit grows where temperatures seldom fall below −12 °C (10 °F). Injury or freeze can occur where winter temperatures drop below −18 °C (0 °F). Some cultivars, such as \"Magnolia\", \"Carlos\", and \"Sterling\" will survive north to Virginia and west to the Blue Ridge Mountains foothills. Nonetheless, Muscadines have a high tolerance to diseases and pests; more than 100 years of breeding has resulted in several bronze cultivars, such as  \"Doreen\" and \"Triumph\", in addition to the aforementioned \"Carlos\" and \"Magnolia’\". All are distinguishable from the Scuppernong variety by being perfect-flowered (male and female flower parts together). The Scuppernong possesses only female flowering parts.\n\n\n== The \"Mother Vine\" ==\n\nPossibly the oldest cultivated grapevine in the world is the 400-year-old scuppernong \"Mother Vine\" growing on Roanoke Island, North Carolina. Growing at the town of Manteo, the Mother Vine was in 2010, 36 m (118 ft) long by 9 m (30 ft) wide, but at its prime in the 1950s had covered 0.8 ha (2.0 acres).\n\n\n== References ==\n\n\n== Further reading ==\n\"Scuppernong: North Carolina's Grape and Its Wines\", Clarence Gohdes (Duke University Press, 1982) ISBN 0-8223-0460-0\n\n\n== External links ==\n\n The dictionary definition of scuppernong at Wiktionary\n\nVisitNC.com North Carolina's Toast To The MotherVine\nAbout.com Southern U.S. cuisine: muscadines & scuppernongs Archived 2005-05-15 at the Wayback Machine\nCharlestonWine.com History of the Muscadine - The South's Own Grape",
+ "facts": {
+  "image": [
+   "Scuppernong.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q30"
+  ],
+  "description": "variety of muscadine (Vitis rotundifolia) grape"
+ }
+}

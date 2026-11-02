@@ -1,0 +1,48 @@
+{
+ "kind": "wine",
+ "key": "montefalco-sagrantino",
+ "label": "Montefalco Sagrantino",
+ "match": "direct",
+ "tried": [
+  "Montefalco Sagrantino"
+ ],
+ "title": "Montefalco Sagrantino",
+ "url": "https://en.wikipedia.org/wiki/Montefalco_Sagrantino",
+ "revision": 1278235464,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q255071",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/1/13/Sagrantino_di_Montefalco_wine.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Italian DOCG",
+  "Italian wine"
+ ],
+ "lead": "Montefalco Sagrantino (also Sagrantino di Montefalco before 2009) is a style of Italian wine made with 100% Sagrantino grapes in and around the comune of Montefalco in the Province of Perugia, Umbria. The wines gained DOC status in 1979 as part of the Montefalco DOC and were later separately elevated to DOCG status in 1992 after a renewal of interest from winemakers, particularly Arnaldo Caprai. There are two DOCG wines: Montefalco Sagrantino Secco, an oak-aged dry red wine (\"secco\" is Italian for \"dry\"), and the less common Montefalco Sagrantino Passito, a sweet, dessert red wine.",
+ "sections": [
+  "History",
+  "Styles",
+  "Montefalco Sagrantino Secco",
+  "Montefalco Sagrantino Passito",
+  "References",
+  "External links"
+ ],
+ "text": "Montefalco Sagrantino (also Sagrantino di Montefalco before 2009) is a style of Italian wine made with 100% Sagrantino grapes in and around the comune of Montefalco in the Province of Perugia, Umbria. The wines gained DOC status in 1979 as part of the Montefalco DOC and were later separately elevated to DOCG status in 1992 after a renewal of interest from winemakers, particularly Arnaldo Caprai. There are two DOCG wines: Montefalco Sagrantino Secco, an oak-aged dry red wine (\"secco\" is Italian for \"dry\"), and the less common Montefalco Sagrantino Passito, a sweet, dessert red wine.\n\n\n== History ==\nFor a long time, the Sagrantino grape variety was only used for making Montefalco Sagrantino Passito, the traditional wine of the area, or to fortify other Sangiovese-based wine, such as Montefalco Rosso.\n\n\n== Styles ==\n\nThere are two DOCG styles made, a modern secco (dry) wine that makes up the majority of production, and a more traditional passito sweet dessert wine style.\n\n\n=== Montefalco Sagrantino Secco ===\nUnder Italian law, the term \"Montefalco Sagrantino Secco DOCG\" defines a wine obtained exclusively from Sagrantino grapes, produced exclusively in a defined area around Montefalco in the Province of Perugia, in the Umbria region of central Italy. The defined area also includes areas around Giano dell'Umbria, Bevagna, Gualdo Cattaneo and Castel Ritaldi. The wine must be aged for a minimum of 37 months, of which at least 12 months must be in oak barrels. The combination of the very thick-skinned Sagrantino grape and the long aging time in oak produces a typically very dense, full-bodied wine, with a very high tannin content. This makes for excellent storage characteristics, which are required since it is highly astringent when young, but improves with age.\n\n\n=== Montefalco Sagrantino Passito ===\nPassito (sweet wine) is a more traditional Italian dried straw wine style. Montefalco Sagrantino Passito DOCG must also be made only from 100% Sagrantino grapes from within the same defined area as the secco DOCG, the bunches dried in air for at least two months to reduce the water content and thus concentrate the juice produced from pressing. The fermentation must occur in contact with the grape skins, which results in a sweet style wine but with intense flavours and a high concentration of tannins. The wine must be aged for a minimum of 37 months, but there is no requirement for oak aging.\n\n\n== References ==\n\n\n== External links ==\nVideo introduction to wines of Umbria: Sagrantino grape",
+ "facts": {
+  "country": [
+   "Q38"
+  ],
+  "image": [
+   "Montefalco Sarantino selection.jpg"
+  ],
+  "instance_of": [
+   "Q282"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "located_in": [
+   "Q16240"
+  ],
+  "description": "Italian controlled and guaranteed designation of origin wine from Umbria"
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "kind": "wine",
+ "key": "chilean-cool-climate-syrah",
+ "label": "Chilean Cool-Climate Syrah (Elqui, Limarí, San Antonio)",
+ "match": "direct",
+ "tried": [
+  "Chilean Cool-Climate Syrah",
+  "Elqui"
+ ],
+ "title": "Elqui River",
+ "url": "https://en.wikipedia.org/wiki/Elqui_River",
+ "revision": 1324416741,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q738445",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/Rio-elqui.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Rivers of Chile",
+  "Rivers of Coquimbo Region"
+ ],
+ "lead": "The Elqui River starts in the west Andes and flows into the Pacific Ocean near the Chilean city of La Serena. It flows through a wine and pisco producing area. Vicuña, the main town of the middle valley, was the home of Nobel Laureate poet Gabriela Mistral.\nThe invasive plant species Limnobium laevigatum is present in the river which is its northernmost locale in Chile.",
+ "sections": [
+  "Indigenous cultures of the Elqui Valley",
+  "See also",
+  "References"
+ ],
+ "text": "The Elqui River starts in the west Andes and flows into the Pacific Ocean near the Chilean city of La Serena. It flows through a wine and pisco producing area. Vicuña, the main town of the middle valley, was the home of Nobel Laureate poet Gabriela Mistral.\nThe invasive plant species Limnobium laevigatum is present in the river which is its northernmost locale in Chile.\n\n\n== Indigenous cultures of the Elqui Valley ==\n\nAbout a quarter of the toponymy in Elqui Valley is of indigenous origin, overwhelmingly Quechua and Mapuche. There is scant Diaguita (Kakan) toponymy known in the area despite it being considered a homeland of that people by various authors. Quechua toponymy is related to valleys incorporation to the Inca Empire in the late 15th and early 16th-century. Some Mapuche toponymy postdates Inca rule, but other may be coeval or even precede it. Toponyms recognised as Nahua, Kunza, Diaguita, Aymara and Taino make together up less than 10% of the all placenames in Elqui Valley.\nIt is generally accepted that incorporation of north-central Chile to the Inca Empire was through warfare which caused a severe depopulation in the Transverse Valleys of Norte Chico, the wider Diaguita homeland. Chilean toponymy in Tarija, Bolivia, including \"Erqui\" along with other evidence have been interpreted to suggest that Incas deported defeated tribes from Elqui Valley to southern Bolivia. After or during conquest Incas would have settled foreign tribes such as the Churumatas in Elqui Valley, and ended up imposing Quechua placenames on the local geography.  There is uncertainty about the date of these transfers. Chronicler Diego de Rosales tells of an anti-Inca rebellion in the Diaguita lands of Coquimbo and Copiapó concurrent with the Inca Civil War. This rebellion would have been brutally repressed by the Incas who gave rebels \"great chastise\".\n\n\n== See also ==\nElqui Valley (wine region)\nPisco Capel\nJulio Alberto Mercado Illanes\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q298"
+  ],
+  "coordinates": [
+   {
+    "lat": -29.894444444444,
+    "lon": -71.275
+   }
+  ],
+  "image": [
+   "Elqui valley view from Puclaro dam - panoramio.jpg"
+  ],
+  "instance_of": [
+   "Q4022"
+  ],
+  "located_in": [
+   "Q2121"
+  ],
+  "description": "river in Chile"
+ }
+}

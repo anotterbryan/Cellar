@@ -1,0 +1,51 @@
+{
+ "kind": "wine",
+ "key": "jumilla-monastrell",
+ "label": "Jumilla Monastrell",
+ "match": "search",
+ "tried": [
+  "Jumilla Monastrell",
+  "Murcia/Castilla-La Mancha — Jumilla wine",
+  "Jumilla (DO)"
+ ],
+ "title": "Jumilla (DO)",
+ "url": "https://en.wikipedia.org/wiki/Jumilla_(DO)",
+ "revision": 1346461439,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1112057",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/1/1c/DO_Jumilla_location.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Wine regions of Spain"
+ ],
+ "lead": "Jumilla is a Spanish Denominación de Origen Protegida (DOP) for wines that extends over the north of the region of Murcia, Spain. The area includes the municipality of Jumilla, from which it takes its name, and the contiguous southeast of the Albacete province (municipalities of Montealegre del Castillo, Fuente-Álamo, Ontur, Hellin, Albatana and Tobarra) in the Castile-La Mancha region. It is one of Spain's leading wine regions.",
+ "sections": [
+  "History",
+  "Geography",
+  "Climate",
+  "Soils",
+  "Grape varieties",
+  "Jumilla labeling laws",
+  "Wineries",
+  "References",
+  "External links"
+ ],
+ "text": "Jumilla is a Spanish Denominación de Origen Protegida (DOP) for wines that extends over the north of the region of Murcia, Spain. The area includes the municipality of Jumilla, from which it takes its name, and the contiguous southeast of the Albacete province (municipalities of Montealegre del Castillo, Fuente-Álamo, Ontur, Hellin, Albatana and Tobarra) in the Castile-La Mancha region. It is one of Spain's leading wine regions.\n\n\n== History ==\nDuring the outbreak of the phylloxera plague in the 19th century the region surprisingly escaped contamination and so entered a period of economic expansion as wine merchants from France came in great numbers to buy wine. For this reason the vines were never regrafted onto resistant rootstock from the New World as was the case in the rest of Europe.\nHowever, the phylloxera pest unexpectedly struck in 1989, devastating the vineyards and reducing production by 60% over the next five years. Replanting and grafting was slow and expensive but allowed the region to adopt the new methods of grape growing and wine making that were already proving successful in the neighbouring DOPs of Alicante and Almansa.\n\n\n== Geography ==\nThis DOP is characterised by wide valleys and plateaus in the presence of mountains. It is a transition zone between the Mediterranean coastal area and the high central plateau of Castile-La Mancha, and so the altitude of the vineyards varies between 400–800 metres (1,300–2,600 ft).\n\n\n== Climate ==\nThe climate is continental (long hot summers and cold winters), tempered by the closeness of the Mediterranean Sea. The area is arid. Rainfall is low (around 300 millimetres (12 in) per year) and irregular, though it mostly falls during spring and autumn, often in the form of violent storms which can sometimes cause damage to the vines.\nThe average annual temperature is 16 °C (61 °F). A maximum of 40 °C (104 °F) can be reached in summer, and minimums below 0 °C (32 °F) in winter. There is a risk of frost up to the month of March, exceptionally until April. The vines receive over 3,000 hours of sunlight per year.\n\n\n== Soils ==\nThe soils are dark, lime bearing and sometimes with a hard lime crust. In general, they are permeable and have good moisture retaining properties, which allows the vines to survive during periods of prolonged drought. They are poor in organic material and their structure does not favour the propagation of phylloxera. They are quite sandy, allowing good aeration, have a high pH value and are low in salinity.\n\n\n== Grape varieties ==\nThe authorised grape varieties are:\n\nRed grapes: Monastrell, Tempranillo (known locally as Cencibel), Garnacha Tintorera, Garnacha, Cabernet Sauvignon, Merlot, Syrah and Petit Verdot.\nWhite grapes: Airén, Macabeo, Chardonnay, Sauvignon blanc, Moscatel de Grano Menudo, Pedro Ximénez and Malvasía.\nOf these varieties, Monastrell is the most significant for Jumilla DOP, as it represents over 85% of the vines planted. Monastrell is in fact the fourth most widely planted red grape variety in Spain. Like Airén, it has good resistance to drought. \nThe planning density is between 1,100 vines/ha to 1,600 vines/ha for extensive planting formations, and the maximum authorised yield is 4,000 kg/ha for red varieties and 4,500 kg/ha for white varieties. For intensive planting formations the density ranges from 1,600 vines/ha to 3,200 vines/ha with maximum yields of 7,000 kg/ha for both red and white varieties.\n\n\n== Jumilla labeling laws ==\n\nSpanish wines are often labeled according to the amount of aging the wine has received. When the label says vino joven (\"young wine\") or sin crianza, the wines will have undergone very little, if any, wood aging. Depending on the producer, some of these wines will be meant to be consumed very young - often within a year of their release. Others will benefit from some time aging in the bottle. For the vintage year (vendimia or cosecha) to appear on the label, a minimum of 85% of the grapes must be from that year's harvest. The three most common aging designations on Spanish wine labels are Crianza, Reserva and Gran Reserva.\n\nCrianza red wines are aged for 1 year with at least 6 months in oak and 6 months in the bottle. Crianza whites and rosés must be aged for at least 1 year with at least 4 months in oak.\nReserva red wines are aged for at least 2 years with at least 12 months in oak and 12 months in the bottle. Reserva whites and rosés must be aged for at least 18 months  with at least 6 months in oak.\nGran Reserva wines typically appear in above average vintages. The red wines require at least four years aging, twelve months of which in oak and a minimum of 36 months in the bottle. Gran Reserva whites and rosés must be aged for at least 4 years with at least 6 months in oak.\n\n\n== Wineries ==\nMonterebro, formerly Pedro Luis Martinez, established in 1870.\nBodega Ego\n\n\n== References ==\n\n\n== External links ==\nD.O.P. Jumilla official website",
+ "facts": {
+  "country": [
+   "Q29"
+  ],
+  "image": [
+   "VISTA CORDOVILLA.JPG"
+  ],
+  "subclass_of": [
+   "Q1432594"
+  ],
+  "located_in": [
+   "Q5772",
+   "Q5748",
+   "Q54889"
+  ],
+  "description": "wine-producing region"
+ }
+}

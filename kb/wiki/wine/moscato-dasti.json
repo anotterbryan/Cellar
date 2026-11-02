@@ -1,0 +1,60 @@
+{
+ "kind": "wine",
+ "key": "moscato-dasti",
+ "label": "Moscato d'Asti",
+ "match": "direct",
+ "tried": [
+  "Moscato d'Asti"
+ ],
+ "title": "Moscato d'Asti",
+ "url": "https://en.wikipedia.org/wiki/Moscato_d%27Asti",
+ "revision": 1337884623,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1198126",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/MOSCATO_BOTTLE.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Italian DOCG",
+  "Monferrato",
+  "Province of Alessandria",
+  "Province of Asti",
+  "Province of Cuneo",
+  "Sparkling wines",
+  "Wines of Piedmont"
+ ],
+ "lead": "Moscato d'Asti is a denominazione di origine controllata e garantita (DOCG) sparkling white wine made from the Moscato bianco grape and produced mainly in the province of Asti, northwest Italy, and in smaller nearby regions in the provinces of Alessandria and Cuneo. The wine is sweet and low in alcohol, and is considered a dessert wine. A related wine, Asti, is produced in the same area from the same grape.\nGrown in the hilltop town of Asti in Montferrat, Piedmont, Moscato d’Asti is made by small producers in small batches. Moscato is named such because of its earthy musky aroma. The ancient Romans called it the apiana. In the Medieval ages, it was popular, and documents that attest to its presence in Piedmont date as far back as the 14th century.\nPiedmont winemakers traditionally make this low alcohol wine with Muscat à Petits Grains, also known as Moscato bianco. This petite berry varietal ripens early and produces a wide range of different wine styles: light and dry, slightly sweet and sparkling or a rich, honey-like dessert wine.",
+ "sections": [
+  "History",
+  "Winemaking",
+  "In popular culture",
+  "References"
+ ],
+ "text": "Moscato d'Asti is a denominazione di origine controllata e garantita (DOCG) sparkling white wine made from the Moscato bianco grape and produced mainly in the province of Asti, northwest Italy, and in smaller nearby regions in the provinces of Alessandria and Cuneo. The wine is sweet and low in alcohol, and is considered a dessert wine. A related wine, Asti, is produced in the same area from the same grape.\nGrown in the hilltop town of Asti in Montferrat, Piedmont, Moscato d’Asti is made by small producers in small batches. Moscato is named such because of its earthy musky aroma. The ancient Romans called it the apiana. In the Medieval ages, it was popular, and documents that attest to its presence in Piedmont date as far back as the 14th century.\nPiedmont winemakers traditionally make this low alcohol wine with Muscat à Petits Grains, also known as Moscato bianco. This petite berry varietal ripens early and produces a wide range of different wine styles: light and dry, slightly sweet and sparkling or a rich, honey-like dessert wine.\n\n\n== History ==\nCultivated for hundreds of years in the Piedmont DOCG in Italy, Moscato bianco is considered one of the oldest grapes grown in that area. Although Moscato has been cultivated and made in the area, modern production of Moscato d’Asti as it is known now began in the 1870s. Made in the frizzante style, Moscato d'Asti was the wine that winemakers made for themselves. This low-alcohol wine could be drunk at noontime meals and would not slow down the winemaker or his workers. After the workday was done, the Piemontese tradition of long, multicourse evening meals gave Moscato d'Asti the purpose of a digestif that cleansed the palate and stimulated the palate for dessert.\n\n\n== Winemaking ==\n\nThe cooler region in which Moscato bianco is grown and produced has an optimal blend of limestone and sandstone soil that allows for adequate hydration and brings out the flavor of the grapes. The grapes are harvested when the brix is optimal and then crushed. The must is chilled almost to the point of freezing to halt the fermentation process. By law, Moscato D’Asti can only contain 5.5% abv so the fermentation process is halted leaving much of the natural sugars remaining in the wine. Unlike Champagne, there is no secondary fermentation allowed in the bottle. Right before bottling, the Moscato d’Asti goes through a filtration process that leaves the wine with a translucent golden color.\n\n\n== In popular culture ==\nFrom 2011 to 2014, Moscato d’Asti sales in the U.S. increased 73% and sales have risen around 10–15% per year among consumers under the age of 45. Such rise has been attributed to the affordability of the wine (most range from $10–20) and its popularity in hip-hop culture: Trey Songz with Drake referenced Moscato in a verse of the 2009 song \"I Invented Sex\", which contributed to the popularity of the wine.\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q38"
+  ],
+  "image": [
+   "Moscato d'Asti, bottle.jpg"
+  ],
+  "instance_of": [
+   "Q282"
+  ],
+  "subclass_of": [
+   "Q51949767",
+   "Q1125341",
+   "Q4013659"
+  ],
+  "located_in": [
+   "Q15099",
+   "Q15091",
+   "Q15097",
+   "Q16216",
+   "Q15096",
+   "Q15094",
+   "Q16312",
+   "Q18288162"
+  ],
+  "description": "type of the Moscato d'Asti Italian DOCG"
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "kind": "grape",
+ "key": "Glera",
+ "label": "Glera",
+ "match": "direct",
+ "tried": [
+  "Glera (grape)"
+ ],
+ "title": "Glera (grape)",
+ "url": "https://en.wikipedia.org/wiki/Glera_(grape)",
+ "revision": 1382307993,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1530756",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Prosecco_vitigni.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Prosecco",
+  "White wine grape varieties",
+  "Wine grape varieties of Italy",
+  "Wine grapes of Veneto"
+ ],
+ "lead": "Glera, also known as Prosecco, is a white variety of grape of Slovenian and Italian origin, possibly from the traditionally Slovenian-populated village of Prosecco on the Slovenia-Italy border, now in Italy. The variety was formerly mostly referred to as Prosecco, but in the EU was renamed \"Glera\" in 2009 to make room for the protection of \"Prosecco\" as the name of the Italian geographically protected wine.\nGlera is a rather neutral grape variety which is mainly cultivated for use in sparkling Italian wine styles, frizzante or spumante, from the various Prosecco DOCG and DOC areas, although still wines also exist.\nIt is grown mainly in the Veneto region of Italy, traditionally in an area near Conegliano and Valdobbiadene, in the hills north of Treviso.",
+ "sections": [
+  "History",
+  "Name change",
+  "Relationship to other grapes",
+  "Synonyms",
+  "References"
+ ],
+ "text": "Glera, also known as Prosecco, is a white variety of grape of Slovenian and Italian origin, possibly from the traditionally Slovenian-populated village of Prosecco on the Slovenia-Italy border, now in Italy. The variety was formerly mostly referred to as Prosecco, but in the EU was renamed \"Glera\" in 2009 to make room for the protection of \"Prosecco\" as the name of the Italian geographically protected wine.\nGlera is a rather neutral grape variety which is mainly cultivated for use in sparkling Italian wine styles, frizzante or spumante, from the various Prosecco DOCG and DOC areas, although still wines also exist.\nIt is grown mainly in the Veneto region of Italy, traditionally in an area near Conegliano and Valdobbiadene, in the hills north of Treviso.\n\n\n== History ==\n\nGlera is believed to be an old variety, and the name Prosecco was derived from the village Prosecco near Trieste, where the grape may have originated. It has been proposed that it was cultivated already in Roman times, possibly as the vinum pucinum praised by Pliny the Elder, although that is not known with any certainty. It ranks about thirtieth in importance among the country's some 2,000 grape varieties.\n\n\n== Name change ==\n\nProsecco was traditionally used as the name for the grape variety. In Italy, it was also used more specifically for sparkling wines produced primarily from it, such as Prosecco di Conegliano e Valdobbiadene, Prosecco di Conegliano and Prosecco di Valdobbiadene, all of which had DOC status, and there was also an IGT zone surrounding them. When the higher DOCG status was sought for Prosecco di Conegliano e Valdobbiadene, it became a complication that the grape (which had become cultivated over a larger area, including outside Italy) and the protected designation of origin had the same name. To resolve the issue, within the EU the old synonym Glera was officially adopted for the variety at the same time as the DOCG was approved in 2009. The change reduced the ability of other producers (in Italy and overseas) to label sparkling wines made elsewhere as \"Prosecco\" by using the grape variety's name.\nThe name change was rejected by wine producers outside Italy, and leading wine experts including Jancis Robinson MW, Julia Harding MW and José Vouillamoz, who continue to refer to the grape variety as 'Prosecco'.\n\n\n== Relationship to other grapes ==\nGlera is a parent variety of two Manzoni grapes, the red wine grape variety Incrocio Manzoni 2.15 (a crossing with Cabernet Sauvignon) and another red skinned variety known as Incrocio Manzoni 2.14 (a crossing with Cabernet Franc).\n\n\n== Synonyms ==\nGlera is also known under the synonyms Ghera, Glere, Prosecco, Prosecco Balbi, Prosecco Bianco, Prosecco Nostrano, Prosecco Tondo, Proseko Sciprina, Serpina, and Uva Pissona.\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q38"
+  ],
+  "image": [
+   "Prosecco vitigni.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q38"
+  ],
+  "description": "Italian grape variety"
+ }
+}

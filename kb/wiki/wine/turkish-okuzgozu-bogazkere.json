@@ -1,0 +1,43 @@
+{
+ "kind": "wine",
+ "key": "turkish-okuzgozu-bogazkere",
+ "label": "Turkish Öküzgözü & Boğazkere",
+ "match": "search",
+ "tried": [
+  "Turkish Öküzgözü & Boğazkere",
+  "Öküzgözü"
+ ],
+ "title": "Öküzgözü",
+ "url": "https://en.wikipedia.org/wiki/%C3%96k%C3%BCzg%C3%B6z%C3%BC",
+ "revision": 1378740333,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q296696",
+ "image": null,
+ "categories": [
+  "Grape varieties of Turkey",
+  "Red wine grape varieties",
+  "Turkish cuisine stubs",
+  "Turkish words and phrases",
+  "Wine grape stubs"
+ ],
+ "lead": "Öküzgözü is an indigenous Turkish grape variety used in the production of Turkish wine. It is one of the two principal native wine grapes of Elazığ Province in Eastern Anatolia, the other being Boğazkere. The grape is widely regarded as one of the most important red wine varieties of Turkey due to its wide cultivation, stylistic versatility, and international recognition.\nThe Turkish name Öküzgözü literally means “ox eye,” referring to the grape’s notably large, round berries.",
+ "sections": [
+  "Origins and regional context",
+  "Viticulture",
+  "Wine styles and characteristics",
+  "International recognition",
+  "See also",
+  "References"
+ ],
+ "text": "Öküzgözü is an indigenous Turkish grape variety used in the production of Turkish wine. It is one of the two principal native wine grapes of Elazığ Province in Eastern Anatolia, the other being Boğazkere. The grape is widely regarded as one of the most important red wine varieties of Turkey due to its wide cultivation, stylistic versatility, and international recognition.\nThe Turkish name Öküzgözü literally means “ox eye,” referring to the grape’s notably large, round berries.\n\n\n== Origins and regional context ==\nÖküzgözü originates from the highland vineyards of Eastern Anatolia, centered on the province of Elazığ. The region lies on the Anatolian plateau north of the Taurus Mountains and is influenced by tributaries of the Euphrates River, which moderate an otherwise harsh continental climate.\nVineyards in this area are typically planted at elevations of approximately 1,000 to 1,200 metres. Winters are severe, with temperatures reported to fall below −20 °C, while summers are characterized by pronounced diurnal temperature variation. These conditions are widely cited as contributing to the grape’s ability to retain acidity while developing aromatic intensity and aging potential.\nMolecular studies of Turkish grapevines contributes to the understanding of the historical context behind Öküzgözü. According to genetic analyses of regional grape varieties of Anatolia, Öküzgözü and other indigenous cultivars contribute significantly to the viticultural diversity. Research related to the historical grapevine candidates highlights the importance of conserving the indigenous genotypes due to their contributions into the evolution and distribution of the Vitis Vinifera in Anatolia.\n\n\n== Viticulture ==\nÖküzgözü produces large, dark-skinned berries and is among the largest-berried wine grapes cultivated in Turkey. It is known for relatively high natural acidity and moderate tannin levels, characteristics that distinguish it from many other indigenous Anatolian red varieties. The sugar levels of the grapes are low during its ripening stage.\nThe variety is officially registered in the Vitis International Variety Catalogue (VIVC) under number 8708, confirming its classification as a distinct grape variety of Vitis vinifera. Elazığ, Diyarbakır, Mardin, Gaziantep, Kilis and Malatya are the vineyard regions within the Eastern and Southeastern Anatolia that Öküzgözü is grown as one of the main high-quality wine varieties. It has the same region with another local variety called Boğazkere. The flavors of the Öküzgözü wines produced from the grapes grown in Aegean and Mediterranean regions show more subtle aromas and less acidic profile.\n\n\n== Wine styles and characteristics ==\nÖküzgözü is vinified both as a varietal wine and as a blending component. Öküzgözü reveals low alcohol profile and high acidity when used in winemaking as a monocepage. Öküzgözü wines are usually medium-bodied, relatively sof tannic structure in ruby-like dark red color with its flavor profile including blackberry, black mulberry, cherry, cherry jam, raspberry and sour cherry. The grape’s acidity also makes it suitable for rosé wine production.\nOne of the most common traditional blends pairs Öküzgözü with Boğazkere, combining Öküzgözü’s fruit-forward freshness with Boğazkere’s structure and tannin. This blend is considered a classic expression of Eastern Anatolian red wine.\n\n\n== International recognition ==\nWines made from Öküzgözü have received increasing international recognition in the 21st century. At the Turkish Wine Challenge 2023, Doluca Tuğra Öküzgözü received a Grand Gold award and was named Best Wine for Turkey and the Balkans, highlighting contemporary international appraisal of the variety.\nSuch results are frequently cited as evidence of Öküzgözü’s ability to produce wines that perform competitively on the international stage while retaining a distinct regional identity.\n\n\n== See also ==\nBoğazkere\nÇalkarası\nKalecik Karası\nPapazkarası\n\n\n== References ==",
+ "facts": {
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "description": "a grape variety and a Turkish wine produced from this grape"
+ }
+}

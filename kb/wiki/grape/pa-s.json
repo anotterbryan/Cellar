@@ -1,0 +1,39 @@
+{
+ "kind": "grape",
+ "key": "País",
+ "label": "País",
+ "match": "direct",
+ "tried": [
+  "País (grape)"
+ ],
+ "title": "Pais",
+ "url": "https://en.wikipedia.org/wiki/Pais",
+ "revision": 1327508284,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q498598",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/7/78/Bio_Bio.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Culture of Chile",
+  "Red wine grape varieties"
+ ],
+ "lead": "Pais is a red wine grape that has played a prominent role in the Chilean wine industry. Up until the turn of the 21st century, it was Chile's most planted variety until it was overtaken by Cabernet Sauvignon. Today it is most commonly used in the production of jug wine in the Bío-Bío, Maule and Itata River regions in the south. The grape is sometimes known as Negra Peruana. In Argentina the grape is known as Criolla Chica.",
+ "sections": [
+  "History",
+  "Viticulture and wine",
+  "References"
+ ],
+ "text": "Pais is a red wine grape that has played a prominent role in the Chilean wine industry. Up until the turn of the 21st century, it was Chile's most planted variety until it was overtaken by Cabernet Sauvignon. Today it is most commonly used in the production of jug wine in the Bío-Bío, Maule and Itata River regions in the south. The grape is sometimes known as Negra Peruana. In Argentina the grape is known as Criolla Chica. \n\n\n== History ==\nThe Pais has one of the longest viticultural history in Chile, believed to have been brought to the region by Spanish conquistadors from Peru during their colonization of the continent in the 16th century. Ampelographers believe that along with the Criolla Grande grape of Argentina and Mission grape of California, that the Pais grape is descended by the Spanish \"common black grape\" brought to Mexico in 1520 by the Spanish conquistador Hernán Cortés. That early grape was then cultivated by Spanish missionaries and spread throughout the Americas. The Pais grape remained Chile's primary wine grape until the emergence of the Bordeaux wine varietals in the late 20th and early 21st centuries.\n\n\n== Viticulture and wine ==\n\nPais produces a thin bodied, rustic red wine that typically has a light brown coloring. The grape's thin skin does not provide much extract and vineyard owners typically harvest at much higher yields than what would be needed to produce higher quality wines. The grape is valued for vigor and ease of cultivation, producing 8–13 tons per acre even with limited amounts of irrigation. It is mostly consumed domestically but some sweet dessert wines have been exported in the past.\n\n\n== References ==",
+ "facts": {
+  "image": [
+   "Mission - Ampélographie.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "description": "red wine grape that has played a prominent role in the Chilean wine"
+ }
+}

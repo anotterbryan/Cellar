@@ -1,0 +1,54 @@
+{
+ "kind": "wine",
+ "key": "condrieu",
+ "label": "Condrieu",
+ "match": "direct",
+ "tried": [
+  "Condrieu"
+ ],
+ "title": "Condrieu",
+ "url": "https://en.wikipedia.org/wiki/Condrieu",
+ "revision": 1381904729,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q828612",
+ "image": null,
+ "categories": [
+  "Communes of Rhône (department)",
+  "Rhône (department) geography stubs"
+ ],
+ "lead": "Condrieu (French pronunciation: [kɔ̃dʁijø] ; Arpitan: Couendriô [kwɛ̃.ˈdʁjo]) is a commune in the Rhône department in eastern France.\nIt is situated on the right bank of the Rhône, some 11 km (6.8 mi) south of Vienne and 44 km south of Lyon, at the foot of the lower slopes of the Mont Monnet. It has an area of 921 hectares. Its altitude ranges from 146 to 460 metres.\nCondrieu produces white wine, Condrieu AOC, and goat milk cheese, the Rigotte de Condrieu.",
+ "sections": [
+  "Population",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Condrieu (French pronunciation: [kɔ̃dʁijø] ; Arpitan: Couendriô [kwɛ̃.ˈdʁjo]) is a commune in the Rhône department in eastern France.\nIt is situated on the right bank of the Rhône, some 11 km (6.8 mi) south of Vienne and 44 km south of Lyon, at the foot of the lower slopes of the Mont Monnet. It has an area of 921 hectares. Its altitude ranges from 146 to 460 metres.\nCondrieu produces white wine, Condrieu AOC, and goat milk cheese, the Rigotte de Condrieu.\n\n\n== Population ==\n\n\n== See also ==\nFrench wine\nCommunes of the Rhône department\n\n\n== References ==\n\n\n== External links ==\n\nOfficial website\nPilat Oueb, local information on Condrieu\nGazetteer Entry",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "coordinates": [
+   {
+    "lat": 45.463055555556,
+    "lon": 4.7677777777778
+   }
+  ],
+  "image": [
+   "Vue panoramique de Condrieu et des Roches de Condrieu.JPG"
+  ],
+  "instance_of": [
+   "Q484170"
+  ],
+  "located_in": [
+   "Q46130",
+   "Q535140",
+   "Q702787",
+   "Q535140",
+   "Q18914778",
+   "Q46130"
+  ],
+  "description": "commune in Rhône, France"
+ }
+}

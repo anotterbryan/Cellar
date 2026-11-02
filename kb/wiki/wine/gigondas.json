@@ -1,0 +1,55 @@
+{
+ "kind": "wine",
+ "key": "gigondas",
+ "label": "Gigondas",
+ "match": "search",
+ "tried": [
+  "Gigondas",
+  "Southern Rhône wine",
+  "Gigondas AOC"
+ ],
+ "title": "Gigondas AOC",
+ "url": "https://en.wikipedia.org/wiki/Gigondas_AOC",
+ "revision": 1365958667,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1332577",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/3/35/Gigondas_wine.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "1971 establishments in France",
+  "French wine",
+  "Red wine",
+  "Rhône wine AOCs"
+ ],
+ "lead": "Gigondas (French pronunciation: [ʒiɡɔ̃das]) is a French wine Appellation d'Origine Contrôlée (AOC) in the southern Rhône wine region of France. It is primarily a red wine region, with a very small amount of rosé wine produced. As of September 2022, the AOC Gigondas appellation was extended to include white wines. Considered a little brother to Châteauneuf-du-Pape, the wine is moderately prestigious and can age well when treated with care. Gigondas AOC wine is produced exclusively in the commune of Gigondas, in Vaucluse.",
+ "sections": [
+  "History",
+  "Climate and geography",
+  "Grapes and wine",
+  "Winemaking",
+  "References",
+  "External links"
+ ],
+ "text": "Gigondas (French pronunciation: [ʒiɡɔ̃das]) is a French wine Appellation d'Origine Contrôlée (AOC) in the southern Rhône wine region of France. It is primarily a red wine region, with a very small amount of rosé wine produced. As of September 2022, the AOC Gigondas appellation was extended to include white wines. Considered a little brother to Châteauneuf-du-Pape, the wine is moderately prestigious and can age well when treated with care. Gigondas AOC wine is produced exclusively in the commune of Gigondas, in Vaucluse.\n\n\n== History ==\nThe name of the appellation is of Roman origin. Jocunditas means great pleasure and enjoyment in Latin; the town was founded as a recreational site for the soldiers from the Roman Empire Second Legion. The finding of a Bacchus-head indicates that wine was already grown at this time. Later the fields went to the church and later still, one finds the Prince of Orange to be a large land owner in the area.\nAs early as 1894 the wines from the region won a gold medal at the agricultural fair in Paris. But until the beginning of World War II, the wines were used as reinforcement to thin Burgundies.\nIn 1956, a bitter winter caused the production of wine to experience a renaissance, as the olive trees had died from the cold. In 1971 the appellation left the other Côtes du Rhône-Villages   and became a proper appellation in its own right.\n\n\n== Climate and geography ==\nGigondas, along with the rest of Southern Rhône has a Mediterranean climate that differs from its northern neighbour, which has a more continental climate. The main geographical feature in Gigondas is the Dentelles de Montmirail, a small range of mountains that divide the appellation into two distinct areas – one with a cooler climate and one with a hotter. But elevation is also an important factor, as wine is being harvested as high as 600 meters.\n\n\n== Grapes and wine ==\n\nIn 1592, white wine from Gigondas is mentioned. However, no white wine is produced today. The appellation is growing red grapes only, and mostly making only red wine, though some rosé is also produced. According to the INAO, Gigondas Rouge is to be made from a maximum 80% Grenache, a minimum 15% Syrah and/or Mourvedre, and a maximum 10% from the other Rhône varieties, minus Carignan. The greatest Gigondas’ can be kept for 10 years or more in the cellar and usually benefits from at least three years in the cellar. Being primarily Grenache does, however, mean that the lesser wines are not recommended for extended bottle aging.\n\n\n=== Winemaking ===\n\nGigondas is known for its power rather than its elegance. Some parts of the appellation are warmer than Châteauneuf-du-Pape, bringing the generous Grenache grape close to fortified strength in alcohol. While some rosé wine is produced, the appellation draws its prestige from its reds.\n\n\n== References ==\n\n\n== External links ==\nGigondas AOC Official Web Site",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "coordinates": [
+   {
+    "lat": 44.164722222222224,
+    "lon": 5.005277777777778
+   }
+  ],
+  "image": [
+   "Gigondas by JM Rosier.jpg"
+  ],
+  "subclass_of": [
+   "Q1151005"
+  ],
+  "located_in": [
+   "Q12792"
+  ],
+  "description": "appellation d'origine contrôlée"
+ }
+}

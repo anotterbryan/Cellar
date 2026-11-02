@@ -1,0 +1,51 @@
+{
+ "kind": "wine",
+ "key": "madiran",
+ "label": "Madiran",
+ "match": "direct",
+ "tried": [
+  "Madiran"
+ ],
+ "title": "Madiran",
+ "url": "https://en.wikipedia.org/wiki/Madiran",
+ "revision": 1381867207,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q744216",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Madiran_%28Hautes-Pyr%C3%A9n%C3%A9es%29_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Communes of Hautes-Pyrénées",
+  "Tarbes arrondissement geography stubs",
+  "Wine regions of France"
+ ],
+ "lead": "Madiran (French pronunciation: [madiʁɑ̃] ) is a commune in the Hautes-Pyrénées department in south-western France.\nIt is the centre of a wine-producing area.",
+ "sections": [
+  "Madiran wine",
+  "See also",
+  "References"
+ ],
+ "text": "Madiran (French pronunciation: [madiʁɑ̃] ) is a commune in the Hautes-Pyrénées department in south-western France.\nIt is the centre of a wine-producing area.\n\n\n== Madiran wine ==\n\nWine is produced around Madiran under three Appellations d'Origine Contrôlées (AOCs): Madiran for powerful red wines primarily from the grape variety Tannat, Pacherenc du Vic-Bilh for sweet white wines and Pacherenc du Vic-Bilh Sec for dry white wines primarily from the grape varieties Courbu and Petit Manseng. The production area for Madiran wine, which consists of 1,300 hectares (3,200 acres) of vineyards, is spread over three departments of France—Gers, Hautes-Pyrénées, and Pyrénées-Atlantiques—and is a part of the South West France wine region.\n\n\n== See also ==\nFrench wine\nCommunes of the Hautes-Pyrénées department\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q142"
+  ],
+  "coordinates": [
+   {
+    "lat": 43.551388888889,
+    "lon": -0.059444444444444
+   }
+  ],
+  "image": [
+   "Madiran (Hautes-Pyrénées) 1.jpg"
+  ],
+  "instance_of": [
+   "Q484170"
+  ],
+  "located_in": [
+   "Q595608",
+   "Q12700",
+   "Q702577"
+  ],
+  "description": "commune in Hautes-Pyrénées, France"
+ }
+}

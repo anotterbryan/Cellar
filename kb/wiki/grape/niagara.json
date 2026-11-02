@@ -1,0 +1,39 @@
+{
+ "kind": "grape",
+ "key": "Niagara",
+ "label": "Niagara",
+ "match": "direct",
+ "tried": [
+  "Niagara (grape)"
+ ],
+ "title": "Niagara (grape)",
+ "url": "https://en.wikipedia.org/wiki/Niagara_(grape)",
+ "revision": 1269650363,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q392699",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Niagara_Grapes.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "American wine",
+  "Hybrid grape varieties"
+ ],
+ "lead": "Niagara grapes  are a variety of the North American grape species Vitis labrusca (botanical family Vitaceae) and are used as table grapes and for wines, as well as jams and juice.  Niagara is the leading green grape grown in the United States. A purple variety, known as \"pink\" niagara (niágara rosada),   exists and is the main niagara cultivated in southern Brazil, principally in the states of São Paulo, where the variety first occurred in 1933, and Rio Grande do Sul. The Niagara grape was created in Niagara County, New York,  in 1868 when Claudius L. Hoag and Benjamin W. Clark cross-bred Concord grapes with white Cassady grapes. It was first sold commercially in 1882. Niagara grapes are considered to be poor shipping grapes, and so are usually only found near where they are grown. They are most commonly found in the United States in New York, Pennsylvania, New Jersey, Michigan, Washington, and Ohio, and are also grown in Ontario in Canada, as well as in Brazil, and New Zealand. While only rarely available fresh outside these areas, Niagara grapes are well known to most American consumers as the source of most white grape juice.",
+ "sections": [
+  "Wines",
+  "References",
+  "External links"
+ ],
+ "text": "Niagara grapes  are a variety of the North American grape species Vitis labrusca (botanical family Vitaceae) and are used as table grapes and for wines, as well as jams and juice.  Niagara is the leading green grape grown in the United States. A purple variety, known as \"pink\" niagara (niágara rosada),   exists and is the main niagara cultivated in southern Brazil, principally in the states of São Paulo, where the variety first occurred in 1933, and Rio Grande do Sul. The Niagara grape was created in Niagara County, New York,  in 1868 when Claudius L. Hoag and Benjamin W. Clark cross-bred Concord grapes with white Cassady grapes. It was first sold commercially in 1882. Niagara grapes are considered to be poor shipping grapes, and so are usually only found near where they are grown. They are most commonly found in the United States in New York, Pennsylvania, New Jersey, Michigan, Washington, and Ohio, and are also grown in Ontario in Canada, as well as in Brazil, and New Zealand. While only rarely available fresh outside these areas, Niagara grapes are well known to most American consumers as the source of most white grape juice.\n\n\n== Wines ==\n\nThe fresh grape is large and juicy, round to oval-shaped, pale greenish-white in color and has a sweet, very pleasant aroma. It also has a sweet and generally pleasant flavor, sometime being described as \"foxy\". One reviewer, Paul Bulas, attempted to characterize the \"foxy\" description. In analyzing the Niagara grape, he detected aromas like candied lemon rind, a Riesling-like diesel aroma, flowery jasmine-like notes, and what he called \"a high-toned, candied muskiness.\" This latter descriptor he felt was the primary element of the term \"foxy\". His opinion of wines made with the grape is that they have unique and interesting properties that are not well known due to Niagara's reputation as a less-than-optimum wine grape.  A diesel aroma in wine is considered to be a positive attribute, but it can be excessive in wines made with the Niagara grape. One opinion is that Niagara grape skins should not contact the must for too long a time after pressing to avoid an excess of this characteristic.\n\n\n== References ==\n\n\n== External links ==\nUnusual Wines - Niagara Grape Variety\nGetting to Know Niagara, the Grape",
+ "facts": {
+  "image": [
+   "Niagara grape.jpg"
+  ],
+  "instance_of": [
+   "Q1639967"
+  ],
+  "country_of_origin": [
+   "Q30"
+  ],
+  "description": "grape varietal"
+ }
+}

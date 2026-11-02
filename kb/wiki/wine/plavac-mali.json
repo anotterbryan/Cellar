@@ -1,0 +1,43 @@
+{
+ "kind": "wine",
+ "key": "plavac-mali",
+ "label": "Croatian Plavac Mali (Dingač, Postup)",
+ "match": "direct",
+ "tried": [
+  "Croatian Plavac Mali",
+  "Dingač"
+ ],
+ "title": "Dingač",
+ "url": "https://en.wikipedia.org/wiki/Dinga%C4%8D",
+ "revision": 1375395143,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1226362",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/2/25/Vinogradi%2C_Dinga%C4%8D_111820.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Appellations",
+  "Croatian wine",
+  "Geography of Dubrovnik-Neretva County",
+  "Wine regions"
+ ],
+ "lead": "Dingač is a wine growing region on the Pelješac peninsula in the region of Dalmatia, Croatia.  Situated on the southwestern facing slope of the Zabrada mountains between the small villages of Trstenik and Podobuče, it is a highly regarded area for growing the autochthonous Croatian red wine grape, Plavac Mali.\nLike the neighboring Postup region, the land is very rugged karst with little top soil.  This attribute, in addition to the level of sunlight (2800 hours annually), 45 degree slope, and weather make for ideal red wines growing conditions which are planted from sea level up to 300 m.  The wines derived from this area are eligible for a \"stamp of geographic origin\" if they meet a series of strict requirements and can reach upwards of 17.6% alcohol.  The wine region was established in 1961 and was the first protected Croatian wine region.\nThe area is not very accessible but a small, rural road runs the length of the region.  Also, at Potomje is the entrance to a one lane tunnel through the mountain that winemakers paid to build in 1973 in order to transport grapes directly.  This replaced the old system of using donkeys to carry harvested grapes over the 400 m high pass of the mountain.\nNotable producers of Dingač region wines include: Matuško, Matković, Bura-Mokalo, Miloš, Kiridžija, Benmosché, Indijan and Bartulović among others.",
+ "sections": [
+  "References"
+ ],
+ "text": "Dingač is a wine growing region on the Pelješac peninsula in the region of Dalmatia, Croatia.  Situated on the southwestern facing slope of the Zabrada mountains between the small villages of Trstenik and Podobuče, it is a highly regarded area for growing the autochthonous Croatian red wine grape, Plavac Mali.\nLike the neighboring Postup region, the land is very rugged karst with little top soil.  This attribute, in addition to the level of sunlight (2800 hours annually), 45 degree slope, and weather make for ideal red wines growing conditions which are planted from sea level up to 300 m.  The wines derived from this area are eligible for a \"stamp of geographic origin\" if they meet a series of strict requirements and can reach upwards of 17.6% alcohol.  The wine region was established in 1961 and was the first protected Croatian wine region.\nThe area is not very accessible but a small, rural road runs the length of the region.  Also, at Potomje is the entrance to a one lane tunnel through the mountain that winemakers paid to build in 1973 in order to transport grapes directly.  This replaced the old system of using donkeys to carry harvested grapes over the 400 m high pass of the mountain.\nNotable producers of Dingač region wines include: Matuško, Matković, Bura-Mokalo, Miloš, Kiridžija, Benmosché, Indijan and Bartulović among others.\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q224"
+  ],
+  "coordinates": [
+   {
+    "lat": 42.917778,
+    "lon": 17.369807
+   }
+  ],
+  "instance_of": [
+   "Q2140699"
+  ],
+  "description": "wine growing region"
+ }
+}

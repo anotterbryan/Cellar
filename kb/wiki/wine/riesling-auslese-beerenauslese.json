@@ -1,0 +1,45 @@
+{
+ "kind": "wine",
+ "key": "riesling-auslese-beerenauslese",
+ "label": "Riesling Auslese & Beerenauslese",
+ "match": "direct",
+ "tried": [
+  "Riesling Auslese & Beerenauslese",
+  "Riesling Auslese",
+  "Beerenauslese"
+ ],
+ "title": "Beerenauslese",
+ "url": "https://en.wikipedia.org/wiki/Beerenauslese",
+ "revision": 1375555328,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1362043",
+ "image": null,
+ "categories": [
+  "Austrian wine",
+  "German wine",
+  "German words and phrases",
+  "Noble rot wines",
+  "Wine classification"
+ ],
+ "lead": "Beerenauslese (German: [ˈbeːʀənˌʔaʊ̯sleːzə] , lit. 'selection of berries', often called BA for short) is a German language wine term for a late harvest wine made from grapes with noble rot, that is \"botrytized\" grapes. Beerenauslese is a category in the Prädikatswein category of the Austrian and German wine classifications, and is a category above Auslese.\nThe grapes for Beerenauslese wines are those that have been individually picked. These wines are typically very sweet and rich, and most age very well. The finest Beerenauslese wines are generally considered to be made from the Riesling grape variety, as this retains significant acidity even with the extreme ripeness, which results in a wine where the sweetness is balanced and which has great longevity and which often will improve for decades. These wines are produced in very small quantities when the weather is suitable for the noble rot to form and only in vineyards with appropriate conditions, so they tend to be very expensive.\nAn exception to this is Beerenauslesen produced from more easily ripening grapes such as Ortega or Huxelrebe which have extremely high sugar content, but less noble rot character and less acidity, and therefore tends to come across as less elegant and usually without the potential to improve with cellaring.\nIn Alsace, the term most closely corresponding to Beerenauslese is Sélection de Grains Nobles.",
+ "sections": [
+  "Requirements",
+  "See also",
+  "References"
+ ],
+ "text": "Beerenauslese (German: [ˈbeːʀənˌʔaʊ̯sleːzə] , lit. 'selection of berries', often called BA for short) is a German language wine term for a late harvest wine made from grapes with noble rot, that is \"botrytized\" grapes. Beerenauslese is a category in the Prädikatswein category of the Austrian and German wine classifications, and is a category above Auslese.\nThe grapes for Beerenauslese wines are those that have been individually picked. These wines are typically very sweet and rich, and most age very well. The finest Beerenauslese wines are generally considered to be made from the Riesling grape variety, as this retains significant acidity even with the extreme ripeness, which results in a wine where the sweetness is balanced and which has great longevity and which often will improve for decades. These wines are produced in very small quantities when the weather is suitable for the noble rot to form and only in vineyards with appropriate conditions, so they tend to be very expensive.\nAn exception to this is Beerenauslesen produced from more easily ripening grapes such as Ortega or Huxelrebe which have extremely high sugar content, but less noble rot character and less acidity, and therefore tends to come across as less elegant and usually without the potential to improve with cellaring.\nIn Alsace, the term most closely corresponding to Beerenauslese is Sélection de Grains Nobles.\n\n\n== Requirements ==\nThe minimum must weight requirements for Beerenauslese is as follows:\n\nFor German wine, 110 to 128 degrees Oechsle, depending on the region (wine growing zone) and grape variety.\nIn Austrian wine, 25 degrees KMW, corresponding to 127 °Oechsle.\nChaptalisation may not be used. The requirements are part of the wine law in both countries. Many producers, especially top-level producers, exceed the minimum requirements, resulting in richer and sweeter wines that can exceed the minimum requirements for Trockenbeerenauslese, the next Prädikat in order. In Germany, it is common to add a golden capsule to indicate a superior wine.\n\n\n== See also ==\nAuslese\nEiswein\nTrockenbeerenauslese\n\n\n== References ==",
+ "facts": {
+  "country": [
+   "Q183",
+   "Q40"
+  ],
+  "image": [
+   "DrLoosen BA 2006.jpg"
+  ],
+  "instance_of": [
+   "Q2122125"
+  ],
+  "description": "German term for late harvest wine"
+ }
+}

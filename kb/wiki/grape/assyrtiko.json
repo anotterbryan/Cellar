@@ -1,0 +1,48 @@
+{
+ "kind": "grape",
+ "key": "Assyrtiko",
+ "label": "Assyrtiko",
+ "match": "direct",
+ "tried": [
+  "Assyrtiko (grape)",
+  "Assyrtiko"
+ ],
+ "title": "Assyrtiko",
+ "url": "https://en.wikipedia.org/wiki/Assyrtiko",
+ "revision": 1364093604,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q457444",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/6/60/ASSYRTIKO.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Dessert wine",
+  "Grape varieties of Greece",
+  "Santorini",
+  "White wine grape varieties"
+ ],
+ "lead": "Assyrtiko or Asyrtiko is a white Greek wine grape indigenous to the island of Santorini. Assyrtiko is widely planted in the arid volcanic-ash-rich soil of Santorini and other Aegean islands, such as Paros. It is also found on other scattered regions of Greece such as Chalkidiki. Assyrtiko is also being grown by the Paicines Ranch Vineyard in the San Benito AVA of California with Margins Wine making the wine, by Jim Barry Wines in Clare Valley, South Australia, at the Abbey of New Clairvaux in Northern California since 2011, and at Kefi Winery in Monroe, North Carolina by a first generation Greek family. The original Assyrtiko cuttings were imported in the USA in 1948 by Harold Olmo, grape breeder at the University of California, Davis, where they were stored until the abbey of New Clairvaux took interest in the early 2000s.\nOn Santorini, many Assyrtiko vineyards are old and ungrafted (own-rooted), as the island is widely described as phylloxera-free. Vines are traditionally trained low to the ground in basket-shaped kouloura to help protect grapes from strong winds and sun exposure.",
+ "sections": [
+  "Viticulture and terroir",
+  "Wine style",
+  "Synonyms",
+  "References",
+  "External links"
+ ],
+ "text": "Assyrtiko or Asyrtiko is a white Greek wine grape indigenous to the island of Santorini. Assyrtiko is widely planted in the arid volcanic-ash-rich soil of Santorini and other Aegean islands, such as Paros. It is also found on other scattered regions of Greece such as Chalkidiki. Assyrtiko is also being grown by the Paicines Ranch Vineyard in the San Benito AVA of California with Margins Wine making the wine, by Jim Barry Wines in Clare Valley, South Australia, at the Abbey of New Clairvaux in Northern California since 2011, and at Kefi Winery in Monroe, North Carolina by a first generation Greek family. The original Assyrtiko cuttings were imported in the USA in 1948 by Harold Olmo, grape breeder at the University of California, Davis, where they were stored until the abbey of New Clairvaux took interest in the early 2000s.\nOn Santorini, many Assyrtiko vineyards are old and ungrafted (own-rooted), as the island is widely described as phylloxera-free. Vines are traditionally trained low to the ground in basket-shaped kouloura to help protect grapes from strong winds and sun exposure.\n\n\n== Viticulture and terroir ==\nSantorini’s vineyards are often described as arid and windswept, with vines grown close to the ground in basket-shaped kouloura; roots can extend deep into ash-rich volcanic soils in search of moisture during long, dry summers. A comparative study of kouloura and VSP training on Santorini reported that kouloura maintained a less-stressed vine water status and offered better protection during heatwaves and strong winds.\n\n\n== Wine style ==\nThe mineral profile of the grape bodes well for blending and in recent times it has been blended often with Sauvignon blanc, Sémillon and Malagousia. Assyrtiko grapes clusters are large, with transparent yellow-gold skin and juicy flesh. In the volcanic soil of Santorini, there appear to be some unique characteristics that develop in the grape variety, and therefore in the wine. One of these characteristics is that Assyrtiko does not lose its acidity even if it is very ripe. Known for maintaining high acidity even in ripe years, Assyrtiko is  noted for a \"pronounced savoury profile, stony minerality and citrus freshness,\" according to Decanter, which contributes to its reputation as a food-friendly wine. Santorini examples in particular are described as low-yielding and concentrated, with briny-fresh salinity and razor-sharp acidity. Some wine writers and sommeliers also cite Santorini Assyrtiko’s aging potential. Throughout Greece, the grape is vinified to make a variety of dry and sweet wines, including Vinsanto-like musky and syrup-sweet dessert wines. In Retsina, it is often blended with the less-acidic Savatiano grape.\n\n\n== Synonyms ==\nAssyrtiko is also known under the synonyms Arcytico, Assirtico, Assyrtico, Asurtico, and Asyrtiko.\n\n\n== References ==\n\n\n== External links ==\nChief Greek white wine varietals (archived)",
+ "facts": {
+  "image": [
+   "ASSYRTIKO.jpg"
+  ],
+  "instance_of": [
+   "Q958314"
+  ],
+  "subclass_of": [
+   "Q958314"
+  ],
+  "country_of_origin": [
+   "Q41",
+   "Q38"
+  ],
+  "description": "varietal"
+ }
+}

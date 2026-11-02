@@ -1,0 +1,50 @@
+{
+ "kind": "wine",
+ "key": "rias-baixas-albarino",
+ "label": "Rías Baixas Albariño",
+ "match": "search",
+ "tried": [
+  "Rías Baixas Albariño",
+  "Galicia — Rías Baixas wine",
+  "Rías Baixas DO"
+ ],
+ "title": "Rías Baixas DO",
+ "url": "https://en.wikipedia.org/wiki/R%C3%ADas_Baixas_DO",
+ "revision": 1318588836,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q1433176",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/DO_R%C3%ADas_Baixas_location.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Galicia (Spain)",
+  "Wine regions of Spain"
+ ],
+ "lead": "Rías Baixas is a Spanish Denominación de Origen (DO) (Denominación de Orixe in Galician) for wines located in the province of Pontevedra and the south of the province of Corunna in the autonomous community of Galicia, Spain. It is renowned for its white wines made from the Albariño grape variety. Its Regulatory Council is headquartered at Pazo de Mugartegui in the city of Pontevedra.",
+ "sections": [
+  "History",
+  "Geography",
+  "Val do Salnés",
+  "O Rosal",
+  "Condado do Tea",
+  "Soutomaior",
+  "Ribera de Ulla",
+  "Climate",
+  "Grapes",
+  "See also",
+  "References",
+  "External links"
+ ],
+ "text": "Rías Baixas is a Spanish Denominación de Origen (DO) (Denominación de Orixe in Galician) for wines located in the province of Pontevedra and the south of the province of Corunna in the autonomous community of Galicia, Spain. It is renowned for its white wines made from the Albariño grape variety. Its Regulatory Council is headquartered at Pazo de Mugartegui in the city of Pontevedra.\n\n\n== History ==\nIt is believed that the Albariño grape was introduced to the area in the 12th century by the Cistercian monks of the Monastery of Armenteira.\nThe sub-zones of Rosal and Condado have a long history of grape growing and wine production and have their own traditional styles. The Salnés sub-zone only recently began to produce Albariño wines, for local sales to bars and restaurants.\nRías Baixas acquired its official status as a Denominación de Origen (DO) in 1988. This replaced the earlier \"Denominación Específica Albariño\" status which had been granted in 1980. Its Regulatory Council (Consejo Regulador) is based at Pazo de Mugartegui in the city of Pontevedra.\n\n\n== Geography ==\nThe DO is divided into five sub-zones, four of them in the province of Pontevedra and one in the south of the province of A Coruña.\n\n\n=== Val do Salnés ===\nVal do Salnés is located on the lower reaches of the river Umia and centred on the town of Cambados. The landscape is of low undulating hills and the vineyards are planted both on the slopes and on the flat valley floors. The soil is generally rocky and alluvial.\n\n\n=== O Rosal ===\nO Rosal is located further south, along the Portuguese frontier in the basin of the river Miño and extends from the Atlantic coast inwards towards the town of Tui. The vineyards here are planted on terraces on the banks of the Miño. The soils are alluvial.\n\n\n=== Condado do Tea ===\nCondado do Tea, in the west, extends eastwards from Tui along the Miño valley up to the neighbouring Ribeiro. The landscape is more abrupt and consists of several small river valleys. The soils are granite and slate based.\n\n\n=== Soutomaior ===\nThe Soutomaior sub-zone was incorporated into the Denominación de Origen in 1996 and is located just south of the city of Pontevedra. The soils are light and sandy, and covered with granite.\n\n\n=== Ribera de Ulla ===\nThe Ribera de Ulla sub-zone, to the north of Pontevedra was incorporated recently in 2000. The soils are mainly alluvial.\n\n\n== Climate ==\nThe climate is Atlantic, with wet winters and sea fog. In general rainfall is high and the temperatures mild. In general, maximum temperatures in summer rarely exceed 30 °C (86 °F) and only drop to 0 °C (32 °F) in December and January.\nThe coldest areas are Ribera do Ulla and  Val do Salnés due to their proximity to the coast. The warmest is Condado do Tea where temperatures in summer sometimes approach 40 °C (104 °F), but the winters are cold with frequent frosts and rainfall of over 2,000 millimetres (79 in) a year.\nStrong winds can occasionally cause problems for the vineyards, especially those located on the west face of the coast. Frosts, hailstones and summer heat can also cause complications.\n\n\n== Grapes ==\nThe regulatory Council (Consejo Regulador) of the Rias Baixas DO currently authorises twelve different grape varieties, though Albariño represents over 90% of all vines planted.\n\nAuthorised white grapes: Albariño, Loureira blanca, Treixadura, Caiño blanca, Torrontés and Godello\nAuthorised red varieties: Caiño tinto, Espadeiro, Loureira Tinta, Sousón, Mencía and Brancellao\nThe vines are trained along granite posts (called parrales) and wires so as to protect them from humidity and to maximise their exposure to the sun in summer.\nOver 90% of the wines produced are white, predominantly using the Albariño grape variety.\n\n\n== See also ==\nGalician wine\n\n\n== References ==\n\n\n== External links ==\nOfficial website of DO Rias Baixas",
+ "facts": {
+  "country": [
+   "Q29"
+  ],
+  "image": [
+   "Viñedos de albariño en la parroquia de la Santa Cruz de Castrelo (Cambados)..JPG"
+  ],
+  "subclass_of": [
+   "Q1432594"
+  ],
+  "description": "Spanish Denominación de Origen"
+ }
+}

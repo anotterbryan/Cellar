@@ -1,0 +1,48 @@
+{
+ "kind": "wine",
+ "key": "priorat",
+ "label": "Priorat",
+ "match": "direct",
+ "tried": [
+  "Priorat"
+ ],
+ "title": "Priorat",
+ "url": "https://en.wikipedia.org/wiki/Priorat",
+ "revision": 1377104465,
+ "fetched": "2026-11-02",
+ "license": "CC BY-SA 4.0 (Wikipedia contributors)",
+ "wikidata": "Q15377",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Priorat_a_Catalunya.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "categories": [
+  "Comarques of the Province of Tarragona",
+  "Priorat"
+ ],
+ "lead": "Priorat (Western Catalan: [pɾi.oˈɾat]) is a comarca (county) in Camp de Tarragona, Catalonia, Spain. The region is named due to the monastery of Scala Dei which held many properties and the capital is now the town of Falset.",
+ "sections": [
+  "Economy",
+  "Physical geography",
+  "Municipalities",
+  "References",
+  "External links"
+ ],
+ "text": "Priorat (Western Catalan: [pɾi.oˈɾat]) is a comarca (county) in Camp de Tarragona, Catalonia, Spain. The region is named due to the monastery of Scala Dei which held many properties and the capital is now the town of Falset.\n\n\n== Economy ==\nThe central part of the comarca, Priorat històric, produces the highly regarded wines that are certified under the DOQ Priorat. Wines from elsewhere in the comarca are certified as DO Montsant although this region also has a small segment of the neighboring comarca, Ribera d'Ebre. However, galena mining was the main activity since prehistoric times until 1972, when the last galena mine closed.\nThe other main agricultural activity is the production of olives and olive oil, the latter of which is certified under DOP Siurana. Historically there was greater production of hazelnuts and almonds but these activities have become mostly for personal use. In late 1800s, a devastating attack of the insect phylloxera destroyed vines and mining kept activities and around twenty mines opened at that time.\nPriorat saw a steady loss of population throughout the 20th century due to a number of external factors such as the Spanish Civil War and the rise of coastal tourism. In 2004, with a more prosperous economy there was an overall increase in population that peaked in 2010 and has since been decreasing again each year. In 2001, the population was 9,196, with only the capital exceeding a population of 1,000 and while it has over 2,800 residents as of 2017, the comarca overall has reduced to 9,345 from a high of 10,145 making it the 3rd least populated comarca in all of Catalonia.\n\n\n== Physical geography ==\nPriorat has an area of 496 km2 and is bordered by the River Ebro, and by the comarques of Ribera d'Ebre, Baix Camp, les Garrigues, and Conca de Barberà. The region is mostly hilly, and in the extreme north of the comarca is the Montsant mountain range, rising to over 1000 m; the south is bordered by the Mola de Colldejou and the mountain ranges of Serra de Llaberia and Serra de Santa Marina.\nThe climate is continental: dry and hot in summer, cold in the winter.\n\n\n== Municipalities ==\n\n\n== References ==\n\n\n== External links ==\nOfficial website\nTourism office website",
+ "facts": {
+  "country": [
+   "Q29"
+  ],
+  "coordinates": [
+   {
+    "lat": 41.133333333333,
+    "lon": 0.81666666666667
+   }
+  ],
+  "instance_of": [
+   "Q937876"
+  ],
+  "located_in": [
+   "Q98392",
+   "Q1030024"
+  ],
+  "description": "Catalan comarca (county) in Camp de Tarragona"
+ }
+}
