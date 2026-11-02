@@ -452,12 +452,12 @@ function render() {
   document.querySelectorAll(".tab").forEach(b => b.classList.toggle("on", b.dataset.v === S.view || (b.dataset.v === "learn" && WHEELS.includes(S.view))));
   document.querySelectorAll(".sub").forEach(b => b.classList.toggle("on", b.dataset.v === S.view));
   document.getElementById("subnav").style.display = WHEELS.includes(S.view) || S.view === "learn" ? "flex" : "none";
-  const isPage = ["home", "snap", "bottles", "pair", "learn"].includes(S.view), noBars = isPage || S.view === "aroma";
+  const isPage = ["home", "snap", "bottles", "pair", "learn", "menu"].includes(S.view), noBars = isPage || S.view === "aroma";
   document.getElementById("pageStage").style.display = isPage ? "block" : "none";
   document.getElementById("wheelStage").style.display = isPage ? "none" : "block";
   document.getElementById("regionbar").style.display = noBars ? "none" : "flex";
   document.getElementById("stylebar").style.display = noBars ? "none" : "flex";
-  if (isPage) { ({home: viewHome, snap: viewSnap, bottles: viewBottles, pair: viewPair, learn: viewLearn})[S.view](); }
+  if (isPage) { ({home: viewHome, snap: viewSnap, bottles: viewBottles, pair: viewPair, learn: viewLearn, menu: viewMenu})[S.view](); }
   else if (S.view === "aroma") { svg.innerHTML = ""; viewAroma(); }
   else { svg.setAttribute("viewBox", "-395 -395 790 790"); buildBars(); svg.innerHTML = ""; ({together: viewTogether, wines: viewWines, words: viewWords})[S.view](); }
   if (!S.sel) (S.view === "home" ? panelWelcome() : isPage ? panelPageHome() : panelHome()); else if (S.sel.type === "wine") panelWine(byId[S.sel.id]); else panelWord(S.sel.id);
@@ -1748,6 +1748,71 @@ function viewBottles() {
 }
 function go(v) { S.view = v; S.sel = null; render(); scrollTo({top: 0, behavior: "smooth"}); }
 function greeting() { const h = new Date().getHours(); return h < 5 ? "Good evening" : h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening"; }
+
+// ---------------- tasting menu: pour order, prep plan and small bites for a flight of wines (rules fact-checked; shared with quors)
+let FLR = null;
+async function flightRules() { if (FLR) return FLR; try { FLR = await (await fetch("quors/flight.json")).json(); } catch (e) { FLR = {}; } return FLR; }
+const WSEQ = ["spark", "crisp", "arom", "rose", "full", "orange", "lred", "mred", "fred", "sweet", "fort"];
+const fSrc = L => [...new Set((L || []).map(u => String(u).replace(/^https?:\/\/(www\.|origin\.|fastly\.)?/, "").split("/")[0]))].join(", ");
+function menuOrder(L, seq) { const st = w => w.structure || {}; return L.slice().sort((a, b) => seq.indexOf(a.style) - seq.indexOf(b.style) || (st(a).sweetness || 1) - (st(b).sweetness || 1) || (st(a).tannin || 1) - (st(b).tannin || 1) || (st(a).body || 3) - (st(b).body || 3)); }
+function menuWhy(w, prev, R) {
+  const P = ((R.wine_order || {}).principles || []), find = k => P.find(p => p.rule.toLowerCase().includes(k)), red = x => ["lred", "mred", "fred"].includes(x.style), W = [];
+  if (!prev) W.push([w.style === "spark" ? "Sparkling opens the flight" : "Starts the flight: the lightest, freshest of your picks", find("open with")]);
+  else {
+    if (["sweet", "fort"].includes(w.style)) W.push(["Sweet and fortified wines go last; sugar would make dry wines after it taste sour", find("sweet and fortified")]);
+    else if (red(w) && !red(prev)) W.push(["Whites before reds (a convention, not a law)", find("whites before reds")]);
+    else if ((w.structure || {}).tannin > (prev.structure || {}).tannin) W.push(["More tannin than the one before", find("low tannin")]);
+    else if ((w.structure || {}).sweetness > (prev.structure || {}).sweetness) W.push(["A touch sweeter than the one before: dry before sweet", find("dry before sweet")]);
+    else W.push(["Fuller or richer than the one before: light to full", find("light-bodied")]);
+  }
+  return W;
+}
+function menuTimeline(order, WT) {
+  const FT = WT.fridge_timing || [], R = k => FT.find(r => r.rule.toLowerCase().includes(k)), lo = w => +((String(w.serve_f || "").match(/\d+/) || [60])[0]);
+  const cold = order.filter(w => lo(w) < 55), reds = order.filter(w => lo(w) >= 55 && !["sweet", "fort"].includes(w.style));
+  const dec = order.map(w => [w, String(w.decant || "")]).filter(([, d]) => d && d !== "none" && /\d/.test(d));
+  const nm = L => L.map(w => w.name).join(", "), step = (when, what, r) => `<div class="hhbox" style="margin:6px 0"><div class="k">${esc(when.toUpperCase())}</div><div class="row" style="font-size:14px">${what}${r ? ` <span class="status" style="font-size:11px">(${esc(fSrc(r.sources))})</span>` : ""}</div></div>`;
+  let h = "";
+  if (cold.length) h += step("Ahead of time", `Chill ${esc(nm(cold))} in the fridge. Short on time? An ice-and-water bucket chills a bottle in 20 to 30 minutes.`, R("ice-and-water"));
+  const byD = {}; dec.forEach(([w, d]) => (byD[d] = byD[d] || []).push(w));
+  Object.entries(byD).forEach(([d, L]) => { h += step(`${d.replace(/\s*hrs?\b/, " hours").replace(/\s*min\b/, " minutes")} before`, `Open and decant ${esc(nm(L))} (${L.length > 1 ? "their profiles suggest" : "its profile suggests"} decanting ${esc(d)}).`, null); });
+  if (cold.length) h += step("30 to 60 minutes before", `Take ${esc(nm(cold))} out of the fridge. A fridge runs colder than any serving temperature, so let them warm a little.`, R("take it out"));
+  if (reds.length) h += step("About 15 minutes before", `If the room is warm, give ${esc(nm(reds))} about 10 minutes in the ice bucket. Reds are best slightly cool, and wine warms in the glass.`, R("dr. vinny"));
+  h += step("As guests arrive", `Water on the table, a spit or dump bucket, plain bread or crackers, then pour in the order above: about 2 to 3 oz each.`, null);
+  return h;
+}
+async function viewMenu() {
+  const pg = document.getElementById("pageStage"), R = await flightRules();
+  const M2 = S.menu || (S.menu = {ids: [...new Set(cellarBottles().map(b => b.wineId).filter(id => byId[id]))].slice(0, 5), guests: 8});
+  const picks = M2.ids.map(id => byId[id]).filter(Boolean), seq = (((R.wine_order || {}).placement_of_app_styles || {}).default_sequence) || WSEQ, order = menuOrder(picks, seq);
+  const LW = (R.logistics || {}).wine || {}, WT = R.wine_temps || {}, B = (R.bites || {}).wine || {};
+  const li = (t, src) => `<div class="row" style="font-size:14px">• ${esc(t)}${src && src.length ? ` <span class="status" style="font-size:11px">(${esc(fSrc(src))})</span>` : ""}</div>`;
+  const ml = M2.guests * 90, bottles = Math.ceil(ml / 750);
+  pg.innerHTML = `<div class="hometitle" style="font-size:30px">Plan a wine tasting</div>
+    <p class="status">Pick 3 to 6 wines (from your cellar or any style). We'll put them in order and say why, then give you a prep plan and small bites for each pour.</p>
+    <div>${picks.map(w => `<button class="pchip on" data-mrm="${w.id}">${esc(w.name)} ✕</button>`).join(" ") || `<span class="status">Nothing picked yet.</span>`}</div>
+    <select id="mAdd" style="margin-top:8px"><option value="">+ Add a wine…</option>${WSEQ.map(k => `<optgroup label="${esc(DATA.styles[k].name)}">${DATA.wines.filter(w => w.style === k && !M2.ids.includes(w.id)).sort((a, b) => a.name.localeCompare(b.name)).map(w => `<option value="${w.id}">${esc(w.name)}</option>`).join("")}</optgroup>`).join("")}</select>
+    <label class="status" style="display:block;margin-top:8px">Guests <input type="number" id="mG" min="1" max="40" value="${M2.guests}" style="width:64px"></label>
+    ${picks.length > 6 ? `<p class="status">Wine Folly suggests 4 to 6 wines for a tasting; more than that tires the palate.</p>` : ""}
+    ${order.length ? `<div class="flab2" style="margin-top:14px">The pour order</div>${order.map((w, i) => { const why = menuWhy(w, order[i - 1], R), bites = (B[w.style] || []).slice(0, 3), own = ((w.pairings || {}).classic || []).slice(0, 2);
+      return `<div class="tonight" style="margin:8px 0;background:var(--cream, #FBF5EA);color:inherit"><div class="k" style="color:${DATA.styles[w.style].color}">POUR ${i + 1} · ${esc(DATA.styles[w.style].name.toUpperCase())}</div>
+        <div class="t"><a href="#" data-mw="${w.id}">${esc(w.name)}</a></div>
+        <div class="row" style="font-size:13px">${w.serve_f ? `Serve at ${esc(f2c(w.serve_f))}` : ""}${w.decant && w.decant !== "none" ? ` · decant ${esc(w.decant)}` : ""}</div>
+        ${why.map(([t, r]) => `<div class="row" style="font-size:14px"><b>Why here:</b> ${esc(t)}${r ? ` <span class="status" style="font-size:11px">(${esc(fSrc(r.sources))})</span>` : ""}</div>`).join("")}
+        ${bites.length || own.length ? `<div class="row" style="font-size:14px"><b>Small bites:</b> ${bites.map(b => esc(b.bite)).join(" · ")}${own.length ? `${bites.length ? " · " : ""}<i>from its profile:</i> ${esc(own.join(" · "))}` : ""}${bites.length ? ` <span class="status" style="font-size:11px">(${esc(fSrc(bites.flatMap(b => b.sources || [])))})</span>` : ""}</div>` : ""}</div>`; }).join("")}
+    <div class="flab2" style="margin-top:14px">Your timeline</div>${menuTimeline(order, WT)}
+    <div class="flab2" style="margin-top:14px">Prep plan</div>
+    <div class="hhbox"><div class="k">HOW MUCH YOU NEED</div>${li(`${M2.guests} guests × a generous 3 oz (90 ml) pour = ${ml} ml of each wine, so ${bottles} bottle${bottles === 1 ? "" : "s"} of each (simple arithmetic; pours tend to grow as the evening goes on).`)}${(LW.pour_size || []).map(r => li(r.value, r.sources)).join("")}${(LW.pours_per_750ml || []).map(r => li(r.value, r.sources)).join("")}${(LW.buy_per_guest || []).map(r => li(r.value, r.sources)).join("")}</div>
+    <div class="hhbox"><div class="k">CHILLING & TIMING</div>${(WT.fridge_timing || []).map(r => li(r.rule, r.sources)).join("")}</div>
+    ${(WT.decant || {}).caveats ? `<div class="hhbox"><div class="k">DECANTING</div>${(WT.decant.caveats || []).map(r => li(r.rule || r.value || r, r.sources)).join("")}</div>` : ""}
+    <div class="hhbox"><div class="k">ON THE TABLE</div>${((R.logistics || {}).spit_dump || []).filter(r => !/whisk/i.test(r.value)).map(r => li(r.value, r.sources)).join("")}${((R.logistics || {}).food_timing || []).filter(r => !/whisk/i.test(r.value)).map(r => li(r.value, r.sources)).join("")}</div>
+    <div class="hhbox"><div class="k">LOOK AFTER YOUR GUESTS</div>${((R.logistics || {}).responsible_serving || []).map(r => li(r.value, r.sources)).join("")}${LW.standard_drink ? li(LW.standard_drink.value, LW.standard_drink.sources) : ""}</div>` : ""}
+    <p class="status" style="margin-top:12px">Spirits instead? <a href="quors/#flight">Plan a spirits tasting in quors</a>. Please enjoy responsibly.</p>`;
+  document.getElementById("mAdd").onchange = e => { if (e.target.value) { M2.ids.push(e.target.value); viewMenu(); } };
+  document.getElementById("mG").onchange = e => { M2.guests = Math.max(1, Math.min(40, +e.target.value || 1)); viewMenu(); };
+  pg.querySelectorAll("[data-mrm]").forEach(b => b.onclick = () => { M2.ids = M2.ids.filter(i => i !== b.dataset.mrm); viewMenu(); });
+  pg.querySelectorAll("[data-mw]").forEach(b => b.onclick = e => { e.preventDefault(); pick("wine", b.dataset.mw); });
+}
 function viewHome() {
   const pg = document.getElementById("pageStage"); const bl = wineBottles();
   const cel = bl.filter(b => b.cellar && b.qty > 0), nCellar = cel.reduce((s, b) => s + (b.qty || 0), 0);
@@ -1758,6 +1823,7 @@ function viewHome() {
     <div class="tiles">
       <div class="tile primary" data-go="snap"><div class="ic">${I("scan")}</div><div><div class="t">Scan a bottle</div><div class="d">Photograph the label or barcode to learn what it is, how it tastes and when to drink it.</div></div></div>
       <div class="tile" data-go="pair"><div class="ic">${I("pair")}</div><div><div class="t">What's for dinner?</div><div class="d">Tell us your meal and we'll pick the perfect wine and explain why.</div></div></div>
+      <div class="tile" data-go="menu"><div class="ic">${I("glass-half") || I("tasting")}</div><div><div class="t">Plan a wine tasting</div><div class="d">Pick a few bottles: we'll set the pour order and why, when to chill and open, and small bites for each pour.</div></div></div>
       <div class="tile" data-go="bottles"><div class="ic">${I("cellar")}</div><div><div class="t">My cellar</div><div class="d">${nCellar ? `${nCellar} bottle${nCellar === 1 ? "" : "s"} · ` : ""}Track what you own, what's ready, and your tasting notes.</div></div></div>
     </div>
     ${tonight ? `<div class="tonight" data-open="${tonight.b.id}" style="cursor:pointer"><div class="k">OPEN TONIGHT</div><div class="t">${esc(tonight.b.name)}${tonight.b.vintage ? " " + tonight.b.vintage : ""}</div>
