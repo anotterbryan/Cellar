@@ -2,7 +2,7 @@
 // Label reading, bottle notes, guided dinner pairing, shared household cellar, community bottle facts,
 // plus (new in 6) a settings file on the Cellar website, general-purpose storage, and a status check,
 // so most future features need no server change. Deployed automatically from GitHub.
-const SERVER_VERSION = 10;
+const SERVER_VERSION = 11;
 import postgres from "npm:postgres@3.4.5";
 // A tiny, private middleman between the Cellar website and Google's Gemini API.
 // It keeps the Gemini key secret (stored as a Supabase secret, never in the website),
@@ -175,7 +175,7 @@ async function household(task: string, input: { code?: string; bottles?: Rec[]; 
 }
 
 // ---------------- community bottle facts (anonymous; only facts about the bottle, never personal data)
-const CFIELDS = ["producer", "grape", "place", "color", "sweet", "wine_id"];
+const CFIELDS = ["producer", "grape", "place", "color", "sweet", "wine_id", "spirit_id", "brand", "expression"];
 const cleanKey = (k: unknown) => String(k ?? "").toLowerCase().replace(/[^a-z0-9:|-]/g, "").slice(0, 120);
 function cleanFields(f: Record<string, unknown> = {}) {
   const out: Record<string, string> = {};
@@ -203,7 +203,7 @@ async function community(task: string, input: { keys?: unknown[]; device?: unkno
   }
   const fields: Record<string, string> = {}, agree: Record<string, number> = {};
   for (const [k, opts] of Object.entries(tally)) { const best = Object.values(opts).sort((a, b) => b.n - a.n)[0]; fields[k] = best.v; agree[k] = best.n; }
-  return { found: true, fields, agree, people: rows.length, trusted: Math.min(agree.producer ?? 0, agree.grape ?? agree.wine_id ?? 0) >= 2 };
+  return { found: true, fields, agree, people: rows.length, trusted: Math.min(agree.producer ?? 0, agree.grape ?? agree.wine_id ?? 0) >= 2 || (agree.spirit_id ?? 0) >= 2 };   // wines: producer + grape; spirits (quors): style id
 }
 
 // ---------------- general-purpose storage: areas are switched on in the settings file ("stores")

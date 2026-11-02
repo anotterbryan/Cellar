@@ -229,9 +229,14 @@ async function useBarcode(code) {
   code = String(code || "").replace(/\D/g, ""); const sc = S.scan; if (code.length < 8) { sc.status = "That doesn't look like a full barcode number."; viewScan(); return; }
   sc.barcode = code; sc.busy = true; sc.status = `Barcode ${code}: looking it up…`; viewScan();
   const hit = await lookupUPC(code);
-  if (hit) { const [brand, name, size] = hit; sc.text = [brand, name].filter(Boolean).join(" "); sc.fields = {brand, expression: name, size}; sc.ai = Object.assign(sc.ai || {}, {brand, expression: name});
+  if (hit) { const [brand, name, size] = hit; sc.fromList = true; sc.text = [brand, name].filter(Boolean).join(" "); sc.fields = {brand, expression: name, size}; sc.ai = Object.assign(sc.ai || {}, {brand, expression: name});
     sc.match = matchSpirit(scanText(sc)); sc.status = `Found barcode ${code} in the quors barcode list: “${sc.text}”${size ? " (" + size + ")" : ""}.` + (sc.match ? "" : " Choose the style below.");
-  } else { sc.status = `Barcode ${code} isn't in our list yet. Snap the label instead, or look it up and type what it says.`; sc.bcMiss = code; }
+  } else {
+    const c = await commGet(code);
+    if (c) { sc.ai = Object.assign(sc.ai || {}, {brand: c.fields.brand, expression: c.fields.expression}); sc.fields = {brand: c.fields.brand, expression: c.fields.expression}; sc.match = c.fields.spirit_id; sc.comm = c; sc.text = [c.fields.brand, c.fields.expression].filter(Boolean).join(" ");
+      sc.status = c.trusted ? `Barcode ${code}: confirmed by ${c.people} people in the community.` : `Barcode ${code}: shared by ${c.people === 1 ? "1 person" : c.people + " people"} in the community, not yet confirmed. Please check it against the label, and choose the right style below if it's wrong.`;
+    } else { sc.status = `Barcode ${code} isn't in our list yet. Snap the label and we'll read it, then remember this barcode for everyone once you save the bottle. Or look it up below.`; sc.bcMiss = code; }
+  }
   sc.busy = false; viewScan(); if (sc.match) loadNotes();
 }
 async function onBarcodePhoto(file) {
@@ -242,7 +247,7 @@ async function onBarcodePhoto(file) {
 }
 function scanText(sc) { const a = sc.ai || {}; return [a.style, a.category, a.brand, a.expression, a.region, a.country, sc.text].filter(Boolean).join("\n"); }
 async function onPhoto(file) {
-  if (!file) return; freshScan(); const sc = S.scan; sc.busy = true; sc.status = "Reading the label…"; viewScan();
+  if (!file) return; const keepBc = S.scan && S.scan.barcode && !S.scan.fromList ? S.scan.barcode : null; freshScan(); const sc = S.scan; if (keepBc) sc.barcode = keepBc; sc.busy = true; sc.status = "Reading the label…"; viewScan();
   sc.img = await shrink(file, 1600, .85); sc.thumb = await shrink(file, 180, .6);
   if (!AI.url) { sc.busy = false; sc.status = "Label reading needs the cellar server. Type what the label says below instead."; viewScan(); return; }
   try { const j = await aiCall({task: "spirit_read", images: [sc.img], inputs: {}}, "spirit_read");
@@ -269,7 +274,7 @@ function viewScan() {
   $("bc").onchange = e => onBarcodePhoto(e.target.files[0]);
   $("bcGo").onclick = () => { if (!S.scan.img) freshScan(); useBarcode($("bcNum").value); };
   $("txGo").onclick = () => { const t = $("tx").value.trim(); if (!t) return; if (!sc.img) { freshScan(); } S.scan.text = t; S.scan.match = matchSpirit(scanText(S.scan)); S.scan.status = S.scan.match ? "" : "We couldn't place that style. Choose it from the list."; viewScan(); if (S.scan.match) loadNotes(); };
-  if ($("pick")) $("pick").onchange = e => { sc.match = e.target.value || null; sc.status = ""; sc.notes = null; viewScan(); if (sc.match) loadNotes(); };
+  if ($("pick")) $("pick").onchange = e => { sc.match = e.target.value || null; sc.shared = false; sc.status = ""; sc.notes = null; viewScan(); if (sc.match) loadNotes(); };
   wireMatch();
 }
 function bottleName(sc) { const a = sc.ai || {}; return [a.brand, a.expression].filter(Boolean).join(" ") || (sc.text || "").split("\n")[0].slice(0, 60) || byId[sc.match].name; }
@@ -281,8 +286,20 @@ function matchCard(s) {
 }
 function saveScanRec(fn) {
   const sc = S.scan, list = loadBottles(); let r = sc.recId ? list.find(b => b.id === sc.recId) : null;
-  if (!r) { r = {id: Date.now() + Math.floor(Math.random() * 1000), ts: new Date().toISOString(), kind: "spirit", spiritId: sc.match, name: bottleName(sc), fields: sc.fields || {}, thumb: sc.thumb || null, qty: 0, bar: false, wish: false, notes: sc.notes && !sc.notes.error && !sc.notes.loading ? sc.notes : null}; list.unshift(r); sc.recId = r.id; }
-  r.spiritId = sc.match; fn(r); r.mt = Date.now(); saveBottles(list);
+  if (!r) { r = {id: Date.now() + Math.floor(Math.random() * 1000), ts: new Date().toISOString(), kind: "spirit", spiritId: sc.match, barcode: sc.barcode || null, name: bottleName(sc), fields: sc.fields || {}, thumb: sc.thumb || null, qty: 0, bar: false, wish: false, notes: sc.notes && !sc.notes.error && !sc.notes.loading ? sc.notes : null}; list.unshift(r); sc.recId = r.id; }
+  r.spiritId = sc.match; fn(r); r.mt = Date.now(); saveBottles(list); commAdd();
+}
+// ---- community barcodes (shared with cellar's "Cellar community" switch; only facts about the bottle are sent)
+const commOn = () => getJ("cellarLyceum.community.v1", true) !== false;
+async function commGet(code) {
+  if (!AI.url) return null;
+  try { const j = await aiCall({task: "community_get", keys: ["bc:" + code]}, "community_get");
+    return j && j.found && j.fields && byId[j.fields.spirit_id] ? j : null; } catch (e) { return null; }
+}
+async function commAdd() {
+  const sc = S.scan; if (!AI.url || !commOn() || !sc.barcode || !sc.match || sc.fromList || sc.shared) return;
+  const a = sc.ai || {}; sc.shared = true;
+  try { await aiCall({task: "community_add", device: deviceId(), keys: ["bc:" + sc.barcode], fields: {spirit_id: sc.match, brand: a.brand || bottleName(sc), expression: a.expression || ""}}, "community_add"); } catch (e) { sc.shared = false; }
 }
 function wireMatch() {
   if ($("addBar")) $("addBar").onclick = () => { saveScanRec(r => { r.bar = true; r.qty = (r.qty || 0) + 1; }); viewScan(); };
