@@ -2,9 +2,8 @@
  "kind": "wine",
  "key": "english-bacchus",
  "label": "English Bacchus",
- "match": "search",
+ "match": "direct",
  "tried": [
-  "English Bacchus",
   "Bacchus (grape)"
  ],
  "title": "Bacchus (grape)",

@@ -4,48 +4,38 @@
  "label": "Madiran",
  "match": "direct",
  "tried": [
-  "Madiran"
+  "Madiran AOC"
  ],
- "title": "Madiran",
- "url": "https://en.wikipedia.org/wiki/Madiran",
- "revision": 1381867207,
+ "title": "Madiran wine",
+ "url": "https://en.wikipedia.org/wiki/Madiran_wine",
+ "revision": 1232404230,
  "fetched": "2026-11-02",
  "license": "CC BY-SA 4.0 (Wikipedia contributors)",
- "wikidata": "Q744216",
- "image": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Madiran_%28Hautes-Pyr%C3%A9n%C3%A9es%29_1.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "wikidata": "Q2516636",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Montus_Cuv%C3%A9e_Prestige_1998.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
  "categories": [
-  "Communes of Hautes-Pyrénées",
-  "Tarbes arrondissement geography stubs",
-  "Wine regions of France"
+  "South West France AOCs"
  ],
- "lead": "Madiran (French pronunciation: [madiʁɑ̃] ) is a commune in the Hautes-Pyrénées department in south-western France.\nIt is the centre of a wine-producing area.",
+ "lead": "Madiran wine (French pronunciation: [madiʁɑ̃] ) is produced around the village of Madiran in Gascony under three Appellations d'Origine Contrôlées (AOCs): Madiran for red wines and Pacherenc du Vic-Bilh and Pacherenc du Vic-Bilh Sec for white wines. The production area for Madiran wine is spread over three départments – Gers, Hautes-Pyrénées and Pyrénées-Atlantiques – and is a part of the South West France wine region. There are 1,300 hectares (3,200 acres) of Madiran vineyards.",
  "sections": [
-  "Madiran wine",
-  "See also",
+  "Madiran AOC",
+  "Pacherenc du Vic-Bilh AOC",
   "References"
  ],
- "text": "Madiran (French pronunciation: [madiʁɑ̃] ) is a commune in the Hautes-Pyrénées department in south-western France.\nIt is the centre of a wine-producing area.\n\n\n== Madiran wine ==\n\nWine is produced around Madiran under three Appellations d'Origine Contrôlées (AOCs): Madiran for powerful red wines primarily from the grape variety Tannat, Pacherenc du Vic-Bilh for sweet white wines and Pacherenc du Vic-Bilh Sec for dry white wines primarily from the grape varieties Courbu and Petit Manseng. The production area for Madiran wine, which consists of 1,300 hectares (3,200 acres) of vineyards, is spread over three departments of France—Gers, Hautes-Pyrénées, and Pyrénées-Atlantiques—and is a part of the South West France wine region.\n\n\n== See also ==\nFrench wine\nCommunes of the Hautes-Pyrénées department\n\n\n== References ==",
+ "text": "Madiran wine (French pronunciation: [madiʁɑ̃] ) is produced around the village of Madiran in Gascony under three Appellations d'Origine Contrôlées (AOCs): Madiran for red wines and Pacherenc du Vic-Bilh and Pacherenc du Vic-Bilh Sec for white wines. The production area for Madiran wine is spread over three départments – Gers, Hautes-Pyrénées and Pyrénées-Atlantiques – and is a part of the South West France wine region. There are 1,300 hectares (3,200 acres) of Madiran vineyards.\n\n\n== Madiran AOC ==\nMadiran was created as an AOC in 1948, and only red wine can be produced under this appellation. The main grape variety in Madiran AOC is Tannat, which must make up at least 60% of the vineyard (Vineyards with less than 60% Tannat are still entitled to the appellation through 2022). Permitted as supplemental to Tannat are Cabernet Franc (locally also called Bouchy), Cabernet Sauvignon and Fer (locally also called Pinenc). Some of the appellation's top wines are in fact made from 100% Tannat; this is within AOC regulations.\nThe wine is typically very concentrated, high in tannin and traditionally requires several years ageing to be at its best. The style of really good Madiran is not unlike that of high-end Cabernet Sauvignon-dominated Bordeaux wines. However, recently some of the younger generations of winemakers have been experimenting with and producing wines which are softer and more approachable in their youth, mirroring a similar tendency in Bordeaux and elsewhere. The modern technique of introducing minute amounts of oxygen into the wine, micro-oxygenation or micro-bullage, was developed here by Patrick Ducournau at Château Aydie and is a significant development in modern French winemaking.\nSome of the leading producers are Alain Brumont, who is the proprietor of Château Bouscassé and Château Montus, Didier Barre of Domaine Berthoumieu and Alain Bortolussi at Château Viella.\n\n\n== Pacherenc du Vic-Bilh AOC ==\nThe area also produces sweet and dry white wine and sparkling wine under the two appellations Pacherenc du Vic-Bilh and Pacherenc du Vic-Bilh Sec, which cover the same area as Madiran AOC. The main grape varieties for the dry wine are Courbu and Petit Manseng, which together must make up at least 60%, and neither of which may exceed 80%. Accessory grape varieties (up to 40%) are Arrufiac, Gros Manseng and Sauvignon blanc, with Sauvignon blanc being limited to a maximum of 10%. The proportions of grape varieties allowed have been modified in recent years, with the most recent changes being implemented in 2005. Previously, a certain proportion of Arrufiac was prescribed, and Sémillon was allowed.\nPacherenc du Vic-Bilh Sec, which are dry white wines, must be made from grapes with a minimum potential alcohol level of 11%, and contain no more than 3 grams per liter of residual sugar.\nPacherenc du Vic-Bilh, without the \"Sec\" (dry) designation, is reserved for semi-sweet and sweet wines and must be made from manually harvested grapes with a minimum potential alcohol level of 12%, and contain a minimum of 35 grams per liter of residual sugar. High-end sweet Pacherenc du Vic-Bilh wines are usually made from dried grapes.\n\n\n== References ==",
  "facts": {
   "country": [
    "Q142"
   ],
-  "coordinates": [
-   {
-    "lat": 43.551388888889,
-    "lon": -0.059444444444444
-   }
-  ],
-  "image": [
-   "Madiran (Hautes-Pyrénées) 1.jpg"
-  ],
   "instance_of": [
-   "Q484170"
+   "Q2140699"
+  ],
+  "subclass_of": [
+   "Q630531"
   ],
   "located_in": [
-   "Q595608",
-   "Q12700",
-   "Q702577"
+   "Q12703"
   ],
-  "description": "commune in Hautes-Pyrénées, France"
+  "description": "wine region in Gascony, south west France"
  }
 }

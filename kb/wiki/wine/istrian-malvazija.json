@@ -2,12 +2,9 @@
  "kind": "wine",
  "key": "istrian-malvazija",
  "label": "Istrian Malvazija (Croatia & Slovenia)",
- "match": "search",
+ "match": "direct",
  "tried": [
-  "Istrian Malvazija",
-  "Croatia",
-  "Slovenia",
-  "Malvasia"
+  "Malvazija Istarska"
  ],
  "title": "Malvasia",
  "url": "https://en.wikipedia.org/wiki/Malvasia",

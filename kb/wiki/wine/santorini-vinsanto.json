@@ -2,10 +2,9 @@
  "kind": "wine",
  "key": "santorini-vinsanto",
  "label": "Santorini Vinsanto",
- "match": "search",
+ "match": "direct",
  "tried": [
-  "Santorini Vinsanto",
-  "Santorini (wine)"
+  "Vinsanto"
  ],
  "title": "Santorini (wine)",
  "url": "https://en.wikipedia.org/wiki/Santorini_(wine)",

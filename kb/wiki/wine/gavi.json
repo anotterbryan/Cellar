@@ -2,11 +2,9 @@
  "kind": "wine",
  "key": "gavi",
  "label": "Gavi",
- "match": "search",
+ "match": "direct",
  "tried": [
-  "Gavi",
-  "Piedmont – Alessandria wine",
-  "Cortese di Gavi"
+  "Gavi (wine)"
  ],
  "title": "Cortese di Gavi",
  "url": "https://en.wikipedia.org/wiki/Cortese_di_Gavi",

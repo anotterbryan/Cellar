@@ -4,48 +4,47 @@
  "label": "Jurançon (dry & sweet)",
  "match": "direct",
  "tried": [
-  "Jurançon"
+  "Jurançon AOC"
  ],
- "title": "Jurançon",
- "url": "https://en.wikipedia.org/wiki/Juran%C3%A7on",
- "revision": 1381857607,
+ "title": "Jurançon AOC",
+ "url": "https://en.wikipedia.org/wiki/Juran%C3%A7on_AOC",
+ "revision": 1358413753,
  "fetched": "2026-11-02",
  "license": "CC BY-SA 4.0 (Wikipedia contributors)",
- "wikidata": "Q199726",
- "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Juranson.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "wikidata": "Q921560",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Manseng_juran%C3%A7on.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
  "categories": [
-  "Béarn",
-  "Communes of Pyrénées-Atlantiques",
-  "Pau arrondissement geography stubs"
+  "South West France AOCs"
  ],
- "lead": "Jurançon (French pronunciation: [ʒyʁɑ̃sɔ̃] ; Occitan: Juranson) is a commune in the Pyrénées-Atlantiques department in Nouvelle-Aquitaine, France. It is part of the traditional province of Béarn.",
+ "lead": "Jurançon (French pronunciation: [ʒyʁɑ̃sɔ̃] ) is a wine region in South West France in the foothills of the Pyrenees, around the commune of Jurançon. It produces a dry white wine and a more sought after sweet white wine. The grape varieties used are Gros Manseng, Petit Manseng and Courbu. The sweet wines develop aromas of tropical fruit such as pineapple and mango. The vines are grown on steep mountain slopes and for the sweet wines the grapes are often hand selected well into October and November to ensure the best noble rot characteristics - although Tim Wildman MW states that noble rot is not the origin of sweetness in these wines.",
  "sections": [
-  "Population",
+  "Cultural references and marketing",
   "See also",
-  "References"
+  "References",
+  "External links"
  ],
- "text": "Jurançon (French pronunciation: [ʒyʁɑ̃sɔ̃] ; Occitan: Juranson) is a commune in the Pyrénées-Atlantiques department in Nouvelle-Aquitaine, France. It is part of the traditional province of Béarn.\n\n\n== Population ==\n\n\n== See also ==\nJurançon AOC, a wine from this commune\nCommunes of the Pyrénées-Atlantiques department\n\n\n== References ==",
+ "text": "Jurançon (French pronunciation: [ʒyʁɑ̃sɔ̃] ) is a wine region in South West France in the foothills of the Pyrenees, around the commune of Jurançon. It produces a dry white wine and a more sought after sweet white wine. The grape varieties used are Gros Manseng, Petit Manseng and Courbu. The sweet wines develop aromas of tropical fruit such as pineapple and mango. The vines are grown on steep mountain slopes and for the sweet wines the grapes are often hand selected well into October and November to ensure the best noble rot characteristics - although Tim Wildman MW states that noble rot is not the origin of sweetness in these wines.\n\n\n== Cultural references and marketing ==\nThe white wine varieties of Manseng were a favorite of the French poet Colette who called the wine séduction du vert galant and was quoted \"I was a girl when I met this prince; aroused, imperious, treacherous, as all great seducers are.\" Winemakers in Jurançon picked up on this endorsement and began touting the wine's (reputed) viril and puissant qualities in sales brochures and with posters that advertise \"Manseng means Jurançon means Sex\".\n\n\n== See also ==\nList of Vins de Primeur\nArrouya noir, a red grape variety grown in the AOC zone though not permitted for the white wines of the regions\n\n\n== References ==\n\n\n== External links ==\nVins Jurancon",
  "facts": {
   "country": [
    "Q142"
   ],
-  "coordinates": [
-   {
-    "lat": 43.287222222222,
-    "lon": -0.38805555555556
-   }
-  ],
   "image": [
-   "Juranson.jpg"
+   "Cave des producteurs de jurançon à GAN Panneau au Château des Astous route de Gan à Jurançon.jpg",
+   "Petit manseng.jpg",
+   "Manseng jurançon.jpg"
   ],
   "instance_of": [
-   "Q484170"
+   "Q282"
+  ],
+  "subclass_of": [
+   "Q630531"
+  ],
+  "country_of_origin": [
+   "Q142"
   ],
   "located_in": [
-   "Q1343600",
-   "Q12703",
-   "Q681862"
+   "Q213763"
   ],
-  "description": "commune in Pyrénées-Atlantiques, France"
+  "description": "Wine region in France"
  }
 }

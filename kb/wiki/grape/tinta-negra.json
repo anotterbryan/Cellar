@@ -2,10 +2,8 @@
  "kind": "grape",
  "key": "Tinta Negra",
  "label": "Tinta Negra",
- "match": "search",
+ "match": "direct",
  "tried": [
-  "Tinta Negra (grape)",
-  "Tinta Negra",
   "Tinta Negra Mole"
  ],
  "title": "Tinta Negra Mole",

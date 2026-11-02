@@ -2,9 +2,8 @@
  "kind": "wine",
  "key": "bulgarian-mavrud",
  "label": "Bulgarian Mavrud",
- "match": "search",
+ "match": "direct",
  "tried": [
-  "Bulgarian Mavrud",
   "Mavrud"
  ],
  "title": "Mavrud",

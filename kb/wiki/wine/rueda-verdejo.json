@@ -2,44 +2,57 @@
  "kind": "wine",
  "key": "rueda-verdejo",
  "label": "Rueda Verdejo",
- "match": "search",
+ "match": "direct",
  "tried": [
-  "Rueda Verdejo",
-  "Castilla y León — Rueda wine",
-  "Verdejo"
+  "Rueda (DO)"
  ],
- "title": "Verdejo",
- "url": "https://en.wikipedia.org/wiki/Verdejo",
- "revision": 1380628354,
+ "title": "Rueda DO",
+ "url": "https://en.wikipedia.org/wiki/Rueda_DO",
+ "revision": 1231090800,
  "fetched": "2026-11-02",
  "license": "CC BY-SA 4.0 (Wikipedia contributors)",
- "wikidata": "Q456276",
- "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Rueda_Verdejo.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
+ "wikidata": "Q356128",
+ "image": "https://upload.wikimedia.org/wikipedia/commons/b/b2/DO_Rueda_location.svg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=original",
  "categories": [
-  "Spanish wine",
-  "White wine grape varieties",
-  "Wine grape stubs"
+  "Province of Valladolid",
+  "Wine regions of Spain"
  ],
- "lead": "Verdejo is a variety of wine grape that has long been grown in the Rueda region of Spain. The grape originated in North Africa, and was spread to Rueda in about the 11th Century, possibly by Mozarabs. Verdejo was generally used to make a strongly oxidized, Sherry-like wine. \nIn the mid-20th century, Verdejo almost became extinct, had it not been for the local winegrower Ángel Rodríguez Vidal (Bodega Martinsancho), who opted for this variety and contributed to re-establishing its prominence in the region. In recognition of his work, he was honoured with the Cross of the Order of Agricultural Merit by King Juan Carlos I of Spain. \nIn the 1970s, the winemaking company Marqués de Riscal began to develop a fresher style of white wine based on Verdejo with the help of French oenologist Émile Peynaud. In 1980, white wines from the Rueda region were recognized by a Denominación de Origen (DO). Wines labeled Rueda must contain 50% Verdejo; the remainder is typically Sauvignon blanc or Macabeo. Wines designated \"Rueda Verdejo\" must contain 85% Verdejo, and are often 100% Verdejo.\nThe Verdejo grapes are generally harvested at night. This means that the grapes enter the cellar at the lower night-time temperature of 10–15 °C (50–59 °F) instead of the daytime temperature, which can be as high as 28–30 °C (82–86 °F) in September. Lower temperatures means less oxidation (and therefore less browning) of the juice. Verdejo wines are aromatic, often soft, and full-bodied.",
+ "lead": "Rueda is a Spanish Denominación de Origen Protegida (DOP) for wines located in the Community of Castile and León. It comprises 72 municipalities, of which 53 are in the province of Valladolid, 17 are in the north of the province of Segovia, and 2 are in the north of the province of Ávila. It is one of Spain's leading wine regions, and is known primarily for its white wines based on the Verdejo grape.",
  "sections": [
   "History",
-  "References"
+  "Geography",
+  "Climate",
+  "Soils",
+  "Grape varieties",
+  "Wine classification",
+  "See also",
+  "References",
+  "External links"
  ],
- "text": "Verdejo is a variety of wine grape that has long been grown in the Rueda region of Spain. The grape originated in North Africa, and was spread to Rueda in about the 11th Century, possibly by Mozarabs. Verdejo was generally used to make a strongly oxidized, Sherry-like wine. \nIn the mid-20th century, Verdejo almost became extinct, had it not been for the local winegrower Ángel Rodríguez Vidal (Bodega Martinsancho), who opted for this variety and contributed to re-establishing its prominence in the region. In recognition of his work, he was honoured with the Cross of the Order of Agricultural Merit by King Juan Carlos I of Spain. \nIn the 1970s, the winemaking company Marqués de Riscal began to develop a fresher style of white wine based on Verdejo with the help of French oenologist Émile Peynaud. In 1980, white wines from the Rueda region were recognized by a Denominación de Origen (DO). Wines labeled Rueda must contain 50% Verdejo; the remainder is typically Sauvignon blanc or Macabeo. Wines designated \"Rueda Verdejo\" must contain 85% Verdejo, and are often 100% Verdejo.\nThe Verdejo grapes are generally harvested at night. This means that the grapes enter the cellar at the lower night-time temperature of 10–15 °C (50–59 °F) instead of the daytime temperature, which can be as high as 28–30 °C (82–86 °F) in September. Lower temperatures means less oxidation (and therefore less browning) of the juice. Verdejo wines are aromatic, often soft, and full-bodied.\n\n\n== History ==\nAfter the Reconquest of Toledo, the Duero area was repopulated by Asturians, Vascones and Mozarabs. It is probable that the grape was brought from Algaida, in North Africa, along the silver route. The first vines of this variety in Spain were planted in Toro and Tierra del vino and the region of Madrigal de las Altas Torres (hence its name madrigal white) and Rueda during the reign of Alfonso VI (11th–12th centuries).\n\n\n== References ==",
+ "text": "Rueda is a Spanish Denominación de Origen Protegida (DOP) for wines located in the Community of Castile and León. It comprises 72 municipalities, of which 53 are in the province of Valladolid, 17 are in the north of the province of Segovia, and 2 are in the north of the province of Ávila. It is one of Spain's leading wine regions, and is known primarily for its white wines based on the Verdejo grape.\n\n\n== History ==\n\nThe first documentary evidence of wine production in this area dates from the 11th century, when King Alfonso VI offered title to lands to settlers in the recently reconquered area. Many individuals and monastic orders accepted the offer and founded monasteries with their own vineyards.\nDuring the 18th century the land planted to vines was greater in extent than it is now and was exclusively under the Verdejo grape variety. The wines produced enjoyed great commercial success in part due to the clarification process used which involved the use of local clay.\nIn the years between 1890 and 1922 the phylloxera louse destroyed over two thirds of the vines, which were replanted by grafting onto louse resistant New World rootstock. However, the new varieties were selected according to productivity criteria rather than quality ones and for many years the wine produced was sold in bulk.  \nIn this context, the local Verdejo variety almost became extinct. Had it not been for the local winegrower Ángel Rodríguez Vidal (Bodega Martinsancho), who adopted this variety and contributed to re-establishing its prominence in the region. In recognition of his work, he was honoured with the Cross of the Order of Agricultural Merit by King Juan Carlos I of Spain. \nThe idea of creating a DO was first raised in 1935, but it was not until 1972 that major investment by the Rioja winery, Marqués de Riscal, signalled the start of a second era of quality wine production, again based on the Verdejo variety. Official DO status was acquired in 1980.\n\n\n== Geography ==\nThe DO encompasses an area of 16,165 hectares (39,940 acres) and is centered around the town of Rueda, in the province of Valladolid about 170 kilometres (110 mi) northwest of Madrid. The land is a flat high plain at an altitude of between 600 metres (2,000 ft) and 780 metres (2,560 ft) above sea level. The Duero River flows through the area from east to west.\n\n\n== Climate ==\nThe climate is continental (long hot summers, cold winters) with certain Atlantic maritime influences. Temperatures vary widely and can drop to −1 °C (30 °F) in winter and can reach 30 °C (86 °F) in summer, which is not as high as similar wine-producing regions in Southern Central Spain. There is a risk of frost, freezing fog, high winds and hailstones in winter and spring. On the other hand, there is only a very small possibility of drought.\nNormally it rains in spring and autumn, with an average rainfall of 400 millimetres (16 in) per year, while the vines receive 2,700 hours of sunlight per year.\n\n\n== Soils ==\nClose to the River Duero the soils are alluvial with a high lime content (max 24%). To the south the topsoil is brown and sandy with a gravel and clay subsoil. Drainage is good, has a rich iron content and is easy to plough.\n\n\n== Grape varieties ==\nThe authorized white varieties are: Verdejo, Viura, Sauvignon blanc, and Palomino Fino. More recently foreign varieties such as  Viognier and Chardonnay have been approved as well.\nThe authorised red varieties are: Tempranillo, Cabernet Sauvignon, Merlot, Syrah and Garnacha.\nThe authorized yield for white varieties is 8,000 kilograms per hectare (7,100 lb/acre) (10,000 kilograms per hectare (8,900 lb/acre) if on trellises) though in practice the yields are only between one quarter and one half of this level. Most new vineyards are planted with rows at 3 metres (9.8 ft) intervals, to allow mechanization. Irrigation is only allowed under special circumstances. Vines are often trained close to the ground to resist the strong winds that are characteristic of the area.\n\n\n== Wine classification ==\n\nUnder the DO, white, rosé and red wines can be produced.\n\nRueda: white wines made of at least 50% of the principal grape varieties that are produced in the region (Verdejo and Sauvignon Blanc).\nVino de Pueblo: wines that can indicate the village or town where the grapes are produced and when the percentage of grapes from that place is more than 85%.\nGran Vino de Rueda: grapes coming from vineyards with more than 30 years, with low yields (<6,500 kg/Ha) and a transformation ratio of 65%. This category is the most prestigious.\n\n\n== See also ==\nSpanish wine\nCuisine of Valladolid\n\n\n== References ==\n\n\n== External links ==\nD.O. Rueda official website",
  "facts": {
+  "country": [
+   "Q29"
+  ],
+  "coordinates": [
+   {
+    "lat": 41.4141296,
+    "lon": -4.9571038
+   }
+  ],
   "image": [
-   "Rueda Verdejo.JPG"
+   "Caserio de Dueñas.jpg"
   ],
   "instance_of": [
-   "Q958314"
+   "Q82794"
   ],
   "subclass_of": [
-   "Q958314"
+   "Q1432594"
   ],
-  "country_of_origin": [
-   "Q29",
-   "Q38"
+  "located_in": [
+   "Q71097",
+   "Q987366"
   ],
-  "description": "Italian grape variety"
+  "description": "Spanish Denominación de Origen Protegida (DOP) for wines located in the Community of Castile and León"
  }
 }

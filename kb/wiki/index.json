@@ -361,15 +361,6 @@
  },
  {
   "kind": "grape",
-  "key": "Azal",
-  "label": "Azal",
-  "title": "List of grape varieties",
-  "url": "https://en.wikipedia.org/wiki/List_of_grape_varieties",
-  "match": "search",
-  "chars": 3961
- },
- {
-  "kind": "grape",
   "key": "Barbera",
   "label": "Barbera",
   "title": "Barbera",
@@ -453,19 +444,19 @@
   "kind": "grape",
   "key": "Cariñena (Samsó)",
   "label": "Cariñena (Samsó)",
-  "title": "List of grape varieties",
-  "url": "https://en.wikipedia.org/wiki/List_of_grape_varieties",
-  "match": "search",
-  "chars": 3961
+  "title": "Carignan",
+  "url": "https://en.wikipedia.org/wiki/Carignan",
+  "match": "direct",
+  "chars": 19906
  },
  {
   "kind": "grape",
   "key": "Carlos",
   "label": "Carlos",
-  "title": "List of grape varieties",
-  "url": "https://en.wikipedia.org/wiki/List_of_grape_varieties",
-  "match": "search",
-  "chars": 3961
+  "title": "Vitis rotundifolia",
+  "url": "https://en.wikipedia.org/wiki/Vitis_rotundifolia",
+  "match": "direct",
+  "chars": 5673
  },
  {
   "kind": "grape",
@@ -1263,10 +1254,10 @@
   "kind": "grape",
   "key": "Sárgamuskotály (Yellow Muscat)",
   "label": "Sárgamuskotály (Yellow Muscat)",
-  "title": "Tokaji",
-  "url": "https://en.wikipedia.org/wiki/Tokaji",
-  "match": "search",
-  "chars": 21006
+  "title": "Muscat Blanc à Petits Grains",
+  "url": "https://en.wikipedia.org/wiki/Muscat_Blanc_%C3%A0_Petits_Grains",
+  "match": "direct",
+  "chars": 5768
  },
  {
   "kind": "grape",
@@ -1337,7 +1328,7 @@
   "label": "Tinta Negra",
   "title": "Tinta Negra Mole",
   "url": "https://en.wikipedia.org/wiki/Tinta_Negra_Mole",
-  "match": "search",
+  "match": "direct",
   "chars": 396
  },
  {
@@ -1429,15 +1420,6 @@
   "url": "https://en.wikipedia.org/wiki/Tinta_Amarela",
   "match": "direct",
   "chars": 640
- },
- {
-  "kind": "grape",
-  "key": "Various (often unspecified red blends)",
-  "label": "Various (often unspecified red blends)",
-  "title": "Port wine",
-  "url": "https://en.wikipedia.org/wiki/Port_wine",
-  "match": "search",
-  "chars": 26881
  },
  {
   "kind": "grape",
@@ -1857,10 +1839,10 @@
   "kind": "wine",
   "key": "pessac-leognan-blanc",
   "label": "Pessac-Léognan Blanc",
-  "title": "Sauvignon blanc",
-  "url": "https://en.wikipedia.org/wiki/Sauvignon_blanc",
-  "match": "search",
-  "chars": 14954
+  "title": "Pessac-Léognan",
+  "url": "https://en.wikipedia.org/wiki/Pessac-L%C3%A9ognan",
+  "match": "direct",
+  "chars": 4279
  },
  {
   "kind": "wine",
@@ -1940,7 +1922,7 @@
   "label": "Morgon",
   "title": "Beaujolais",
   "url": "https://en.wikipedia.org/wiki/Beaujolais",
-  "match": "search",
+  "match": "direct",
   "chars": 28188
  },
  {
@@ -1965,10 +1947,10 @@
   "kind": "wine",
   "key": "blanc-de-blancs-champagne",
   "label": "Blanc de Blancs Champagne",
-  "title": "Champagne wine region",
-  "url": "https://en.wikipedia.org/wiki/Champagne_wine_region",
-  "match": "search",
-  "chars": 17566
+  "title": "Champagne",
+  "url": "https://en.wikipedia.org/wiki/Champagne",
+  "match": "direct",
+  "chars": 39545
  },
  {
   "kind": "wine",
@@ -2219,7 +2201,7 @@
   "label": "Gavi",
   "title": "Cortese di Gavi",
   "url": "https://en.wikipedia.org/wiki/Cortese_di_Gavi",
-  "match": "search",
+  "match": "direct",
   "chars": 1161
  },
  {
@@ -2496,10 +2478,10 @@
   "kind": "wine",
   "key": "rueda-verdejo",
   "label": "Rueda Verdejo",
-  "title": "Verdejo",
-  "url": "https://en.wikipedia.org/wiki/Verdejo",
-  "match": "search",
-  "chars": 1934
+  "title": "Rueda DO",
+  "url": "https://en.wikipedia.org/wiki/Rueda_DO",
+  "match": "direct",
+  "chars": 4687
  },
  {
   "kind": "wine",
@@ -2523,10 +2505,10 @@
   "kind": "wine",
   "key": "spanish-garnacha",
   "label": "Spanish Garnacha (Campo de Borja, Calatayud)",
-  "title": "Cava (Spanish wine)",
-  "url": "https://en.wikipedia.org/wiki/Cava_(Spanish_wine)",
-  "match": "search",
-  "chars": 3801
+  "title": "Campo de Borja (DO)",
+  "url": "https://en.wikipedia.org/wiki/Campo_de_Borja_(DO)",
+  "match": "direct",
+  "chars": 3452
  },
  {
   "kind": "wine",
@@ -2577,10 +2559,10 @@
   "kind": "wine",
   "key": "douro-red",
   "label": "Douro Red",
-  "title": "Port wine",
-  "url": "https://en.wikipedia.org/wiki/Port_wine",
-  "match": "search",
-  "chars": 26881
+  "title": "Douro DOC",
+  "url": "https://en.wikipedia.org/wiki/Douro_DOC",
+  "match": "direct",
+  "chars": 7053
  },
  {
   "kind": "wine",
@@ -2757,10 +2739,10 @@
   "kind": "wine",
   "key": "wiener-gemischter-satz",
   "label": "Wiener Gemischter Satz",
-  "title": "Vienna",
-  "url": "https://en.wikipedia.org/wiki/Vienna",
-  "match": "search",
-  "chars": 72999
+  "title": "Viticulture",
+  "url": "https://en.wikipedia.org/wiki/Viticulture",
+  "match": "direct",
+  "chars": 13631
  },
  {
   "kind": "wine",
@@ -2802,10 +2784,10 @@
   "kind": "wine",
   "key": "dry-tokaji-furmint",
   "label": "Dry Tokaji Furmint",
-  "title": "Furmint",
-  "url": "https://en.wikipedia.org/wiki/Furmint",
+  "title": "Tokaji",
+  "url": "https://en.wikipedia.org/wiki/Tokaji",
   "match": "search",
-  "chars": 14356
+  "chars": 21006
  },
  {
   "kind": "wine",
@@ -2856,10 +2838,10 @@
   "kind": "wine",
   "key": "japanese-koshu",
   "label": "Japanese Koshu",
-  "title": "Koshu (grape)",
-  "url": "https://en.wikipedia.org/wiki/Koshu_(grape)",
+  "title": "Japanese wine",
+  "url": "https://en.wikipedia.org/wiki/Japanese_wine",
   "match": "search",
-  "chars": 1159
+  "chars": 13428
  },
  {
   "kind": "wine",
@@ -2910,10 +2892,10 @@
   "kind": "wine",
   "key": "russian-river-valley-pinot-noir",
   "label": "Russian River Valley Pinot Noir",
-  "title": "Pinot noir",
-  "url": "https://en.wikipedia.org/wiki/Pinot_noir",
+  "title": "Pinot gris",
+  "url": "https://en.wikipedia.org/wiki/Pinot_gris",
   "match": "search",
-  "chars": 30194
+  "chars": 11133
  },
  {
   "kind": "wine",
@@ -2955,10 +2937,10 @@
   "kind": "wine",
   "key": "california-sparkling",
   "label": "California Sparkling (Carneros, Anderson Valley)",
-  "title": "California wine",
-  "url": "https://en.wikipedia.org/wiki/California_wine",
+  "title": "Sparkling wine",
+  "url": "https://en.wikipedia.org/wiki/Sparkling_wine",
   "match": "search",
-  "chars": 20361
+  "chars": 47705
  },
  {
   "kind": "wine",
@@ -2973,10 +2955,10 @@
   "kind": "wine",
   "key": "temecula-valley-red",
   "label": "Temecula Valley Red",
-  "title": "Temecula, California",
-  "url": "https://en.wikipedia.org/wiki/Temecula,_California",
-  "match": "search",
-  "chars": 29439
+  "title": "Temecula Valley AVA",
+  "url": "https://en.wikipedia.org/wiki/Temecula_Valley_AVA",
+  "match": "direct",
+  "chars": 12937
  },
  {
   "kind": "wine",
@@ -3144,10 +3126,10 @@
   "kind": "wine",
   "key": "margaret-river-cabernet-sauvignon",
   "label": "Margaret River Cabernet Sauvignon",
-  "title": "Cabernet Sauvignon",
-  "url": "https://en.wikipedia.org/wiki/Cabernet_Sauvignon",
+  "title": "Margaret River (wine region)",
+  "url": "https://en.wikipedia.org/wiki/Margaret_River_(wine_region)",
   "match": "search",
-  "chars": 45529
+  "chars": 1866
  },
  {
   "kind": "wine",
@@ -3306,10 +3288,10 @@
   "kind": "wine",
   "key": "california-red-blend",
   "label": "California Red Blend",
-  "title": "Bordeaux wine",
-  "url": "https://en.wikipedia.org/wiki/Bordeaux_wine",
-  "match": "search",
-  "chars": 23376
+  "title": "California wine",
+  "url": "https://en.wikipedia.org/wiki/California_wine",
+  "match": "direct",
+  "chars": 20361
  },
  {
   "kind": "wine",
@@ -3432,19 +3414,19 @@
   "kind": "wine",
   "key": "columbia-valley-red-blend",
   "label": "Washington Red Blend (Columbia Valley)",
-  "title": "Washington wine",
-  "url": "https://en.wikipedia.org/wiki/Washington_wine",
+  "title": "Cabernet Sauvignon",
+  "url": "https://en.wikipedia.org/wiki/Cabernet_Sauvignon",
   "match": "search",
-  "chars": 33302
+  "chars": 45529
  },
  {
   "kind": "wine",
   "key": "long-island-merlot",
   "label": "Long Island Merlot & Red Blends (New York)",
-  "title": "Merlot",
-  "url": "https://en.wikipedia.org/wiki/Merlot",
-  "match": "search",
-  "chars": 30825
+  "title": "Long Island AVA",
+  "url": "https://en.wikipedia.org/wiki/Long_Island_AVA",
+  "match": "direct",
+  "chars": 12647
  },
  {
   "kind": "wine",
@@ -3468,19 +3450,19 @@
   "kind": "wine",
   "key": "texas-tempranillo",
   "label": "Texas Tempranillo (High Plains & Hill Country)",
-  "title": "Tempranillo",
-  "url": "https://en.wikipedia.org/wiki/Tempranillo",
-  "match": "search",
-  "chars": 10759
+  "title": "Texas wine",
+  "url": "https://en.wikipedia.org/wiki/Texas_wine",
+  "match": "direct",
+  "chars": 8487
  },
  {
   "kind": "wine",
   "key": "michigan-riesling",
   "label": "Michigan Riesling (Old Mission & Leelanau)",
-  "title": "Riesling",
-  "url": "https://en.wikipedia.org/wiki/Riesling",
-  "match": "search",
-  "chars": 26893
+  "title": "Michigan wine",
+  "url": "https://en.wikipedia.org/wiki/Michigan_wine",
+  "match": "direct",
+  "chars": 13304
  },
  {
   "kind": "wine",
@@ -3549,10 +3531,10 @@
   "kind": "wine",
   "key": "red-blend",
   "label": "Red Blend (general)",
-  "title": "Washington wine",
-  "url": "https://en.wikipedia.org/wiki/Washington_wine",
-  "match": "search",
-  "chars": 33302
+  "title": "Red wine",
+  "url": "https://en.wikipedia.org/wiki/Red_wine",
+  "match": "direct",
+  "chars": 12747
  },
  {
   "kind": "wine",
@@ -3702,28 +3684,28 @@
   "kind": "wine",
   "key": "sweet-red",
   "label": "Sweet Red Wine (general)",
-  "title": "Port wine",
-  "url": "https://en.wikipedia.org/wiki/Port_wine",
-  "match": "search",
-  "chars": 26881
+  "title": "Sweetness of wine",
+  "url": "https://en.wikipedia.org/wiki/Sweetness_of_wine",
+  "match": "direct",
+  "chars": 8675
  },
  {
   "kind": "wine",
   "key": "uruguay-tannat",
   "label": "Uruguayan Tannat",
-  "title": "Tannat",
-  "url": "https://en.wikipedia.org/wiki/Tannat",
-  "match": "search",
-  "chars": 5231
+  "title": "Uruguayan wine",
+  "url": "https://en.wikipedia.org/wiki/Uruguayan_wine",
+  "match": "direct",
+  "chars": 2432
  },
  {
   "kind": "wine",
   "key": "mendoza-bonarda",
   "label": "Argentine Bonarda",
-  "title": "Argentine wine",
-  "url": "https://en.wikipedia.org/wiki/Argentine_wine",
-  "match": "search",
-  "chars": 35442
+  "title": "Douce noir",
+  "url": "https://en.wikipedia.org/wiki/Douce_noir",
+  "match": "direct",
+  "chars": 8983
  },
  {
   "kind": "wine",
@@ -3756,28 +3738,28 @@
   "kind": "wine",
   "key": "chilean-cool-climate-syrah",
   "label": "Chilean Cool-Climate Syrah (Elqui, Limarí, San Antonio)",
-  "title": "Elqui River",
-  "url": "https://en.wikipedia.org/wiki/Elqui_River",
+  "title": "Chilean wine",
+  "url": "https://en.wikipedia.org/wiki/Chilean_wine",
   "match": "direct",
-  "chars": 1969
+  "chars": 34821
  },
  {
   "kind": "wine",
   "key": "limari-chardonnay",
   "label": "Chilean Coastal Chardonnay (Limarí, Casablanca)",
-  "title": "Chilean wine",
-  "url": "https://en.wikipedia.org/wiki/Chilean_wine",
-  "match": "search",
-  "chars": 34821
+  "title": "Limarí Province",
+  "url": "https://en.wikipedia.org/wiki/Limar%C3%AD_Province",
+  "match": "direct",
+  "chars": 2124
  },
  {
   "kind": "wine",
   "key": "serra-gaucha-sparkling",
   "label": "Brazilian Sparkling Wine (Serra Gaúcha)",
-  "title": "Serra Gaúcha",
-  "url": "https://en.wikipedia.org/wiki/Serra_Ga%C3%BAcha",
+  "title": "Brazilian wine",
+  "url": "https://en.wikipedia.org/wiki/Brazilian_wine",
   "match": "direct",
-  "chars": 2332
+  "chars": 2966
  },
  {
   "kind": "wine",
@@ -3794,17 +3776,17 @@
   "label": "Tasmanian Sparkling Wine",
   "title": "Tasmanian wine",
   "url": "https://en.wikipedia.org/wiki/Tasmanian_wine",
-  "match": "search",
+  "match": "direct",
   "chars": 5553
  },
  {
   "kind": "wine",
   "key": "adelaide-hills-chardonnay",
   "label": "Adelaide Hills Chardonnay",
-  "title": "Chardonnay",
-  "url": "https://en.wikipedia.org/wiki/Chardonnay",
-  "match": "search",
-  "chars": 46165
+  "title": "Adelaide Hills wine region",
+  "url": "https://en.wikipedia.org/wiki/Adelaide_Hills_wine_region",
+  "match": "direct",
+  "chars": 2098
  },
  {
   "kind": "wine",
@@ -3830,17 +3812,17 @@
   "label": "Constantia Sweet Wine (Vin de Constance style)",
   "title": "Constantia (wine)",
   "url": "https://en.wikipedia.org/wiki/Constantia_(wine)",
-  "match": "search",
+  "match": "direct",
   "chars": 3161
  },
  {
   "kind": "wine",
   "key": "swiss-chasselas",
   "label": "Swiss Chasselas (Vaud, Lavaux)",
-  "title": "Vaud",
-  "url": "https://en.wikipedia.org/wiki/Vaud",
+  "title": "Chasselas",
+  "url": "https://en.wikipedia.org/wiki/Chasselas",
   "match": "direct",
-  "chars": 13332
+  "chars": 1714
  },
  {
   "kind": "wine",
@@ -3855,10 +3837,10 @@
   "kind": "wine",
   "key": "plavac-mali",
   "label": "Croatian Plavac Mali (Dingač, Postup)",
-  "title": "Dingač",
-  "url": "https://en.wikipedia.org/wiki/Dinga%C4%8D",
+  "title": "Plavac Mali",
+  "url": "https://en.wikipedia.org/wiki/Plavac_Mali",
   "match": "direct",
-  "chars": 1375
+  "chars": 2023
  },
  {
   "kind": "wine",
@@ -3866,17 +3848,17 @@
   "label": "Istrian Malvazija (Croatia & Slovenia)",
   "title": "Malvasia",
   "url": "https://en.wikipedia.org/wiki/Malvasia",
-  "match": "search",
+  "match": "direct",
   "chars": 15303
  },
  {
   "kind": "wine",
   "key": "brda-rebula",
   "label": "Rebula from Brda (Slovenia)",
-  "title": "Ribolla Gialla",
-  "url": "https://en.wikipedia.org/wiki/Ribolla_Gialla",
-  "match": "search",
-  "chars": 3622
+  "title": "Gorizia Hills",
+  "url": "https://en.wikipedia.org/wiki/Gorizia_Hills",
+  "match": "direct",
+  "chars": 4473
  },
  {
   "kind": "wine",
@@ -3891,10 +3873,10 @@
   "kind": "wine",
   "key": "feteasca-neagra",
   "label": "Romanian Fetească Neagră",
-  "title": "Romanian wine",
-  "url": "https://en.wikipedia.org/wiki/Romanian_wine",
-  "match": "search",
-  "chars": 5939
+  "title": "Fetească neagră",
+  "url": "https://en.wikipedia.org/wiki/Feteasc%C4%83_neagr%C4%83",
+  "match": "direct",
+  "chars": 1385
  },
  {
   "kind": "wine",
@@ -3902,44 +3884,44 @@
   "label": "Bulgarian Mavrud",
   "title": "Mavrud",
   "url": "https://en.wikipedia.org/wiki/Mavrud",
-  "match": "search",
+  "match": "direct",
   "chars": 1689
  },
  {
   "kind": "wine",
   "key": "turkish-okuzgozu-bogazkere",
   "label": "Turkish Öküzgözü & Boğazkere",
-  "title": "Öküzgözü",
-  "url": "https://en.wikipedia.org/wiki/%C3%96k%C3%BCzg%C3%B6z%C3%BC",
-  "match": "search",
-  "chars": 3991
+  "title": "Turkish wine",
+  "url": "https://en.wikipedia.org/wiki/Turkish_wine",
+  "match": "direct",
+  "chars": 10588
  },
  {
   "kind": "wine",
   "key": "israel-red-blend",
   "label": "Israeli Red Blend (Galilee, Golan Heights, Judean Hills)",
-  "title": "Judaean Mountains",
-  "url": "https://en.wikipedia.org/wiki/Judaean_Mountains",
+  "title": "Israeli wine",
+  "url": "https://en.wikipedia.org/wiki/Israeli_wine",
   "match": "direct",
-  "chars": 5700
+  "chars": 21363
  },
  {
   "kind": "wine",
   "key": "ningxia-cabernet",
   "label": "Ningxia Cabernet Sauvignon & Blends (China)",
-  "title": "Cabernet Sauvignon",
-  "url": "https://en.wikipedia.org/wiki/Cabernet_Sauvignon",
-  "match": "search",
-  "chars": 45529
+  "title": "Ningxia wine",
+  "url": "https://en.wikipedia.org/wiki/Ningxia_wine",
+  "match": "direct",
+  "chars": 4078
  },
  {
   "kind": "wine",
   "key": "mantinia-moschofilero",
   "label": "Mantinia Moschofilero (Greece)",
-  "title": "Greek cuisine",
-  "url": "https://en.wikipedia.org/wiki/Greek_cuisine",
-  "match": "search",
-  "chars": 31754
+  "title": "Moschofilero",
+  "url": "https://en.wikipedia.org/wiki/Moschofilero",
+  "match": "direct",
+  "chars": 1195
  },
  {
   "kind": "wine",
@@ -3947,7 +3929,7 @@
   "label": "Santorini Vinsanto",
   "title": "Santorini (wine)",
   "url": "https://en.wikipedia.org/wiki/Santorini_(wine)",
-  "match": "search",
+  "match": "direct",
   "chars": 9736
  },
  {
@@ -3965,7 +3947,7 @@
   "label": "English Bacchus",
   "title": "Bacchus (grape)",
   "url": "https://en.wikipedia.org/wiki/Bacchus_(grape)",
-  "match": "search",
+  "match": "direct",
   "chars": 2655
  },
  {
@@ -3983,26 +3965,26 @@
   "label": "Côtes de Gascogne White",
   "title": "Côtes de Gascogne",
   "url": "https://en.wikipedia.org/wiki/C%C3%B4tes_de_Gascogne",
-  "match": "search",
+  "match": "direct",
   "chars": 3382
  },
  {
   "kind": "wine",
   "key": "madiran",
   "label": "Madiran",
-  "title": "Madiran",
-  "url": "https://en.wikipedia.org/wiki/Madiran",
+  "title": "Madiran wine",
+  "url": "https://en.wikipedia.org/wiki/Madiran_wine",
   "match": "direct",
-  "chars": 825
+  "chars": 3192
  },
  {
   "kind": "wine",
   "key": "jurancon",
   "label": "Jurançon (dry & sweet)",
-  "title": "Jurançon",
-  "url": "https://en.wikipedia.org/wiki/Juran%C3%A7on",
+  "title": "Jurançon AOC",
+  "url": "https://en.wikipedia.org/wiki/Juran%C3%A7on_AOC",
   "match": "direct",
-  "chars": 337
+  "chars": 1338
  },
  {
   "kind": "wine",
@@ -4026,10 +4008,10 @@
   "kind": "wine",
   "key": "bordeaux-superieur",
   "label": "Everyday Bordeaux Red (Bordeaux & Bordeaux Supérieur)",
-  "title": "Bordeaux",
-  "url": "https://en.wikipedia.org/wiki/Bordeaux",
+  "title": "Regional Bordeaux AOCs",
+  "url": "https://en.wikipedia.org/wiki/Regional_Bordeaux_AOCs",
   "match": "direct",
-  "chars": 48377
+  "chars": 5604
  },
  {
   "kind": "wine",
@@ -4044,10 +4026,10 @@
   "kind": "wine",
   "key": "german-sekt",
   "label": "German Sekt",
-  "title": "German wine classification",
-  "url": "https://en.wikipedia.org/wiki/German_wine_classification",
-  "match": "search",
-  "chars": 19272
+  "title": "Sparkling wine",
+  "url": "https://en.wikipedia.org/wiki/Sparkling_wine",
+  "match": "direct",
+  "chars": 47705
  },
  {
   "kind": "wine",
@@ -4071,10 +4053,10 @@
   "kind": "wine",
   "key": "roero-arneis",
   "label": "Roero Arneis",
-  "title": "Arneis",
-  "url": "https://en.wikipedia.org/wiki/Arneis",
+  "title": "Roero",
+  "url": "https://en.wikipedia.org/wiki/Roero",
   "match": "direct",
-  "chars": 4967
+  "chars": 3463
  },
  {
   "kind": "wine",
@@ -4098,10 +4080,10 @@
   "kind": "wine",
   "key": "valtellina-nebbiolo",
   "label": "Valtellina Nebbiolo (Chiavennasca) & Sforzato",
-  "title": "Nebbiolo",
-  "url": "https://en.wikipedia.org/wiki/Nebbiolo",
+  "title": "Valtellina",
+  "url": "https://en.wikipedia.org/wiki/Valtellina",
   "match": "direct",
-  "chars": 22407
+  "chars": 16269
  },
  {
   "kind": "wine",
@@ -4125,10 +4107,10 @@
   "kind": "wine",
   "key": "navarra-rosado",
   "label": "Navarra Rosado",
-  "title": "Cava (Spanish wine)",
-  "url": "https://en.wikipedia.org/wiki/Cava_(Spanish_wine)",
-  "match": "search",
-  "chars": 3801
+  "title": "Navarra (DO)",
+  "url": "https://en.wikipedia.org/wiki/Navarra_(DO)",
+  "match": "direct",
+  "chars": 4333
  },
  {
   "kind": "wine",

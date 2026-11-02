@@ -2,11 +2,9 @@
  "kind": "wine",
  "key": "constantia-sweet",
  "label": "Constantia Sweet Wine (Vin de Constance style)",
- "match": "search",
+ "match": "direct",
  "tried": [
-  "Constantia Sweet Wine",
-  "Vin de Constance style",
-  "Constantia (wine)"
+  "Vin de Constance"
  ],
  "title": "Constantia (wine)",
  "url": "https://en.wikipedia.org/wiki/Constantia_(wine)",

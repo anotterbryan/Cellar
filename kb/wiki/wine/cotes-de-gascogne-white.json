@@ -2,9 +2,8 @@
  "kind": "wine",
  "key": "cotes-de-gascogne-white",
  "label": "Côtes de Gascogne White",
- "match": "search",
+ "match": "direct",
  "tried": [
-  "Côtes de Gascogne White",
   "Côtes de Gascogne"
  ],
  "title": "Côtes de Gascogne",

@@ -2,11 +2,10 @@
  "kind": "wine",
  "key": "morgon",
  "label": "Morgon",
- "match": "search",
+ "match": "direct",
  "tried": [
   "Morgon",
-  "Beaujolais — Crus wine",
-  "Beaujolais"
+  "Morgon AOC"
  ],
  "title": "Beaujolais",
  "url": "https://en.wikipedia.org/wiki/Beaujolais",

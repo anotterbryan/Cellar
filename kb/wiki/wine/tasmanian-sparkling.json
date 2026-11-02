@@ -2,9 +2,8 @@
  "kind": "wine",
  "key": "tasmanian-sparkling",
  "label": "Tasmanian Sparkling Wine",
- "match": "search",
+ "match": "direct",
  "tried": [
-  "Tasmanian Sparkling Wine",
   "Tasmanian wine"
  ],
  "title": "Tasmanian wine",
