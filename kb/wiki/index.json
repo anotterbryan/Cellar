@@ -3,28 +3,19 @@
   "kind": "topic",
   "key": "Wine",
   "label": "Wine",
-  "title": "Wine",
-  "url": "https://en.wikipedia.org/wiki/Wine",
-  "match": "direct",
-  "chars": 28787
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q282&props=claims%7Cdescriptions&languages=e"
  },
  {
   "kind": "topic",
   "key": "Winemaking",
   "label": "Winemaking",
-  "title": "Winemaking",
-  "url": "https://en.wikipedia.org/wiki/Winemaking",
-  "match": "direct",
-  "chars": 38627
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q213376&props=claims%7Cdescriptions&language"
  },
  {
   "kind": "topic",
   "key": "Wine tasting",
   "label": "Wine tasting",
-  "title": "Wine tasting",
-  "url": "https://en.wikipedia.org/wiki/Wine_tasting",
-  "match": "direct",
-  "chars": 19432
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q2166448&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "topic",
@@ -741,208 +732,139 @@
   "kind": "grape",
   "key": "Lambrusco",
   "label": "Lambrusco",
-  "title": "Lambrusco",
-  "url": "https://en.wikipedia.org/wiki/Lambrusco",
-  "match": "direct",
-  "chars": 6156
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1146204&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Lambrusco Grasparossa",
   "label": "Lambrusco Grasparossa",
-  "title": "Lambrusco",
-  "url": "https://en.wikipedia.org/wiki/Lambrusco",
-  "match": "search",
-  "chars": 6156
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1146204&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Lambrusco Salamino",
   "label": "Lambrusco Salamino",
-  "title": "Lambrusco",
-  "url": "https://en.wikipedia.org/wiki/Lambrusco",
-  "match": "search",
-  "chars": 6156
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1146204&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Lambrusco Sorbara",
   "label": "Lambrusco Sorbara",
-  "title": "Lambrusco",
-  "url": "https://en.wikipedia.org/wiki/Lambrusco",
-  "match": "search",
-  "chars": 6156
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1146204&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Loureiro",
   "label": "Loureiro",
-  "title": "Loureiro (grape)",
-  "url": "https://en.wikipedia.org/wiki/Loureiro_(grape)",
-  "match": "direct",
-  "chars": 835
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1474000&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Macabeo",
   "label": "Macabeo",
-  "title": "Macabeo",
-  "url": "https://en.wikipedia.org/wiki/Macabeo",
-  "match": "direct",
-  "chars": 2224
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1756570&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Malbec",
   "label": "Malbec",
-  "title": "Malbec",
-  "url": "https://en.wikipedia.org/wiki/Malbec",
-  "match": "direct",
-  "chars": 19185
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1414045&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Malvasia",
   "label": "Malvasia",
-  "title": "Malvasia",
-  "url": "https://en.wikipedia.org/wiki/Malvasia",
-  "match": "direct",
-  "chars": 15303
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1165349&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Mammolo",
   "label": "Mammolo",
-  "title": "Mammolo",
-  "url": "https://en.wikipedia.org/wiki/Mammolo",
-  "match": "direct",
-  "chars": 1127
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q690100&props=claims%7Cdescriptions&language"
  },
  {
   "kind": "grape",
   "key": "Mazuelo",
   "label": "Mazuelo",
-  "title": "Carignan",
-  "url": "https://en.wikipedia.org/wiki/Carignan",
-  "match": "direct",
-  "chars": 19906
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q251054&props=claims%7Cdescriptions&language"
  },
  {
   "kind": "grape",
   "key": "Melon de Bourgogne",
   "label": "Melon de Bourgogne",
-  "title": "Melon de Bourgogne",
-  "url": "https://en.wikipedia.org/wiki/Melon_de_Bourgogne",
-  "match": "direct",
-  "chars": 2183
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1417652&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Mencía",
   "label": "Mencía",
-  "title": "Mencía (grape)",
-  "url": "https://en.wikipedia.org/wiki/Menc%C3%ADa_(grape)",
-  "match": "direct",
-  "chars": 2371
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1293271&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Merlot",
   "label": "Merlot",
-  "title": "Merlot",
-  "url": "https://en.wikipedia.org/wiki/Merlot",
-  "match": "direct",
-  "chars": 30825
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q213338&props=claims%7Cdescriptions&language"
  },
  {
   "kind": "grape",
   "key": "Meunier",
   "label": "Meunier",
-  "title": "Pinot Meunier",
-  "url": "https://en.wikipedia.org/wiki/Pinot_Meunier",
-  "match": "search",
-  "chars": 8831
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q947208&props=claims%7Cdescriptions&language"
  },
  {
   "kind": "grape",
   "key": "Monastrell",
   "label": "Monastrell",
-  "title": "Mourvèdre",
-  "url": "https://en.wikipedia.org/wiki/Mourv%C3%A8dre",
-  "match": "direct",
-  "chars": 16450
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q161864&props=claims%7Cdescriptions&language"
  },
  {
   "kind": "grape",
   "key": "Montepulciano",
   "label": "Montepulciano",
-  "title": "Montepulciano (grape)",
-  "url": "https://en.wikipedia.org/wiki/Montepulciano_(grape)",
-  "match": "direct",
-  "chars": 9069
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1937737&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Moscato Bianco",
   "label": "Moscato Bianco",
-  "title": "Muscat Blanc à Petits Grains",
-  "url": "https://en.wikipedia.org/wiki/Muscat_Blanc_%C3%A0_Petits_Grains",
-  "match": "direct",
-  "chars": 5768
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1499340&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Mourvèdre",
   "label": "Mourvèdre",
-  "title": "Mourvèdre",
-  "url": "https://en.wikipedia.org/wiki/Mourv%C3%A8dre",
-  "match": "direct",
-  "chars": 16450
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q161864&props=claims%7Cdescriptions&language"
  },
  {
   "kind": "grape",
   "key": "Muscadelle",
   "label": "Muscadelle",
-  "title": "Muscadelle",
-  "url": "https://en.wikipedia.org/wiki/Muscadelle",
-  "match": "direct",
-  "chars": 2310
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1934770&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Muscadine (Vitis rotundifolia)",
   "label": "Muscadine (Vitis rotundifolia)",
-  "title": "Vitis rotundifolia",
-  "url": "https://en.wikipedia.org/wiki/Vitis_rotundifolia",
-  "match": "search",
-  "chars": 5673
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q2701573&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Muscat Blanc à Petits Grains",
   "label": "Muscat Blanc à Petits Grains",
-  "title": "Muscat Blanc à Petits Grains",
-  "url": "https://en.wikipedia.org/wiki/Muscat_Blanc_%C3%A0_Petits_Grains",
-  "match": "direct",
-  "chars": 5768
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1499340&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Muscat of Alexandria",
   "label": "Muscat of Alexandria",
-  "title": "Muscat of Alexandria",
-  "url": "https://en.wikipedia.org/wiki/Muscat_of_Alexandria",
-  "match": "direct",
-  "chars": 2937
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q1651827&props=claims%7Cdescriptions&languag"
  },
  {
   "kind": "grape",
   "key": "Nebbiolo",
   "label": "Nebbiolo",
-  "title": "Nebbiolo",
-  "url": "https://en.wikipedia.org/wiki/Nebbiolo",
-  "match": "direct",
-  "chars": 22407
+  "match": "error: request failed: https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q202290&props=claims%7Cdescriptions&language"
  },
  {
   "kind": "grape",
@@ -1455,7 +1377,7 @@
   "title": "Vermentino",
   "url": "https://en.wikipedia.org/wiki/Vermentino",
   "match": "direct",
-  "chars": 4668
+  "chars": 4667
  },
  {
   "kind": "grape",
@@ -1995,7 +1917,7 @@
   "title": "Loire Valley (wine)",
   "url": "https://en.wikipedia.org/wiki/Loire_Valley_(wine)",
   "match": "direct",
-  "chars": 15927
+  "chars": 15874
  },
  {
   "kind": "wine",
@@ -2352,10 +2274,10 @@
   "kind": "wine",
   "key": "primitivo-di-manduria",
   "label": "Primitivo di Manduria",
-  "title": "Zinfandel",
-  "url": "https://en.wikipedia.org/wiki/Zinfandel",
+  "title": "Italian wine",
+  "url": "https://en.wikipedia.org/wiki/Italian_wine",
   "match": "search",
-  "chars": 28094
+  "chars": 19305
  },
  {
   "kind": "wine",
@@ -2784,10 +2706,10 @@
   "kind": "wine",
   "key": "dry-tokaji-furmint",
   "label": "Dry Tokaji Furmint",
-  "title": "Tokaji",
-  "url": "https://en.wikipedia.org/wiki/Tokaji",
+  "title": "Furmint",
+  "url": "https://en.wikipedia.org/wiki/Furmint",
   "match": "search",
-  "chars": 21006
+  "chars": 14356
  },
  {
   "kind": "wine",
@@ -2829,10 +2751,10 @@
   "kind": "wine",
   "key": "canadian-icewine",
   "label": "Canadian Icewine",
-  "title": "Ice wine",
-  "url": "https://en.wikipedia.org/wiki/Ice_wine",
+  "title": "Canadian wine",
+  "url": "https://en.wikipedia.org/wiki/Canadian_wine",
   "match": "search",
-  "chars": 17095
+  "chars": 9667
  },
  {
   "kind": "wine",
@@ -2937,10 +2859,10 @@
   "kind": "wine",
   "key": "california-sparkling",
   "label": "California Sparkling (Carneros, Anderson Valley)",
-  "title": "Sparkling wine",
-  "url": "https://en.wikipedia.org/wiki/Sparkling_wine",
+  "title": "California wine",
+  "url": "https://en.wikipedia.org/wiki/California_wine",
   "match": "search",
-  "chars": 47705
+  "chars": 20361
  },
  {
   "kind": "wine",
@@ -3135,10 +3057,10 @@
   "kind": "wine",
   "key": "margaret-river-chardonnay",
   "label": "Margaret River Chardonnay",
-  "title": "Margaret River (wine region)",
-  "url": "https://en.wikipedia.org/wiki/Margaret_River_(wine_region)",
+  "title": "Chardonnay",
+  "url": "https://en.wikipedia.org/wiki/Chardonnay",
   "match": "search",
-  "chars": 1866
+  "chars": 46165
  },
  {
   "kind": "wine",
@@ -3414,10 +3336,10 @@
   "kind": "wine",
   "key": "columbia-valley-red-blend",
   "label": "Washington Red Blend (Columbia Valley)",
-  "title": "Cabernet Sauvignon",
-  "url": "https://en.wikipedia.org/wiki/Cabernet_Sauvignon",
+  "title": "Washington wine",
+  "url": "https://en.wikipedia.org/wiki/Washington_wine",
   "match": "search",
-  "chars": 45529
+  "chars": 33302
  },
  {
   "kind": "wine",
