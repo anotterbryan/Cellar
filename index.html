@@ -743,10 +743,20 @@ async function upcList() {   // our own barcode list (upc.json on the site), loa
   try { const j = await (await fetch("upc.json")).json(); UPCLIST = j.codes || {}; } catch (e) { UPCLIST = {}; }
   return UPCLIST;
 }
+const SHARDS = {};   // extra barcodes harvested monthly (Open Food Facts, Brazos Wine, public state lists), split by first 3 digits
+async function shardLookup(kind, code, base) {
+  const vars = [code, code.length === 12 ? "0" + code : "", code.length === 13 && code[0] === "0" ? code.slice(1) : ""].filter(Boolean);
+  for (const c of vars) { const p = c.slice(0, 3), k = kind + p;
+    if (!(k in SHARDS)) { try { const r = await fetch(`${base}barcodes/${kind}/${p}.json`); SHARDS[k] = r.ok ? await r.json() : {}; } catch (e) { SHARDS[k] = {}; } }
+    if (SHARDS[k][c]) return SHARDS[k][c]; }
+  return null;
+}
 async function lookupBarcode(code) {
   const L = await upcList(), keys = [code, code.length === 13 && code[0] === "0" ? code.slice(1) : "", code.length === 12 ? "0" + code : "", code.length === 12 ? code.slice(1, 11) : "", code.length === 13 ? code.slice(2, 12) : ""].filter(Boolean);
   for (const k of keys) { const r = L[k]; if (r) { const [prod, name, size] = r;
     return {src: "the Cellar barcode list", p: {product_name: `${prod} ${name}`.trim(), brands: prod, generic_name: [name, size].filter(Boolean).join(", ")}, url: ""}; } }
+  const sh = await shardLookup("wine", code, "");
+  if (sh) { const [prod, name, size, src] = sh; return {src: src === "brazos" ? "Brazos Wine's importer list" : src === "off" ? "Open Food Facts" : "a public product list", p: {product_name: `${prod} ${name}`.trim(), brands: prod, generic_name: [name, size].filter(Boolean).join(", ")}, url: ""}; }
   const vars = [code]; if (code.length === 12) vars.push("0" + code); if (code.length === 13 && code[0] === "0") vars.push(code.slice(1));
   for (const c of vars) { try {
     const j = await (await fetch(`https://world.openfoodfacts.org/api/v2/product/${c}.json?fields=product_name,brands,generic_name,categories,origins,labels`)).json();

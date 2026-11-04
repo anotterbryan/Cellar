@@ -228,11 +228,20 @@ async function decodeBarcode(src) {
 }
 let UPCLIST = null;
 async function upcList() { if (UPCLIST) return UPCLIST; try { UPCLIST = (await (await fetch("upc.json")).json()).codes || {}; } catch (e) { UPCLIST = {}; } return UPCLIST; }
+const SHARDS = {};   // extra barcodes harvested monthly (Open Food Facts, Brazos Wine, public state lists), split by first 3 digits
+async function shardLookup(kind, code, base) {
+  const vars = [code, code.length === 12 ? "0" + code : "", code.length === 13 && code[0] === "0" ? code.slice(1) : ""].filter(Boolean);
+  for (const c of vars) { const p = c.slice(0, 3), k = kind + p;
+    if (!(k in SHARDS)) { try { const r = await fetch(`${base}barcodes/${kind}/${p}.json`); SHARDS[k] = r.ok ? await r.json() : {}; } catch (e) { SHARDS[k] = {}; } }
+    if (SHARDS[k][c]) return SHARDS[k][c]; }
+  return null;
+}
 async function lookupUPC(code) { const L = await upcList(); for (const k of [code, code.length === 13 && code[0] === "0" ? code.slice(1) : "", code.length === 12 ? "0" + code : "", code.length === 12 ? code.slice(1, 11) : ""].filter(Boolean)) if (L[k]) return L[k]; return null; }
 async function useBarcode(code) {
   code = String(code || "").replace(/\D/g, ""); const sc = S.scan; if (code.length < 8) { sc.status = "That doesn't look like a full barcode number."; viewScan(); return; }
   sc.barcode = code; sc.busy = true; sc.status = `Barcode ${code}: looking it up…`; viewScan();
-  const hit = await lookupUPC(code);
+  let hit = await lookupUPC(code);
+  if (!hit) { const sh = await shardLookup("spirits", code, "../"); if (sh) hit = [sh[0], sh[1], sh[2]]; }
   if (hit) { const [brand, name, size] = hit; sc.fromList = true; sc.text = [brand, name].filter(Boolean).join(" "); sc.fields = {brand, expression: name, size}; sc.ai = Object.assign(sc.ai || {}, {brand, expression: name});
     sc.match = matchSpirit(scanText(sc)); sc.status = `Found barcode ${code} in the quors barcode list: “${sc.text}”${size ? " (" + size + ")" : ""}.` + (sc.match ? "" : " Choose the style below.");
   } else {

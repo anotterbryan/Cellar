@@ -1,0 +1,30 @@
+name: Harvest wine & spirits barcodes
+# Open Food Facts bulk export + Brazos Wine's UPC table + government open-data leads → barcodes/ (shards the apps load
+# on demand) and barcodes/Cellar_Barcode_Harvest.xlsx. Monthly, when the script changes, or by hand.
+on:
+  push:
+    branches: [main]
+    paths: ["scripts/barcodes/harvest.py", ".github/workflows/harvest-barcodes.yml"]
+  schedule:
+    - cron: "41 10 5 * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: barcodes, cancel-in-progress: false }
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install beautifulsoup4 openpyxl
+      - run: python scripts/barcodes/harvest.py
+      - name: Save results
+        run: |
+          git config user.name "Cellar barcode bot"
+          git config user.email "anotterbryan@users.noreply.github.com"
+          git add barcodes
+          git diff --cached --quiet || git commit -m "Barcodes: harvest $(date -u +%F)"
+          git pull --rebase -q && git push
