@@ -95,7 +95,7 @@ def step_brazos():
 def step_gov():
     print("Socrata open-data catalog search")
     res = []
-    for q in ["wine", "liquor products", "spirits price list", "alcoholic beverage brand registration"]:
+    for q in ["Iowa liquor products", "liquor products", "liquor product list", "wine", "spirits price list", "alcoholic beverage", "liquor brands"]:
         try:
             j = json.load(fetch("https://api.us.socrata.com/api/catalog/v1?only=datasets&limit=50&q=" + urllib.parse.quote(q)))
             for it in j.get("results", []):
@@ -110,7 +110,7 @@ def step_gov():
     print(f"  {len(uniq)} datasets, {sum(r['has_barcode_column'] for r in uniq)} with a barcode-like column")
     json.dump(uniq, open(os.path.join(RAW, "gov_datasets.json"), "w"), ensure_ascii=False, indent=1)
 
-GOVKEEP = re.compile(r"liquor|spirit|wine|alcohol|beverage", re.I)
+GOVKEEP = re.compile(r"liquor|spirit|wine|alcohol", re.I)
 def _pick(cols, *pats):
     for p in pats:
         for c in cols:
@@ -120,7 +120,7 @@ def step_govdata():
     """Pull the public government datasets that actually carry barcodes (e.g. a state liquor product list) via the SODA API."""
     leads = json.load(open(os.path.join(RAW, "gov_datasets.json"))) if os.path.exists(os.path.join(RAW, "gov_datasets.json")) else []
     out = {"wine": {}, "spirits": {}}
-    for d in [r for r in leads if r["has_barcode_column"] and GOVKEEP.search((r["title"] or "") + " " + (r["description"] or ""))][:8]:
+    for d in [r for r in leads if r["has_barcode_column"] and GOVKEEP.search(r["title"] or "") and not re.search(r"vending|energy|sales by|tax", r["title"] or "", re.I)][:8]:
         dom, rid = d["agency"], d["id"]; rows = []; off = 0
         print("  dataset:", dom, rid, d["title"])
         try:
