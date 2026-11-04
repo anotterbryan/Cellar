@@ -221,9 +221,9 @@ def _parse_pdf(data, kind, src):
         sample = [l for l in lines if re.search(r"\d{6}", l)][:120]; dbg.write("\n".join(sample))
         if os.environ.get("HARVEST_DEBUG"): print(f"  --- sample lines from {src} ---\n" + "\n".join("  | " + l[:200] for l in sample[:25]))
     for ln in lines:
-        m = re.search(r"(?<![\d-])(\d[\d ]{8,16}\d)(?![\d-])", ln)
+        m = re.search(r"(?<![\d-])(\d(?:\d|[ -](?=\d)){9,17})(?![\d])", ln)   # single spaces/dashes inside a code only ("0-85798 04962-2")
         if not m: continue
-        code = _code_fix(m.group(1).replace(" ", ""))
+        code = _code_fix(re.sub(r"[ -]", "", m.group(1)))
         if not code: continue
         parts = [p.strip() for p in re.split(r"\s{2,}", ln.replace(m.group(1), "  ")) if re.search(r"[A-Za-z]{3}", p)]
         if not parts: continue
@@ -257,6 +257,28 @@ DOCS = [  # (name, url or list of urls, kind or None = decide per row, type)
     ("Alexander Valley Vineyards UPC sheet", ["https://www.avvwine.com/wp-content/uploads/UPC-Codes-and-Product-Specifications.pdf"], "wine", "pdf"),
     ("Castoro Cellars UPC list", ["https://s3.us-west-1.amazonaws.com/kraftwerk-castoro/upc_codes/UPC-Code-Asgnmt.pdf", "https://s3-us-west-1.amazonaws.com/kraftwerk-castoro/general_files/UPC-Codes-2.pdf"], "wine", "pdf"),
 ]
+def _upc_from_short(c):
+    """Utah prints UPC-A without its leading number-system digit, sometimes also without the check digit."""
+    if len(c) == 12 and gtin_ok(c): return c
+    if len(c) == 11 and gtin_ok("0" + c): return "0" + c
+    if len(c) == 10:
+        body = "0" + c; s = sum(int(x) * (3 if i % 2 == 0 else 1) for i, x in enumerate(reversed(body)))
+        return body + str((10 - s % 10) % 10)
+    return None
+UTAH_ROW = re.compile(r"^\s*\d{6}\s+\d+\s+\d+\s+(\d{10,12})\s+(.+?)\s{2,}.*?\s([A-Z]{3}[A-Z ]*?-\s?[A-Z&/ ]+?)\s{2,}(.+?)(?:\s{2,}|$)")
+def _parse_utah(data, src):
+    out = {}
+    for ln in _pdf_lines(data):
+        m = UTAH_ROW.match(ln)
+        if not m: continue
+        code = _upc_from_short(m.group(1))
+        if not code: continue
+        name, cat, vendor = m.group(2).strip(), m.group(3).strip(), m.group(4).strip()
+        k = "wine" if re.search(r"WINE|CHAMPAGNE|SPARKLING|SAKE|CIDER", cat) else "spirits"
+        size = (re.search(r"\b(\d+)\s*ML\b", name, re.I) or [None, ""])[1]
+        out.setdefault(k, {})[code] = {"brand": vendor.title(), "name": name.title(), "size": f"{size} ml" if size else "", "vintage": vintage_of(name), "src": src}
+    return out
+
 def step_docs():
     import openpyxl
     out = {"wine": {}, "spirits": {}}; report = []
@@ -266,7 +288,7 @@ def step_docs():
             try: data = fetch(url, timeout=180).read()
             except Exception as e: print(f"  {name}: {url.rsplit('/', 1)[-1]} unavailable ({e.__class__.__name__})"); continue
             try:
-                if typ == "pdf": res = _parse_pdf(data, kind, name)
+                if typ == "pdf": res = _parse_utah(data, name) if "Utah" in name else _parse_pdf(data, kind, name)
                 elif typ == "xlsx":
                     wb = openpyxl.load_workbook(io.BytesIO(data), read_only=True, data_only=True); res = {}
                     for ws in wb:
