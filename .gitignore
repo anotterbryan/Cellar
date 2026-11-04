@@ -3,3 +3,4 @@ barcodes/raw/gov_*.json
 barcodes/raw/sheets_*.json
 __pycache__/
 barcodes/raw/wikidata_*.json
+barcodes/raw/docs_*.json

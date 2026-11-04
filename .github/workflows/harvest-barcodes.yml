@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
-      - run: pip install beautifulsoup4 openpyxl
+      - run: sudo apt-get install -y -qq poppler-utils >/dev/null && pip install beautifulsoup4 openpyxl
       - run: python scripts/barcodes/harvest.py
       - name: Save results
         run: |

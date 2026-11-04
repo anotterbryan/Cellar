@@ -193,11 +193,94 @@ def step_sheets():
         except Exception as e: print("  failed:", url, e)
     json.dump(out, open(os.path.join(RAW, "sheets_wine.json"), "w"), ensure_ascii=False)
 
+# ---- round-2 sources (found and terms-checked Nov 2026): public price lists and producers' trade PDFs that carry UPCs
+WINEWORDS = re.compile(r"\bWINE|CHARDONNAY|CABERNET|PINOT|MERLOT|\bROS[EÉ]\b|SPARKLING|CHAMPAGNE|PROSECCO|RIESLING|SAUV|ZINFANDEL|MALBEC|SYRAH|SHIRAZ|"
+                       r"\bPORT\b|SHERRY|TEMPRANILLO|SANGIOVESE|CHIANTI|RIOJA|BORDEAUX|TANNAT|MOSCATO|GRENACHE|VERMENTINO|NEBBIOLO|BARBERA|CAVA\b", re.I)
+def _month_urls(pattern, back=3):
+    t = time.gmtime(); y, m = t.tm_year, t.tm_mon; out = []
+    for _ in range(back):
+        out.append(pattern.format(Mon=time.strftime("%b", (y, m, 1, 0, 0, 0, 0, 1, 0)), YYYY=y, MM=f"{m:02d}", YY=str(y)[2:]))
+        m -= 1
+        if m == 0: m, y = 12, y - 1
+    return out
+def _code_fix(raw):
+    c = re.sub(r"\D", "", raw)
+    if len(c) < 10: return None
+    for cand in (c, c.zfill(12), c.zfill(13)):   # some price lists drop one or two leading zeros
+        n = norm_code(cand)
+        if n: return n
+    return None
+def _pdf_lines(data):
+    import subprocess, tempfile
+    with tempfile.NamedTemporaryFile(suffix=".pdf") as f:
+        f.write(data); f.flush()
+        return subprocess.run(["pdftotext", "-layout", f.name, "-"], capture_output=True, text=True, timeout=300).stdout.split("\n")
+def _parse_pdf(data, kind, src):
+    out = {}
+    for ln in _pdf_lines(data):
+        m = re.search(r"(?<![\d-])(\d[\d ]{8,16}\d)(?![\d-])", ln)
+        if not m: continue
+        code = _code_fix(m.group(1).replace(" ", ""))
+        if not code: continue
+        parts = [p.strip() for p in re.split(r"\s{2,}", ln.replace(m.group(1), "  ")) if re.search(r"[A-Za-z]{3}", p)]
+        if not parts: continue
+        name = " ".join(p for p in parts if not re.fullmatch(r"(N/?V|None|NA|\$?[\d.,]+)", p))[:90]; k = kind or ("wine" if WINEWORDS.search(ln) else "spirits")
+        size = (re.search(r"\b(\d+(?:\.\d+)?\s?(?:ml|mL|ML|L|l|oz))\b", ln) or [None, ""])[1]
+        out.setdefault(k, {})[code] = {"brand": "", "name": name.title() if name.isupper() else name, "size": size, "vintage": vintage_of(name), "src": src}
+    return out
+def _parse_table(rows, kind, src):
+    out = {}; hi = None
+    for row in rows:
+        cells = ["" if c is None else str(c).strip() for c in row]
+        if hi is None:
+            low = [c.lower() for c in cells]
+            if any(re.search(r"(^|\W)(upc|gtin|ean|barcode)", c) for c in low): hi = {c: i for i, c in enumerate(low)}
+            continue
+        col = lambda *ps: next((cells[i] for k, i in hi.items() for p in ps if re.search(p, k) and i < len(cells) and cells[i]), "")
+        code = _code_fix(col(r"upc", r"gtin", r"ean", r"barcode"))
+        if not code: continue
+        name = col(r"item.?desc", r"description", r"product.?name", r"^name", r"product", r"brand"); vend = col(r"vendor", r"supplier", r"brand", r"producer", r"winery")
+        cat = col(r"categ", r"class", r"type"); k = kind or ("wine" if WINEWORDS.search(cat + " " + name) else "spirits")
+        out.setdefault(k, {})[code] = {"brand": vend.title() if vend.isupper() else vend, "name": name.title() if name.isupper() else name, "size": (lambda z: f"{z} ml" if z.isdigit() else z)(col(r"size", r"volume"))[:20], "vintage": col(r"vintage") or vintage_of(name), "src": src}
+    return out
+DOCS = [  # (name, url or list of urls, kind or None = decide per row, type)
+    ("Utah DABS price list", _month_urls("https://abs.utah.gov/wp-content/uploads/{Mon}{YYYY}NumericPriceList.pdf"), None, "pdf"),
+    ("Iowa Liquor Products (Iowa Data Hub, CC BY 4.0)", ["https://idh-be.iowa.gov/api/v1/datasets/1029/rows.csv"], "spirits", "csv"),
+    ("BC Liquor price list (Open Government Licence - BC)", ["https://catalogue.data.gov.bc.ca/dataset/e43be180-7511-4e6f-84d3-ad6c9f5c3e2b/resource/09a4eba7-c357-4764-8ef8-5f0499e11a3e/download/bc_liquor_store_product_price_list_july_2026.csv"], None, "csv"),
+    ("Yukon Liquor price list (Open Government Licence - Yukon)", ["https://open.yukon.ca/data/85ef5f5c-d285-4703-a2f2-afd780b67f02/resource/3f0f5a00-0df3-40d7-b5b1-2570164517cd/download/ylc-retail-price-list-oct-2026.xlsx"], None, "xlsx"),
+    ("Montgomery County MD ABS", ["https://data.montgomerycountymd.gov/api/views/ib5t-5ncy/rows.csv?accessType=DOWNLOAD"], None, "csv"),
+    ("Oregon OLCC pricing", ["https://data.oregon.gov/api/views/vmf2-f83h/rows.csv?accessType=DOWNLOAD"], "spirits", "csv"),
+    ("Vine Connections UPC list", ["https://vineconnections.com/media/2618/full-portfolio-srpplusupc_sept-2018.pdf"], "wine", "pdf"),
+    ("Alexander Valley Vineyards UPC sheet", ["https://www.avvwine.com/wp-content/uploads/UPC-Codes-and-Product-Specifications.pdf"], "wine", "pdf"),
+    ("Castoro Cellars UPC list", ["https://s3.us-west-1.amazonaws.com/kraftwerk-castoro/upc_codes/UPC-Code-Asgnmt.pdf", "https://s3-us-west-1.amazonaws.com/kraftwerk-castoro/general_files/UPC-Codes-2.pdf"], "wine", "pdf"),
+]
+def step_docs():
+    import openpyxl
+    out = {"wine": {}, "spirits": {}}; report = []
+    for name, urls, kind, typ in DOCS:
+        got = 0
+        for url in urls:
+            try: data = fetch(url, timeout=180).read()
+            except Exception as e: print(f"  {name}: {url.rsplit('/', 1)[-1]} unavailable ({e.__class__.__name__})"); continue
+            try:
+                if typ == "pdf": res = _parse_pdf(data, kind, name)
+                elif typ == "xlsx":
+                    wb = openpyxl.load_workbook(io.BytesIO(data), read_only=True, data_only=True); res = {}
+                    for ws in wb:
+                        for k, v in _parse_table(ws.iter_rows(values_only=True), kind, name).items(): res.setdefault(k, {}).update(v)
+                else: res = _parse_table(csv.reader(io.StringIO(data.decode("utf-8-sig", "replace"))), kind, name)
+            except Exception as e: print(f"  {name}: could not read ({e})"); continue
+            for k, v in res.items(): out[k].update(v); got += len(v)
+            if typ == "pdf" and "Utah" in name and got: break   # newest month is enough
+        print(f"  {name}: {got:,} barcodes"); report.append((name, got))
+    for k, v in out.items(): json.dump(v, open(os.path.join(RAW, f"docs_{k}.json"), "w"), ensure_ascii=False)
+    json.dump(report, open(os.path.join(RAW, "docs_report.json"), "w"))
+
 def step_build():
     load = lambda f: json.load(open(os.path.join(RAW, f))) if os.path.exists(os.path.join(RAW, f)) else {}
     seed_w = json.load(open(os.path.join(ROOT, "upc.json")))["codes"]; seed_s = json.load(open(os.path.join(ROOT, "quors", "upc.json")))["codes"]
-    sets = {"wine": ({**load("off_wine.json"), **load("wikidata_wine.json"), **load("gov_wine.json"), **load("sheets_wine.json"), **load("brazos_wine.json")}, seed_w),
-            "spirits": ({**load("off_spirits.json"), **load("wikidata_spirits.json"), **load("gov_spirits.json")}, seed_s)}
+    sets = {"wine": ({**load("off_wine.json"), **load("wikidata_wine.json"), **load("gov_wine.json"), **load("docs_wine.json"), **load("sheets_wine.json"), **load("brazos_wine.json")}, seed_w),
+            "spirits": ({**load("off_spirits.json"), **load("wikidata_spirits.json"), **load("gov_spirits.json"), **load("docs_spirits.json")}, seed_s)}
     import openpyxl; wb = openpyxl.Workbook(); wb.remove(wb.active)
     for kind, (found, seed) in sets.items():
         shards = defaultdict(dict); added = 0
@@ -210,7 +293,7 @@ def step_build():
         for p, codes in shards.items(): json.dump(codes, open(os.path.join(d, f"{p}.json"), "w"), ensure_ascii=False, separators=(",", ":"))
         srcs = sorted({r["src"] for r in found.values()})
         json.dump({"about": f"{kind} barcodes beyond the curated list. Sources: Open Food Facts (© Open Food Facts contributors, ODbL), Wikidata (CC0), Brazos Wine's public importer UPC table, "
-                   "public government open-data product lists and producers' public trade spreadsheets. Row: [brand, name, size, source].", "sources": srcs,
+                   "public government open-data product lists (Utah DABS, Iowa ABD CC BY 4.0, BC and Yukon under their Open Government Licences, and others) and producers' public UPC sheets. Row: [brand, name, size, source].", "sources": srcs,
                    "count": added, "shards": sorted(shards), "built": time.strftime("%Y-%m-%d")}, open(os.path.join(d, "index.json"), "w"), indent=1)
         ws = wb.create_sheet(f"{kind.title()} barcodes"); ws.append(["Barcode (UPC/EAN)", "Brand / grower", "Name", "Vintage", "Size", "Countries", "Source"])
         for code, r in sorted(found.items()): ws.append([code, r["brand"], r["name"], r.get("vintage", ""), r["size"], r.get("countries", ""), {"off": "Open Food Facts", "brazos": "Brazos Wine", "wikidata": "Wikidata (CC0)"}.get(r["src"], r["src"])])
@@ -222,7 +305,7 @@ def step_build():
     wb.save(os.path.join(ROOT, "barcodes", "Cellar_Barcode_Harvest.xlsx"))
 
 if __name__ == "__main__":
-    steps = sys.argv[1:] or ["off", "brazos", "wikidata", "gov", "govdata", "sheets", "build"]
+    steps = sys.argv[1:] or ["off", "brazos", "wikidata", "gov", "govdata", "docs", "sheets", "build"]
     import urllib.parse  # noqa
     for s in steps:
         try: globals()["step_" + s]()
