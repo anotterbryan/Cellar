@@ -1,5 +1,5 @@
 {
- "about": "wine barcodes beyond the curated list. Sources: Open Food Facts (\u00a9 Open Food Facts contributors, ODbL), Brazos Wine's public importer UPC table, public government open-data product lists and producers' public trade spreadsheets. Row: [brand, name, size, source].",
+ "about": "wine barcodes beyond the curated list. Sources: Open Food Facts (\u00a9 Open Food Facts contributors, ODbL), Wikidata (CC0), Brazos Wine's public importer UPC table, public government open-data product lists and producers' public trade spreadsheets. Row: [brand, name, size, source].",
  "sources": [
   "brazos",
   "off"
