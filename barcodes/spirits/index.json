@@ -4,9 +4,10 @@
   "Iowa Liquor Products (Iowa Data Hub, CC BY 4.0)",
   "Utah DABS price list",
   "Yukon Liquor price list (Open Government Licence - Yukon)",
-  "off"
+  "off",
+  "wikidata"
  ],
- "count": 11372,
+ "count": 11375,
  "shards": [
   "000",
   "001",
