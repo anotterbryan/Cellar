@@ -106,7 +106,7 @@ def step_gov():
     seen, uniq = set(), []
     for r in res:
         if r["id"] not in seen: seen.add(r["id"]); uniq.append(r)
-    for r in uniq: r["has_barcode_column"] = any(re.search(r"upc|ean|gtin|barcode", c or "", re.I) for c in r["columns"])
+    for r in uniq: r["has_barcode_column"] = any(re.search(r"(^|[_ ])(upc|ean|gtin|barcode|upc_code)([_ ]|$)", (c or "").lower()) for c in r["columns"])
     print(f"  {len(uniq)} datasets, {sum(r['has_barcode_column'] for r in uniq)} with a barcode-like column")
     json.dump(uniq, open(os.path.join(RAW, "gov_datasets.json"), "w"), ensure_ascii=False, indent=1)
 

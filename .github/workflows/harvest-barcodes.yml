@@ -27,4 +27,4 @@ jobs:
           git config user.email "anotterbryan@users.noreply.github.com"
           git add barcodes
           git diff --cached --quiet || git commit -m "Barcodes: harvest $(date -u +%F)"
-          git pull --rebase -q && git push
+          git pull --rebase -q -X theirs && git push
