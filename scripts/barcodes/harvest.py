@@ -306,8 +306,25 @@ def step_build():
     seed_w = json.load(open(os.path.join(ROOT, "upc.json")))["codes"]; seed_s = json.load(open(os.path.join(ROOT, "quors", "upc.json")))["codes"]
     sets = {"wine": ({**load("off_wine.json"), **load("wikidata_wine.json"), **load("gov_wine.json"), **load("docs_wine.json"), **load("sheets_wine.json"), **load("brazos_wine.json")}, seed_w),
             "spirits": ({**load("off_spirits.json"), **load("wikidata_spirits.json"), **load("gov_spirits.json"), **load("docs_spirits.json")}, seed_s)}
-    import openpyxl; wb = openpyxl.Workbook(); wb.remove(wb.active)
+    import openpyxl; from openpyxl.styles import PatternFill, Font; wb = openpyxl.Workbook(); wb.remove(wb.active)
+    FILES = {"wine": ["off_wine.json", "wikidata_wine.json", "gov_wine.json", "docs_wine.json", "sheets_wine.json", "brazos_wine.json"],
+             "spirits": ["off_spirits.json", "wikidata_spirits.json", "gov_spirits.json", "docs_spirits.json"]}
+    SRCN = lambda x: {"off": "Open Food Facts", "brazos": "Brazos Wine", "wikidata": "Wikidata (CC0)"}.get(x, x)
+    words = lambda t: set(re.findall(r"[a-z]{3,}", (t or "").lower())) - {"the", "and", "wine", "red", "white", "with", "750", "bottle"}
+    def same(a, b):   # loosely the same product? (shared distinctive words)
+        A, B = words(a), words(b); return not A or not B or len(A & B) / min(len(A), len(B)) >= .34
+    conflicts_all = []
     for kind, (found, seed) in sets.items():
+        hits = defaultdict(list)   # every source that has each barcode
+        for f in FILES[kind]:
+            for code, r in load(f).items(): hits[code].append((SRCN(r["src"]), f"{r['brand']} {r['name']}".strip()))
+        for code, sv in seed.items(): hits.setdefault(code, []).insert(0, ("Curated list", " ".join(x for x in sv[:2] if x)))
+        dup_rows = []
+        for code, hs in hits.items():
+            if len(hs) < 2: continue
+            clash = any(not same(hs[0][1], h[1]) for h in hs[1:])
+            dup_rows.append((code, clash, hs)); 
+            if clash: conflicts_all.append((kind, code, hs))
         shards = defaultdict(dict); added = 0
         for code, r in sorted(found.items()):
             if code in seed or ("0" + code) in seed or (code[1:] if len(code) == 13 and code[0] == "0" else None) in seed: continue
@@ -320,8 +337,21 @@ def step_build():
         json.dump({"about": f"{kind} barcodes beyond the curated list. Sources: Open Food Facts (© Open Food Facts contributors, ODbL), Wikidata (CC0), Brazos Wine's public importer UPC table, "
                    "public government open-data product lists (Utah DABS, Iowa ABD CC BY 4.0, BC and Yukon under their Open Government Licences, and others) and producers' public UPC sheets. Row: [brand, name, size, source].", "sources": srcs,
                    "count": added, "shards": sorted(shards), "built": time.strftime("%Y-%m-%d")}, open(os.path.join(d, "index.json"), "w"), indent=1)
-        ws = wb.create_sheet(f"{kind.title()} barcodes"); ws.append(["Barcode (UPC/EAN)", "Brand / grower", "Name", "Vintage", "Size", "Countries", "Source"])
-        for code, r in sorted(found.items()): ws.append([code, r["brand"], r["name"], r.get("vintage", ""), r["size"], r.get("countries", ""), {"off": "Open Food Facts", "brazos": "Brazos Wine", "wikidata": "Wikidata (CC0)"}.get(r["src"], r["src"])])
+        ws = wb.create_sheet(f"{kind.title()} barcodes"); ws.append(["Barcode (UPC/EAN)", "Brand / grower", "Name", "Vintage", "Size", "Countries", "Source used", "Found in (all sources)", "Also in curated list", "Names disagree?"])
+        dmap = {c: (cl, hs) for c, cl, hs in dup_rows}
+        for code, r in sorted(found.items()):
+            cl, hs = dmap.get(code, (False, hits.get(code, [])))
+            ws.append([code, r["brand"], r["name"], r.get("vintage", ""), r["size"], r.get("countries", ""), SRCN(r["src"]), ", ".join(dict.fromkeys(h[0] for h in hs)),
+                       "yes" if any(h[0] == "Curated list" for h in hs) else "", "CHECK" if cl else ""])
+        ws.freeze_panes = "A2"; ws.auto_filter.ref = ws.dimensions
+        dw = wb.create_sheet(f"{kind.title()} duplicates"); dw.append(["Barcode", "Names disagree?", "Source", "Name as given by that source"])
+        for code, cl, hs in sorted(dup_rows, key=lambda x: (not x[1], x[0])):
+            for i, (src, nm) in enumerate(hs):
+                dw.append([code if i == 0 else "", ("CHECK" if cl else "same product") if i == 0 else "", src, nm])
+                if cl: dw.cell(dw.max_row, 2).fill = PatternFill("solid", fgColor="F8D7D0")
+        dw.freeze_panes = "A2"
+        for w, col in zip([18, 16, 22, 70], "ABCD"): dw.column_dimensions[col].width = w
+        print(f"  {kind}: {len(dup_rows):,} barcodes found in 2+ sources, {sum(1 for d in dup_rows if d[1]):,} where the names disagree")
         print(f"{kind}: {len(found):,} found, {added:,} new beyond the curated list, {len(shards)} shard files")
     gov = load("gov_datasets.json")
     if gov:
