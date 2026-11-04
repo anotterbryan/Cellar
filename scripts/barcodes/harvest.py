@@ -216,8 +216,10 @@ def _pdf_lines(data):
         f.write(data); f.flush()
         return subprocess.run(["pdftotext", "-layout", f.name, "-"], capture_output=True, text=True, timeout=300).stdout.split("\n")
 def _parse_pdf(data, kind, src):
-    out = {}
-    for ln in _pdf_lines(data):
+    out = {}; lines = _pdf_lines(data)
+    with open(os.path.join(RAW, "debug_" + re.sub(r"\W+", "_", src)[:30] + ".txt"), "w") as dbg:   # sample lines for tuning the reader
+        dbg.write("\n".join([l for l in lines if re.search(r"\d{6}", l)][:120]))
+    for ln in lines:
         m = re.search(r"(?<![\d-])(\d[\d ]{8,16}\d)(?![\d-])", ln)
         if not m: continue
         code = _code_fix(m.group(1).replace(" ", ""))

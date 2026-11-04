@@ -4,3 +4,4 @@ barcodes/raw/sheets_*.json
 __pycache__/
 barcodes/raw/wikidata_*.json
 barcodes/raw/docs_*.json
+barcodes/raw/debug_*.txt
