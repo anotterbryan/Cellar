@@ -218,7 +218,8 @@ def _pdf_lines(data):
 def _parse_pdf(data, kind, src):
     out = {}; lines = _pdf_lines(data)
     with open(os.path.join(RAW, "debug_" + re.sub(r"\W+", "_", src)[:30] + ".txt"), "w") as dbg:   # sample lines for tuning the reader
-        dbg.write("\n".join([l for l in lines if re.search(r"\d{6}", l)][:120]))
+        sample = [l for l in lines if re.search(r"\d{6}", l)][:120]; dbg.write("\n".join(sample))
+        if os.environ.get("HARVEST_DEBUG"): print(f"  --- sample lines from {src} ---\n" + "\n".join("  | " + l[:200] for l in sample[:25]))
     for ln in lines:
         m = re.search(r"(?<![\d-])(\d[\d ]{8,16}\d)(?![\d-])", ln)
         if not m: continue

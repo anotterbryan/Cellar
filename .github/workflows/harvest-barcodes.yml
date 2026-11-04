@@ -21,8 +21,7 @@ jobs:
         with: { python-version: "3.12" }
       - run: sudo apt-get install -y -qq poppler-utils >/dev/null && pip install beautifulsoup4 openpyxl
       - run: python scripts/barcodes/harvest.py
-      - uses: actions/upload-artifact@v4
-        with: { name: harvest-debug, path: barcodes/raw/debug_*.txt, if-no-files-found: ignore }
+        env: { HARVEST_DEBUG: "1" }
       - name: Save results
         run: |
           git config user.name "Cellar barcode bot"
