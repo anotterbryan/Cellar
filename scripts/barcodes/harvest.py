@@ -146,6 +146,28 @@ def step_govdata():
         print(f"   {n:,} barcodes")
     for k, v in out.items(): json.dump(v, open(os.path.join(RAW, f"gov_{k}.json"), "w"), ensure_ascii=False)
 
+WIKIDATA_Q = """SELECT ?item ?itemLabel ?gtin ?brandLabel ?kind WHERE {
+  ?item wdt:P3962 ?gtin .
+  { ?item wdt:P31/wdt:P279* wd:Q282 . BIND("wine" AS ?kind) } UNION { ?item wdt:P31/wdt:P279* wd:Q56139 . BIND("spirits" AS ?kind) }
+  UNION { ?item wdt:P31/wdt:P279* wd:Q154 . BIND("spirits" AS ?kind) }
+  OPTIONAL { ?item wdt:P1716 ?brand . }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en,fr,es,it,de". }
+}"""
+def step_wikidata():
+    """Wikidata (Wikipedia's structured-data sister, CC0): drinks that carry a GTIN barcode (property P3962)."""
+    import urllib.parse
+    out = {"wine": {}, "spirits": {}}
+    try:
+        req = urllib.request.Request("https://query.wikidata.org/sparql?format=json&query=" + urllib.parse.quote(WIKIDATA_Q), headers={"User-Agent": UA, "Accept": "application/sparql-results+json"})
+        rows = json.load(urllib.request.urlopen(req, timeout=180))["results"]["bindings"]
+    except Exception as e: print("  Wikidata query failed:", e); rows = []
+    for r in rows:
+        code = norm_code(r["gtin"]["value"]); name = r.get("itemLabel", {}).get("value", "")
+        if not code or re.fullmatch(r"Q\d+", name): continue
+        out[r["kind"]["value"]][code] = {"brand": r.get("brandLabel", {}).get("value", ""), "name": name, "size": "", "vintage": vintage_of(name), "src": "wikidata"}
+    print(f"Wikidata: {len(out['wine'])} wines, {len(out['spirits'])} spirits with a valid barcode")
+    for k, v in out.items(): json.dump(v, open(os.path.join(RAW, f"wikidata_{k}.json"), "w"), ensure_ascii=False)
+
 TRADE_SHEETS = ["https://www.jfwthekey.com/asset/distributor-standard-wine-list-excel-july-2018", "https://www.finewinepa.com/fine-wines/wine-list-excel/"]
 def step_sheets():
     """Producers' and retailers' public trade spreadsheets: keep any rows that carry a valid UPC/EAN."""
@@ -174,7 +196,8 @@ def step_sheets():
 def step_build():
     load = lambda f: json.load(open(os.path.join(RAW, f))) if os.path.exists(os.path.join(RAW, f)) else {}
     seed_w = json.load(open(os.path.join(ROOT, "upc.json")))["codes"]; seed_s = json.load(open(os.path.join(ROOT, "quors", "upc.json")))["codes"]
-    sets = {"wine": ({**load("off_wine.json"), **load("gov_wine.json"), **load("sheets_wine.json"), **load("brazos_wine.json")}, seed_w), "spirits": ({**load("off_spirits.json"), **load("gov_spirits.json")}, seed_s)}
+    sets = {"wine": ({**load("off_wine.json"), **load("wikidata_wine.json"), **load("gov_wine.json"), **load("sheets_wine.json"), **load("brazos_wine.json")}, seed_w),
+            "spirits": ({**load("off_spirits.json"), **load("wikidata_spirits.json"), **load("gov_spirits.json")}, seed_s)}
     import openpyxl; wb = openpyxl.Workbook(); wb.remove(wb.active)
     for kind, (found, seed) in sets.items():
         shards = defaultdict(dict); added = 0
@@ -186,11 +209,11 @@ def step_build():
             if f.endswith(".json"): os.remove(os.path.join(d, f))
         for p, codes in shards.items(): json.dump(codes, open(os.path.join(d, f"{p}.json"), "w"), ensure_ascii=False, separators=(",", ":"))
         srcs = sorted({r["src"] for r in found.values()})
-        json.dump({"about": f"{kind} barcodes beyond the curated list. Sources: Open Food Facts (© Open Food Facts contributors, ODbL), Brazos Wine's public importer UPC table, "
+        json.dump({"about": f"{kind} barcodes beyond the curated list. Sources: Open Food Facts (© Open Food Facts contributors, ODbL), Wikidata (CC0), Brazos Wine's public importer UPC table, "
                    "public government open-data product lists and producers' public trade spreadsheets. Row: [brand, name, size, source].", "sources": srcs,
                    "count": added, "shards": sorted(shards), "built": time.strftime("%Y-%m-%d")}, open(os.path.join(d, "index.json"), "w"), indent=1)
         ws = wb.create_sheet(f"{kind.title()} barcodes"); ws.append(["Barcode (UPC/EAN)", "Brand / grower", "Name", "Vintage", "Size", "Countries", "Source"])
-        for code, r in sorted(found.items()): ws.append([code, r["brand"], r["name"], r.get("vintage", ""), r["size"], r.get("countries", ""), {"off": "Open Food Facts", "brazos": "Brazos Wine"}.get(r["src"], r["src"])])
+        for code, r in sorted(found.items()): ws.append([code, r["brand"], r["name"], r.get("vintage", ""), r["size"], r.get("countries", ""), {"off": "Open Food Facts", "brazos": "Brazos Wine", "wikidata": "Wikidata (CC0)"}.get(r["src"], r["src"])])
         print(f"{kind}: {len(found):,} found, {added:,} new beyond the curated list, {len(shards)} shard files")
     gov = load("gov_datasets.json")
     if gov:
@@ -199,7 +222,7 @@ def step_build():
     wb.save(os.path.join(ROOT, "barcodes", "Cellar_Barcode_Harvest.xlsx"))
 
 if __name__ == "__main__":
-    steps = sys.argv[1:] or ["off", "brazos", "gov", "govdata", "sheets", "build"]
+    steps = sys.argv[1:] or ["off", "brazos", "wikidata", "gov", "govdata", "sheets", "build"]
     import urllib.parse  # noqa
     for s in steps:
         try: globals()["step_" + s]()
